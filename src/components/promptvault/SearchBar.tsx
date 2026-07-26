@@ -24,6 +24,7 @@ const CHIPS: Chip[] = [
   { label: "TikTok Shop", filter: { kind: "category", value: "TikTok Shop" } },
   { label: "Shopee", filter: { kind: "category", value: "Shopee" } },
   { label: "Favoritos", filter: { kind: "favorites" } },
+  { label: "Recomendados", filter: { kind: "recommended" } },
 ];
 
 interface SearchBarProps {
