@@ -23,6 +23,7 @@ const CHIPS: Chip[] = [
   { label: "Produto", filter: { kind: "category", value: "Produto" } },
   { label: "TikTok Shop", filter: { kind: "category", value: "TikTok Shop" } },
   { label: "Shopee", filter: { kind: "category", value: "Shopee" } },
+  { label: "Identidade AI", filter: { kind: "category", value: "Identidade AI" } },
   { label: "Favoritos", filter: { kind: "favorites" } },
   { label: "Recomendados", filter: { kind: "recommended" } },
 ];

@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, Heart, Check, X, Film, ImageIcon } from "lucide-react";
+import { Copy, Heart, Check, X, Film, ImageIcon, Lightbulb } from "lucide-react";
 import { useState } from "react";
 import {
   Dialog,
@@ -119,6 +119,18 @@ export function PromptModal({
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {prompt.description}
                 </p>
+
+                {prompt.explanation && (
+                  <div className="mt-4 rounded-xl border border-brand-purple/25 bg-brand-purple/[0.07] p-4">
+                    <p className="mb-2 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-brand-purple">
+                      <Lightbulb className="h-3.5 w-3.5" />
+                      Como usar este prompt
+                    </p>
+                    <p className="whitespace-pre-line text-[13px] leading-relaxed text-foreground/80">
+                      {prompt.explanation}
+                    </p>
+                  </div>
+                )}
 
                 <div className="mt-4">
                   <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">

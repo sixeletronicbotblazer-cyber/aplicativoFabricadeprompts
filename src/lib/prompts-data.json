@@ -1702,5 +1702,97 @@
     "image": "/prompts/doc/img_124.jpg",
     "prompt": "{ \"metadata\": { \"id\": \"ugc_beverage_002\", \"category\": \"UGC + Produto\", \"tags\": [\"bebida\", \"energético\", \"ao ar livre\", \"estilo de vida\", \"ugc\"], \"gender\": \"feminino\", \"ethnicity\": \"europeia\", \"age_range\": \"20-25\", \"format\": \"9:16\" }, \"prompt_structure\": { \"quality_modifiers\": \"((ultra realista)), 8k uhd, fotorrealista, fotografia UGC profissional ao ar livre, foco nítido, altamente detalhada\", \"subject\": { \"main_description\": \"bela jovem influenciadora de estilo de vida ao ar livre\", \"age\": \"23 anos\", \"facial_features\": \"rosto simétrico, maçãs do rosto definidas, olhos claros, lábios naturais\", \"expression\": \"sorriso sutil e confiante, relaxada e envolvente\", \"skin\": \"pele natural e saudável, brilho de pele beijada pelo sol, textura realista\", \"maquiagem\": \"maquiagem natural, blush suave, lábios nude, rímel leve\" }, \"cabelo\": { \"estilo\": \"cabelo liso e solto\", \"cor\": \"loiro\", \"textura\": \"fluxo natural suave, levemente iluminado pelo sol\" }, \"roupa\": { \"descrição\": \"regata preta justa\", \"estilo\": \"casual esportivo minimalista\", \"acessórios\": \"nenhuma ou poucas joias\" }, \"mãos_unhas\": { \"descrição\": \"((mãos bem cuidadas com cinco dedos, anatomia natural)):1.3\", \"unhas\": \"manicure branca curta, limpa e minimalista\", \"pose\": \"ambas as mãos emoldurando o produto, uma acima e outra abaixo segurando-o centralizado\" }, \"produto\": { \"tipo\": \"((lata de alumínio elegante para bebida energética)):1.3\", \"descrição\": \"((design minimalista de lata com tipografia limpa rótulo):1.25, embalagem moderna de bebida premium\", \"posicionamento\": \"centralizado em frente ao rosto, segurado entre as duas mãos, rótulo voltado diretamente para a câmera\" }, \"pose_composition\": { \"body_position\": \"parte superior do corpo voltada para a câmera, braços levantados emoldurando o produto\", \"eye_direction\": \"contato visual direto com a câmera\", \"overall_pose\": \"pose confiante de influenciador mostrando o produto claramente\" }, \"camera_settings\": { \"shot_type\": \"plano médio fechado\", \"aperture\": \"f/2.8\", \"depth_of_field\": \"profundidade rasa com desfoque suave do fundo\", \"format\": \"vertical 9:16\" }, \"lighting\":{ \"primary\": \"luz solar natural\", \"quality\": \"luz natural brilhante e suave\", \"direction\": \"luz solar frontal com leve ângulo lateral\", \"temperature\": \"luz do dia natural de 5500K\" }, \"background\": { \"setting\": \"parque ensolarado com palmeiras\", \"description\": \"campo de grama verde, palmeiras, céu azul, fundo desfocado\", \"atmosphere\": \"estilo de vida ao ar livre fresco e vibrante\" }, \"color_grading\": { \"palette\": \"verdes naturais, céu azul, tons de pele quentes\", \"mood\": \"energético, fresco, focado em estilo de vida\", \"saturation\": \"ligeiramente vibrante, mas natural\" }, \"style_aesthetic\": { \"photography_style\": \"conteúdo autêntico de influenciador UGC ao ar livre\", \"mood\": \"energético, confiante, com o qual as pessoas se identificam\", \"authenticity\": \"sensação natural e espontânea, sem excesso de produção\" } }, \"final_prompt\": \"((ultra realista)), 8k uhd, fotorrealista, fotografia profissional UGC externa, foco nítido, altamente detalhada, linda jovem influenciadora de estilo de vida ao ar livre, 23 anos, rosto simétrico, maçãs do rosto definidas, olhos claros, sorriso discreto e confiante, pele naturalmente saudável e bronzeada com textura realista, maquiagem natural com lábios nude e blush suave, cabelo loiro liso e solto com movimento natural, regata preta justa, estilo casual esportivo minimalista, ((mãos bem cuidadas com cinco dedos, anatomia natural)):1.3, manicure branca curta, ambas as mãos emoldurando o produto, uma acima e outra abaixo, segurando ((lata elegante de alumínio de bebida energética)):1.3, ((design minimalista da lata com rótulo de tipografia limpa)):1.25, rótulo voltado para a câmera claramente visível, centralizado em frente ao rosto, parte superior do corpo voltada para a câmera, braços levantados emoldurando o produto, contato visual direto, pose confiante de influenciadora, close-up médio, abertura f/2.8, profundidade de campo rasa com desfoque suave de fundo, formato vertical 9:16, luz solar natural, brilho suave iluminação, leve ângulo lateral, luz do dia de 5500K, parque ensolarado com palmeiras, grama verde e céu azul, fundo desfocado, atmosfera externa fresca e vibrante, tons de verde naturais e quentes, cores levemente vibrantes, estilo autêntico de conteúdo de influenciador UGC ao ar livre, humor energético, confiante e com o qual as pessoas se identificam\", \"negative_prompt_compiled\": \"mãos deformadas, dedos extras, dedos faltando, anatomia ruim, produto desfocado, rótulo ilegível, lata distorcida, baixa qualidade, desfocado, desenho animado, anime, irrealista, pele de plástico, marca d\\'água, assinatura, iluminação forte, superexposto, enquadramento ruim, supersaturado, fundo carregado, sorriso forçado, olhos sem vida, pessoas duplicadas, objetos flutuantes, rosto desfigurado, membros extras, artefatos jpeg, renderização 3D, aparência falsa, iluminação não natural, cores erradas, tons de pele não naturais,fundo que distrai, cabelo tipo peruca, vários rostos\", \"api_parameters\": { \"width\": 512, \"height\": 912, \"steps\": 45, \"cfg_scale\": 7.5, \"sampler\": \"DPM++ 2M Karras\", \"seed\": -1 } }",
     "referencia": false
+  },
+  {
+    "id": "identity-001",
+    "title": "Frame Mestre — Identidade + Composição",
+    "type": "Imagem",
+    "category": "Identidade AI",
+    "description": "Prompt longo para Nano Banana 2 / Veo 3 que preserva 100% da identidade da Imagem 1 e copia apenas a composição (pose, enquadramento, roupa, acessórios, iluminação e cenário) da Imagem 2.",
+    "tags": [
+      "nano-banana-2",
+      "veo-3",
+      "identidade",
+      "frame-mestre",
+      "composicao"
+    ],
+    "image": "/prompts/identity/img_001.jpg",
+    "prompt": "OBJECTIVE\n\nUse IMAGE 1 as the ONLY identity reference for the character.\nUse IMAGE 2 ONLY as the composition, pose, framing and styling reference.\n\nThe final result MUST look as if the character from IMAGE 1 was photographed in the exact same moment shown in IMAGE 2.\n\nIDENTITY PRESERVATION (MANDATORY)\n\nPreserve 100% of the facial identity from IMAGE 1.\n\nDo NOT redesign the face.\nDo NOT change facial proportions.\nDo NOT change eye shape.\nDo NOT change nose shape.\nDo NOT change lips.\nDo NOT change jawline.\nDo NOT change skin tone.\nDo NOT change hairstyle unless IMAGE 2 explicitly requires it.\nDo NOT make the character younger or older.\nDo NOT alter body proportions.\n\nThe person in the final image must be immediately recognizable as the exact same person from IMAGE 1.\n\nFRAME REPLICATION (MANDATORY)\n\nRecreate the EXACT frame from IMAGE 2.\n\nMatch EXACTLY:\n\n• camera angle\n• camera height\n• lens perspective\n• framing\n• crop\n• body position\n• head position\n• shoulder position\n• torso rotation\n• arm placement\n• hand placement\n• finger position\n• leg position\n• facial direction\n• eye direction\n• facial expression\n• body language\n\nThe composition should be virtually identical to IMAGE 2.\n\nCLOTHING & ACCESSORIES\n\nReplicate every visible clothing item and accessory from IMAGE 2 exactly.\n\nIf IMAGE 2 shows sunglasses, the character MUST wear the exact same sunglasses.\n\nIf IMAGE 2 shows prescription glasses, recreate the same glasses.\n\nIf IMAGE 2 shows earrings, necklace, rings, watch, bracelets, hat, cap, headphones, scarf or any other accessory, reproduce them exactly.\n\nReplicate:\n\n• clothing colors\n• clothing materials\n• clothing fit\n• clothing folds\n• textures\n• accessories\n• positioning of every accessory\n\nBACKGROUND\n\nRecreate the background from IMAGE 2 as accurately as possible.\n\nMatch:\n\n• environment\n• lighting\n• shadows\n• reflections\n• colors\n• depth of field\n• perspective\n• weather\n• atmosphere\n\nLIGHTING\n\nMatch the lighting from IMAGE 2 exactly.\n\nReplicate:\n\n• light direction\n• light intensity\n• color temperature\n• highlights\n• shadows\n• contrast\n• reflections\n\nIMAGE QUALITY\n\nUltra photorealistic.\nNatural skin texture.\nRealistic hair strands.\nAccurate fabric physics.\nRealistic reflections.\nNatural shadows.\nProfessional photography.\nUltra detailed.\n8K.\nHDR.\nHigh dynamic range.\nCinematic realism.\n\nIMPORTANT PRIORITY\n\nPriority #1:\nMaintain the exact identity of IMAGE 1.\n\nPriority #2:\nRecreate the exact frame, pose, composition, clothing, accessories and environment from IMAGE 2.\n\nThe final image should appear as if IMAGE 1's character had actually posed for the original photograph shown in IMAGE 2.",
+    "explanation": "O segredo é tratar a Imagem 2 como um frame mestre (master frame) e instruir o modelo a preservar 100% da identidade da Imagem 1, copiando apenas a composição da Imagem 2. Este prompt foi pensado para Nano Banana 2 / Veo 3, com linguagem forte para minimizar alterações.\n\nEsse tipo de prompt costuma dar resultados mais consistentes porque estabelece uma hierarquia clara:\n\n• Imagem 1 = identidade (rosto e corpo).\n• Imagem 2 = pose, enquadramento, roupa, acessórios, iluminação e cenário.\n\nIsso reduz bastante as chances do modelo \"misturar\" os rostos ou criar uma pessoa diferente.",
+    "recommended": true,
+    "referencia": false
+  },
+  {
+    "id": "identity-002",
+    "title": "Identity Replacement Task",
+    "type": "Imagem",
+    "category": "Identidade AI",
+    "description": "Substitui completamente a pessoa da Imagem 2 pela personagem da Imagem 1. Declara explicitamente que a Imagem 2 NÃO é referência de pessoa — apenas de composição, pose, cenário e acessórios.",
+    "tags": [
+      "nano-banana-2",
+      "identity-replacement",
+      "scene-reference",
+      "pesos"
+    ],
+    "image": "/prompts/identity/img_002.jpg",
+    "prompt": "TASK: IDENTITY REPLACEMENT\n\nIMAGE 1 is the ONLY source of identity.\n\nIMAGE 2 is NOT a person reference.\nIMAGE 2 is ONLY a reference for composition.\n\nReplace the person in IMAGE 2 completely with the character from IMAGE 1.\n\nThe person from IMAGE 2 must NOT appear in any way.\n\nIDENTITY LOCK (ABSOLUTE PRIORITY)\n\nUse the exact character from IMAGE 1.\n\nLock and preserve:\n\n• facial identity\n• facial proportions\n• head shape\n• jawline\n• nose\n• lips\n• eyes\n• eyebrows\n• hairstyle\n• skin tone\n• body proportions\n\nDo NOT blend identities.\n\nDo NOT average the two faces.\n\nDo NOT reinterpret the face.\n\nDo NOT create a new person.\n\nDo NOT use any facial feature from IMAGE 2.\n\nThe final person must be unmistakably the same character as IMAGE 1.\n\nIMAGE 2 ONLY PROVIDES\n\n• exact pose\n• exact body position\n• exact camera angle\n• exact framing\n• exact perspective\n• exact expression\n• exact lighting\n• exact environment\n• exact background\n• exact clothing\n• exact accessories\n\nIf IMAGE 2 contains glasses, sunglasses, jewelry, hat, watch or any accessory, place those exact accessories onto the character from IMAGE 1.\n\nThe accessories are copied.\nThe identity is NEVER copied.\n\nIMPORTANT\n\nImagine the character from IMAGE 1 physically standing where the person in IMAGE 2 is standing.\n\nEverything remains identical to IMAGE 2 except the human identity.\n\nThe final image should look like someone photographed the character from IMAGE 1 in the exact moment captured by IMAGE 2.\n\nUltra photorealistic.\n8K.\nNatural skin texture.\nProfessional photography.\nNo face morphing.\nNo identity mixing.\nNo resemblance to IMAGE 2.\n100% identity preservation from IMAGE 1.",
+    "explanation": "Use este formato quando o modelo estiver \"misturando\" os rostos das duas referências. A estrutura declara explicitamente que IMAGE 2 NÃO é uma referência de personagem — apenas de composição.\n\nDica que faz muita diferença no Nano Banana 2: em vez de chamar de \"Image 2\", chame de \"Scene Reference\". Muitos modelos entendem \"Image 2\" como outra referência de personagem e acabam fundindo os rostos.\n\nUse esta estrutura mental:\n\n• Reference Character (Image 1) = identidade.\n• Scene Reference (Image 2) = cenário, pose e enquadramento.\n\nEssa simples mudança de nomenclatura costuma aumentar bastante a fidelidade da personagem. Além disso, se o Nano Banana 2 permitir definir pesos para as imagens, configure Imagem 1 com peso máximo e Imagem 2 com peso baixo, usando-a apenas como referência de composição.",
+    "recommended": true,
+    "referencia": false
+  },
+  {
+    "id": "identity-003",
+    "title": "Retrato Estúdio — Imagem Mestra",
+    "type": "Imagem",
+    "category": "Identidade AI",
+    "description": "Gera um retrato de estúdio clean e padronizado a partir de uma foto de referência. Use o resultado como 'imagem mestra' para alimentar os demais prompts de substituição de cena.",
+    "tags": [
+      "studio-portrait",
+      "master-frame",
+      "identidade",
+      "passport",
+      "beauty"
+    ],
+    "image": "/prompts/identity/img_003.jpg",
+    "prompt": "Use the uploaded reference image as the ONLY identity reference.\n\nCreate a highly realistic studio portrait of the exact same woman.\n\nThis is NOT a reinterpretation. Preserve her identity with maximum fidelity.\n\nMaintain exactly:\n- facial structure\n- face proportions\n- eye shape\n- eyebrow shape\n- nose\n- lips\n- jawline\n- chin\n- ears\n- skin tone\n- hairstyle\n- hairline\n\nHer lips are naturally full with a subtle lip filler appearance and a glossy finish. Preserve this characteristic exactly without exaggeration.\n\nExpression:\nNeutral, confident, serious fashion model expression.\nLips gently closed.\nEyes looking directly into the camera.\n\nPose:\nStraight posture.\nHead centered.\nShoulders squared.\nPerfect passport-style composition.\nUpper chest and head visible.\nFace perfectly aligned to the camera.\n\nLighting:\nProfessional beauty studio lighting.\nSoft, diffused key light.\nBalanced fill light.\nNatural skin rendering.\nSubtle catchlights in the eyes.\n\nBackground:\nClean light gray seamless studio background.\n\nWardrobe:\nMinimalist fitted black crew-neck shirt with no logos, patterns, or accessories.\n\nPhotography:\n85mm portrait lens.\nEye-level camera.\nUltra-sharp focus on the eyes.\nExtremely realistic skin texture.\nNatural pores.\nRealistic hair strands.\nProfessional beauty photography.\nUltra photorealistic.\n8K resolution.\nHDR.\nNo beauty filter.\nNo face morphing.\nNo facial redesign.\nNo stylization.\nNo makeup changes.\nNo identity alteration.\n\nThe final portrait must be immediately recognizable as the exact same woman from the uploaded reference image.",
+    "explanation": "Esse retrato funciona muito bem como \"imagem mestra\". Depois, quando você quiser colocá-la em qualquer pose, roupa ou cenário, use essa imagem gerada como a nova referência de identidade.\n\nIsso normalmente produz resultados mais consistentes do que partir sempre da foto original, porque a imagem mestra já está \"limpa\", bem iluminada e padronizada — o modelo consegue replicá-la com muito mais fidelidade do que uma foto amadora com sombras ruins ou ângulos estranhos.\n\nFluxo recomendado:\n1. Gere a imagem mestra com este prompt a partir da foto original.\n2. Salve essa imagem mestra.\n3. Use-a como IMAGE 1 (identidade) nos outros prompts de substituição de cena.",
+    "recommended": true,
+    "referencia": false
+  },
+  {
+    "id": "identity-004",
+    "title": "Substituição de Pessoa — Versão Curta",
+    "type": "Imagem",
+    "category": "Identidade AI",
+    "description": "Versão enxuta do prompt de substituição de identidade. Ideal quando o modelo está 'misturando' os rostos das duas referências por causa de instruções longas demais.",
+    "tags": [
+      "nano-banana-2",
+      "curto",
+      "substituicao",
+      "identidade"
+    ],
+    "image": "/prompts/identity/img_004.jpg",
+    "prompt": "Replace the person in Image 2 with the character from Image 1.\n\nImage 1 is the ONLY identity reference.\n\nKeep 100% of the face, body, skin tone, hair, facial features, and proportions from Image 1.\n\nCopy ONLY the pose, camera angle, framing, clothing, accessories, lighting, and background from Image 2.\n\nDo not use the face or body from Image 2.\n\nThe final image must look like the character from Image 1 was photographed in the exact scene from Image 2.\n\nUltra photorealistic.\n8K.\nNatural skin texture.\nRealistic lighting.\nMaximum identity preservation.",
+    "explanation": "Modelos como o Nano Banana 2 muitas vezes obedecem melhor prompts curtos do que instruções enormes. Quando o prompt fica muito detalhado, ele acaba \"misturando\" as duas referências e o resultado é uma pessoa nova, parecida com ambas mas idêntica a nenhuma.\n\nUse esta versão curta quando:\n\n• o modelo já recebeu as duas imagens como referência anexada,\n• você quer apenas instruir o que fazer com cada uma,\n• a versão longa estiver gerando resultados \"fundidos\".\n\nA regra geral: quanto mais detalhe você adiciona sobre a identidade, mais o modelo se sente \"autorizado\" a reinterpretá-la. Prompt curto + referências claras costuma trancar melhor a identidade.",
+    "recommended": false,
+    "referencia": false
+  },
+  {
+    "id": "identity-005",
+    "title": "Substituição de Pessoa — Ultra Curta",
+    "type": "Imagem",
+    "category": "Identidade AI",
+    "description": "Mínimo viável: 8 linhas diretas declarando qual imagem é a personagem, qual é a cena, e o que copiar de cada uma. Use quando o modelo ignora prompts longos.",
+    "tags": [
+      "nano-banana-2",
+      "ultra-curto",
+      "substituicao",
+      "identidade"
+    ],
+    "image": "/prompts/identity/img_005.jpg",
+    "prompt": "Use Image 1 as the character.\n\nUse Image 2 as the scene.\n\nReplace the person in Image 2 with the person from Image 1.\n\nKeep the exact identity of Image 1.\n\nCopy only the pose, clothing, accessories, camera angle, framing, lighting and background from Image 2.\n\nDo not copy the identity of Image 2.\n\nUltra realistic.",
+    "explanation": "Versão enxuta para modelos que se confundem com instruções longas. Ideal quando você já carregou as duas imagens como referência e só precisa de uma instrução direta sobre o que fazer com cada uma.\n\nEsta versão é especialmente útil em ferramentas com janela de contexto limitada ou quando o modelo começa a ignorar partes do prompt longo. A simplicidade aqui é uma feature, não uma limitação: cada linha carrega uma única instrução não-negociável.",
+    "recommended": false,
+    "referencia": false
   }
 ]

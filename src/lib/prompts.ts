@@ -16,7 +16,8 @@ export type PromptCategory =
   | "TikTok Shop"
   | "Shopee"
   | "Imagem"
-  | "Vídeo";
+  | "Vídeo"
+  | "Identidade AI";
 
 export interface Prompt {
   id: string;
@@ -32,6 +33,8 @@ export interface Prompt {
   /** True quando há imagem sem prompt (card apenas visual de referência). */
   referencia?: boolean;
   recommended?: boolean;
+  /** Contexto, tutorial e dicas de uso do prompt (quando aplicável). */
+  explanation?: string;
 }
 
 /**
@@ -61,6 +64,7 @@ export const CATEGORIES: PromptCategory[] = [
   "Shopee",
   "Imagem",
   "Vídeo",
+  "Identidade AI",
 ];
 
 export const TYPE_BADGES: PromptType[] = [
