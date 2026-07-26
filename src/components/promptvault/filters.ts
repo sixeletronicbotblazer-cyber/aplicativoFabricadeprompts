@@ -58,7 +58,13 @@ export function applyFilter(
   const favSet = new Set(favIds);
   switch (f.kind) {
     case "all":
-      return prompts;
+      // Stable sort: keep original order, but push video prompts to the end
+      // so the "Todos" tab leads with image-based prompts.
+      return [...prompts].sort((a, b) => {
+        const av = a.type === "Vídeo" ? 1 : 0;
+        const bv = b.type === "Vídeo" ? 1 : 0;
+        return av - bv;
+      });
     case "favorites":
       return prompts.filter((p) => favSet.has(p.id));
     case "recommended":

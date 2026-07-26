@@ -60,7 +60,7 @@ export function PromptCard({
   };
 
   return (
-    <article className="group glass rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl hover:shadow-black/40 flex flex-col">
+    <article className="group glass relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl hover:shadow-black/40 flex flex-col">
       {/* Image / Placeholder */}
       <button
         type="button"
@@ -130,31 +130,28 @@ export function PromptCard({
           </span>
         )}
 
-        {/* Favorite */}
-        <button
-          type="button"
-          onClick={(e) => {
-            e.stopPropagation();
-            onToggleFavorite(prompt.id);
-          }}
-          className={cn(
-            "absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border backdrop-blur-md transition-all",
-            isFavorite
-              ? "border-brand-pink/40 bg-brand-pink/20 text-brand-pink"
-              : "border-white/15 bg-black/30 text-white/80 hover:text-brand-pink hover:border-brand-pink/40"
-          )}
-          aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
-        >
-          <Heart
-            className={cn("h-4 w-4 transition-transform", isFavorite && "fill-current scale-110")}
-          />
-        </button>
-
         {/* Hover hint */}
         <span className="absolute bottom-3 right-3 inline-flex items-center gap-1 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white/90 opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
           <Eye className="h-3 w-3" />
           Ver detalhes
         </span>
+      </button>
+
+      {/* Favorite — sibling of the card button to avoid invalid nested <button> */}
+      <button
+        type="button"
+        onClick={() => onToggleFavorite(prompt.id)}
+        className={cn(
+          "absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full border backdrop-blur-md transition-all",
+          isFavorite
+            ? "border-brand-pink/40 bg-brand-pink/20 text-brand-pink"
+            : "border-white/15 bg-black/30 text-white/80 hover:text-brand-pink hover:border-brand-pink/40"
+        )}
+        aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+      >
+        <Heart
+          className={cn("h-4 w-4 transition-transform", isFavorite && "fill-current scale-110")}
+        />
       </button>
 
       {/* Body */}

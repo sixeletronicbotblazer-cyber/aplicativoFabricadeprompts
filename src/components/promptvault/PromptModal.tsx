@@ -39,6 +39,7 @@ export function PromptModal({
   onToggleFavorite,
 }: PromptModalProps) {
   const [copied, setCopied] = useState(false);
+  const hasImage = Boolean(prompt?.image);
 
   const handleCopy = async () => {
     if (!prompt) return;
@@ -56,12 +57,16 @@ export function PromptModal({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         showCloseButton={false}
-        className="max-w-4xl p-0 gap-0 overflow-hidden rounded-3xl border-white/10 bg-popover/95 backdrop-blur-2xl"
+        className={cn(
+          "p-0 gap-0 overflow-hidden rounded-3xl border-white/10 bg-popover/95 backdrop-blur-2xl",
+          hasImage ? "max-w-4xl" : "max-w-2xl"
+        )}
       >
         {prompt && (
-          <div className="grid md:grid-cols-2 max-h-[92vh]">
-            {/* Image side */}
-            <div className="relative md:h-auto h-56 sm:h-72 md:max-h-[92vh] bg-white/5">
+          <div className={cn("grid max-h-[92vh]", hasImage ? "md:grid-cols-5" : "grid-cols-1")}>
+            {/* Image side — only rendered when a reference image exists */}
+            {hasImage && (
+            <div className="relative md:col-span-2 md:h-auto h-56 sm:h-72 md:max-h-[92vh] bg-white/5">
               <img
                 src={prompt.image}
                 alt={prompt.title}
@@ -82,9 +87,10 @@ export function PromptModal({
                 {prompt.type}
               </span>
             </div>
+            )}
 
             {/* Details side */}
-            <div className="relative flex flex-col p-5 sm:p-7 overflow-hidden">
+            <div className={cn("relative flex flex-col p-5 sm:p-7 overflow-hidden", hasImage ? "md:col-span-3" : "")}>
               <button
                 type="button"
                 onClick={() => onOpenChange(false)}
@@ -94,6 +100,21 @@ export function PromptModal({
                 <X className="h-4 w-4" />
               </button>
 
+              {!hasImage && (
+                <span
+                  className={cn(
+                    "mb-3 inline-flex w-fit items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                    TYPE_STYLE[prompt.type]
+                  )}
+                >
+                  {prompt.type === "Vídeo" ? (
+                    <Film className="h-3.5 w-3.5" />
+                  ) : (
+                    <ImageIcon className="h-3.5 w-3.5" />
+                  )}
+                  {prompt.type}
+                </span>
+              )}
               <DialogTitle className="text-xl sm:text-2xl font-semibold tracking-tight pr-10">
                 {prompt.title}
               </DialogTitle>
