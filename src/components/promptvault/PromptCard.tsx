@@ -9,6 +9,9 @@ import {
   Check,
   Sparkles,
   Hand,
+  Zap,
+  Play,
+  ExternalLink,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -47,6 +50,8 @@ export function PromptCard({
 }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
   const hasImage = Boolean(prompt.image);
+  const hasVideo = Boolean(prompt.videoUrl);
+  const showVideoThumb = hasVideo && !hasImage;
 
   const handleCopy = async () => {
     const ok = await copyText(prompt.prompt);
@@ -61,7 +66,7 @@ export function PromptCard({
 
   return (
     <article className="group glass relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl hover:shadow-black/40 flex flex-col">
-      {/* Image / Placeholder */}
+      {/* Image / Video / Placeholder */}
       <button
         type="button"
         onClick={() => onOpen(prompt)}
@@ -77,8 +82,22 @@ export function PromptCard({
               decoding="async"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
+          ) : showVideoThumb ? (
+            <div className="relative h-full w-full bg-black/40">
+              <video
+                src={prompt.videoUrl}
+                muted
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div className="absolute inset-0 grid place-items-center">
+                <div className="grid h-14 w-14 place-items-center rounded-full bg-white/15 backdrop-blur-md border border-white/20 transition-transform duration-300 group-hover:scale-110">
+                  <Play className="h-6 w-6 text-white ml-0.5" />
+                </div>
+              </div>
+            </div>
           ) : (
-            // Premium placeholder for prompts without a reference image
             <div className="relative h-full w-full overflow-hidden bg-gradient-to-br from-brand-purple/25 via-background to-brand-cyan/20">
               <div
                 aria-hidden
@@ -122,7 +141,7 @@ export function PromptCard({
           {prompt.type}
         </span>
 
-        {/* Referência badge (image without prompt) */}
+        {/* Referência badge */}
         {prompt.referencia && (
           <span className="absolute left-3 top-12 inline-flex items-center gap-1 rounded-full border border-white/15 bg-black/50 px-2.5 py-1 text-[10px] font-semibold text-white/90 backdrop-blur-md">
             <Sparkles className="h-3 w-3" />
@@ -130,14 +149,22 @@ export function PromptCard({
           </span>
         )}
 
+        {/* "Novo" badge */}
+        {prompt.isNew && (
+          <span className="absolute left-3 top-12 inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-emerald-500/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-emerald-300 backdrop-blur-md animate-pulse">
+            <Zap className="h-3 w-3" />
+            Novo
+          </span>
+        )}
+
         {/* Hover hint */}
         <span className="absolute bottom-3 right-3 inline-flex items-center gap-1 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white/90 opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
-          <Eye className="h-3 w-3" />
-          Ver detalhes
+          {hasVideo ? <ExternalLink className="h-3 w-3" /> : <Eye className="h-3 w-3" />}
+          {hasVideo ? "Assistir" : "Ver detalhes"}
         </span>
       </button>
 
-      {/* Favorite — sibling of the card button to avoid invalid nested <button> */}
+      {/* Favorite */}
       <button
         type="button"
         onClick={() => onToggleFavorite(prompt.id)}
@@ -163,7 +190,6 @@ export function PromptCard({
           {prompt.description}
         </p>
 
-        {/* Tags */}
         <div className="mt-3 flex flex-wrap gap-1.5">
           {prompt.tags.slice(0, 4).map((tag) => (
             <span
@@ -175,7 +201,6 @@ export function PromptCard({
           ))}
         </div>
 
-        {/* Actions */}
         <div className="mt-4 flex items-center gap-2 pt-1">
           <Button
             type="button"

@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, Heart, Check, X, Film, ImageIcon, Lightbulb } from "lucide-react";
+import { Copy, Heart, Check, X, Film, ImageIcon, Lightbulb, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import {
   Dialog,
@@ -40,6 +40,8 @@ export function PromptModal({
 }: PromptModalProps) {
   const [copied, setCopied] = useState(false);
   const hasImage = Boolean(prompt?.image);
+  const hasVideo = Boolean(prompt?.videoUrl);
+  const hasMedia = hasImage || hasVideo;
 
   const handleCopy = async () => {
     if (!prompt) return;
@@ -59,38 +61,60 @@ export function PromptModal({
         showCloseButton={false}
         className={cn(
           "p-0 gap-0 overflow-hidden rounded-3xl border-white/10 bg-popover/95 backdrop-blur-2xl",
-          hasImage ? "max-w-4xl" : "max-w-2xl"
+          hasMedia ? "max-w-4xl" : "max-w-2xl"
         )}
       >
         {prompt && (
-          <div className={cn("grid max-h-[92vh]", hasImage ? "md:grid-cols-5" : "grid-cols-1")}>
-            {/* Image side — only rendered when a reference image exists */}
+          <div className={cn("grid max-h-[92vh]", hasMedia ? "md:grid-cols-5" : "grid-cols-1")}>
+            {/* Image side */}
             {hasImage && (
-            <div className="relative md:col-span-2 md:h-auto h-56 sm:h-72 md:max-h-[92vh] bg-white/5">
-              <img
-                src={prompt.image}
-                alt={prompt.title}
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:bg-gradient-to-r" />
-              <span
-                className={cn(
-                  "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
-                  TYPE_STYLE[prompt.type]
-                )}
-              >
-                {prompt.type === "Vídeo" ? (
+              <div className="relative md:col-span-2 md:h-auto h-56 sm:h-72 md:max-h-[92vh] bg-white/5">
+                <img
+                  src={prompt.image}
+                  alt={prompt.title}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:bg-gradient-to-r" />
+                <span
+                  className={cn(
+                    "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                    TYPE_STYLE[prompt.type]
+                  )}
+                >
+                  {prompt.type === "Vídeo" ? (
+                    <Film className="h-3.5 w-3.5" />
+                  ) : (
+                    <ImageIcon className="h-3.5 w-3.5" />
+                  )}
+                  {prompt.type}
+                </span>
+              </div>
+            )}
+
+            {/* Video side (when no image but has videoUrl) */}
+            {hasVideo && !hasImage && (
+              <div className="relative md:col-span-2 md:h-auto h-48 sm:h-64 md:max-h-[92vh] bg-black/60">
+                <video
+                  src={prompt.videoUrl}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-contain"
+                />
+                <span
+                  className={cn(
+                    "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                    TYPE_STYLE[prompt.type]
+                  )}
+                >
                   <Film className="h-3.5 w-3.5" />
-                ) : (
-                  <ImageIcon className="h-3.5 w-3.5" />
-                )}
-                {prompt.type}
-              </span>
-            </div>
+                  {prompt.type}
+                </span>
+              </div>
             )}
 
             {/* Details side */}
-            <div className={cn("relative flex flex-col p-5 sm:p-7 overflow-hidden", hasImage ? "md:col-span-3" : "")}>
+            <div className={cn("relative flex flex-col p-5 sm:p-7 overflow-hidden", hasMedia ? "md:col-span-3" : "")}>
               <button
                 type="button"
                 onClick={() => onOpenChange(false)}
@@ -100,7 +124,7 @@ export function PromptModal({
                 <X className="h-4 w-4" />
               </button>
 
-              {!hasImage && (
+              {!hasMedia && (
                 <span
                   className={cn(
                     "mb-3 inline-flex w-fit items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
