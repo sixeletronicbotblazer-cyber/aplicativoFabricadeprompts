@@ -78,7 +78,6 @@ interface SidebarContentProps {
 
 function SidebarContent({ filter, onSelect, onClose }: SidebarContentProps) {
   const logout = useAuthStore((s) => s.logout);
-  const email = useAuthStore((s) => s.email);
   const favIds = useFavoritesStore((s) => s.ids);
   const activeKey = filterKey(filter);
 
@@ -88,8 +87,8 @@ function SidebarContent({ filter, onSelect, onClose }: SidebarContentProps) {
   };
 
   const handleAccount = () => {
-    toast.info(`Conta conectada: ${email ?? "—"}`, {
-      description: "Gerencie seu acesso nas configurações da conta.",
+    toast.info("PromptVault", {
+      description: "Você está conectado ao acervo exclusivo.",
     });
     onClose?.();
   };

@@ -1,34 +1,28 @@
 "use client";
 
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+
+/** Código de acesso autorizado. */
+const ACCESS_CODE = "280394";
 
 interface AuthState {
-  email: string | null;
-  code: string | null;
   isAuthenticated: boolean;
-  /** Validação simples: exige e-mail com "@" e código não vazio. */
-  login: (email: string, code: string) => boolean;
+  login: (code: string) => boolean;
   logout: () => void;
 }
 
-export const useAuthStore = create<AuthState>()(
-  persist(
-    (set) => ({
-      email: null,
-      code: null,
-      isAuthenticated: false,
-      login: (email, code) => {
-        const emailOk = email.trim().length > 3 && email.includes("@");
-        const codeOk = code.trim().length > 0;
-        if (emailOk && codeOk) {
-          set({ email: email.trim(), code: code.trim(), isAuthenticated: true });
-          return true;
-        }
-        return false;
-      },
-      logout: () => set({ email: null, code: null, isAuthenticated: false }),
-    }),
-    { name: "promptvault-auth" }
-  )
-);
+/**
+ * Auth store SEM persistência — o usuário precisa digitar o código
+ * toda vez que abrir/fechar a aba. Nada é salvo em localStorage/sessionStorage.
+ */
+export const useAuthStore = create<AuthState>()((set) => ({
+  isAuthenticated: false,
+  login: (code: string) => {
+    if (code.trim() === ACCESS_CODE) {
+      set({ isAuthenticated: true });
+      return true;
+    }
+    return false;
+  },
+  logout: () => set({ isAuthenticated: false }),
+}));
