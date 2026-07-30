@@ -24,7 +24,8 @@
     ],
     "image": "",
     "prompt": "{ \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\", \"resolution\": \"1080p\", \"fps\": 30, \"mode\": \"image-to-video\", \"reference_image\": \"USE THE GENERATED INFLUENCER IMAGE AS STARTING FRAME\" }, \"scene_sequence\": [ { \"part\": \"FABRIC_TOUCH_SUBTLE\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento de câmera de smartphone na mão. Uma pessoa toca e acaricia suavemente o tecido do produto (por exemplo, uma legging ou camisa) com as pontas dos dedos, transmitindo maciez e qualidade. Iluminação natural interna, texturas de pele e cabelo com alto nível de detalhes. Sem movimento da boca. Preservando a identidade da imagem de referência.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movimento\": \"Movimentos delicados dos dedos, leve pressão no tecido, gestos sutis com as mãos, piscadas naturais, olhar fixo no produto. Os movimentos são fluidos e não robóticos.\" } ], \"restrições_técnicas\": { \"estilo\": [ \"UGC\", \"Bruto\", \"Autêntico\", \"Hiper-realista\" ], \"proibições\": [ \"Sem movimento da boca\", \"Sem diálogo\", \"Sem sobreposições\", \"Sem elementos de texto\", \"Sem botões\", \"Sem elementos de interface do usuário\", \"Sem transições artificiais\", \"Sem planos estáticos\", \"Sem movimentos não naturais\", \"Sem reinicializações de cena\" ], \"requisitos\": [ \"Ultrarrealismo\", \"Shaders de pele naturais\", \"Interação física com a luz\", \"Sensação de câmera na mão\", \"A identidade visual deve corresponder exatamente à imagem de referência\", \"Movimentos fluidos e orgânicos\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/toquetecido.mp4#t=0.1"
   },
   {
     "id": "doc-003",
@@ -37,7 +38,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"Mudança muito sutil na expressão facial ao longo do tempo. Um micro-sorriso suave se forma naturalmente. Nenhuma emoção exagerada.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/microsorriso.mp4#t=0.1"
   },
   {
     "id": "doc-004",
@@ -94,7 +96,8 @@
     ],
     "image": "",
     "prompt": "{ \"prompt_name\": \"Destaque_Frontal_do_Tecido\", \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\" }, \"scene_sequence\": [ { \"part\": \"FULL_SEQUENCE_8S\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Personagem fictício adulto (imagem de referência fornecida). Plano frontal de conteúdo gerado pelo usuário. Foco na interação com o tecido. Texturas fotorrealistas. Sem espelho, sem celular. Sem movimento da boca. Vídeo silencioso.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement_timeline\": [ \"0.0-1.0s: Sujeito já centralizado, sorriso suave, contato visual direto com a lente.\", \"1.0-3.0s: Lentamente leva uma das mãos para tocar o tecido (manga ou cintura). Os dedos acariciam sutilmente o material, mostrando a textura.\", \"3,0-5,0s: Os dedos beliscam e soltam levemente o tecido, demonstrando elasticidade. Olha para o tecido e depois para a câmera com um aceno de cabeça.\", \"5,0-7,0s: Giro lento dos quadris para mostrar o caimento e o movimento. Um braço se estende ligeiramente e depois retorna.\", \"7,0-8,0s: Mantém uma pose satisfeita, sorriso contente, contato visual direto, permanece imóvel.\" ] } ], \"technical_constraints\": { \"style\": [ \"UGC\", \"Product Focus\", \"Frontal\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No mirror\", \"No phone in hand\" ], \"requirements\": [ \"Ultra-realism\", \"Detailed fabric physics\", \"Natural hand pressure\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/Movimento%20fashion.mp4#t=0.1"
   },
   {
     "id": "doc-008",
@@ -107,7 +110,8 @@
     ],
     "image": "",
     "prompt": "{ \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\", \"resolution\": \"1080p\", \"fps\": 30, \"mode\": \"image-to-video\", \"reference_image\": \"USE THE GENERATED INFLUENCER IMAGE AS STARTING FRAME\" }, \"scene_sequence\": [ { \"part\": \"POSE_CASUAL_WALK\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento de câmera de smartphone na mão. Uma pessoa caminha casualmente em direção à câmera e depois passa por ela, mostrando o produto em movimento. Postura relaxada, movimento natural dos braços. Iluminação natural interna, texturas de pele e cabelo com alto nível de detalhes. Sem movimento da boca. Preservando a identidade da imagem de referência.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement\": \"Caminhada natural marcha, movimento fluido dos braços, rotação sutil do corpo, piscadas naturais, expressão facial suave. Os movimentos são fluidos e não robóticos.\" } ], \"technical_constraints\": { \"style\": [ \"UGC\", \"Raw\", \"Authentic\", \"Hyper-realistic\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No overlays\", \"No text elements\", \"No buttons\", \"No UI elements\", \"No artificial transitions\", \"No static takes\", \"No antinatural movements\", \"No scene resets\" ], \"requirements\": [ \"Ultra-realism\", \"Natural skin shaders\", \"Physical light interaction\", \"Handheld camera sense\", \"Visual identity must match reference image exactly\", \"Fluid and organic movements\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://i.imgur.com/qddqpxw.mp4"
   },
   {
     "id": "doc-009",
@@ -135,7 +139,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"Deslocamento lateral extremamente sutil da câmera da esquerda para a direita. O sujeito permanece centralizado, realizando ajustes suaves de postura. Piscar de olhos natural, micromovimentos faciais suaves. Sem movimentos abruptos.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/giro%20lento%20360%20controlado.mp4#t=0.1"
   },
   {
     "id": "doc-011",
@@ -192,7 +197,8 @@
     ],
     "image": "",
     "prompt": "{ \"animation_style\": \"realistic_fashion_presentation\", \"camera\": { \"fixed\": true, \"no_zoom\": true, \"no_reframe\": true }, \"motion\": { \"type\": \"continuous_natural_flow\", \"speed\": \"natural_slightly_fast\", \"no_pause\": true, \"no_freeze\": true, \"avoid_robotic_timing\": true, \"keep_body_alive\": true }, \"position\": { \"stay_near_same_spot\": true, \"small_natural_steps\": true, \"short_forward_shift\": true, \"short_side_shift\": true, \"no_large_movement\": true }, \"sequence\": { \"start\": \"facing_camera\", \"action_1\": { \"type\": \"active_natural_body_flow\", \"description\": \"O sujeito se move naturalmente o tempo todo com movimentos corporais visíveis, porém controlados, nem lentos, nem rígidos\" }, \"ação_2\": { \"tipo\": \"mão_na_cintura\", \"estilo\": \"relaxado\", \"mão\": \"uma_mão_no_quadril\", \"detalhes\": \"a mão vai naturalmente para a cintura sem forçar a pose\" }, \"ação_3\": { \"tipo\": \"pequeno_deslocamento_lateral\", \"intensidade\": \"médio_leve\", \"detalhes\": \"deslocamento natural perceptível para um lado sem girar o corpo\" }, \"ação_4\": { \"tipo\": \"pequeno_deslocamento_para_frente\", \"intensidade\": \"médio_leve\", \"detalhes\": \"pequeno movimento natural ligeiramente para frente, visível, mas não exagerado\" }, \"ação_5\": { \"tipo\": \"deslocamento_de_peso_no_quadril\", \"estilo\": \"natural_ativo\", \"detalhes\": \"deslocamento natural de quadril e peso com mais energia, sem dançar, sem ritmo repetido\" }, \"action_6\": { \"type\": \"single_shoulder_lift\", \"style\": \"soft_natural_active\", \"details\": \"um ombro se eleva e relaxa naturalmente com um pouco mais de energia\" }, \"fabric\": { \"type\": \"light_touch\", \"area\": ​​\"clothing\", \"no_pull\": true }, \"movement\": { \"type\": \"continuous_natural_adjustments\", \"max_angle\": \"10_degrees\", \"no_turn\": true, \"no_spin\": true, \"no_360\": true } }, \"body\": { \"hip\": \"active_subtle_continuous\", \"weight\": \"always_shifting_naturally\", \"posture\": \"relaxed_confident\", \"no_static\": true,\"no_dance\": true, \"no_stiff_pose\": true }, \"face\": { \"expression\": \"natural\", \"smile\": \"brief_subtle\", \"no_constant\": true }, \"rules\": { \"no_rotation\": true, \"no_360\": true, \"no_spin\": true, \"no_freeze\": true, \"no_exaggeration\": true, \"no_robotic_motion\": true, \"no_slow_motion\": true }, \"final\": \"movimento natural ativo, fluxo corporal ligeiramente mais rápido, pequenos deslocamentos laterais e para frente visíveis, movimento sutil de quadril e ombro, sem rotação, sem dança, sem congelamento\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/Ma%CC%83o%20na%20cintura%20%2B%20movimento%20leve.mp4#t=0.1"
   },
   {
     "id": "doc-015",
@@ -330,7 +336,8 @@
     ],
     "image": "",
     "prompt": "\"Anime a pessoa como uma pessoa REAL apresentando roupas em um vídeo em estilo POV.\\n\\n⸻\\n\\n🔥 INÍCIO DA ANIMAÇÃO (ATUALIZADO):\\n\\n– A pessoa começa a uma distância natural da câmera\\n– Ela dá dois pequenos passos naturais em direção à câmera\\n– Ao se aproximar, ela toca suavemente e segura levemente o detalhe do laço/renda na área do peito\\n– O gesto é delicado, sutil e realista, como se estivesse mostrando um detalhe da roupa naturalmente\\n– Sem ênfase, sem poses, sem exageros\\n– O movimento parece espontâneo e casual\\n– Depois de tocar brevemente o laço, ela o solta naturalmente\\n– Ela dá um pequeno passo para trás, retornando à sua posição original\\n– Transição suave para o restante da animação\\n\\n⸻\\n\\nESTILO GERAL DE MOVIMENTO:\\n\\n– Movimentos naturais, confiantes e fluidos\\n– Sem estática\\n– Sem exageros\\n– Sem robótica\\n– Ritmo humano real\\n\\n⸻\\n\\nCORPO MOVIMENTOS:\\n\\n– Uma mão repousa naturalmente na cintura\\n– Movimento suave do quadril (de um lado para o outro, muito sutil)\\n– Um pé à frente, o outro relaxado atrás\\n– Postura natural, ombros relaxados\\n\\n⸻\\n\\nAPRESENTAÇÃO DA ROUPA:\\n\\n– Movimentos pequenos e naturais para destacar a roupa\\n– Leve rotação do tronco para mostrar o caimento e o tecido\\n– Sem poses agressivas\\n– Sem exageros de passarela\\n– Movimentos espontâneos e casuais\\n\\n⸻\\n\\nEXPRESSÃO FACIAL (MUITO IMPORTANTE – RITMO HUMANO REAL):\\n\\n– O sujeito NÃO sorri continuamente\\n– A expressão facial alterna naturalmente ao longo do vídeo\\n– Ao se aproximar da câmera:\\n • Expressão neutra e relaxada\\n • Lábios levemente fechados\\n • Olhar calmo e confiante\\n– Durante o toque no laço/renda:\\n • Um sorriso breve e sutil aparece\\n • O sorriso é suave e natural, não exagerado\\n • Leve Movimento apenas das bochechas\\n– Após soltar o laço:\\n • Expressão retorna à posição neutra\\n • Rosto relaxado, respiração natural\\n– Mais tarde na animação:\\n • Ela vira a cabeça levemente para um lado\\n • Um sorriso curto e caloroso aparece novamente\\n • O sorriso dura pouco e desaparece naturalmente\\n– Comportamento do sorriso:\\n • Aparece e desaparece naturalmente\\n • Sem sorriso congelado\\n • Sem sorriso constante\\n • Sem tensão facial exagerada\\n\\n⸻\\n\\nPERSONALIDADE:\\n\\n– Simpática\\n– Acessível\\n– Confortável\\n– Parece uma pessoa real gravando um vídeo casualmente\\n\\n⸻\\n\\nCÂMERA E PONTO DE VISTA:\\n\\n– Perspectiva em primeira pessoa, como se o telefone estivesse sendo segurado por uma pessoa\\n– Micromovimentos muito sutis feitos com a câmera na mão\\n– Sem trepidação da câmera\\n– Sem zoom\\n– A câmera permanece na altura do peito/rosto\\n\\n⸻\\n\\nTEMPO:\\n\\n– Os movimentos são Contínuo\\n– Sem congelamentos\\n– Sem poses em loop\\n– Transições suaves entre gestos\\n\\n⸻\\n\\nREGRAS DE REALISMO:\\n\\n– Preservar a identidade facial original\\n– Preservar a textura da pele\\n– Preservar o movimento do cabelo (movimento natural leve)\\n– Física natural do tecido\\n– Sem filtros de beleza\\n– Sem suavização\\n– Sem estilização\\n\\n⸻\\n\\nRESTRIÇÕES:\\n\\n– Sem falas\\n– Sem texto\\n– Sem interface de usuário\\n– Sem efeitos\\n– Sem danças exageradas\\n– Sem clichês de poses de influenciadores\\n\\n⸻\\n\\nRESULTADO FINAL:\\n\\nUm vídeo de moda em primeira pessoa hiper-realista onde o sujeito parece vivo e humano,Com mudanças naturais nas expressões faciais, sorrisos suaves ocasionais, momentos neutros entre eles e movimentos sutis da cabeça — indistinguível de uma gravação telefônica casual real.\"",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/movimentoassimetrico.mp4#t=0.1"
   },
   {
     "id": "doc-025",
@@ -357,7 +364,8 @@
     ],
     "image": "",
     "prompt": "{ \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\", \"resolution\": \"1080p\", \"fps\": 30, \"mode\": \"image-to-video\", \"reference_image\": \"USE THE GENERATED INFLUENCER IMAGE AS STARTING FRAME\" }, \"scene_sequence\": [ { \"part\": \"ADJUST_HAIR_SUBTLE\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento de câmera de smartphone na mão. Uma pessoa ajusta sutilmente o cabelo (por exemplo, colocando uma mecha atrás da orelha ou fazendo um movimento suave). Iluminação natural interna, texturas de pele e cabelo com alto nível de detalhes. Sem movimento da boca. Preservando a identidade da imagem de referência.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement\": \"Movimento delicado da mão próximo ao cabeça, leve elevação do braço, piscadela natural, expressão facial suave. Os movimentos são fluidos e não robóticos.\" } ], \"technical_constraints\": { \"style\": [ \"UGC\", \"Raw\", \"Authentic\", \"Hyper-realistic\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No overlays\", \"No text elements\", \"No buttons\", \"No UI elements\", \"No artificial transitions\", \"No static takes\", \"No antinatural movements\", \"No scene resets\" ], \"requirements\": [ \"Ultra-realism\", \"Natural skin shaders\", \"Physical light interaction\", \"Handheld camera sense\", \"Visual identity must match reference image exactly\", \"Fluid and organic movements\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/arrumandocabelo.mp4#t=0.1"
   },
   {
     "id": "doc-027",
@@ -411,7 +419,8 @@
     ],
     "image": "",
     "prompt": "INÍCIO DA ANIMAÇÃO: A modelo começa em pé, naturalmente, a uma distância confortável da câmera. Ela dá dois pequenos passos naturais em direção à câmera, com postura relaxada, um leve balanço feminino e um ritmo realista. Ao se aproximar, ela toca ou ajusta levemente um detalhe visível da roupa, de forma natural e casual. O movimento deve parecer espontâneo e realista. Sem poses exageradas. Sem comportamento de passarela. Sem ritmo robótico. À medida que se aproxima da câmera, a modelo sorri suavemente e levanta uma das mãos em direção à lente, naturalmente. A mão se move lentamente até cobrir toda a visão da câmera, criando um efeito de transição suave. IMPORTANTE: – O movimento da mão deve parecer calmo e natural. – Sem movimentos agressivos. – Sem movimentos rápidos. – Sem impacto brusco na lente. – Apenas um ritmo suave e realista. Após cobrir brevemente a câmera, a modelo dá um passo natural para trás, retornando a uma distância confortável com um movimento corporal relaxado. Ao retornar para trás, uma das mãos se move gradualmente em direção à cintura, de forma natural. Na posição final, a modelo desloca levemente o quadril e levanta suavemente uma perna para a frente, em um gesto feminino e relaxado. A modelo mantém uma das mãos na cintura e exibe um sorriso natural e caloroso.\\n\\nMOVIMENTOS GERAIS: Movimentos fluidos e naturais. Microajustes corporais contínuos. Ombros relaxados. Balanço suave dos quadris. Ritmo humano real. Sem movimentos rígidos.\\n\\nEXPRESSÃO FACIAL: Expressão neutra e suave na maior parte do tempo. Sorrisos naturais e sutis. Sem sorrisos congelados. Sem tensão facial exagerada.\\n\\nLINGUAGEM CORPORAL: Postura natural. Energia feminina suave. Sem dançar. Sem poses exageradas de influenciadora.\\n\\nCÂMERA: Gravação estável e casual, no estilo celular. Apenas micromovimentos sutis com a câmera na mão. Sem zoom. Sem trepidação da câmera. Enquadramento na altura do peito.\\n\\nREALISMO: Preservar a identidade original. Textura natural da pele. Movimento natural do cabelo. Física natural do tecido. Sem filtros de beleza. Sem suavização. Sem estilização.\\n\\nRESTRIÇÕES: Sem falar. Sem texto. Sem interface do usuário. Sem efeitos. Sem movimentos exagerados. Sem movimentos robóticos.\\n\\nRESULTADO FINAL: Um hiper-realista Vídeo de transição de moda casual onde a modelo caminha naturalmente em direção à câmera, cobre suavemente a lente com uma das mãos para fazer a transição e, em seguida, recua para uma pose final feminina e relaxada.",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/tamparcamera.mp4#t=0.1"
   },
   {
     "id": "doc-031",
@@ -482,7 +491,8 @@
     ],
     "image": "",
     "prompt": "{ \"version\": \"3.1\", \"aspectRatio\": \"9:16\", \"durationSeconds\": 8, \"seed\": 12345, \"subjectRef\": \"usar a imagem transmitida como âncora de identidade, mantendo exatamente as mesmas feições, tom de pele, cor de cabelo, mesma cor, mesma textura, mesmo volume e mesmo comprimento durante TODO o vídeo, sem qualquer alteração em nenhum momento\", \"referenceStyle\": \"realismo cinematográfico natural, interação direta com a câmera estilo gravação em celular\", \"negativePrompt\": \"sem falas, sem áudio vocal, sem movimento labial articulando palavras, sem legendas, sem texto na tela, sem logos, sem marcas d\\'água, sem deformações corporais, sem dedos extras, sem passar de mãos, sem artefatos de IA, sem mudança de cor do cabelo, sem mudança de textura do cabelo, sem mudança de estilo do cabelo, sem alteração de iluminação que modifica a cor do cabelo\", \"segurança\": { \"allowMinorViolence\": false, \"allowNudity\": false }, \"shots\": [ { \"scene\": \"ambiente interno residencial com moldura de madeira e iluminação quente natural\", \"action\": \"ela dá um passo natural para frente, inclina o tronco entre 30 e 40 graus em direção à câmera, mantém contato visual constante com um sorriso cativante e vendedor durante toda a cena. Sem falar absolutamente nada e sem articular palavras com os lábios. Ela levanta a mão direita e posição o dedo indicador referência para baixo (direção inferior) da tela, não para a lente). O gesto é intencional e expressivo, realizando um leve movimento repetido de cima para baixo com o dedo indicador, como uma chamada visual para ação. O sorriso permanece natural, envolvente e confiante do início ao fim. o fundo levemente desfocado\", \"lighting\": \"luz quente lateral suave com leve preenchimento frontal; iluminação estável e constante, sem variação de temperatura de cor ao longo do vídeo\", \"environment\": \"fundo levemente desfocado; movimento natural dos cabelos ao inclinar; leve sensação de profundidade realista sem passar de mãos; manter consistência total de aparência do cabelo do início ao fim\" } ] }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/cta.mp4#t=0.1"
   },
   {
     "id": "doc-036",
@@ -523,7 +533,8 @@
     ],
     "image": "",
     "prompt": "{ \"prompt_name\": \"Ponto Amigável de Chamada para Ação Frontal\", \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\" }, \"scene_sequence\": [ { \"part\": \"CTA_SEQUENCE\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Imagem frontal de conteúdo gerado pelo usuário. Foque no gesto de apontar. Sem espelho. Sem movimento da boca. Vídeo silencioso.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement_timeline\": [ \"0.0-2.0s: O sujeito começa com um sorriso caloroso e genuíno, fazendo contato visual direto. Um aceno sutil de aprovação como se dissesse \\'você vai adorar isso\\'.\", \"2.0-5.0s: Leva suavemente ambas as mãos à altura da cintura e, em seguida, estende os dedos indicadores apontando diretamente para baixo. Realiza 2 leves toques no ar em direção à parte inferior da tela a tela.\", \"5,0-7,0s: Mantém o gesto de apontar enquanto se inclina ligeiramente para a frente, com os olhos brilhantes e convidativos, confirmando a ação.\", \"7,0-8,0s: Relaxa lentamente os braços de volta aos lados, mantém um sorriso confiante e permanece perfeitamente imóvel até o final.\" ] } ], \"technical_constraints\": { \"style\": [ \"UGC\", \"CTA\", \"Frontal\" ], \"prohibitions\": [ \"Sem movimento da boca\", \"Sem diálogo\", \"Sem gestos robóticos\" ], \"requirements\": [ \"Ultra-realismo\", \"Movimento fluido das mãos\", \"Expressão facial envolvente\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/dancinhattk.mp4#t=0.1"
   },
   {
     "id": "doc-039",
@@ -593,7 +604,8 @@
     ],
     "image": "",
     "prompt": "{ \"animation_style\": \"realistic_fashion_presentation\", \"camera\": { \"fixed\": true, \"no_zoom\": true, \"no_reframe\": true }, \"motion\": { \"type\": \"continuous\", \"speed\": \"natural_slightly_fast\", \"no_pause\": true, \"no_freeze\": true }, \"position\": { \"stay_near_same_spot\": true, \"small_natural_steps\": true, \"no_large_movement\": true }, \"sequence\": { \"start\": \"facing_camera\", \"action\": { \"type\": \"natural_flow\", \"description\": \"o sujeito continua se movendo naturalmente o tempo todo\" }, \"fabric\": { \"type\": \"light_touch\", \"area\": ​​\"clothing\", \"no_pull\": true }, \"movement\": { \"type\": \"deslocamento_lateral_pequeno\", \"ângulo_máximo\": \"10_graus\", \"sem_giro\": true, \"sem_rotação\": true, \"sem_360\": true } }, \"corpo\": { \"quadril\": \"sutil_contínuo\", \"peso\": \"sem_mudança_sempre\", \"sem_estático\": true }, \"rosto\": { \"expressão\": \"natural\", \"sorriso\": \"breve_sutil\", \"sem_constante\": true }, \"regras\": { \"sem_rotação\": true, \"sem_360\": true, \"sem_congelamento\": true, \"sem_exagero\": true }, \"final\": \"movimento contínuo natural, sem rotação, sem congelamento\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/movimentonatural.mp4#t=0.1"
   },
   {
     "id": "doc-044",
@@ -662,7 +674,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"O movimento é intencionalmente assimétrico: um quadril ligeiramente para a frente, um ombro relaxado mais baixo. O sujeito altera lentamente a assimetria ao longo do vídeo. A câmera permanece neutra, permitindo que a dinâmica corporal defina o movimento.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/Foco%20no%20look.mp4#t=0.1"
   },
   {
     "id": "doc-049",
@@ -678,7 +691,8 @@
     ],
     "image": "",
     "prompt": "{ \"prompt_name\": \"Frontal_Dance_Shoulder_Bounce\", \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\" }, \"scene_sequence\": [ { \"part\": \"DANCE_SEQUENCE\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Imagem frontal de conteúdo gerado pelo usuário. Movimento rítmico dos ombros. Sem movimento da boca.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement_timeline\": [ \"0.0-4.0s: O sujeito fica parado e move os ombros ritmicamente ao ritmo de uma batida imaginária. Os braços estão relaxados ao lado do corpo.\", \"4.0-8.0s: Adiciona uma leve inclinação da cabeça para cada lado em sincronia com o movimento dos ombros. Mantém uma expressão facial divertida e enérgica.\" ] } ] }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/dancinhattk.mp4#t=0.1"
   },
   {
     "id": "doc-050",
@@ -693,7 +707,8 @@
     ],
     "image": "",
     "prompt": "APERFEIÇOAMENTO DO MOVIMENTO DE GANCHO (CRÍTICO): SEM FALA. SEM NARRAÇÃO. SEM CONVERSAÇÃO. Apenas ações visuais naturais. O sujeito deve manusear a embalagem com total fidelidade ao produto. A embalagem deve permanecer EXATAMENTE idêntica à imagem de referência. IMPORTANTE: – NÃO aperte, dobre, torça, estique, amasse ou deforme a embalagem – NÃO altere o formato, tamanho, cores, rótulos, estampas, logotipo, textura ou detalhes da embalagem – A embalagem deve manter a aparência original durante todo o vídeo – Somente a área/material da abertura pode ser rasgado naturalmente FLUXO DE MOVIMENTO: – A pessoa começa segurando a embalagem naturalmente com as duas mãos – Ela dá UM pequeno passo natural em direção à câmera – Seu corpo inteiro se move para frente junto com a embalagem – Movimento natural do tronco e ombros – Os braços permanecem levemente flexionados – A embalagem permanece próxima ao peito/corpo – Sem extensão exagerada dos braços – Sem movimento elástico dos braços – Sem alongamento antinatural APRESENTAÇÃO DA EMBALAGEM: – Depois de se aproximar, ela posiciona delicadamente a embalagem em frente à câmera – Ela mostra os detalhes da embalagem claramente – A embalagem permanece estável e inalterada – Posicionamento natural das mãos AÇÃO DE RASGAR: – Uma mão segura a embalagem naturalmente – A outra mão segura apenas a área de abertura/lacração – Ela rasga lentamente o material da embalagem de forma realista – O rasgo ocorre apenas no lacre da embalagem – Não deforme a embalagem ao abrir – Sem amassar, dobrar, derreter ou alterar a embalagem – Movimento realista da mão humana POSIÇÃO FINAL: – O objeto termina próximo à câmera – A embalagem preenche a maior parte do quadro – A área aberta está visível – A embalagem ainda parece exatamente como a referência original CÂMERA: – Câmera POV estável de smartphone – Micromovimentos muito sutis feitos à mão – Sem zoom – Sem movimentos cinematográficos – Sem trepidação ANTI-ERROS: – Sem fala – Sem movimento labial – Sem deformação da embalagem – Sem alteração do design da embalagem – Sem substituição da embalagem – Sem dedos extras – Sem mãos distorcidas – Sem movimentos não naturais",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/Woman_walking_with_package_covering_202606081637.mp4#t=0.1"
   },
   {
     "id": "doc-051",
@@ -746,7 +761,8 @@
     ],
     "image": "",
     "prompt": "{ \"prompt_name\": \"Dança_Rítmica_Frontal\", \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\" }, \"scene_sequence\": [ { \"part\": \"SEQUÊNCIA_DE_DANÇA\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Personagem fictício adulto. Plano frontal, na altura dos olhos. Movimentos de dança enérgicos, porém naturais. Sem espelho, sem celular. Pele e tecido fotorrealistas. Sem movimento da boca. Vídeo silencioso.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement_timeline\": [ \"0.0-2.0s: O sujeito começa com um passo rítmico, tocando o chão de um lado para o outro, com os ombros se movendo em sincronia. Sorriso genuíno e alegre. Contato visual direto.\", \"2.0-4.0s: Pequeno e fluido balanço de quadril enquanto levanta as mãos até a altura do peito, estalando os dedos uma vez naturalmente. Cabelo balança com o movimento.\", \"4,0-6,0s: Executa um movimento suave e lento do corpo, começando dos ombros até a cintura, demonstrando a flexibilidade do tecido. O sorriso permanece radiante.\", \"6,0-8,0s: Transiciona de volta para um balanço rítmico simples, terminando com uma piscadela brincalhona e uma pose estável, permanecendo imóvel.\" ] } ], \"technical_constraints\": { \"style\": [ \"UGC\", \"Viral Dance\", \"Frontal\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No robotic posing\", \"No mirror\" ], \"requirements\": [ \"Ultra-realism\", \"Fluid body physics\", \"Natural hair swing\", \"Rhythmic continuity\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://i.imgur.com/32Hrn3g.mp4"
   },
   {
     "id": "doc-055",
@@ -759,7 +775,8 @@
     ],
     "image": "",
     "prompt": "{ \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\", \"resolution\": \"1080p\", \"fps\": 30, \"mode\": \"image-to-video\", \"reference_image\": \"USE THE GENERATED INFLUENCER IMAGE AS STARTING FRAME\" }, \"scene_sequence\": [ { \"part\": \"POSE_HANDS_IN_POCKETS\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento de câmera de smartphone na mão. Uma pessoa está em pé com uma ou ambas as mãos casualmente nos bolsos, transferindo o peso sutilmente, olhando para a câmera com uma expressão relaxada e confiante. Iluminação natural interna, texturas de pele e cabelo com alto nível de detalhes. Sem movimento da boca. Preservando a identidade da imagem de referência.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movimento\": \"Mudanças sutis de peso, postura relaxada dos ombros, piscadas naturais, contato visual confiante. As mãos permanecem nos bolsos, mas os dedos mostram microajustes. Os movimentos são fluidos e não robóticos.\" } ], \"restrições_técnicas\": { \"estilo\": [ \"UGC\", \"Bruto\", \"Autêntico\", \"Hiper-realista\" ], \"proibições\": [ \"Sem movimento da boca\", \"Sem diálogo\", \"Sem sobreposições\", \"Sem elementos de texto\", \"Sem botões\", \"Sem elementos de interface do usuário\", \"Sem transições artificiais\", \"Sem planos estáticos\", \"Sem movimentos não naturais\", \"Sem reinicializações de cena\" ], \"requisitos\": [ \"Ultra-realismo\", \"Shaders de pele naturais\", \"Interação física com a luz\", \"Sensação de câmera na mão\", \"A identidade visual deve corresponder exatamente à imagem de referência\", \"Movimentos fluidos e orgânicos\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/maosnobolso.mp4#t=0.1"
   },
   {
     "id": "doc-056",
@@ -773,7 +790,8 @@
     ],
     "image": "",
     "prompt": "{ \"version\": \"3.1\", \"aspectRatio\": \"9:16\", \"durationSeconds\": 8, \"seed\": 12345, \"subjectRef\": \"usar a imagem transmitida como âncora de identidade, mantendo exatamente as mesmas feições, tom de pele\", \"referenceStyle\": \"realismo cinematográfico natural, apresentação de moda com movimento corporal suave\", \"negativePrompt\": \"sem falas, sem áudio vocal, sem movimento labial, sem texto na tela, sem logotipos, sem marcas d\\'água\", \"safety\": { \"allowMinorViolence\": false, \"allowNudity\": false }, \"shots\": [ { \"scene\": \"ambiente interno residencial com moldura de madeira e iluminação quente natural\", \"action\": \"ela permanece no mesmo lugar e realiza uma rotação completa de 360° de forma lenta, suave e segmentada, mostrando o look de todos os anexos.\", \"câmera\": \"fixa; 50mm; 24 fps; sem movimento da câmera; foco contínuo; profundidade de campo leve\", \"lighting\": \"luz quente lateral suave com preenchimento frontal; iluminação constante sem variação\", \"ambiente\": \"fundo levemente desfocado; movimento natural do cabelo acompanhando o giro; sem distorções\" } ], \"motionControl\": { \"rotation_speed\": \"slow\", \"rotation_style\": \"segmented_smooth_turn\", \"no_fast_spin\": true, \"no_instant_360\": true }, \"rules\": { \"stay_in_same_position\": true, \"no_forward_movement\": true, \"no_backward_movement\": true, \"no_fast_rotation\": verdadeiro, \"must_be_slow_turn\": verdadeiro, \"preserve_identity\": verdadeiro } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/giro%20lento%20360%20controlado.mp4#t=0.1"
   },
   {
     "id": "doc-057",
@@ -800,7 +818,8 @@
     ],
     "image": "",
     "prompt": "Use exatamente o mesmo avatar da imagem de referência, sem alterar rosto, cabelo, roupa, cenário ou enquadramento. O personagem passa a mão no cabelo de forma natural. Em seguida, ela segura o puxador do zíper exatamente na posição em que ele aparece na imagem e o desliza suavemente para cima em um único movimento contínuo fechar até completamente a blusa. O movimento termina no instante em que o zíper chega ao topo. Após isso, ela solta imediatamente o puxador e mantém as mãos relaxadas. O cursor do zíper permanece totalmente fechado no topo e não se move novamente. Não puxe o zíper para baixo, não faça correção de movimento, não repuxe, não volte o cursor nem crie qualquer animação de retorno. O movimento deve acontecer apenas uma vez, do ponto inicial até o topo, finalizando de forma estável e natural.",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/cta.mp4#t=0.1"
   },
   {
     "id": "doc-059",
@@ -814,7 +833,8 @@
     ],
     "image": "",
     "prompt": "{ \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\", \"resolution\": \"1080p\", \"fps\": 30, \"mode\": \"image-to-video\", \"reference_image\": \"USE THE GENERATED INFLUENCER IMAGE AS STARTING FRAME\" }, \"scene_sequence\": [ { \"part\": \"POSE_SLOW_TURN_GAZE\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento de câmera de smartphone na mão. Uma pessoa realiza uma meia volta lenta e graciosa, olhando por cima do ombro para a câmera com um olhar confiante e convidativo. Iluminação natural interna, texturas de pele e cabelo com alto nível de detalhes. Sem movimento da boca. Postura autêntica e natural. Preservando a identidade da imagem de referência.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movimento\": \"Rotação suave do torso, posicionamento natural dos braços, sutil transferência de peso, rotação lenta da cabeça, contato visual direto, piscadas naturais. Os movimentos são fluidos e não robóticos.\" } ], \"restrições_técnicas\": { \"estilo\": [ \"UGC\", \"Bruto\", \"Autêntico\", \"Hiper-realista\" ], \"proibições\": [ \"Sem movimento da boca\", \"Sem diálogo\", \"Sem sobreposições\", \"Sem elementos de texto\", \"Sem botões\", \"Sem elementos de interface do usuário\", \"Sem transições artificiais\", \"Sem planos estáticos\", \"Sem movimentos não naturais\", \"Sem reinicializações de cena\" ], \"requisitos\": [ \"Ultra-realismo\", \"Shaders de pele naturais\", \"Interação física com a luz\", \"Sensação de câmera na mão\", \"A identidade visual deve corresponder exatamente à imagem de referência\", \"Movimentos fluidos e orgânicos\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/girolentoeolhar.mp4#t=0.1"
   },
   {
     "id": "doc-060",
@@ -841,7 +861,8 @@
     ],
     "image": "",
     "prompt": "{ \"part\": \"MIRROR_SELFIE_POSE_4\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento da câmera de um smartphone na mão, capturando uma pessoa tirando uma selfie no espelho. A pessoa toca suavemente o tecido de sua roupa, destacando sua textura e detalhes no reflexo do espelho. Iluminação natural interna, texturas de pele e cabelo com alto nível de detalhes. Pele fotorrealista com textura sutil, poros naturais, reflexos suaves e sombras realistas. Movimento natural do cabelo com detalhes finos dos fios e física crível. Comportamento preciso do tecido e materiais do produto com reflexos e peso corretos. Imagem limpa e nítida com cor natural, contraste equilibrado e profundidade de campo realista. Sem processamento excessivo, sem efeitos cinematográficos artificiais. Sem movimento da boca, sem diálogo, sem música. Postura autêntica e natural.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement\": \"Gesto delicado da mão tocando e sentindo o tecido, movimentos sutis dos dedos para mostrar a textura. Mão segurando o telefone de forma estável. Natural piscadelas e uma expressão focada e apreciativa ao se refletir. Evite planos estáticos, mas mantenha tudo suave e coerente. Sem movimentos robóticos ou rígidos.\", \"technical_constraints\": { \"style\": [ \"UGC\", \"Raw\", \"Authentic\", \"Hyper-realistic\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No music\", \"No overlays\", \"No artificial elements\", \"No robotic movements\", \"No rigid movements\", \"No exaggerated gestures\" ], \"requirements\": [ \"Ultra-realism\", \"Natural skin shaders\", \"Fluid movements\", \"Authentic expressions\", \"Handheld camera feel\", \"Mirror reflection realism\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/espelhotextura.mp4#t=0.1"
   },
   {
     "id": "doc-062",
@@ -855,7 +876,8 @@
     ],
     "image": "",
     "prompt": "{ \"prompt_name\": \"Frontal_CTA_High_Energy\", \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\" }, \"scene_sequence\": [ { \"part\": \"CTA_SEQUENCE\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Imagem frontal de conteúdo gerado pelo usuário. Movimento de alta energia. Sem espelho. Sem movimento da boca.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement_timeline\": [ \"0.0-2.0s: O sujeito entra em cena com um pequeno pulo entusiasmado, sorrindo amplamente. Alta energia, mas natural.\", \"2.0-4.0s: Aponta rapidamente para baixo com uma mão enquanto a outra permanece no quadril. Faz um movimento brincalhão de \\'sacudir\\' com o dedo indicador para chamar a atenção.\", \"4.0-6.0s: Troca de mãos e aponta abaixo com a outra, mantendo uma expressão divertida e enérgica. Pequeno movimento rítmico do ombro.\", \"6,0-8,0s: Pose final apontando para baixo com as duas mãos, grande sorriso, permanecendo imóvel e firme.\" ] } ] }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://i.imgur.com/4UkK3Es.mp4"
   },
   {
     "id": "doc-063",
@@ -868,7 +890,8 @@
     ],
     "image": "",
     "prompt": "{ \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\", \"resolution\": \"1080p\", \"fps\": 30, \"mode\": \"image-to-video\", \"reference_image\": \"USE THE GENERATED INFLUENCER IMAGE AS STARTING FRAME\" }, \"scene_sequence\": [ { \"part\": \"PRODUCT_ONLY_SLOW_PAN_ZOOM\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Close-up macro do produto sozinho, sem pessoas ou mãos visíveis. Panorâmica cinematográfica lenta pela superfície do produto, com um zoom sutil e suave para destacar a textura e os detalhes. Iluminação interna natural, texturas do produto com alto nível de detalhes. Sem movimento da boca. Preservando a identidade do produto da imagem de referência.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement\": \"Movimentos de câmera suaves, zoom sutil, foco seletivo nos detalhes do produto. Os movimentos são fluidos e não robóticos.\" } ], \"technical_constraints\": { \"style\": [ \"UGC\", \"Raw\", \"Authentic\", \"Hyper-realistic\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No overlays\", \"No text elements\", \"No buttons\", \"No UI elements\", \"No artificial transitions\", \"No static takes\", \"No antinatural movements\", \"No scene resets\", \"No people\", \"No hands\" ], \"requirements\": [ \"Ultra-realism\", \"Natural product textures\", \"Physical light interaction\", \"Handheld camera sense (simulated)\", \"Visual identity must match reference image exactly\", \"Fluid and organic movements\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://i.imgur.com/cSSrDfw.mp4"
   },
   {
     "id": "doc-065",
@@ -937,7 +960,8 @@
     ],
     "image": "",
     "prompt": "\"Anime a pessoa como uma pessoa REAL apresentando roupas em um vídeo em estilo POV (ponto de vista).\\n⸻\\nINÍCIO DA ANIMAÇÃO:\\n– A pessoa começa a uma distância natural da câmera\\n– Ela dá dois pequenos passos naturais em direção à câmera\\n– Ao se aproximar, ela toca suavemente e segura levemente o detalhe do laço/renda na área do peito\\n– O gesto é delicado, sutil e realista, como se estivesse mostrando um detalhe da roupa naturalmente\\n– Sem ênfase, sem poses, sem exageros\\n– O movimento parece espontâneo e casual\\n– Após tocar brevemente o laço, ela o solta naturalmente\\n– Ela dá um pequeno passo para trás, retornando à sua posição original\\n– Transição suave para o restante da animação\\n⸻\\nESTILO GERAL DE MOVIMENTO:\\n– Movimentos naturais, confiantes e fluidos\\n– Sem estática – Sem exageros – Sem robótica – Ritmo humano real\\n⸻\\nEXPRESSÃO FACIAL:\\n– A pessoa NÃO sorri continuamente\\n– Ao se aproximar da câmera: Expressão neutra e relaxada, lábios Fechamento suave\\n– Durante o toque do laço/cadarço: Um sorriso breve e sutil aparece, suave e natural\\n– Após soltar o laço: A expressão retorna ao normal\\n– Mais tarde: Ela vira levemente a cabeça para um lado, um sorriso curto e caloroso aparece e desaparece\\n⸻\\nCÂMERA E PONTO DE VISTA:\\n– Perspectiva em primeira pessoa, como se o telefone estivesse sendo segurado por uma pessoa\\n– Micromovimentos muito sutis feitos com a câmera na mão – Sem trepidação da câmera – Sem zoom\\n⸻\\nREGRAS DE REALISMO:\\n– Preservar a identidade facial original – Preservar a textura da pele – Física natural do tecido\\n– Sem filtros de beleza – Sem suavização – Sem estilização\\n⸻\\nRESTRIÇÕES:\\n– Sem falar – Sem texto – Sem interface do usuário – Sem efeitos – Sem dança exagerada\\n⸻\\nRESULTADO FINAL:\\nUm vídeo de moda em primeira pessoa hiper-realista onde a pessoa parece viva e humana, com mudanças naturais de expressão facial, sorrisos suaves ocasionais e momentos neutros entre eles — indistinguível de uma gravação casual feita com um telefone.",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/alturaalta.mp4#t=0.1"
   },
   {
     "id": "doc-070",
@@ -950,7 +974,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"O enquadramento favorece sutilmente a cintura e os quadris ao longo do tempo. O sujeito muda de posição suavemente. O tecido reage de forma realista ao movimento do corpo.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/alturacintura.mp4#t=0.1"
   },
   {
     "id": "doc-071",
@@ -990,7 +1015,8 @@
     ],
     "image": "",
     "prompt": "\\# 🎬 PROMPT DE MOVIMENTO — 6s \\| UGC ULTRA-REALISTA \\| 4K \\| 9:16 \\| SEM FALA \\| SEM TEXTO A mulher permanece sentada naturalmente na cadeira gamer, mantendo exatamente a mesma identidade, penteado, roupas, proporções corporais e feições faciais da imagem de referência. Ela sorri com genuína animação, como alguém que acabou de receber um pacote que estava ansiosamente esperando. Sua expressão evolui naturalmente ao longo da sequência, mostrando curiosidade, felicidade e satisfação sem exageros. Sua boca permanece completamente fechada durante todo o vídeo. Sem fala, sem sincronização labial, sem articulação da boca. Ela segura exatamente o mesmo pacote transparente com fecho zip mostrado na imagem de referência. O pacote deve preservar sua aparência original ao longo do vídeo, incluindo a mesma transparência, reflexos, dobras, proporções e material. **A peça de roupa dentro do pacote deve ser EXATAMENTE a mesma da imagem de referência. Nunca",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://files.catbox.moe/aolllm.mp4#t=0.1"
   },
   {
     "id": "doc-074",
@@ -1016,7 +1042,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"Estabilização de câmera muito leve, estilo câmera na mão. Leve deriva natural. O sujeito mantém uma postura relaxada com pequenas inclinações da cabeça e movimentos suaves dos ombros. Os acessórios se movem naturalmente com a gravidade. Sensação de gravação casual e descontraída.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://files.catbox.moe/8d6z2n.mp4#t=0.1"
   },
   {
     "id": "doc-076",
@@ -1086,7 +1113,8 @@
     ],
     "image": "",
     "prompt": "{ \"part\": \"MIRROR_SELFIE_POSE_2\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento de câmera de smartphone na mão, capturando uma pessoa tirando uma selfie no espelho. A pessoa se inclina levemente contra uma parede, posando casualmente com uma mão no quadril e a outra segurando o telefone, exibindo a roupa no espelho. Iluminação interna natural, texturas de pele e cabelo com alto nível de detalhes. Pele fotorrealista com textura sutil, poros naturais, reflexos suaves e sombras realistas. Movimento natural do cabelo com detalhes finos dos fios e física crível. Comportamento preciso do tecido e materiais do produto com reflexos e peso corretos. Imagem limpa e nítida com cor natural, contraste equilibrado e profundidade de campo realista. Sem processamento excessivo, sem efeitos cinematográficos artificiais. Sem movimento da boca, sem diálogo, sem música. Postura autêntica e natural.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement\": \"Leve inclinação contra a parede, sutil mudança de peso, Postura relaxada, gesto suave com a mão no quadril, mão firme segurando o celular. Piscar de olhos natural e um olhar confiante e suave para o reflexo. Evite fotos estáticas, mas mantenha tudo fluido e coerente. Sem movimentos robóticos ou rígidos.\", \"technical_constraints\": { \"style\": [ \"UGC\", \"Raw\", \"Authentic\", \"Hyper-realistic\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No music\", \"No overlays\", \"No artificial elements\", \"No robotic movements\", \"No rigid movements\", \"No exaggerated gestures\" ], \"requirements\": [ \"Ultra-realism\", \"Natural skin shaders\", \"Fluid movements\", \"Authentic expressions\", \"Handheld camera feel\", \"Mirror reflection realism\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/espelhorelax.mp4#t=0.1"
   },
   {
     "id": "doc-081",
@@ -1099,7 +1127,8 @@
     ],
     "image": "",
     "prompt": "{ \"part\": \"MIRROR_SELFIE_POSE_5\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Estilo UGC ultrarrealista. Movimento da câmera de um smartphone na mão, capturando uma pessoa tirando uma selfie no espelho. A pessoa realiza uma pose sutil e confiante, transferindo o peso e fazendo contato visual com seu reflexo, transmitindo satisfação com a roupa. Iluminação natural interna, texturas de pele e cabelo com alto nível de detalhes. Pele fotorrealista com textura sutil, poros naturais, destaques suaves e sombras realistas. Movimento natural do cabelo com detalhes finos dos fios e física crível. Comportamento preciso do tecido e materiais do produto com reflexos e peso corretos. Imagem limpa e nítida com cor natural, contraste equilibrado e profundidade de campo realista. Sem processamento excessivo, sem efeitos cinematográficos artificiais. Sem movimento da boca, sem diálogo, sem música. Postura autêntica e natural.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement\": \"Transferência de peso confiante, postura relaxada, leve inclinação da cabeça e um sorriso suave e genuíno.\" na reflexão. As mãos permanecem estáveis ​​segurando o telefone. Piscar natural e uma expressão relaxada e envolvente. Evite fotos estáticas, mas mantenha tudo suave e coerente. Sem movimentos robóticos ou rígidos.\", \"technical_constraints\": { \"style\": [ \"UGC\", \"Raw\", \"Authentic\", \"Hyper-realistic\" ], \"prohibitions\": [ \"No mouth movement\", \"No dialogue\", \"No music\", \"No overlays\", \"No artificial elements\", \"No robotic movements\", \"No rigid movements\", \"No exaggerated gestures\" ], \"requirements\": [ \"Ultra-realism\", \"Natural skin shaders\", \"Fluid movements\", \"Authentic expressions\", \"Handheld camera feel\", \"Mirror reflection realism\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/espelhoconfianca.mp4#t=0.1"
   },
   {
     "id": "doc-082",
@@ -1170,7 +1199,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"A câmera permanece praticamente estática enquanto o sujeito realiza movimentos corporais naturais. Pequenos ajustes de postura, braços relaxados, movimentos sutis das mãos perto da cintura. Piscar de olhos realista e microexpressões faciais. Tudo suave e orgânico.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/estaticacorporal.mp4#t=0.1"
   },
   {
     "id": "doc-087",
@@ -1210,7 +1240,8 @@
     ],
     "image": "",
     "prompt": "\"Um vídeo cinematográfico ultrarrealista de 6 segundos com transições suaves feitas com a câmera na mão e movimento natural de paralaxe.\\n\\nUse a imagem anexada como referência visual para a estrutura facial, tom de pele, penteado e aparência geral da mulher. Mantenha uma forte consistência visual, preservando o realismo natural.\\n\\n[0,00–2,00 s] Plano médio fechado feito com a câmera na mão em um ambiente natural de quarto. A mulher olha para a câmera com foco relaxado enquanto segura uma pequena quantidade de pomada na ponta dos dedos. A textura natural da pele é claramente visível: olheiras, pequenas imperfeições, poros visíveis, marcas leves de acne, linhas de expressão sutis, leve vermelhidão e irregularidades realistas na pele. Sem maquiagem perfeita. A luz suave do dia vinda de uma janela próxima cria sombras suaves e tons neutros. Micromovimentos controlados com a câmera na mão e piscadas naturais. Sem diálogos. Som ambiente sutil.\\n\\n[2,00–4,00 s] Movimento lento e orgânico da câmera na mão enquanto ela aplica suavemente a pomada em uma das bochechas usando movimentos circulares naturais. A textura do produto aparece.\" Ligeiramente brilhante e espessa, espalhando-se de forma realista pela pele. As imperfeições da pele permanecem visíveis e não desfocadas. Microexpressões faciais e ligeiros movimentos musculares ao redor dos olhos e da boca. Luz natural constante e pouca profundidade de campo. [4,00–6,00 s] A câmera na mão aproxima-se subitamente, mantendo um movimento natural. Ela massageia suavemente a pomada na pele, mostrando uma absorção realista e um ligeiro brilho. A textura sob os olhos, as linhas finas, os poros e os detalhes naturais da pele permanecem claramente visíveis. Ela mantém um contato visual calmo e neutro, com respiração relaxada. Os sons ambientes da sala diminuem suavemente. Características visuais e atmosfera: Filmado com uma lente prime equivalente a 50 mm. Detalhes da pele ultrarrealistas com poros visíveis, variação de textura, olheiras, linhas finas e imperfeições naturais. Sem suavização da pele. Sem filtro de beleza. Sem brilho artificial. Iluminação equilibrada com luz natural e gradação de cores neutras e suaves. Pouca profundidade de campo enfatizando a textura real da pele. Movimento orgânico da câmera na mão, imitando filmagens autênticas de rotina de cuidados com a pele. Sem estilização, sem\\... Processamento excessivo, sem efeito de pele plástica.\"",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://i.imgur.com/ef19i1w.mp4"
   },
   {
     "id": "doc-090",
@@ -1298,7 +1329,8 @@
     ],
     "image": "",
     "prompt": "Use a imagem de referência original como referência exata de identidade. Preserve o mesmo rosto, penteado, tom de pele, proporções corporais, roupas, iluminação e fundo. O vídeo deve parecer um vídeo UGC real do TikTok gravado naturalmente com um smartphone. Formato vertical 9:16. Sem efeitos cinematográficos. Sem câmera lenta. Velocidade humana real. Apenas movimentos corporais naturais. CENA 0,0–1,5s Ela imediatamente olha para a camisa que está vestindo com uma expressão sutil de decepção, como se realmente não gostasse dela. Ela aponta diretamente para a camisa com o dedo indicador. Imediatamente depois, levanta o mesmo dedo indicador em frente ao peito e faz um gesto natural de \"não\", movendo apenas o dedo indicador levantado suavemente da esquerda para a direita várias vezes, enquanto balança levemente a cabeça de um lado para o outro. O gesto com o dedo deve ser óbvio e sincronizado com o movimento da cabeça, comunicando claramente \"Não, eu não gosto desta camisa\". Ela alterna o olhar naturalmente entre a camisa e a câmera, mantendo um estilo UGC convincente. De 1,5 a 2,5 segundos, sem cortes, ela dá um passo natural em direção à câmera. Ao se aproximar, ela estende com confiança a mão aberta em direção à lente. O movimento deve ser fluido e executado em velocidade humana normal, exatamente como um criador de conteúdo do TikTok faz uma transição. 2,5–3,0s A palma da mão aberta cobre completamente a lente da câmera, preenchendo naturalmente todo o quadro. A mão toca a lente de forma realista, como se estivesse criando uma transição intencionalmente. 3,0–4,0s Ela afasta suavemente a mão da lente, dando um pequeno passo natural para trás. Ela retorna à sua posição original, olhando diretamente para a câmera com um sorriso suave de lábios fechados e postura relaxada, preparando-se naturalmente para a próxima cena ou troca de roupa. Requisitos: - O gesto de \"não\" deve ser feito com o dedo indicador levantado, movendo-o claramente para a esquerda e para a direita. - Sincronize o gesto do dedo com um leve movimento de cabeça. - Aponte para a camisa antes de fazer o gesto de \"não\" com o dedo. - Velocidade humana normal. - Sem câmera lenta. - Sem movimentos robóticos. - Expressões faciais naturais. - Piscar de olhos natural. - Respiração realista. - Mudanças sutis no peso corporal. - Um único plano-sequência. - Sem cortes. - Sem transições. - Sem trepidação da câmera além de micromovimentos sutis e naturais causados ​​pela câmera na mão. - A mão deve cobrir completamente a lente da câmera antes de se afastar. Ela não deve dizer absolutamente nada!",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://files.catbox.moe/1kvpg2.mp4#t=0.1"
   },
   {
     "id": "doc-096",
@@ -1312,7 +1344,8 @@
     ],
     "image": "",
     "prompt": "\"Anime a personagem como uma pessoa REAL apresentando roupas em um vídeo em primeira pessoa. A personagem permanece na mesma posição e começa a se mover imediatamente. Desde o início, ela move o cabelo e o corpo AO MESMO TEMPO. Ela leva uma das mãos ao cabelo e passa os dedos pelos fios de forma rápida e natural, depois o joga levemente para trás. Enquanto toca o cabelo, seu corpo se move continuamente: ela transfere o peso entre as pernas, move os quadris levemente de um lado para o outro, mantém um ritmo natural no tronco e faz pequenos ajustes naturais de postura. Seu corpo NÃO DEVE parar enquanto toca o cabelo. O movimento do cabelo e o movimento do corpo acontecem juntos como uma ação contínua. O movimento deve parecer vivo, fluido e humano, nunca pausado, nunca separado, nunca robótico. Sua expressão começa neutra, então um sorriso suave e natural aparece brevemente durante o movimento e desaparece. Depois de terminar o movimento do cabelo, ela continua com movimentos corporais sutis e naturais, sem congelar. A velocidade do movimento é natural e ligeiramente rápida, sem câmera lenta e sem exageros. A câmera permanece estável, sem zoom, sem movimentos bruscos. Preserve a identidade, a física natural do cabelo, o comportamento natural do tecido, sem estilização. O resultado final deve parecer uma animação.\" Uma pessoa real movendo casualmente o cabelo enquanto desloca o corpo de forma natural, totalmente sincronizada e realista.\"",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/movimentonatural.mp4#t=0.1"
   },
   {
     "id": "doc-097",
@@ -1339,7 +1372,8 @@
     ],
     "image": "",
     "prompt": "{ \"version\": \"3.1\", \"aspectRatio\": \"9:16\", \"durationSeconds\": 8, \"seed\": 12345, \"subjectRef\": \"usar a imagem transmitida como âncora de identidade, mantendo exatamente as mesmas feições, tom de pele\", \"referenceStyle\": \"realismo cinematográfico natural, apresentação de moda com movimento corporal suave\", \"negativePrompt\": \"sem falas, sem áudio vocal, sem movimento labial, sem texto na tela, sem logotipos, sem marcas d\\'água\", \"safety\": { \"allowMinorViolence\": false, \"allowNudity\": false }, \"shots\": [ { \"scene\": \"ambiente interno residencial com moldura de madeira e iluminação quente natural\", \"action\": \"ela permanece no mesmo lugar e inicia uma rotação corporal lenta e natural.\", \"câmera\": \"fixa; 50mm; 24 fps; sem movimento da câmera; foco contínuo; profundidade de campo leve\", \"lighting\": \"luz quente lateral suave com preenchimento frontal; iluminação constante sem variação\", \"ambiente\": \"fundo levemente desfocado; movimento natural do cabelo acompanhando o giro; sem distorções\" } ], \"motionControl\": { \"rotation_speed\": \"slow\", \"rotation_style\": \"segmented_smooth_turn\", \"no_fast_spin\": true, \"no_instant_360\": true }, \"rules\": { \"stay_in_same_position\": true, \"no_forward_movement\": true, \"no_backward_movement\": true, \"no_fast_rotation\": verdadeiro, \"must_be_slow_turn\": verdadeiro, \"preserve_identity\": verdadeiro } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/Giro%20lento%20no%20look.mp4#t=0.1"
   },
   {
     "id": "doc-099",
@@ -1352,7 +1386,8 @@
     ],
     "image": "",
     "prompt": "INÍCIO DA ANIMAÇÃO: A modelo começa em pé, naturalmente, a uma distância confortável da câmera. Ela dá dois pequenos passos naturais em direção à câmera, com postura relaxada, um leve balanço feminino do corpo e um ritmo realista. Ao se aproximar, ela toca ou ajusta levemente um detalhe visível da roupa, de forma natural e casual. O movimento deve parecer espontâneo e realista. Conforme se aproxima da câmera, a modelo sorri suavemente e levanta uma das mãos em direção à lente. A mão se move lentamente até cobrir toda a visão da câmera, criando um efeito de transição suave. Após cobrir a câmera brevemente, a modelo dá um passo para trás, naturalmente, até uma distância confortável, com movimentos corporais relaxados. Ao retornar para trás, uma das mãos se move gradualmente para a cintura, de forma natural. Na posição final, a modelo desloca levemente o quadril, levanta suavemente uma perna para a frente em uma pose feminina e relaxada, mantém uma das mãos na cintura e dá um sorriso natural e caloroso. MOVIMENTO GERAL: Movimento fluido e natural. Microajustes corporais contínuos. Ombros relaxados. Leve balanço do quadril. Ritmo humano real. Sem movimentos rígidos. CÂMERA: Gravação estável, casual, no estilo celular. Movimentos sutis e discretos, feitos à mão livre. Sem zoom. Sem trepidação da câmera. Enquadramento na altura do peito. REALISMO: Preservar a identidade original. Textura natural da pele. Movimento natural do cabelo. Física natural do tecido. Sem filtros de beleza. Sem suavização. Sem estilização. RESULTADO FINAL: Um vídeo de transição de moda casual hiper-realista, onde a modelo caminha naturalmente em direção à câmera, cobre suavemente a lente com uma das mãos para a transição e, em seguida, recua para uma pose final feminina e relaxada.",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/tamparcamera.mp4#t=0.1"
   },
   {
     "id": "doc-100",
@@ -1480,7 +1515,8 @@
     ],
     "image": "",
     "prompt": "Crie um vídeo vertical ultrarrealista de 9:16 para o TikTok, usando a identidade exata da imagem de referência. Preserve o rosto, o penteado, as proporções do corpo, o tom de pele, as roupas, os acessórios, a iluminação e o fundo com precisão. Não modifique nenhum elemento da roupa. O vídeo deve parecer que foi gravado naturalmente por uma influenciadora real usando um smartphone. Sem estilo cinematográfico. Sem câmera lenta. Sem poses exageradas. Velocidade humana normal. Movimento contínuo do início ao fim. Sem pausas. Sem transições. Sem transformações. Sem cortes de câmera. Sequência de movimentos: • O vídeo começa com uma das mãos extremamente próxima da câmera, cobrindo completamente a lente para um efeito natural. • Ela afasta suavemente a mão da lente, mantendo contato visual suave e um sorriso discreto com os lábios fechados. • Ela ajusta naturalmente a postura com um leve balanço do corpo. • Ela afasta delicadamente algumas mechas de cabelo do rosto com uma das mãos. • Ela inclina levemente a cabeça enquanto sorri naturalmente. • Ela toca levemente a região do ombro da blusa, como se estivesse ajustando o tecido. • Ela desliza suavemente a mão pela frente da camisa, seguindo o logotipo e o tecido de forma natural. • Ela transfere sutilmente o peso de uma perna para a outra ao longo do vídeo. • Ela gira o corpo suavemente de 20 a 30 graus para um lado, mantendo os ombros relaxados. • Durante o giro, ela olha rapidamente para a camisa antes de voltar a olhar para a câmera. • Ela segura levemente a barra da camisa com as duas mãos e a estica delicadamente para fora uma vez para demonstrar o caimento. • Ela solta o tecido naturalmente, sem estalar. • Ela alisa a parte inferior da blusa com as duas mãos. • Ela faz um leve balanço corporal, mantendo a postura relaxada. • Ela faz microexpressões faciais naturais, incluindo piscadelas suaves, um leve movimento das sobrancelhas e uma expressão amigável. • Ela brinca levemente com uma mecha do cabelo, deixando-o cair naturalmente para trás. • Ela toca delicadamente a alça do ombro com uma das mãos, como se estivesse ajustando. • Ela dá um pequeno passo natural para frente. • Ela se inclina levemente em direção à câmera, mantendo contato visual. • Ela aponta diretamente para a câmera com um dedo, em um estilo divertido e amigável, típico do TikTok. • Ela finaliza com um sorriso caloroso de lábios fechados, permanecendo bem perto da câmera. Requisitos de comportamento natural: • Respiração realista. • Frequência natural de piscadas. • Pequenos movimentos dos ombros. Não quero música de fundo! Nem mesmo a voz dela ao fundo!",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://files.catbox.moe/cxz32z.mp4#t=0.1"
   },
   {
     "id": "doc-109",
@@ -1523,7 +1559,8 @@
     ],
     "image": "",
     "prompt": "Movimentos exatos em sequência de 10 segundos, filmagem estilo TikTok segurando celular: 0-1s: close rosto, sorriso leve, inclina cabeça direita, piscada lenta, gesto rápido com mão direita. 1-2s: zoom out, sorriso largo, joga cabelo para trás com mão direita. 2-3s: mão na cintura, balanço leve de quadril, sorriso confiante. 3-4s: olha para ⁠​‌‌​​‌​‌​​‌‌​​​​​‌‌​‌‌‌​‌‌​​‌‌​​​‌ ‌​​​​​​‌‌​​​​​‌‌​​‌​‌​‌‌​​‌‌​⁠baixo, ajusta peça com duas mãos na barra. 4-5s: volta olhar para câmera, passa mão no cabelo, mão na cintura. 5-6s: duas mãos ajustando laterais da peça na cintura, balanço corpo. 6-7s: olha para baixo, ajusta barra novamente. 7-8s: vira completamente de costas, fica 1s. 8-9s: vira de frente, ajusta peça. 9-10s: meche no cabelo e manda beijo",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://files.catbox.moe/48yur8.mp4#t=0.1"
   },
   {
     "id": "doc-112",
@@ -1621,7 +1658,8 @@
     ],
     "image": "",
     "prompt": "{ \"prompt_name\": \"Revelação_Frontal_Admiração\", \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\", \"resolution\": \"1080p\", \"fps\": 30 }, \"scene_sequence\": [ { \"part\": \"SEQUÊNCIA_COMPLETA_8S\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Personagem fictício adulto (imagem de referência fornecida). Plano frontal, câmera na altura dos olhos. Enquadramento do torso até o meio da coxa. Pele fotorrealista, física de cabelo natural, comportamento preciso do tecido. Sem espelho, sem telefone na mão. Sem movimento da boca. Vídeo silencioso.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement_timeline\": [ \"0.0-1.0s: O sujeito entra no quadro pela lateral, centralizando-se em frente à câmera. Postura relaxada, ombros soltos, levemente Sorriso. Contato visual direto com a lente.\", \"1,0-3,0s: O(a) modelo segura um produto dobrado na altura do peito e, em seguida, abaixa-o lentamente para revelar a roupa que está vestindo. Movimento suave e fluido dos braços.\", \"3,0-5,0s: O(a) modelo alisa suavemente o tecido da peça principal com uma das mãos. Realiza uma sutil e rítmica transferência de peso de um pé para o outro.\", \"5,0-7,0s: O(a) modelo gira levemente o tronco para um lado e, em seguida, volta ao centro, em uma pose pequena e confiante para destacar a silhueta.\", \"7,0-8,0s: Final: pose estável, braços relaxados, sorriso genuíno, contato visual direto, permanece imóvel até o final.\" ] } ], \"restrições_técnicas\": { \"estilo\": [ \"UGC\", \"Frontal\", \"Comercial\", \"Moda\" ], \"proibições\": [ \"Sem movimento da boca\", \"Sem diálogo\", \"Sem espelho\", \"Sem telefone na mão\", \"Sem movimentos robóticos\" ], \"requisitos\": [ \"Ultrarrealismo\", \"Textura de pele natural\", \"Tremor sutil da câmera na mão\", \"Peso preciso do tecido\" ] } }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://i.imgur.com/HHpJzw9.mp4"
   },
   {
     "id": "doc-119",
@@ -1661,7 +1699,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"A câmera reenquadra sutilmente para cima ao longo do tempo, aumentando o foco na parte superior do corpo. O sujeito realiza pequenos movimentos de cabeça, suaves deslocamentos de ombros e piscadas naturais. Postura calma e confiante.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/detalhesacessorios.mp4#t=0.1"
   },
   {
     "id": "doc-122",
@@ -1674,7 +1713,8 @@
     ],
     "image": "",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"Movimento dos acessórios enfatizado pela gravidade e inércia. A corrente e a bolsa balançam levemente conforme o sujeito muda de postura. A câmera permanece estável.\" }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/detalhesacessorios.mp4#t=0.1"
   },
   {
     "id": "doc-123",
@@ -1688,7 +1728,8 @@
     ],
     "image": "",
     "prompt": "{ \"prompt_name\": \"Frontal_CTA_Rítmico\", \"video_generation_config\": { \"duration_seconds\": 8, \"aspect_ratio\": \"9:16\" }, \"scene_sequence\": [ { \"part\": \"CTA_SEQUENCE\", \"duration\": \"0.0-8.0s\", \"visual_prompt\": \"Plano UGC frontal. Movimento rítmico terminando em CTA. Sem espelho.\", \"audio_instructions\": \"Sem áudio. Vídeo silencioso.\", \"movement_timeline\": [ \"0.0-3.0s: O sujeito realiza uma simples dança lateral com toques, movendo os ombros e sorrindo.\", \"3.0-6.0s: No ritmo, para a dança e imediatamente aponta para baixo com as duas mãos em um movimento sincronizado.\", \"6.0-8.0s: Mantém o gesto de apontar enquanto faz um pequeno balanço de quadril brincalhão, terminando em um pose estável e sorridente.\" ] } ] }",
-    "referencia": false
+    "referencia": false,
+    "videoUrl": "https://i.imgur.com/1CixWG7.mp4"
   },
   {
     "id": "doc-124",
