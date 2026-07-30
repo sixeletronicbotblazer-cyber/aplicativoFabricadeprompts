@@ -1835,5 +1835,105 @@
     "explanation": "Versão enxuta para modelos que se confundem com instruções longas. Ideal quando você já carregou as duas imagens como referência e só precisa de uma instrução direta sobre o que fazer com cada uma.\n\nEsta versão é especialmente útil em ferramentas com janela de contexto limitada ou quando o modelo começa a ignorar partes do prompt longo. A simplicidade aqui é uma feature, não uma limitação: cada linha carrega uma única instrução não-negociável.",
     "recommended": false,
     "referencia": false
+  },
+  {
+    "id": "vid-link-001",
+    "title": "Vídeo UGC Universal",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo UGC universal — referência de estilo e movimento para criação de conteúdo.",
+    "tags": [
+      "vídeo",
+      "ugc",
+      "universal"
+    ],
+    "image": "",
+    "prompt": "Vídeo UGC universal — referência visual para criação de conteúdo.",
+    "videoUrl": "https://files.catbox.moe/c19s4b.mp4#t=0.1",
+    "referencia": true
+  },
+  {
+    "id": "vid-link-002",
+    "title": "POV Sapatos (Vídeo)",
+    "type": "Vídeo",
+    "category": "POV",
+    "description": "POV de sapatos — vídeo de referência para criação de conteúdo de calçados em primeira pessoa.",
+    "tags": [
+      "vídeo",
+      "pov",
+      "sapato",
+      "calcado"
+    ],
+    "image": "",
+    "prompt": "POV de sapatos — vídeo de referência para criação de conteúdo de calçados.",
+    "videoUrl": "https://i.imgur.com/dYbhl7c.mp4",
+    "referencia": true
+  },
+  {
+    "id": "vid-link-003",
+    "title": "POV Capinha (Vídeo)",
+    "type": "Vídeo",
+    "category": "POV",
+    "description": "POV de capinha/capa — vídeo de referência para criar conteúdo de acessórios de celular.",
+    "tags": [
+      "vídeo",
+      "pov",
+      "capinha",
+      "acessorio"
+    ],
+    "image": "",
+    "prompt": "POV de capinha — vídeo de referência para criação de conteúdo.",
+    "videoUrl": "https://i.imgur.com/ZpytNmp.mp4",
+    "referencia": true
+  },
+  {
+    "id": "vid-link-004",
+    "title": "Selfie Pensativo",
+    "type": "Vídeo",
+    "category": "Selfie",
+    "description": "Vídeo de selfie pensativo — referência para criar conteúdo de selfie com expressão contemplativa.",
+    "tags": [
+      "vídeo",
+      "selfie",
+      "pensativo"
+    ],
+    "image": "",
+    "prompt": "Selfie pensativo — vídeo de referência para criação de conteúdo.",
+    "videoUrl": "https://i.imgur.com/OQXds0Y.mp4",
+    "referencia": true
+  },
+  {
+    "id": "vid-link-005",
+    "title": "Selfie Cabelo",
+    "type": "Vídeo",
+    "category": "Selfie",
+    "description": "Vídeo de selfie com destaque no cabelo — referência para conteúdo de hair styling.",
+    "tags": [
+      "vídeo",
+      "selfie",
+      "cabelo",
+      "hair"
+    ],
+    "image": "",
+    "prompt": "Selfie cabelo — vídeo de referência para criação de conteúdo.",
+    "videoUrl": "https://i.imgur.com/QgfXnQv.mp4",
+    "referencia": true
+  },
+  {
+    "id": "vid-link-006",
+    "title": "POV Outfit Universal",
+    "type": "Vídeo",
+    "category": "POV",
+    "description": "Vídeo POV de outfit universal — referência para criar conteúdo de look completo.",
+    "tags": [
+      "vídeo",
+      "pov",
+      "outfit",
+      "look"
+    ],
+    "image": "",
+    "prompt": "POV outfit universal — vídeo de referência para criação de conteúdo.",
+    "videoUrl": "https://files.catbox.moe/mq8o9f.mp4#t=0.1",
+    "referencia": true
   }
 ]
