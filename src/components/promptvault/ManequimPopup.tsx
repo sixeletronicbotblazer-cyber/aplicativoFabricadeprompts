@@ -14,15 +14,25 @@ interface ManequimPopupProps {
 }
 
 export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !sessionStorage.getItem("manequim-popup-dismissed");
+  });
+
+  const handleClose = (nextOpen: boolean) => {
+    setOpen(nextOpen);
+    if (!nextOpen) {
+      sessionStorage.setItem("manequim-popup-dismissed", "1");
+    }
+  };
 
   const handleGo = () => {
-    setOpen(false);
+    handleClose(false);
     onNavigate();
   };
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent
         showCloseButton={false}
         className="sm:max-w-lg p-0 gap-0 overflow-hidden rounded-3xl border-white/10 bg-popover/95 backdrop-blur-2xl"
@@ -37,7 +47,7 @@ export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
           <div className="relative bg-gradient-to-br from-brand-purple/30 via-brand-pink/20 to-brand-cyan/15 px-6 pt-6 pb-5">
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={() => handleClose(false)}
               className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-black/30 text-white/80 backdrop-blur-md transition-colors hover:text-white hover:bg-black/50"
               aria-label="Fechar"
             >
@@ -111,7 +121,7 @@ export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
             </button>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={() => handleClose(false)}
               className="h-11 px-5 rounded-xl border border-white/10 bg-white/5 text-foreground font-medium hover:bg-white/10 transition-colors"
             >
               Depois

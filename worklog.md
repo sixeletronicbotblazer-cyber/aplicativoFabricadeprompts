@@ -51,3 +51,35 @@ Stage Summary:
 - Dark premium identity (purple/pink/cyan, glassmorphism, glow) applied consistently.
 - All requested features implemented: login, sidebar with counters, hero, search, filter chips, responsive card grid, copy prompt + toast, favorites (persisted), detail modal, "Ver mais" pagination, empty state, internal recommended CTA, sticky footer, mobile drawer, logout.
 - Lint clean; dev server healthy; browser-verified end-to-end.
+---
+Task ID: 2
+Agent: Z.ai Code (main orchestrator)
+Task: Add Modo Manequim gallery section with 3 phases, popup banner, fix PromptModal bug
+
+Work Log:
+- Analyzed uploaded screenshot: turned out to be a runtime error (hasMedia not defined in PromptModal.tsx)
+- Resolved 6 imgur album URLs to direct media URLs via imgur API:
+  - Fase 1: image uRghAnK.jpeg, video AOEQTFE.mp4
+  - Fase 2: image W9qyLGM.png, video zOKt3lT.mp4
+  - Fase 3: image dV4Gdoa.png, video Yj8WqoR.mp4
+- Extracted prompt text from Guia_Manequim_Esteira_IA.pdf (6 pages, 2 prompt templates)
+- Fixed PromptModal.tsx: added missing hasMedia and hasVideo variable definitions
+- Fixed PromptCard.tsx: added video thumbnail support for video-only prompts (Play overlay, Assistir label)
+- Added Play icon import to PromptCard
+- Added 3 Manequim phase entries to prompts-data.json:
+  - manequim-fase1: Roupa Tradicional (Hook) — image + video + full prompt
+  - manequim-fase2: Segurando Peça no Cabide — image + video + adapted prompt
+  - manequim-fase3: Vestindo a Roupa — image + video + adapted prompt
+- Removed 3 duplicate stub entries (maneq-001/002/003) from previous session
+- Enhanced ManequimPopup.tsx: sessionStorage-based one-time-show behavior
+- Added NOVO badge to Manequim in sidebar navigation
+- Fixed Sidebar email/code fallback for account toast
+
+Stage Summary:
+- Manequim category shows 3 entries with correct images, videos, and full prompts
+- Popup shows once per session, navigates to Manequim on CTA click
+- PromptModal no longer crashes with hasMedia undefined error
+- PromptCard now renders video thumbnails for video-only prompts
+- Sidebar shows NOVO badge next to Manequim
+- Lint clean, zero console errors, verified desktop and mobile via Agent Browser
+
