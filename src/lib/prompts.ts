@@ -17,7 +17,8 @@ export type PromptCategory =
   | "Shopee"
   | "Imagem"
   | "Vídeo"
-  | "Identidade AI";
+  | "Identidade AI"
+  | "Manequim";
 
 export interface Prompt {
   id: string;
@@ -35,6 +36,10 @@ export interface Prompt {
   recommended?: boolean;
   /** Contexto, tutorial e dicas de uso do prompt (quando aplicável). */
   explanation?: string;
+  /** True para marcar como conteúdo novo/adicionado recentemente. */
+  isNew?: boolean;
+  /** External hosted video URL (for video-type prompts). */
+  videoUrl?: string;
 }
 
 /**
@@ -65,6 +70,7 @@ export const CATEGORIES: PromptCategory[] = [
   "Imagem",
   "Vídeo",
   "Identidade AI",
+  "Manequim",
 ];
 
 export const TYPE_BADGES: PromptType[] = [

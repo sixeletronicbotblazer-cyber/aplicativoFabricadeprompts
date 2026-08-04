@@ -19,6 +19,7 @@ import {
   UserCircle,
   Sparkles,
   X,
+  PersonStanding,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -65,6 +66,11 @@ const MAIN_NAV: NavItem[] = [
     label: "Identidade AI",
     icon: ScanFace,
     filter: { kind: "category", value: "Identidade AI" },
+  },
+  {
+    label: "Manequim",
+    icon: PersonStanding,
+    filter: { kind: "category", value: "Manequim" },
   },
   { label: "Favoritos", icon: Heart, filter: { kind: "favorites" } },
   { label: "Atualizações", icon: RefreshCw, filter: { kind: "updates" } },

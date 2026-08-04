@@ -14,6 +14,7 @@ import { PromptCard } from "./PromptCard";
 import { PromptModal } from "./PromptModal";
 import { EmptyState } from "./EmptyState";
 import { InternalCta } from "./InternalCta";
+import { ManequimPopup } from "./ManequimPopup";
 
 const PAGE_SIZE = 9;
 
@@ -216,6 +217,10 @@ export function Gallery() {
           </p>
         </div>
       </footer>
+
+      <ManequimPopup
+        onNavigate={() => setFilter({ kind: "category", value: "Manequim" })}
+      />
 
       <PromptModal
         prompt={selected}

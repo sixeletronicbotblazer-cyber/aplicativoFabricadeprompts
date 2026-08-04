@@ -113,6 +113,50 @@ export function PromptModal({
               </div>
             )}
 
+            {/* Video only (no image but has videoUrl) */}
+            {hasVideo && !hasImage && (
+            <div className="relative md:col-span-2 md:h-auto h-48 sm:h-64 md:max-h-[92vh] bg-black/60">
+              <video
+                src={prompt.videoUrl}
+                controls
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-contain"
+              />
+              <span
+                className={cn(
+                  "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                  TYPE_STYLE[prompt.type]
+                )}
+              >
+                <Film className="h-3.5 w-3.5" />
+                {prompt.type}
+              </span>
+            </div>
+            )}
+
+            {/* Video player when both image and video exist */}
+            {hasImage && hasVideo && (
+            <div className="relative md:col-span-5 h-48 sm:h-56 bg-black/60">
+              <video
+                src={prompt.videoUrl}
+                controls
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-contain"
+              />
+              <span
+                className={cn(
+                  "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                  TYPE_STYLE[prompt.type]
+                )}
+              >
+                <Film className="h-3.5 w-3.5" />
+                Vídeo
+              </span>
+            </div>
+            )}
+
             {/* Details side */}
             <div className={cn("relative flex flex-col p-5 sm:p-7 overflow-hidden", hasMedia ? "md:col-span-3" : "")}>
               <button
