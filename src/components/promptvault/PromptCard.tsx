@@ -88,7 +88,7 @@ export function PromptCard({
                 src={prompt.videoUrl}
                 muted
                 playsInline
-                preload="metadata"
+                preload="none"
                 className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
               />
               <div className="absolute inset-0 grid place-items-center">
