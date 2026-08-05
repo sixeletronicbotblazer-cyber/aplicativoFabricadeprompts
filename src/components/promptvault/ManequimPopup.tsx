@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PersonStanding, X, ArrowRight, Play, Sparkles } from "lucide-react";
+import { Camera, X, ArrowRight, Sparkles } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -9,20 +9,20 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 
-interface ManequimPopupProps {
+interface SelfieUGCPopupProps {
   onNavigate: () => void;
 }
 
-export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
+export function ManequimPopup({ onNavigate }: SelfieUGCPopupProps) {
   const [open, setOpen] = useState(() => {
     if (typeof window === "undefined") return false;
-    return !sessionStorage.getItem("manequim-popup-dismissed");
+    return !sessionStorage.getItem("selfie-ugc-popup-dismissed");
   });
 
   const handleClose = (nextOpen: boolean) => {
     setOpen(nextOpen);
     if (!nextOpen) {
-      sessionStorage.setItem("manequim-popup-dismissed", "1");
+      sessionStorage.setItem("selfie-ugc-popup-dismissed", "1");
     }
   };
 
@@ -35,11 +35,11 @@ export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent
         showCloseButton={false}
-        className="sm:max-w-lg p-0 gap-0 overflow-hidden rounded-3xl border-white/10 bg-popover/95 backdrop-blur-2xl"
+        className="sm:max-w-md p-0 gap-0 overflow-hidden rounded-3xl border-white/10 bg-popover/95 backdrop-blur-2xl"
       >
-        <DialogTitle className="sr-only">Novo: Estilo Manequim</DialogTitle>
+        <DialogTitle className="sr-only">Novo: Módulo Selfie UGC</DialogTitle>
         <DialogDescription className="sr-only">
-          Nova seção de prompts no estilo manequim com 3 fases de produção.
+          Nova seção de prompts Selfie UGC com 16 prompts de imagem e vídeo.
         </DialogDescription>
 
         <div className="relative">
@@ -54,9 +54,9 @@ export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
               <X className="h-4 w-4" />
             </button>
 
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3">
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-gradient glow-purple">
-                <PersonStanding className="h-5.5 w-5.5 text-white" />
+                <Camera className="h-5.5 w-5.5 text-white" />
               </div>
               <div>
                 <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-emerald-500/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300 mb-1">
@@ -64,49 +64,31 @@ export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
                   Novo
                 </span>
                 <h2 className="text-xl font-semibold tracking-tight">
-                  Estilo Manequim
+                  Módulo Selfie UGC
                 </h2>
               </div>
             </div>
-
-            <p className="text-sm text-foreground/80 leading-relaxed">
-              Nova seção com 3 fases de produção de vídeo para TikTok Shop:
-            </p>
           </div>
 
-          {/* 3 Phases */}
-          <div className="px-6 py-5 space-y-3">
-            {[
-              {
-                phase: "Fase 1",
-                title: "Roupa Tradicional (Hook)",
-                desc: "Manequim com a roupa na esteira — ideal como abertura",
-              },
-              {
-                phase: "Fase 2",
-                title: "Roupa no Cabide",
-                desc: "Segurando a peça no cabide enquanto caminha",
-              },
-              {
-                phase: "Fase 3",
-                title: "Vestindo a Roupa",
-                desc: "Vestindo a peça ao vivo em movimento",
-              },
-            ].map((item) => (
-              <div
-                key={item.phase}
-                className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] p-3"
-              >
-                <span className="shrink-0 grid h-8 w-8 place-items-center rounded-lg bg-brand-purple/15 text-brand-purple text-xs font-bold">
-                  {item.phase.split(" ")[1]}
-                </span>
-                <div className="min-w-0">
-                  <p className="text-sm font-semibold leading-snug">{item.title}</p>
-                  <p className="text-[12px] text-muted-foreground mt-0.5">{item.desc}</p>
-                </div>
-                <Play className="h-4 w-4 shrink-0 text-muted-foreground/50 mt-0.5" />
-              </div>
-            ))}
+          {/* Brief description */}
+          <div className="px-6 py-5">
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              Novo módulo completo com <span className="font-semibold text-foreground">1 prompt de imagem base</span> e{" "}
+              <span className="font-semibold text-foreground">15 movimentos de vídeo</span> para criar conteúdo
+              selfie UGC fotorrealista no espelho — ideal para TikTok Shop.
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-muted-foreground">
+                Imagem base (influenciadora)
+              </span>
+              <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-muted-foreground">
+                10 movimentos base
+              </span>
+              <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-muted-foreground">
+                5 movimentos vendedor
+              </span>
+            </div>
           </div>
 
           {/* CTA */}
@@ -116,7 +98,7 @@ export function ManequimPopup({ onNavigate }: ManequimPopupProps) {
               onClick={handleGo}
               className="flex-1 h-11 inline-flex items-center justify-center gap-2 rounded-xl bg-brand-gradient text-white font-semibold hover:opacity-90 transition-opacity glow-purple border-0"
             >
-              Ver seção Manequim
+              Ver Selfie UGC
               <ArrowRight className="h-4 w-4" />
             </button>
             <button

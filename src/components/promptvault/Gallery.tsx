@@ -219,7 +219,7 @@ export function Gallery() {
       </footer>
 
       <ManequimPopup
-        onNavigate={() => setFilter({ kind: "category", value: "Manequim" })}
+        onNavigate={() => setFilter({ kind: "category", value: "Selfie UGC" })}
       />
 
       <PromptModal

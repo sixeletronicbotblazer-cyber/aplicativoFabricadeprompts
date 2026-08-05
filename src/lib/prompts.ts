@@ -18,7 +18,8 @@ export type PromptCategory =
   | "Imagem"
   | "Vídeo"
   | "Identidade AI"
-  | "Manequim";
+  | "Manequim"
+  | "Selfie UGC";
 
 export interface Prompt {
   id: string;
@@ -71,6 +72,7 @@ export const CATEGORIES: PromptCategory[] = [
   "Vídeo",
   "Identidade AI",
   "Manequim",
+  "Selfie UGC",
 ];
 
 export const TYPE_BADGES: PromptType[] = [

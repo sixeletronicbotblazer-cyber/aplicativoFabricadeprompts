@@ -1995,5 +1995,278 @@
     "videoUrl": "https://i.imgur.com/Yj8WqoR.mp4",
     "isNew": true,
     "explanation": "Fase 3 (Vestindo): O manequim veste a roupa do produto e caminha na esteira ajustando as peças naturalmente. Gere a imagem base com o look desejado e depois anime com o prompt de movimentação."
+  },
+  {
+    "id": "selfie-ugc-base",
+    "title": "Selfie UGC — Criar Influencer do Zero",
+    "type": "Imagem",
+    "category": "Selfie UGC",
+    "description": "Prompt base para criar imagem selfie no espelho fotorrealista — influenciadora segurando celular cobrindo o rosto, roupa preta, fundo painel de madeira.",
+    "tags": [
+      "selfie ugc",
+      "espelho",
+      "influenciadora",
+      "base"
+    ],
+    "image": "https://i.imgur.com/gSutSyz.jpeg",
+    "prompt": "Write a GPT Image 2 prompt for a photorealistic vertical 9:16 mirror selfie of a slim brunette woman in her mid-20s, creating casual UGC fashion content.\nShe is standing in front of a mirror, holding a smartphone in one hand and covering her face completely with the phone. Her face must not be visible. The mirror selfie should feel natural, like a real influencer taking a quick outfit photo for TikTok Shop or Instagram Stories.\nShe has long straight brunette hair, natural body proportions, a slim fit silhouette, relaxed posture, and a casual confident pose. She is wearing a fitted black long-sleeve sports top and black high-waisted leggings. The outfit should be clean, minimal, and clearly visible from top to bottom.\nThe background is a clean, minimal bedroom or dressing area with a dark walnut wood panel wall. The environment should feel premium, modern, feminine, and realistic, without clutter. No extra people, no logos, no text on screen.\nLighting is warm, moody, and realistic, with soft indoor ambient light creating gentle shadows and depth. Add slight film grain, natural smartphone texture, realistic skin, natural hair detail, and subtle imperfections. The image must look like a real smartphone mirror selfie, not a studio photoshoot.\nComposition:\n– vertical 9:16\n– full outfit visible\n– phone covering the face\n– body centered in the mirror\n– background clean and minimal\n– dark walnut wood panel wall visible\n– casual UGC fashion mood\nUltra realistic, photorealistic smartphone image, natural lens perspective, slight film grain, soft focus, realistic lighting, no AI-generated look, no plastic skin, no beauty filter, no over-editing.",
+    "isNew": true,
+    "explanation": "Este é o prompt BASE para gerar a imagem da influenciadora no espelho. Use esta imagem como referência para todos os prompts de movimento (módulos 01 e 02). A imagem gerada deve ser usada como input de referência nos prompts de vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-001",
+    "title": "Zoom Lento — Modelo Quase Parada",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: zoom lento contínuo com modelo quase estática em selfie UGC.",
+    "tags": [
+      "selfie ugc",
+      "zoom",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything about her identical — same body, same hair, same outfit, same mirror selfie framing, same background, same warm moody lighting, and the phone covering her face the entire time.\nShe stays almost completely still in her pose, with only natural micro-movements in posture and breathing. The phone must never leave her face and must continue covering it fully during the entire shot.\nThe camera performs a very slow, smooth continuous push-in toward her, with no jerky motion, no sudden changes in speed, and no cuts. The overall feeling should be calm, realistic, cinematic, and seamless.\nNo audio. No talking. No lip movement. No outfit changes. No hand deformation. No sudden pose changes.",
+    "videoUrl": "https://i.imgur.com/z8btlR3.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-002",
+    "title": "Leve Mudança de Peso Corporal",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: mudança sutil de peso corporal de uma perna para outra.",
+    "tags": [
+      "selfie ugc",
+      "peso corporal",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same woman, same hair, same outfit, same mirror selfie composition, same room, and phone covering her face the whole time.\nShe makes a very subtle natural shift of body weight from one leg to the other, creating a slight hip angle change while staying elegant and relaxed. The movement must be minimal and smooth, with no exaggerated posing. Her phone must remain in front of her face the entire time and never reveal her face.\nCamera remains mostly static with only a very subtle natural handheld feel or tiny smooth drift. Warm moody ambient lighting. Realistic, seamless, no cuts, no abrupt motion.\nNo audio. No speech. No outfit changes. No sudden movements.",
+    "videoUrl": "https://i.imgur.com/X6vB3k6.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-003",
+    "title": "Pequena Virada Lateral e Volta",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: virada lateral sutil do corpo e retorno.",
+    "tags": [
+      "selfie ugc",
+      "virada lateral",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, preserve everything exactly — same person, same hair, same outfit, same background, same mirror selfie setup, and phone covering her face at all times.\nShe begins facing the mirror in the original pose, then makes a very small and natural turn of her body to one side, just enough to show a slightly different angle of the outfit, and then softly returns to a more frontal pose. The motion must be delicate, slow, and realistic, like a casual outfit check.\nThe phone must stay covering her face the whole time, with no face reveal at any moment. The movement should remain minimal and natural, with no exaggerated body motion and no sudden changes.\nWarm moody ambient lighting, ultra realistic, smooth continuous motion, no cuts, no audio.",
+    "videoUrl": "https://i.imgur.com/AXiuITY.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-004",
+    "title": "Ajuste Suave de Postura + Cabelo Parado",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: ajuste sutil de postura com cabelo estático.",
+    "tags": [
+      "selfie ugc",
+      "postura",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same face hidden by the phone, same hair, same outfit, same pose style, same framing, same background, same warm moody lighting.\nShe makes only a soft posture adjustment: a slight straightening of the torso, a subtle shoulder reposition, and a very gentle change in stance, as if naturally settling into the pose. The motion should be almost imperceptible but elegant and realistic.\nThe phone must continue covering her face fully during the entire animation. Do not let the phone move away from her face. Do not reveal any facial features. Keep the scene stable and refined.\nSmooth realistic animation, no cuts, no speech, no audio, no outfit changes, no unnatural movement.",
+    "videoUrl": "https://i.imgur.com/EDwaKWx.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-005",
+    "title": "Mão Livre Tocando Levemente a Roupa",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: mão livre toca sutilmente o tecido da roupa.",
+    "tags": [
+      "selfie ugc",
+      "tocar roupa",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same woman, same hair, same outfit, same room, same mirror selfie framing, and the phone covering her face the entire time.\nIf a free hand is visible, she gently touches or smooths the fabric of her outfit in a subtle and natural way, as if showing the clothing texture or adjusting the fit. The movement must be very light and realistic, while the rest of her body stays mostly steady.\nThe phone must never leave her face and must continue hiding it completely. No dramatic gestures, no face reveal, no outfit changes, and no exaggerated movement.\nWarm moody lighting, ultra realistic, smooth and continuous motion, no cuts, no audio.",
+    "videoUrl": "https://i.imgur.com/EDwaKWx.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-006",
+    "title": "Passo Pequeno para Trás — Mostrar Look",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: passo para trás para revelar o look completo.",
+    "tags": [
+      "selfie ugc",
+      "passo trás",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, preserve everything exactly — same body, same hair, same outfit, same mirror scene, same room, same lighting, and phone covering her face throughout the entire shot.\nShe takes one very small and natural step backward, just enough to reveal a little more of the outfit in the mirror, then settles into a relaxed standing pose. The movement should be subtle, controlled, and elegant, like a real person adjusting position while recording a mirror selfie.\nThe phone must stay in front of her face the whole time and must never reveal her face. Keep the motion soft, realistic, and minimal.\nWarm moody ambient lighting, slight filmic feel, smooth continuous movement, no cuts, no audio, no sudden changes.",
+    "videoUrl": "https://i.imgur.com/oKMvhkR.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-007",
+    "title": "Leve Inclinação de Cabeça",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: inclinação sutil de cabeça com retorno natural.",
+    "tags": [
+      "selfie ugc",
+      "inclinação cabeça",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same woman, same hair, same outfit, same mirror selfie framing, same background, same lighting, and the phone covering her face the entire time. She tilts her head very slightly to one side in a natural, relaxed way, then returns to a neutral position. The phone must remain covering her face throughout, never revealing it. Movement is minimal, elegant, and realistic. Camera stays static, no jerky motion, no cuts. Warm moody ambient lighting, seamless continuous motion, no audio, no speech, no outfit changes.",
+    "videoUrl": "https://i.imgur.com/1egpHjA.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-008",
+    "title": "Respiração Visível no Tronco",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: respiração natural visível no tronco.",
+    "tags": [
+      "selfie ugc",
+      "respiração",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, preserve everything exactly — same body, same hair, same outfit, same mirror selfie composition, same room, same lighting, phone covering her face the whole time. She takes one slow, natural breath, with a subtle rise and fall of the chest and shoulders, staying otherwise still. The phone must never leave her face. Camera remains fully static, no cuts, no abrupt motion. Realistic, calm, seamless. No audio, no speech, no outfit changes.",
+    "videoUrl": "https://i.imgur.com/BSFGvtn.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-009",
+    "title": "Ajuste do Cabelo com uma Mão",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: mão livre ajusta mecha de cabelo no ombro.",
+    "tags": [
+      "selfie ugc",
+      "cabelo",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same woman, same hair, same outfit, same background, same mirror selfie framing, phone covering her face at all times. Her free hand gently touches and slightly adjusts a strand of hair near her shoulder, then returns to a natural resting position. The phone must stay fixed over her face throughout, with no face reveal. Movement subtle and realistic. Camera static, no cuts, no audio, no speech, no outfit changes, no hand deformation.",
+    "videoUrl": "https://i.imgur.com/DetZIox.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-010",
+    "title": "Micro Passo Lateral",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento base: pequeno passo lateral mudando ângulo do reflexo.",
+    "tags": [
+      "selfie ugc",
+      "passo lateral",
+      "movimento base"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, preserve everything exactly — same body, same hair, same outfit, same room, same lighting, same mirror selfie setup, phone covering her face the entire time. She takes one very small step to the side, shifting the mirror reflection angle slightly, then settles back into a natural standing pose. The phone must remain covering her face without exception. Motion subtle, controlled, realistic. Camera mostly static with minimal natural drift, no cuts, no audio, no speech.",
+    "videoUrl": "https://i.imgur.com/SqNm1Q9.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-011",
+    "title": "Tocando a Peça de Forma Leve",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento vendedor: toca suavemente a peça como influencer mostrando o produto.",
+    "tags": [
+      "selfie ugc",
+      "vendedor",
+      "tocar peça"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same woman, same hair, same outfit, same mirror selfie framing, same background, same warm moody lighting, and the phone covering her face the entire time.\nShe remains in a natural mirror selfie pose and uses her free hand to gently touch or smooth the main area of the outfit, as if casually showing the fabric or fit. The movement should be subtle, elegant, and realistic, with no exaggerated motion.\nThe phone must stay covering her face during the entire shot and must never reveal her face. Keep the motion soft and minimal, like a real influencer casually showing the clothing in a mirror selfie.\nNo audio. No speech. No cuts. No sudden movement. No outfit change. No hand deformation.",
+    "videoUrl": "https://i.imgur.com/EDU1JLm.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-012",
+    "title": "Passo para Trás Mostrando o Look",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento vendedor: passo para trás para exibir o look completo no espelho.",
+    "tags": [
+      "selfie ugc",
+      "vendedor",
+      "passo trás"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, preserve everything exactly — same body, same hair, same outfit, same room, same lighting, same mirror selfie composition, and the phone covering her face throughout the whole shot.\nShe takes one small and natural step backward to reveal a little more of the full outfit in the mirror, then settles into a relaxed pose. The movement should be subtle, controlled, and realistic, as if she is naturally adjusting to show the look better.\nThe phone must remain fully covering her face at all times. Do not let the phone move away from her face. No face reveal, no sudden pose changes, no exaggerated movement.\nWarm moody ambient lighting, smooth continuous motion, no cuts, no audio.",
+    "videoUrl": "https://i.imgur.com/JiYsAHU.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-013",
+    "title": "Leve Virada Lateral para Mostrar Caimento",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento vendedor: virada lateral mostrando o caimento da roupa.",
+    "tags": [
+      "selfie ugc",
+      "vendedor",
+      "caimento",
+      "virada lateral"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same woman, same hair, same outfit, same mirror selfie framing, same room, and phone covering her face the whole time.\nShe starts in the original frontal mirror selfie pose, then makes a small and natural turn of her body to one side to show the fit and side angle of the clothing, then slowly returns to a more frontal pose. The movement should be delicate, smooth, and realistic.\nThe phone must continue covering her face during the entire animation and must never reveal her face. Keep the motion minimal and elegant, with no exaggerated body movement.\nNo speech. No audio. No cuts. No outfit changes. No abrupt motion.",
+    "videoUrl": "https://i.imgur.com/M262fFy.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-014",
+    "title": "Aponta Brevemente para a Peça",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento vendedor: aponta brevemente para a peça indicando o produto.",
+    "tags": [
+      "selfie ugc",
+      "vendedor",
+      "apontar"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, keep everything identical — same woman, same hair, same outfit, same mirror selfie framing, same background, same lighting, phone covering her face the entire time held with one hand. Her free hand briefly points toward the main garment on her body, indicating the piece, then returns to a natural relaxed position. The phone must remain fully covering her face throughout, no face reveal. Movement short, natural, selling-style but subtle. Camera static, no cuts, no audio, no speech, no outfit changes.",
+    "videoUrl": "https://i.imgur.com/Jv0j4yV.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
+  },
+  {
+    "id": "selfie-ugc-vid-015",
+    "title": "Ajusta Postura como se Fosse Falar (Sem Falar)",
+    "type": "Vídeo",
+    "category": "Selfie UGC",
+    "description": "Movimento vendedor: ajuste de postura como se fosse falar, sem áudio.",
+    "tags": [
+      "selfie ugc",
+      "vendedor",
+      "postura"
+    ],
+    "image": "",
+    "prompt": "Using the exact same woman from the reference image, preserve everything exactly — same body, same hair, same outfit, same room, same lighting, same mirror selfie composition, phone covering her face throughout. She straightens her posture slightly and leans in a tiny bit toward the mirror, as if about to share something, but her mouth never moves and there is no lip motion of any kind, since there is no speech in this scene. The phone must stay covering her face at all times. Motion subtle, realistic. Camera static, no cuts, no audio.",
+    "videoUrl": "https://i.imgur.com/YbwNZPK.mp4#t=0.1",
+    "isNew": true,
+    "explanation": "Mantenha a mesma modelo do prompt base (Selfie UGC — Criar Influencer do Zero). Use a imagem gerada como referência de input para este vídeo."
   }
 ]

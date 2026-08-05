@@ -41,6 +41,7 @@ interface NavItem {
   label: string;
   icon: React.ElementType;
   filter: Filter;
+  isNew?: boolean;
 }
 
 const MAIN_NAV: NavItem[] = [
@@ -71,6 +72,12 @@ const MAIN_NAV: NavItem[] = [
     label: "Manequim",
     icon: PersonStanding,
     filter: { kind: "category", value: "Manequim" },
+  },
+  {
+    label: "Selfie UGC",
+    icon: Camera,
+    filter: { kind: "category", value: "Selfie UGC" },
+    isNew: true,
   },
   { label: "Favoritos", icon: Heart, filter: { kind: "favorites" } },
   { label: "Atualizações", icon: RefreshCw, filter: { kind: "updates" } },
@@ -172,7 +179,14 @@ function SidebarContent({ filter, onSelect, onClose }: SidebarContentProps) {
                 >
                   <Icon className="h-4 w-4" />
                 </span>
-                <span className="flex-1 text-left font-medium">{item.label}</span>
+                <span className="flex-1 text-left font-medium">
+                  {item.label}
+                  {item.isNew && (
+                    <span className="ml-2 inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-500/20 px-1.5 py-px text-[9px] font-bold uppercase tracking-wider text-emerald-300">
+                      NOVO
+                    </span>
+                  )}
+                </span>
                 <span
                   className={cn(
                     "rounded-md px-1.5 py-0.5 text-[11px] font-semibold tabular-nums",
