@@ -1,4 +1,8 @@
-export const BLOCKED_EMAILS = new Set<string>([  "admhotmk@gmail.com",
+export const BLOCKED_EMAILS = new Set<string>([
+  "ribas.acesso@gmail.com",
+  "carolaynesj14@gmail.com",
+  "erika.christina@hotmail.com",
+  "admhotmk@gmail.com",
   "allnew200915@gmail.com",
   "beatrizextreme2020@gmail.com",
   "binholmeister@gmail.com",
