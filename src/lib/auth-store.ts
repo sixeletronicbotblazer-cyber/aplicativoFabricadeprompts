@@ -20,11 +20,11 @@ interface AuthState {
 function getStoredSession(): { email: string; code: string; ts: number } | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = sessionStorage.getItem("pv_session");
+    const raw = localStorage.getItem("pv_session");
     if (!raw) return null;
     const s = JSON.parse(raw);
     if (Date.now() - s.ts < SESSION_TTL) return s;
-    sessionStorage.removeItem("pv_session");
+    localStorage.removeItem("pv_session");
     return null;
   } catch {
     return null;
@@ -33,16 +33,16 @@ function getStoredSession(): { email: string; code: string; ts: number } | null 
 
 function saveSession(email: string, code: string) {
   if (typeof window === "undefined") return;
-  sessionStorage.setItem("pv_session", JSON.stringify({ email, code, ts: Date.now() }));
+  localStorage.setItem("pv_session", JSON.stringify({ email, code, ts: Date.now() }));
 }
 
 function clearSession() {
   if (typeof window === "undefined") return;
-  sessionStorage.removeItem("pv_session");
+  localStorage.removeItem("pv_session");
 }
 
 /**
- * Auth store com sessão de 1h via sessionStorage.
+ * Auth store com sessão de 1h via localStorage.
  *
  * Lógica:
  * - Código novo (0519) + qualquer email → libera
