@@ -9,6 +9,7 @@ export type PromptType =
 export type PromptCategory =
   | "Selfie"
   | "POV"
+  | "POV Avançado"
   | "UGC"
   | "Roupas"
   | "Produto"
@@ -19,7 +20,9 @@ export type PromptCategory =
   | "Vídeo"
   | "Identidade AI"
   | "Manequim"
-  | "Selfie UGC";
+  | "Selfie UGC"
+  | "PET"
+  | "Infantil";
 
 export interface Prompt {
   id: string;
@@ -62,10 +65,13 @@ export const PROMPTS: Prompt[] = promptsData as unknown as Prompt[];
  */
 export const CATEGORIES: PromptCategory[] = [
   "POV",
+  "POV Avançado",
   "Produto",
   "UGC",
   "Selfie",
   "Roupas",
+  "PET",
+  "Infantil",
   "TikTok Shop",
   "Shopee",
   "Imagem",

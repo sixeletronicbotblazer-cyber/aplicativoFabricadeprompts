@@ -14,9 +14,10 @@ import { PromptCard } from "./PromptCard";
 import { PromptModal } from "./PromptModal";
 import { EmptyState } from "./EmptyState";
 import { InternalCta } from "./InternalCta";
+import { UpdateBanner } from "./UpdateBanner";
 import { ManequimPopup } from "./ManequimPopup";
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 12;
 
 export function Gallery() {
   const [filter, setFilterState] = useState<Filter>(ALL_FILTER);
@@ -217,6 +218,10 @@ export function Gallery() {
           </p>
         </div>
       </footer>
+
+      <UpdateBanner
+        onNavigate={(cat) => setFilter({ kind: "category", value: cat as any })}
+      />
 
       <ManequimPopup
         onNavigate={() => setFilter({ kind: "category", value: "Selfie UGC" })}

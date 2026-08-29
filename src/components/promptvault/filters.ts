@@ -42,7 +42,7 @@ export function countFor(f: Filter, favIds: string[]): number {
     case "recommended":
       return PROMPTS.filter((p) => p.recommended).length;
     case "updates":
-      return Math.min(6, PROMPTS.length);
+      return PROMPTS.filter((p) => p.isNew).length;
     case "type":
       return PROMPTS.filter((p) => p.type === f.value).length;
     case "category":
@@ -58,9 +58,11 @@ export function applyFilter(
   const favSet = new Set(favIds);
   switch (f.kind) {
     case "all":
-      // Stable sort: keep original order, but push video prompts to the end
-      // so the "Todos" tab leads with image-based prompts.
+      // Sort: new items first, then by type (images before videos)
       return [...prompts].sort((a, b) => {
+        const an = a.isNew ? 0 : 1;
+        const bn = b.isNew ? 0 : 1;
+        if (an !== bn) return an - bn;
         const av = a.type === "Vídeo" ? 1 : 0;
         const bv = b.type === "Vídeo" ? 1 : 0;
         return av - bv;
@@ -70,7 +72,7 @@ export function applyFilter(
     case "recommended":
       return prompts.filter((p) => p.recommended);
     case "updates":
-      return [...prompts].reverse().slice(0, 6);
+      return prompts.filter((p) => p.isNew);
     case "type":
       return prompts.filter((p) => p.type === f.value);
     case "category":

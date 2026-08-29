@@ -20,6 +20,9 @@ import {
   Sparkles,
   X,
   PersonStanding,
+  Target,
+  PawPrint,
+  Baby,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -50,9 +53,27 @@ const MAIN_NAV: NavItem[] = [
   { label: "Vídeo", icon: Film, filter: { kind: "type", value: "Vídeo" } },
   { label: "UGC", icon: Camera, filter: { kind: "category", value: "UGC" } },
   { label: "POV", icon: Eye, filter: { kind: "category", value: "POV" } },
+  {
+    label: "POV Avançado",
+    icon: Target,
+    filter: { kind: "category", value: "POV Avançado" },
+    isNew: true,
+  },
   { label: "Selfie", icon: User, filter: { kind: "category", value: "Selfie" } },
   { label: "Roupas", icon: Shirt, filter: { kind: "category", value: "Roupas" } },
   { label: "Produto", icon: Hand, filter: { kind: "category", value: "Produto" } },
+  {
+    label: "PET",
+    icon: PawPrint,
+    filter: { kind: "category", value: "PET" },
+    isNew: true,
+  },
+  {
+    label: "Infantil",
+    icon: Baby,
+    filter: { kind: "category", value: "Infantil" },
+    isNew: true,
+  },
   {
     label: "TikTok Shop",
     icon: ShoppingCart,
