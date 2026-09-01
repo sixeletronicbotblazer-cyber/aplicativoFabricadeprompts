@@ -57,6 +57,12 @@ export function Gallery() {
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
 
+  // Split into image cards (full) and no-image cards (compact)
+  const imageCards = visible.filter((p) => p.image);
+  const compactCards = visible.filter((p) => !p.image);
+  const hasImageCards = imageCards.length > 0;
+  const hasCompactCards = compactCards.length > 0;
+
   const handleToggleFav = (id: string) => {
     const result = toggleFav(id);
     if (result === "added") {
@@ -159,16 +165,43 @@ export function Gallery() {
             {visible.length === 0 ? (
               <EmptyState onReset={handleReset} />
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
-                {visible.map((prompt) => (
-                  <PromptCard
-                    key={prompt.id}
-                    prompt={prompt}
-                    isFavorite={isFav(prompt.id)}
-                    onToggleFavorite={handleToggleFav}
-                    onOpen={openModal}
-                  />
-                ))}
+              <div className="space-y-6">
+                {/* Full image cards grid */}
+                {hasImageCards && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+                    {imageCards.map((prompt) => (
+                      <PromptCard
+                        key={prompt.id}
+                        prompt={prompt}
+                        isFavorite={isFav(prompt.id)}
+                        onToggleFavorite={handleToggleFav}
+                        onOpen={openModal}
+                      />
+                    ))}
+                  </div>
+                )}
+
+                {/* Compact cards list (no reference image) */}
+                {hasCompactCards && (
+                  <div>
+                    {hasImageCards && (
+                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-3">
+                        Sem referência visual
+                      </p>
+                    )}
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5">
+                      {compactCards.map((prompt) => (
+                        <PromptCard
+                          key={prompt.id}
+                          prompt={prompt}
+                          isFavorite={isFav(prompt.id)}
+                          onToggleFavorite={handleToggleFav}
+                          onOpen={openModal}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 

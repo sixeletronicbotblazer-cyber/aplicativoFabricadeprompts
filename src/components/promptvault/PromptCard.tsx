@@ -60,9 +60,83 @@ export function PromptCard({
     }
   };
 
+  /* ─── COMPACT CARD (no reference image) ─── */
+  if (!hasImage) {
+    return (
+      <article className="group glass relative rounded-xl overflow-hidden transition-all duration-300 hover:border-white/15 hover:shadow-lg hover:shadow-black/20">
+        <div className="flex items-center gap-3 p-3 sm:p-3.5">
+          {/* Type icon */}
+          <span
+            className={cn(
+              "inline-flex items-center justify-center shrink-0 rounded-lg border h-10 w-10",
+              TYPE_STYLE[prompt.type]
+            )}
+          >
+            <TypeIcon type={prompt.type} className="h-4 w-4" />
+          </span>
+
+          {/* Text */}
+          <button
+            type="button"
+            onClick={() => onOpen(prompt)}
+            className="flex-1 min-w-0 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple/60 rounded"
+            aria-label={`Ver detalhes de ${prompt.title}`}
+          >
+            <h3 className="text-[14px] font-semibold leading-tight line-clamp-1 text-foreground">
+              {prompt.title}
+            </h3>
+            <p className="mt-0.5 text-[12px] text-muted-foreground/70 leading-snug line-clamp-1">
+              {prompt.description}
+            </p>
+          </button>
+
+          {/* Actions */}
+          <div className="flex items-center gap-1.5 shrink-0">
+            <Button
+              type="button"
+              onClick={handleCopy}
+              size="sm"
+              className={cn(
+                "h-8 px-3 gap-1.5 text-xs font-bold border-0 transition-all active:scale-[0.97] rounded-lg",
+                copied
+                  ? "bg-emerald-500/90 text-white"
+                  : "bg-brand-gradient text-white hover:brightness-110"
+              )}
+            >
+              {copied ? (
+                <Check className="h-3.5 w-3.5" />
+              ) : (
+                <Copy className="h-3.5 w-3.5" />
+              )}
+            </Button>
+            <button
+              type="button"
+              onClick={() => onToggleFavorite(prompt.id)}
+              className={cn(
+                "grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition-all",
+                isFavorite
+                  ? "border-brand-pink/40 bg-brand-pink/20 text-brand-pink"
+                  : "border-white/10 bg-white/5 text-muted-foreground/70 hover:text-brand-pink hover:border-brand-pink/40"
+              )}
+              aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+            >
+              <Heart
+                className={cn(
+                  "h-3.5 w-3.5 transition-transform",
+                  isFavorite && "fill-current scale-110"
+                )}
+              />
+            </button>
+          </div>
+        </div>
+      </article>
+    );
+  }
+
+  /* ─── FULL CARD (with reference image) ─── */
   return (
     <article className="group glass relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-white/15 hover:shadow-xl hover:shadow-black/30 flex flex-col">
-      {/* Image / Video / Placeholder */}
+      {/* Image / Video thumb */}
       <button
         type="button"
         onClick={() => onOpen(prompt)}
@@ -70,15 +144,7 @@ export function PromptCard({
         aria-label={`Ver detalhes de ${prompt.title}`}
       >
         <div className="aspect-[4/5] w-full bg-white/5">
-          {hasImage ? (
-            <img
-              src={prompt.image}
-              alt={prompt.title}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            />
-          ) : showVideoThumb ? (
+          {showVideoThumb ? (
             <div className="relative h-full w-full bg-black/40">
               <video
                 src={prompt.videoUrl}
@@ -94,29 +160,13 @@ export function PromptCard({
               </div>
             </div>
           ) : (
-            <div className="relative h-full w-full overflow-hidden bg-gradient-to-br from-brand-purple/20 via-background to-brand-cyan/15">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full blur-2xl opacity-40"
-                style={{
-                  background:
-                    "radial-gradient(closest-side, var(--brand-pink), transparent)",
-                }}
-              />
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -bottom-10 -left-10 h-40 w-40 rounded-full blur-2xl opacity-30"
-                style={{
-                  background:
-                    "radial-gradient(closest-side, var(--brand-cyan), transparent)",
-                }}
-              />
-              <div className="absolute inset-0 grid place-items-center">
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white/[0.07] backdrop-blur-md border border-white/10">
-                  <TypeIcon type={prompt.type} className="h-5 w-5 text-white/60" />
-                </div>
-              </div>
-            </div>
+            <img
+              src={prompt.image}
+              alt={prompt.title}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
           )}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
