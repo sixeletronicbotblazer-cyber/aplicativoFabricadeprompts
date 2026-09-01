@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Sparkles, Heart, ChevronDown, Menu } from "lucide-react";
+import { Sparkles, Heart, ChevronDown, Menu, Film } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PROMPTS, type Prompt } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
@@ -89,6 +89,12 @@ export function Gallery() {
 
   const isFav = (id: string) => favIds.includes(id);
   const activeLabel = filterLabel(filter);
+
+  // Label for the no-reference section
+  const noRefLabel =
+    filter.kind === "type" && filter.value === "Vídeo"
+      ? "Vídeos sem referência"
+      : "Sem referência visual";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -181,14 +187,19 @@ export function Gallery() {
                   </div>
                 )}
 
-                {/* Compact cards list (no reference image) */}
+                {/* Compact cards section (no reference image) */}
                 {hasCompactCards && (
-                  <div>
-                    {hasImageCards && (
-                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-3">
-                        Sem referência visual
-                      </p>
-                    )}
+                  <div className="pt-4">
+                    {/* Section divider + header */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="flex-1 h-px bg-white/10" />
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <Film className="h-4 w-4" />
+                        <span className="text-sm font-semibold tracking-wide">{noRefLabel}</span>
+                        <span className="rounded-md bg-white/5 px-2 py-0.5 text-xs font-medium tabular-nums">{compactCards.length}</span>
+                      </div>
+                      <div className="flex-1 h-px bg-white/10" />
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5">
                       {compactCards.map((prompt) => (
                         <PromptCard
