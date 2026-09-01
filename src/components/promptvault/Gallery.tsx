@@ -47,10 +47,11 @@ export function Gallery() {
   const visibleCount = PAGE_SIZE * (page + 1);
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
-  const imageCards = visible.filter((p) => p.image);
-  const compactCards = visible.filter((p) => !p.image);
-  const hasImageCards = imageCards.length > 0;
-  const hasCompactCards = compactCards.length > 0;
+  const hasPreview = (p: Prompt) => Boolean(p.image) || Boolean(p.videoUrl);
+  const previewCards = visible.filter(hasPreview);
+  const noPreviewCards = visible.filter((p) => !hasPreview(p));
+  const hasPreviewCards = previewCards.length > 0;
+  const hasNoPreviewCards = noPreviewCards.length > 0;
   const isVideosNoRef = filter.kind === "videos-no-ref";
   const isVideosWithRef = filter.kind === "videos-with-ref";
 
@@ -107,24 +108,24 @@ export function Gallery() {
               </div>
             ) : (
               <div className="space-y-6">
-                {hasImageCards && (
+                {hasPreviewCards && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
-                    {imageCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                    {previewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                   </div>
                 )}
-                {hasCompactCards && (
+                {hasNoPreviewCards && (
                   <div className="pt-4">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="flex-1 h-px bg-white/10" />
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Film className="h-4 w-4" />
                         <span className="text-sm font-semibold tracking-wide">Sem referência visual</span>
-                        <span className="rounded-md bg-white/5 px-2 py-0.5 text-xs font-medium tabular-nums">{compactCards.length}</span>
+                        <span className="rounded-md bg-white/5 px-2 py-0.5 text-xs font-medium tabular-nums">{noPreviewCards.length}</span>
                       </div>
                       <div className="flex-1 h-px bg-white/10" />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5">
-                      {compactCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                      {noPreviewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                     </div>
                   </div>
                 )}

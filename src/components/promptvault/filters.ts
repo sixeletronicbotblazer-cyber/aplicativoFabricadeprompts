@@ -54,9 +54,9 @@ export function countFor(f: Filter, favIds: string[]): number {
     case "category":
       return PROMPTS.filter((p) => p.category === f.value).length;
     case "videos-with-ref":
-      return PROMPTS.filter((p) => p.type === "Vídeo" && Boolean(p.image)).length;
+      return PROMPTS.filter((p) => p.type === "Vídeo" && (Boolean(p.image) || Boolean(p.videoUrl))).length;
     case "videos-no-ref":
-      return PROMPTS.filter((p) => p.type === "Vídeo" && !p.image).length;
+      return PROMPTS.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl).length;
   }
 }
 
@@ -90,15 +90,19 @@ function sortVideoWithRef(list: Prompt[]): Prompt[] {
   });
 }
 
+function hasPreview(p: Prompt): boolean {
+  return Boolean(p.image) || Boolean(p.videoUrl);
+}
+
 /**
- * Sort helper: prompts WITH reference image → first, WITHOUT → last.
+ * Sort helper: prompts WITH preview (image or video) → first, WITHOUT → last.
  * Within each group: new items first, then images before videos.
  */
 function sortByReference(list: Prompt[]): Prompt[] {
   return [...list].sort((a, b) => {
-    // 1. With reference first
-    const aRef = a.image ? 0 : 1;
-    const bRef = b.image ? 0 : 1;
+    // 1. With preview first
+    const aRef = hasPreview(a) ? 0 : 1;
+    const bRef = hasPreview(b) ? 0 : 1;
     if (aRef !== bRef) return aRef - bRef;
     // 2. New items first
     const aNew = a.isNew ? 0 : 1;
@@ -133,10 +137,10 @@ export function applyFilter(
       return sortByReference(prompts.filter((p) => p.category === f.value));
     case "videos-with-ref":
       return sortVideoWithRef(
-        prompts.filter((p) => p.type === "Vídeo" && Boolean(p.image))
+        prompts.filter((p) => p.type === "Vídeo" && (Boolean(p.image) || Boolean(p.videoUrl)))
       );
     case "videos-no-ref":
-      return prompts.filter((p) => p.type === "Vídeo" && !p.image);
+      return prompts.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl);
   }
 }
 

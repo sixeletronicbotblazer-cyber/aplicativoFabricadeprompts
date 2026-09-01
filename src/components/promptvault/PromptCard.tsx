@@ -60,8 +60,8 @@ export function PromptCard({
     }
   };
 
-  /* ─── COMPACT CARD (no reference image) ─── */
-  if (!hasImage) {
+  /* ─── COMPACT CARD (no preview at all — no image AND no video) ─── */
+  if (!hasImage && !hasVideo) {
     return (
       <article className="group glass relative rounded-xl overflow-hidden transition-all duration-300 hover:border-white/15 hover:shadow-lg hover:shadow-black/20">
         <div className="flex items-center gap-3 p-3 sm:p-3.5">
