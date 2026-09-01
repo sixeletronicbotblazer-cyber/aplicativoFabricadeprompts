@@ -50,6 +50,28 @@ export function countFor(f: Filter, favIds: string[]): number {
   }
 }
 
+/**
+ * Sort helper: prompts WITH reference image → first, WITHOUT → last.
+ * Within each group: new items first, then images before videos.
+ */
+function sortByReference(list: Prompt[]): Prompt[] {
+  return [...list].sort((a, b) => {
+    // 1. With reference first
+    const aRef = a.image ? 0 : 1;
+    const bRef = b.image ? 0 : 1;
+    if (aRef !== bRef) return aRef - bRef;
+    // 2. New items first
+    const aNew = a.isNew ? 0 : 1;
+    const bNew = b.isNew ? 0 : 1;
+    if (aNew !== bNew) return aNew - bNew;
+    // 3. Images before videos
+    const aVid = a.type === "Vídeo" ? 1 : 0;
+    const bVid = b.type === "Vídeo" ? 1 : 0;
+    if (aVid !== bVid) return aVid - bVid;
+    return 0;
+  });
+}
+
 export function applyFilter(
   prompts: Prompt[],
   f: Filter,
@@ -58,25 +80,17 @@ export function applyFilter(
   const favSet = new Set(favIds);
   switch (f.kind) {
     case "all":
-      // Sort: new items first, then by type (images before videos)
-      return [...prompts].sort((a, b) => {
-        const an = a.isNew ? 0 : 1;
-        const bn = b.isNew ? 0 : 1;
-        if (an !== bn) return an - bn;
-        const av = a.type === "Vídeo" ? 1 : 0;
-        const bv = b.type === "Vídeo" ? 1 : 0;
-        return av - bv;
-      });
+      return sortByReference(prompts);
     case "favorites":
-      return prompts.filter((p) => favSet.has(p.id));
+      return sortByReference(prompts.filter((p) => favSet.has(p.id)));
     case "recommended":
-      return prompts.filter((p) => p.recommended);
+      return sortByReference(prompts.filter((p) => p.recommended));
     case "updates":
-      return prompts.filter((p) => p.isNew);
+      return sortByReference(prompts.filter((p) => p.isNew));
     case "type":
-      return prompts.filter((p) => p.type === f.value);
+      return sortByReference(prompts.filter((p) => p.type === f.value));
     case "category":
-      return prompts.filter((p) => p.category === f.value);
+      return sortByReference(prompts.filter((p) => p.category === f.value));
   }
 }
 

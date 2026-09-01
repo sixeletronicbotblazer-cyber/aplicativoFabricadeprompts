@@ -1,19 +1,17 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Sparkles, Heart, ChevronDown } from "lucide-react";
+import { Sparkles, Heart, ChevronDown, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PROMPTS, type Prompt } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
 import { toast } from "sonner";
 import { applyFilter, filterLabel, type Filter, ALL_FILTER } from "./filters";
 import { Sidebar, MobileSidebar } from "./Sidebar";
-import { Hero } from "./Hero";
 import { SearchBar } from "./SearchBar";
 import { PromptCard } from "./PromptCard";
 import { PromptModal } from "./PromptModal";
 import { EmptyState } from "./EmptyState";
-import { InternalCta } from "./InternalCta";
 import { UpdateBanner } from "./UpdateBanner";
 import { ManequimPopup } from "./ManequimPopup";
 
@@ -78,11 +76,6 @@ export function Gallery() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSeeRecommended = () => {
-    setFilter({ kind: "recommended" });
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const handleReset = () => {
     setQuery("");
     setFilter(ALL_FILTER);
@@ -131,8 +124,6 @@ export function Gallery() {
           </div>
 
           <div className="px-4 sm:px-6 lg:px-8 py-6 lg:py-8 space-y-6 lg:space-y-7">
-            <Hero onSeeFavorites={handleSeeFavorites} favoritesCount={favIds.length} />
-
             <SearchBar
               query={query}
               onQueryChange={setQuery}
@@ -196,7 +187,6 @@ export function Gallery() {
               </div>
             )}
 
-            <InternalCta onSeeRecommended={handleSeeRecommended} />
           </div>
         </main>
       </div>

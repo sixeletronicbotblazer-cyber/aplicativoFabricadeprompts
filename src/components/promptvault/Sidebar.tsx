@@ -7,10 +7,8 @@ import {
   Camera,
   Eye,
   User,
-  Shirt,
   Hand,
   ShoppingCart,
-  ShoppingBag,
   ScanFace,
   Heart,
   RefreshCw,
@@ -19,7 +17,6 @@ import {
   UserCircle,
   Sparkles,
   X,
-  PersonStanding,
   Target,
   PawPrint,
   Baby,
@@ -60,7 +57,6 @@ const MAIN_NAV: NavItem[] = [
     isNew: true,
   },
   { label: "Selfie", icon: User, filter: { kind: "category", value: "Selfie" } },
-  { label: "Roupas", icon: Shirt, filter: { kind: "category", value: "Roupas" } },
   { label: "Produto", icon: Hand, filter: { kind: "category", value: "Produto" } },
   {
     label: "PET",
@@ -80,19 +76,9 @@ const MAIN_NAV: NavItem[] = [
     filter: { kind: "category", value: "TikTok Shop" },
   },
   {
-    label: "Shopee",
-    icon: ShoppingBag,
-    filter: { kind: "category", value: "Shopee" },
-  },
-  {
     label: "Identidade AI",
     icon: ScanFace,
     filter: { kind: "category", value: "Identidade AI" },
-  },
-  {
-    label: "Manequim",
-    icon: PersonStanding,
-    filter: { kind: "category", value: "Manequim" },
   },
   {
     label: "Selfie UGC",

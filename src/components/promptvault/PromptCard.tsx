@@ -7,11 +7,7 @@ import {
   Film,
   ImageIcon,
   Check,
-  Sparkles,
-  Hand,
-  Zap,
   Play,
-  ExternalLink,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -31,7 +27,7 @@ const TYPE_STYLE: Record<PromptType, string> = {
 
 function TypeIcon({ type, className }: { type: PromptType; className?: string }) {
   if (type === "Vídeo") return <Film className={className} />;
-  if (type === "Produto") return <Hand className={className} />;
+  if (type === "Produto") return <Eye className={className} />;
   return <ImageIcon className={className} />;
 }
 
@@ -57,15 +53,15 @@ export function PromptCard({
     const ok = await copyText(prompt.prompt);
     if (ok) {
       setCopied(true);
-      toast.success("Prompt copiado com sucesso.");
+      toast.success("Prompt copiado!");
       setTimeout(() => setCopied(false), 1600);
     } else {
-      toast.error("Não foi possível copiar. Tente novamente.");
+      toast.error("Não foi possível copiar.");
     }
   };
 
   return (
-    <article className="group glass relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl hover:shadow-black/40 flex flex-col">
+    <article className="group glass relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-white/15 hover:shadow-xl hover:shadow-black/30 flex flex-col">
       {/* Image / Video / Placeholder */}
       <button
         type="button"
@@ -80,7 +76,7 @@ export function PromptCard({
               alt={prompt.title}
               loading="lazy"
               decoding="async"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
           ) : showVideoThumb ? (
             <div className="relative h-full w-full bg-black/40">
@@ -98,10 +94,10 @@ export function PromptCard({
               </div>
             </div>
           ) : (
-            <div className="relative h-full w-full overflow-hidden bg-gradient-to-br from-brand-purple/25 via-background to-brand-cyan/20">
+            <div className="relative h-full w-full overflow-hidden bg-gradient-to-br from-brand-purple/20 via-background to-brand-cyan/15">
               <div
                 aria-hidden
-                className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full blur-2xl opacity-60"
+                className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full blur-2xl opacity-40"
                 style={{
                   background:
                     "radial-gradient(closest-side, var(--brand-pink), transparent)",
@@ -109,58 +105,31 @@ export function PromptCard({
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute -bottom-10 -left-10 h-40 w-40 rounded-full blur-2xl opacity-50"
+                className="pointer-events-none absolute -bottom-10 -left-10 h-40 w-40 rounded-full blur-2xl opacity-30"
                 style={{
                   background:
                     "radial-gradient(closest-side, var(--brand-cyan), transparent)",
                 }}
               />
               <div className="absolute inset-0 grid place-items-center">
-                <div className="flex flex-col items-center gap-2 text-center">
-                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
-                    <TypeIcon type={prompt.type} className="h-6 w-6 text-white/80" />
-                  </div>
-                  <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                    Sem referência
-                  </span>
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white/[0.07] backdrop-blur-md border border-white/10">
+                  <TypeIcon type={prompt.type} className="h-5 w-5 text-white/60" />
                 </div>
               </div>
             </div>
           )}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
         {/* Type badge */}
         <span
           className={cn(
-            "absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] font-semibold backdrop-blur-md",
+            "absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider backdrop-blur-md",
             TYPE_STYLE[prompt.type]
           )}
         >
           <TypeIcon type={prompt.type} className="h-3 w-3" />
           {prompt.type}
-        </span>
-
-        {/* Referência badge */}
-        {prompt.referencia && (
-          <span className="absolute left-3 top-12 inline-flex items-center gap-1 rounded-full border border-white/15 bg-black/50 px-2.5 py-1 text-[10px] font-semibold text-white/90 backdrop-blur-md">
-            <Sparkles className="h-3 w-3" />
-            Referência
-          </span>
-        )}
-
-        {/* "Novo" badge */}
-        {prompt.isNew && (
-          <span className="absolute left-3 top-12 inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-emerald-500/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-emerald-300 backdrop-blur-md animate-pulse">
-            <Zap className="h-3 w-3" />
-            Novo
-          </span>
-        )}
-
-        {/* Hover hint */}
-        <span className="absolute bottom-3 right-3 inline-flex items-center gap-1 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white/90 opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
-          {hasVideo ? <ExternalLink className="h-3 w-3" /> : <Eye className="h-3 w-3" />}
-          {hasVideo ? "Assistir" : "Ver detalhes"}
         </span>
       </button>
 
@@ -169,43 +138,38 @@ export function PromptCard({
         type="button"
         onClick={() => onToggleFavorite(prompt.id)}
         className={cn(
-          "absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full border backdrop-blur-md transition-all",
+          "absolute right-3 top-3 z-10 grid h-8 w-8 place-items-center rounded-full border backdrop-blur-md transition-all",
           isFavorite
             ? "border-brand-pink/40 bg-brand-pink/20 text-brand-pink"
-            : "border-white/15 bg-black/30 text-white/80 hover:text-brand-pink hover:border-brand-pink/40"
+            : "border-white/10 bg-black/25 text-white/70 hover:text-brand-pink hover:border-brand-pink/40"
         )}
         aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
       >
         <Heart
-          className={cn("h-4 w-4 transition-transform", isFavorite && "fill-current scale-110")}
+          className={cn("h-3.5 w-3.5 transition-transform", isFavorite && "fill-current scale-110")}
         />
       </button>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-4">
-        <h3 className="text-base font-semibold leading-snug line-clamp-1">
+      <div className="flex flex-1 flex-col p-4 pb-3">
+        <h3 className="text-[15px] font-bold leading-tight line-clamp-1 text-foreground">
           {prompt.title}
         </h3>
-        <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed line-clamp-2">
+        <p className="mt-1 text-[13px] text-muted-foreground/80 leading-relaxed line-clamp-2">
           {prompt.description}
         </p>
 
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {prompt.tags.slice(0, 4).map((tag) => (
-            <span
-              key={tag}
-              className="rounded-md bg-white/5 px-2 py-0.5 text-[11px] font-medium text-muted-foreground"
-            >
-              #{tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-4 flex items-center gap-2 pt-1">
+        <div className="mt-auto pt-3 flex items-center gap-2">
           <Button
             type="button"
             onClick={handleCopy}
-            className="h-9 flex-1 gap-2 bg-brand-gradient text-white font-semibold hover:opacity-90 border-0"
+            size="sm"
+            className={cn(
+              "h-9 flex-1 gap-1.5 text-sm font-bold border-0 transition-all active:scale-[0.97]",
+              copied
+                ? "bg-emerald-500/90 text-white"
+                : "bg-brand-gradient text-white hover:brightness-110"
+            )}
           >
             {copied ? (
               <>
@@ -215,18 +179,18 @@ export function PromptCard({
             ) : (
               <>
                 <Copy className="h-4 w-4" />
-                Copiar prompt
+                Copiar
               </>
             )}
           </Button>
           <Button
             type="button"
             variant="outline"
+            size="sm"
             onClick={() => onOpen(prompt)}
-            className="h-9 border-white/10 bg-white/5 text-foreground hover:bg-white/10"
+            className="h-9 w-9 p-0 border-white/10 bg-white/5 text-foreground/70 hover:bg-white/10 hover:text-foreground"
           >
             <Eye className="h-4 w-4" />
-            <span className="sr-only sm:not-sr-only sm:ml-1.5">Detalhes</span>
           </Button>
         </div>
       </div>

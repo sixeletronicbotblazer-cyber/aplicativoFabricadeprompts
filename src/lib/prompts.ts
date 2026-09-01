@@ -11,15 +11,11 @@ export type PromptCategory =
   | "POV"
   | "POV Avançado"
   | "UGC"
-  | "Roupas"
   | "Produto"
-  | "Look no corpo"
   | "TikTok Shop"
-  | "Shopee"
   | "Imagem"
   | "Vídeo"
   | "Identidade AI"
-  | "Manequim"
   | "Selfie UGC"
   | "PET"
   | "Infantil";
@@ -69,15 +65,12 @@ export const CATEGORIES: PromptCategory[] = [
   "Produto",
   "UGC",
   "Selfie",
-  "Roupas",
   "PET",
   "Infantil",
   "TikTok Shop",
-  "Shopee",
   "Imagem",
   "Vídeo",
   "Identidade AI",
-  "Manequim",
   "Selfie UGC",
 ];
 

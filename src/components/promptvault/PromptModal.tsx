@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, Heart, Check, X, Film, ImageIcon, Lightbulb, ExternalLink } from "lucide-react";
+import { Copy, Heart, Check, X, Film, ImageIcon, Lightbulb } from "lucide-react";
 import { useState } from "react";
 import {
   Dialog,
@@ -48,10 +48,10 @@ export function PromptModal({
     const ok = await copyText(prompt.prompt);
     if (ok) {
       setCopied(true);
-      toast.success("Prompt copiado com sucesso.");
+      toast.success("Prompt copiado!");
       setTimeout(() => setCopied(false), 1600);
     } else {
-      toast.error("Não foi possível copiar. Tente novamente.");
+      toast.error("Não foi possível copiar.");
     }
   };
 
@@ -77,7 +77,7 @@ export function PromptModal({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:bg-gradient-to-r" />
                 <span
                   className={cn(
-                    "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                    "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur-md",
                     TYPE_STYLE[prompt.type]
                   )}
                 >
@@ -103,7 +103,7 @@ export function PromptModal({
                 />
                 <span
                   className={cn(
-                    "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                    "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur-md",
                     TYPE_STYLE[prompt.type]
                   )}
                 >
@@ -113,26 +113,25 @@ export function PromptModal({
               </div>
             )}
 
-
             {hasImage && hasVideo && (
-            <div className="relative md:col-span-5 h-48 sm:h-56 bg-black/60">
-              <video
-                src={prompt.videoUrl}
-                controls
-                playsInline
-                preload="metadata"
-                className="h-full w-full object-contain"
-              />
-              <span
-                className={cn(
-                  "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
-                  TYPE_STYLE[prompt.type]
-                )}
-              >
-                <Film className="h-3.5 w-3.5" />
-                Vídeo
-              </span>
-            </div>
+              <div className="relative md:col-span-5 h-48 sm:h-56 bg-black/60">
+                <video
+                  src={prompt.videoUrl}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-contain"
+                />
+                <span
+                  className={cn(
+                    "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur-md",
+                    TYPE_STYLE[prompt.type]
+                  )}
+                >
+                  <Film className="h-3.5 w-3.5" />
+                  Vídeo
+                </span>
+              </div>
             )}
 
             {/* Details side */}
@@ -140,7 +139,7 @@ export function PromptModal({
               <button
                 type="button"
                 onClick={() => onOpenChange(false)}
-                className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full border border-white/10 bg-black/30 text-white/80 backdrop-blur-md transition-colors hover:text-white hover:bg-black/50"
+                className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-black/30 text-white/70 backdrop-blur-md transition-colors hover:text-white hover:bg-black/50"
                 aria-label="Fechar"
               >
                 <X className="h-4 w-4" />
@@ -149,7 +148,7 @@ export function PromptModal({
               {!hasMedia && (
                 <span
                   className={cn(
-                    "mb-3 inline-flex w-fit items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md",
+                    "mb-3 inline-flex w-fit items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur-md",
                     TYPE_STYLE[prompt.type]
                   )}
                 >
@@ -161,61 +160,49 @@ export function PromptModal({
                   {prompt.type}
                 </span>
               )}
-              <DialogTitle className="text-xl sm:text-2xl font-semibold tracking-tight pr-10">
+
+              <DialogTitle className="text-xl sm:text-2xl font-bold tracking-tight pr-10">
                 {prompt.title}
               </DialogTitle>
               <DialogDescription className="sr-only">
                 Detalhes do prompt {prompt.title}
               </DialogDescription>
 
-              <div className="mt-3 flex flex-wrap items-center gap-2">
-                <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
-                  Categoria: {prompt.category}
-                </span>
-                {prompt.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-md bg-white/5 px-2 py-0.5 text-[11px] font-medium text-muted-foreground"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
+              <p className="mt-2 text-sm text-muted-foreground/80 leading-relaxed">
+                {prompt.description}
+              </p>
 
-              <ScrollArea className="mt-4 flex-1 pr-2 -mr-2 max-h-[40vh] md:max-h-none scrollbar-premium">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {prompt.description}
-                </p>
-
-                {prompt.explanation && (
-                  <div className="mt-4 rounded-xl border border-brand-purple/25 bg-brand-purple/[0.07] p-4">
-                    <p className="mb-2 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-brand-purple">
-                      <Lightbulb className="h-3.5 w-3.5" />
-                      Como usar este prompt
-                    </p>
-                    <p className="whitespace-pre-line text-[13px] leading-relaxed text-foreground/80">
-                      {prompt.explanation}
-                    </p>
-                  </div>
-                )}
-
-                <div className="mt-4">
-                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
-                    Prompt completo
+              {prompt.explanation && (
+                <div className="mt-4 rounded-xl border border-brand-purple/20 bg-brand-purple/[0.05] p-4">
+                  <p className="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-brand-purple">
+                    <Lightbulb className="h-3.5 w-3.5" />
+                    Como usar
                   </p>
-                  <div className="relative rounded-xl border border-white/10 bg-black/40">
-                    <pre className="max-h-64 overflow-auto whitespace-pre-wrap break-words p-4 text-[13px] leading-relaxed text-foreground/90 font-mono scrollbar-premium">
+                  <p className="whitespace-pre-line text-[13px] leading-relaxed text-foreground/80">
+                    {prompt.explanation}
+                  </p>
+                </div>
+              )}
+
+              {/* Prompt text - the main copy target */}
+              <div className="mt-5 flex-1 min-h-0">
+                <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground/60">
+                  Prompt
+                </p>
+                <ScrollArea className="max-h-[38vh] md:max-h-none scrollbar-premium">
+                  <div className="relative rounded-xl border border-white/8 bg-black/30">
+                    <pre className="whitespace-pre-wrap break-words p-4 text-[13px] leading-[1.7] text-foreground/90 font-mono selection:bg-brand-purple/30">
                       {prompt.prompt}
                     </pre>
                     <button
                       type="button"
                       onClick={handleCopy}
-                      className="absolute right-2.5 top-2.5 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-black/50 px-2.5 py-1.5 text-[11px] font-medium text-white/90 backdrop-blur-md transition-colors hover:bg-black/70"
+                      className="absolute right-2.5 top-2.5 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-black/50 px-2.5 py-1.5 text-[11px] font-bold text-white/90 backdrop-blur-md transition-all hover:bg-black/70 active:scale-95"
                     >
                       {copied ? (
                         <>
-                          <Check className="h-3.5 w-3.5 text-brand-cyan" />
-                          Copiado
+                          <Check className="h-3.5 w-3.5 text-emerald-400" />
+                          <span className="text-emerald-400">Copiado</span>
                         </>
                       ) : (
                         <>
@@ -225,14 +212,20 @@ export function PromptModal({
                       )}
                     </button>
                   </div>
-                </div>
-              </ScrollArea>
+                </ScrollArea>
+              </div>
 
+              {/* Bottom actions */}
               <div className="mt-5 flex items-center gap-2">
                 <Button
                   type="button"
                   onClick={handleCopy}
-                  className="h-11 flex-1 gap-2 bg-brand-gradient text-white font-semibold hover:opacity-90 border-0"
+                  className={cn(
+                    "h-11 flex-1 gap-2 text-[15px] font-bold border-0 transition-all active:scale-[0.97]",
+                    copied
+                      ? "bg-emerald-500/90 text-white hover:bg-emerald-500"
+                      : "bg-brand-gradient text-white hover:brightness-110"
+                  )}
                 >
                   {copied ? (
                     <>
@@ -251,7 +244,7 @@ export function PromptModal({
                   variant="outline"
                   onClick={() => onToggleFavorite(prompt.id)}
                   className={cn(
-                    "h-11 gap-2 border-white/10",
+                    "h-11 gap-2 border-white/10 text-sm",
                     isFavorite
                       ? "bg-brand-pink/15 text-brand-pink border-brand-pink/30 hover:bg-brand-pink/20"
                       : "bg-white/5 text-foreground hover:bg-white/10"
@@ -260,7 +253,7 @@ export function PromptModal({
                   <Heart
                     className={cn("h-4 w-4", isFavorite && "fill-current")}
                   />
-                  {isFavorite ? "Favoritado" : "Favoritar"}
+                  {isFavorite ? "Salvo" : "Salvar"}
                 </Button>
               </div>
             </div>
