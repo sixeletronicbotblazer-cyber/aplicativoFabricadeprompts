@@ -11,7 +11,9 @@ export type Filter =
   | { kind: "category"; value: PromptCategory }
   | { kind: "favorites" }
   | { kind: "recommended" }
-  | { kind: "updates" };
+  | { kind: "updates" }
+  | { kind: "videos-with-ref" }
+  | { kind: "videos-no-ref" };
 
 export const ALL_FILTER: Filter = { kind: "all" };
 
@@ -30,6 +32,10 @@ export function filterKey(f: Filter): string {
       return `type:${f.value}`;
     case "category":
       return `category:${f.value}`;
+    case "videos-with-ref":
+      return "videos-with-ref";
+    case "videos-no-ref":
+      return "videos-no-ref";
   }
 }
 
@@ -47,7 +53,41 @@ export function countFor(f: Filter, favIds: string[]): number {
       return PROMPTS.filter((p) => p.type === f.value).length;
     case "category":
       return PROMPTS.filter((p) => p.category === f.value).length;
+    case "videos-with-ref":
+      return PROMPTS.filter((p) => p.type === "Vídeo" && Boolean(p.image)).length;
+    case "videos-no-ref":
+      return PROMPTS.filter((p) => p.type === "Vídeo" && !p.image).length;
   }
+}
+
+/**
+ * Check if a prompt is "manequim" or "selfie" (should go to bottom in Vídeo tab).
+ */
+function isManequimOrSelfie(p: Prompt): boolean {
+  const t = p.title.toLowerCase();
+  const c = p.category.toLowerCase();
+  return (
+    t.includes("manequim") ||
+    c.includes("selfie ugc") ||
+    c === "selfie"
+  );
+}
+
+/**
+ * Sort for Vídeo tab (with ref): newest first, manequim/selfie at bottom.
+ */
+function sortVideoWithRef(list: Prompt[]): Prompt[] {
+  return [...list].sort((a, b) => {
+    // 1. Manequim/Selfie → bottom (1), others → top (0)
+    const aBottom = isManequimOrSelfie(a) ? 1 : 0;
+    const bBottom = isManequimOrSelfie(b) ? 1 : 0;
+    if (aBottom !== bBottom) return aBottom - bBottom;
+    // 2. New items first
+    const aNew = a.isNew ? 0 : 1;
+    const bNew = b.isNew ? 0 : 1;
+    if (aNew !== bNew) return aNew - bNew;
+    return 0;
+  });
 }
 
 /**
@@ -91,6 +131,12 @@ export function applyFilter(
       return sortByReference(prompts.filter((p) => p.type === f.value));
     case "category":
       return sortByReference(prompts.filter((p) => p.category === f.value));
+    case "videos-with-ref":
+      return sortVideoWithRef(
+        prompts.filter((p) => p.type === "Vídeo" && Boolean(p.image))
+      );
+    case "videos-no-ref":
+      return prompts.filter((p) => p.type === "Vídeo" && !p.image);
   }
 }
 
@@ -108,5 +154,9 @@ export function filterLabel(f: Filter): string {
       return f.value;
     case "category":
       return f.value;
+    case "videos-with-ref":
+      return "Vídeo";
+    case "videos-no-ref":
+      return "Vídeos Parte 2";
   }
 }

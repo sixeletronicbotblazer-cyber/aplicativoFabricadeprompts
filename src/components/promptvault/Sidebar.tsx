@@ -47,7 +47,8 @@ interface NavItem {
 const MAIN_NAV: NavItem[] = [
   { label: "Todos os prompts", icon: LayoutGrid, filter: { kind: "all" } },
   { label: "Imagem", icon: ImageIcon, filter: { kind: "type", value: "Imagem" } },
-  { label: "Vídeo", icon: Film, filter: { kind: "type", value: "Vídeo" } },
+  { label: "Vídeo", icon: Film, filter: { kind: "videos-with-ref" } },
+  { label: "Vídeos Parte 2", icon: Film, filter: { kind: "videos-no-ref" } },
   { label: "UGC", icon: Camera, filter: { kind: "category", value: "UGC" } },
   { label: "POV", icon: Eye, filter: { kind: "category", value: "POV" } },
   {

@@ -106,3 +106,25 @@ Stage Summary:
 - Popup replaced from Manequim → Selfie UGC (brief format)
 - All existing functionality preserved — NO layout/code changes to working components
 - No git push performed (user requested preview only)
+
+---
+Task ID: 2
+Agent: Sub-agent (general-purpose)
+Task: Update Gallery.tsx to support new video-no-ref and video-with-ref filter kinds
+
+Work Log:
+- Read worklog.md for context
+- Read existing Gallery.tsx to understand current implementation
+- Wrote updated Gallery.tsx with exact content specified:
+  - Removed unused `Menu` import from lucide-react
+  - Added `isVideosNoRef` and `isVideosWithRef` boolean flags based on filter.kind
+  - Removed dynamic `noRefLabel` variable, replaced with static "Sem referência visual"
+  - Restructured grid rendering into 3-way branch: videos-no-ref (compact 3-col), videos-with-ref (full 4-col), or default (image cards + compact cards with divider)
+  - Compacted arrow functions and JSX formatting to match spec
+  - All existing imports, components, and functionality preserved
+- Verified compilation: ✓ Compiled in 252ms, GET / 200 — no errors
+
+Stage Summary:
+- Gallery.tsx updated to support `videos-no-ref` and `videos-with-ref` filter kinds from updated filters.ts
+- Three rendering modes: compact grid for no-ref videos, full grid for with-ref videos, split image/compact layout for all other filters
+- Compilation clean, zero errors
