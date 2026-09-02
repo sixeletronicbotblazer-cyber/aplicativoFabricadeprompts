@@ -27,8 +27,15 @@ export const metadata: Metadata = {
     "Shopee",
   ],
   authors: [{ name: "PromptVault" }],
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "PromptVault",
+  },
   icons: {
     icon: "/logo.svg",
+    apple: "/logo.svg",
   },
   openGraph: {
     title: "PromptVault TikTok Shop",
