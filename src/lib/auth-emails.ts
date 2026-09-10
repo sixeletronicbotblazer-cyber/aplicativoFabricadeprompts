@@ -45,7 +45,6 @@ export const BLOCKED_EMAILS = new Set<string>([  "acemoreira48@gmail.com",
   "lorenaabreufelipe32@gmail.com",
   "gabrielnunessouza0202@gmail.com",
   "selance.uniformes@yahoo.com.br",
-  "leandraramos512@gmail.com",
 ]);
 
 export const VALID_EMAILS = new Set<string>([  "acssejesu@gmail.com",
