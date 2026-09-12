@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Sparkles, Heart, ChevronDown, Film } from "lucide-react";
+import { Sparkles, Heart, ChevronDown, Film, ArrowRight, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PROMPTS, type Prompt } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
@@ -82,6 +82,26 @@ export function Gallery() {
               {favIds.length > 0 && <span className="absolute -right-1 -top-1 grid h-4 min-w-4 place-items-center rounded-full bg-brand-pink px-1 text-[10px] font-bold text-black">{favIds.length}</span>}
             </Button>
           </div>
+          {/* Update 12/09 Banner */}
+          <div className="mx-4 sm:mx-6 lg:mx-8 mt-4 mb-0 rounded-xl border border-brand-pink/20 bg-gradient-to-r from-brand-pink/[0.08] via-brand-purple/[0.06] to-brand-cyan/[0.04] px-4 py-3 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand-gradient shadow-md shadow-brand-purple/20">
+                <Zap className="h-4 w-4 text-white" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-foreground">Atualização 12/09</p>
+                <p className="text-[11px] text-muted-foreground truncate">Novos prompts, formatos e referências adicionados à biblioteca</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setFilter({ kind: "novidades" })}
+              className="shrink-0 inline-flex items-center gap-1.5 rounded-lg bg-brand-gradient px-3.5 py-2 text-xs font-semibold text-white shadow-sm hover:brightness-110 transition-all active:scale-95"
+            >
+              Ver novidades
+              <ArrowRight className="h-3.5 w-3.5" />
+            </button>
+          </div>
           <div className="px-4 sm:px-6 lg:px-8 py-6 lg:py-8 space-y-6 lg:space-y-7">
             <SearchBar query={query} onQueryChange={setQuery} filter={filter} onFilterChange={setFilter} onOpenMenu={() => setMobileOpen(true)} />
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -150,7 +170,7 @@ export function Gallery() {
           <p className="text-[11px] text-muted-foreground/70">Acervo exclusivo para clientes · {PROMPTS.length} prompts disponíveis</p>
         </div>
       </footer>
-      <UpdateBanner onNavigate={(cat) => setFilter({ kind: "category", value: cat as any })} />
+      <UpdateBanner onNavigate={(cat) => setFilter({ kind: "category", value: cat as any })} onNavigateNovidades={() => setFilter({ kind: "novidades" })} />
       <ManequimPopup onNavigate={() => setFilter({ kind: "category", value: "Selfie UGC" })} />
       <PromptModal prompt={selected} open={modalOpen} onOpenChange={setModalOpen} isFavorite={selected ? isFav(selected.id) : false} onToggleFavorite={handleToggleFav} />
     </div>

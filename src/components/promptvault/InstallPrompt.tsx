@@ -11,18 +11,16 @@ import { Download, X, Smartphone } from "lucide-react";
 export function InstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [dismissed, setDismissed] = useState(false);
-  const [isIOS, setIsIOS] = useState(false);
+  const [isIOS, setIsIOS] = useState(() => {
+    if (typeof navigator === "undefined") return false;
+    const ua = navigator.userAgent;
+    return /iPad|iPhone|iPod/.test(ua) && !ua.includes("CriOS");
+  });
 
   useEffect(() => {
     // Check if already installed
     if (window.matchMedia("(display-mode: standalone)").matches) return;
     if (sessionStorage.getItem("pv-install-dismissed")) return;
-
-    // Detect iOS Safari (no beforeinstallprompt)
-    const ua = navigator.userAgent;
-    if (/iPad|iPhone|iPod/.test(ua) && !(ua as string).includes("CriOS")) {
-      setIsIOS(true);
-    }
 
     const handler = (e: Event) => {
       e.preventDefault();

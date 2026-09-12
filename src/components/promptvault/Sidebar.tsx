@@ -20,6 +20,12 @@ import {
   Target,
   PawPrint,
   Baby,
+  TreePine,
+  Zap,
+  ArrowRightLeft,
+  Users,
+  Move,
+  Shirt,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -46,6 +52,7 @@ interface NavItem {
 
 const MAIN_NAV: NavItem[] = [
   { label: "Todos os prompts", icon: LayoutGrid, filter: { kind: "all" } },
+  { label: "Novidades", icon: Sparkles, filter: { kind: "novidades" }, isNew: true },
   { label: "Imagem", icon: ImageIcon, filter: { kind: "type", value: "Imagem" } },
   { label: "Vídeo", icon: Film, filter: { kind: "videos-with-ref" } },
   { label: "Vídeos Parte 2", icon: Film, filter: { kind: "videos-no-ref" } },
@@ -55,21 +62,66 @@ const MAIN_NAV: NavItem[] = [
     label: "POV Avançado",
     icon: Target,
     filter: { kind: "category", value: "POV Avançado" },
-    isNew: true,
   },
   { label: "Selfie", icon: User, filter: { kind: "category", value: "Selfie" } },
   { label: "Produto", icon: Hand, filter: { kind: "category", value: "Produto" } },
   {
+    label: "Natal",
+    icon: TreePine,
+    filter: { kind: "category", value: "Natal" },
+    isNew: true,
+  },
+  {
+    label: "Ganchos",
+    icon: Zap,
+    filter: { kind: "category", value: "Gancho" },
+    isNew: true,
+  },
+  {
+    label: "Transições",
+    icon: ArrowRightLeft,
+    filter: { kind: "category", value: "Transição" },
+    isNew: true,
+  },
+  {
+    label: "Moda",
+    icon: Shirt,
+    filter: { kind: "category", value: "Moda" },
+    isNew: true,
+  },
+  {
+    label: "Casal",
+    icon: Users,
+    filter: { kind: "category", value: "Casal" },
+    isNew: true,
+  },
+  {
+    label: "Masculino",
+    icon: User,
+    filter: { kind: "category", value: "Masculino" },
+    isNew: true,
+  },
+  {
+    label: "Movimento",
+    icon: Move,
+    filter: { kind: "category", value: "Movimento" },
+    isNew: true,
+  },
+  {
+    label: "Lingerie",
+    icon: Heart,
+    filter: { kind: "category", value: "Lingerie" },
+    isNew: true,
+  },
+  {
     label: "PET",
     icon: PawPrint,
     filter: { kind: "category", value: "PET" },
-    isNew: true,
   },
   {
     label: "Infantil",
     icon: Baby,
     filter: { kind: "category", value: "Infantil" },
-    isNew: true,
   },
   {
     label: "TikTok Shop",
@@ -85,7 +137,6 @@ const MAIN_NAV: NavItem[] = [
     label: "Selfie UGC",
     icon: Camera,
     filter: { kind: "category", value: "Selfie UGC" },
-    isNew: true,
   },
   { label: "Favoritos", icon: Heart, filter: { kind: "favorites" } },
   { label: "Atualizações", icon: RefreshCw, filter: { kind: "updates" } },

@@ -12,6 +12,7 @@ export type Filter =
   | { kind: "favorites" }
   | { kind: "recommended" }
   | { kind: "updates" }
+  | { kind: "novidades" }
   | { kind: "videos-with-ref" }
   | { kind: "videos-no-ref" };
 
@@ -28,6 +29,8 @@ export function filterKey(f: Filter): string {
       return "recommended";
     case "updates":
       return "updates";
+    case "novidades":
+      return "novidades";
     case "type":
       return `type:${f.value}`;
     case "category":
@@ -48,6 +51,8 @@ export function countFor(f: Filter, favIds: string[]): number {
     case "recommended":
       return PROMPTS.filter((p) => p.recommended).length;
     case "updates":
+      return PROMPTS.filter((p) => p.isNew).length;
+    case "novidades":
       return PROMPTS.filter((p) => p.isNew).length;
     case "type":
       return PROMPTS.filter((p) => p.type === f.value).length;
@@ -131,6 +136,8 @@ export function applyFilter(
       return sortByReference(prompts.filter((p) => p.recommended));
     case "updates":
       return sortByReference(prompts.filter((p) => p.isNew));
+    case "novidades":
+      return sortByReference(prompts.filter((p) => p.isNew));
     case "type":
       return sortByReference(prompts.filter((p) => p.type === f.value));
     case "category":
@@ -154,6 +161,8 @@ export function filterLabel(f: Filter): string {
       return "Recomendados";
     case "updates":
       return "Atualizações";
+    case "novidades":
+      return "Novidades";
     case "type":
       return f.value;
     case "category":

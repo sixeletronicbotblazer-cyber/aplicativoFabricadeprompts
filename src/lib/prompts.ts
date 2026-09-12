@@ -10,6 +10,10 @@ export type PromptCategory =
   | "Selfie"
   | "POV"
   | "POV Avançado"
+  | "POV Calçados"
+  | "POV Acessórios"
+  | "POV Moda"
+  | "POV Casa"
   | "UGC"
   | "Produto"
   | "TikTok Shop"
@@ -18,7 +22,20 @@ export type PromptCategory =
   | "Identidade AI"
   | "Selfie UGC"
   | "PET"
-  | "Infantil";
+  | "Infantil"
+  | "Natal"
+  | "Natal Pet"
+  | "Natal POV"
+  | "Natal Gancho"
+  | "Gancho"
+  | "Gancho Masculino"
+  | "Transição"
+  | "Masculino"
+  | "Casal"
+  | "Moda"
+  | "Moda Moto"
+  | "Movimento"
+  | "Lingerie";
 
 export interface Prompt {
   id: string;
@@ -62,6 +79,10 @@ export const PROMPTS: Prompt[] = promptsData as unknown as Prompt[];
 export const CATEGORIES: PromptCategory[] = [
   "POV",
   "POV Avançado",
+  "POV Calçados",
+  "POV Acessórios",
+  "POV Moda",
+  "POV Casa",
   "Produto",
   "UGC",
   "Selfie",
@@ -72,6 +93,19 @@ export const CATEGORIES: PromptCategory[] = [
   "Vídeo",
   "Identidade AI",
   "Selfie UGC",
+  "Natal",
+  "Natal Pet",
+  "Natal POV",
+  "Natal Gancho",
+  "Gancho",
+  "Gancho Masculino",
+  "Transição",
+  "Masculino",
+  "Casal",
+  "Moda",
+  "Moda Moto",
+  "Movimento",
+  "Lingerie",
 ];
 
 export const TYPE_BADGES: PromptType[] = [

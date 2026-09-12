@@ -128,3 +128,30 @@ Stage Summary:
 - Gallery.tsx updated to support `videos-no-ref` and `videos-with-ref` filter kinds from updated filters.ts
 - Three rendering modes: compact grid for no-ref videos, full grid for with-ref videos, split image/compact layout for all other filters
 - Compilation clean, zero errors
+
+---
+Task ID: 3
+Agent: Sub-agent (general-purpose)
+Task: Merge 239 new prompts from PDF into existing PromptVault app
+
+Work Log:
+- Read worklog.md for context on prior agents' work (Task 1: initial build, Task 2: video filters & Manequim)
+- Read existing prompts-data.json (248 prompts) and upload/new_prompts_fixed.json (239 new prompts)
+- Analyzed new prompts structure: fields include id, title, type, category, description, tags, image, prompt, isNew, videoUrl, refImages, order
+- Analyzed new categories: Natal, Natal Pet, Natal POV, Natal Gancho, Gancho, Gancho Masculino, Transição, Moda, Movimento, Lingerie, POV Calçados, POV Acessórios, POV Moda, POV Casa, Masculino, Casal, Moda Moto, Selfie UGC
+- Analyzed new types: Vídeo, POV, UGC, Selfie (all valid existing PromptTypes)
+- Merged prompts: mapped each new prompt to existing format (id, title, type, category, description, tags, image from first refImages, prompt, isNew: true, videoUrl if present). Zero ID collisions.
+- Updated prompts.ts: added 17 new PromptCategory types to union and CATEGORIES array (POV Calçados, POV Acessórios, POV Moda, POV Casa, Natal, Natal Pet, Natal POV, Natal Gancho, Gancho, Gancho Masculino, Transição, Masculino, Casal, Moda, Moda Moto, Movimento, Lingerie)
+- Updated Sidebar.tsx: added new lucide-react imports (TreePine, Zap, ArrowRightLeft, Users, Move, Shirt), added 8 new sidebar nav items (Novidades, Natal, Ganhos, Transições, Moda, Casal, Masculino, Movimento, Lingerie) with NOVO badges, moved Novidades to top position after "Todos os prompts"
+- Updated filters.ts: added 'novidades' filter kind to Filter union type, filterKey, countFor, applyFilter, and filterLabel functions. Novidades filters prompts where isNew === true (same logic as updates filter but separate navigation item)
+- Verified Next.js build compiles successfully (✓ Generating static pages)
+- Pre-existing lint error in InstallPrompt.tsx (react-hooks/set-state-in-effect) — not caused by these changes
+
+Stage Summary:
+- Total prompts: 487 (248 existing + 239 new)
+- 353 prompts marked isNew (includes previously existing ones + all 239 new)
+- 17 new PromptCategory types added
+- 8 new sidebar navigation items with NOVO badges
+- 'novidades' filter kind added to show all new prompts
+- All existing functionality preserved — no modifications to existing prompts
+- Build compiles clean, no new lint errors
