@@ -14,7 +14,8 @@ export type Filter =
   | { kind: "updates" }
   | { kind: "novidades" }
   | { kind: "videos-with-ref" }
-  | { kind: "videos-no-ref" };
+  | { kind: "videos-no-ref" }
+  | { kind: "no-prompt" };
 
 export const ALL_FILTER: Filter = { kind: "all" };
 
@@ -39,6 +40,8 @@ export function filterKey(f: Filter): string {
       return "videos-with-ref";
     case "videos-no-ref":
       return "videos-no-ref";
+    case "no-prompt":
+      return "no-prompt";
   }
 }
 
@@ -62,6 +65,8 @@ export function countFor(f: Filter, favIds: string[]): number {
       return PROMPTS.filter((p) => p.type === "Vídeo" && (Boolean(p.image) || Boolean(p.videoUrl))).length;
     case "videos-no-ref":
       return PROMPTS.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl).length;
+    case "no-prompt":
+      return PROMPTS.filter((p) => !p.prompt || p.prompt.trim().length < 10).length;
   }
 }
 
@@ -148,6 +153,8 @@ export function applyFilter(
       );
     case "videos-no-ref":
       return prompts.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl);
+    case "no-prompt":
+      return sortByReference(prompts.filter((p) => !p.prompt || p.prompt.trim().length < 10));
   }
 }
 
@@ -171,5 +178,7 @@ export function filterLabel(f: Filter): string {
       return "Vídeo";
     case "videos-no-ref":
       return "Vídeos Parte 2";
+    case "no-prompt":
+      return "Sem Prompt";
   }
 }

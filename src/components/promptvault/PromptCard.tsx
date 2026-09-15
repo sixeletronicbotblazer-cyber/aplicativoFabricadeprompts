@@ -8,6 +8,7 @@ import {
   ImageIcon,
   Check,
   Play,
+  AlertTriangle,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -47,6 +48,7 @@ export function PromptCard({
   const [copied, setCopied] = useState(false);
   const hasImage = Boolean(prompt.image);
   const hasVideo = Boolean(prompt.videoUrl);
+  const missingPrompt = !prompt.prompt || prompt.prompt.trim().length < 10;
   const showVideoThumb = hasVideo && !hasImage;
 
   const handleCopy = async () => {
@@ -84,6 +86,12 @@ export function PromptCard({
           >
             <h3 className="text-[14px] font-semibold leading-tight line-clamp-1 text-foreground">
               {prompt.title}
+              {missingPrompt && (
+                <span className="ml-1.5 inline-flex items-center gap-0.5 rounded-full border border-amber-400/40 bg-amber-500/20 px-1 py-px text-[7px] font-bold uppercase tracking-wider text-amber-300">
+                  <AlertTriangle className="h-2 w-2" />
+                  Sem prompt
+                </span>
+              )}
             </h3>
             <p className="mt-0.5 text-[12px] text-muted-foreground/70 leading-snug line-clamp-1">
               {prompt.description}
@@ -96,14 +104,19 @@ export function PromptCard({
               type="button"
               onClick={handleCopy}
               size="sm"
+              disabled={missingPrompt}
               className={cn(
                 "h-8 px-3 gap-1.5 text-xs font-bold border-0 transition-all active:scale-[0.97] rounded-lg",
-                copied
-                  ? "bg-emerald-500/90 text-white"
-                  : "bg-brand-gradient text-white hover:brightness-110"
+                missingPrompt
+                  ? "bg-white/5 text-muted-foreground/30 cursor-not-allowed"
+                  : copied
+                    ? "bg-emerald-500/90 text-white"
+                    : "bg-brand-gradient text-white hover:brightness-110"
               )}
             >
-              {copied ? (
+              {missingPrompt ? (
+                <AlertTriangle className="h-3.5 w-3.5" />
+              ) : copied ? (
                 <Check className="h-3.5 w-3.5" />
               ) : (
                 <Copy className="h-3.5 w-3.5" />
@@ -181,6 +194,13 @@ export function PromptCard({
           <TypeIcon type={prompt.type} className="h-3 w-3" />
           {prompt.type}
         </span>
+        {/* Missing prompt warning */}
+        {missingPrompt && (
+          <span className="absolute right-12 top-3 inline-flex items-center gap-0.5 rounded-full border border-amber-400/40 bg-amber-500/20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-amber-300 backdrop-blur-md z-[2]">
+            <AlertTriangle className="h-2.5 w-2.5" />
+            Sem prompt
+          </span>
+        )}
       </button>
 
       {/* Favorite */}
@@ -214,14 +234,22 @@ export function PromptCard({
             type="button"
             onClick={handleCopy}
             size="sm"
+            disabled={missingPrompt}
             className={cn(
               "h-9 flex-1 gap-1.5 text-sm font-bold border-0 transition-all active:scale-[0.97]",
-              copied
-                ? "bg-emerald-500/90 text-white"
-                : "bg-brand-gradient text-white hover:brightness-110"
+              missingPrompt
+                ? "bg-white/5 text-muted-foreground/30 cursor-not-allowed"
+                : copied
+                  ? "bg-emerald-500/90 text-white"
+                  : "bg-brand-gradient text-white hover:brightness-110"
             )}
           >
-            {copied ? (
+            {missingPrompt ? (
+              <>
+                <AlertTriangle className="h-4 w-4" />
+                Sem prompt
+              </>
+            ) : copied ? (
               <>
                 <Check className="h-4 w-4" />
                 Copiado

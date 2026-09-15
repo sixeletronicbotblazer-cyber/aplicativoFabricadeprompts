@@ -155,3 +155,25 @@ Stage Summary:
 - 'novidades' filter kind added to show all new prompts
 - All existing functionality preserved — no modifications to existing prompts
 - Build compiles clean, no new lint errors
+---
+Task ID: 2
+Agent: Main
+Task: Analyze and filter prompts missing text - add "Sem Prompt" filter and visual indicators
+
+Work Log:
+- Analyzed all 487 prompts: found 97 (19.9%) with empty prompt text, all from PDF extraction
+- Worst categories: POV Calçados (100% empty - 9/9), Casal (67%), Masculino (64%), POV Moda (60%)
+- Added new filter kind "no-prompt" to filters.ts (filterKey, countFor, applyFilter, filterLabel)
+- Added "Sem Prompt" sidebar item with AlertTriangle icon and counter (97)
+- Added amber "SEM PROMPT" warning badge on PromptCard for prompts missing text
+- Disabled copy button on cards when prompt text is missing (shows "Sem prompt" with warning icon)
+- Added warning box in PromptModal: "Prompt não disponível" with explanation message
+- Disabled "Copiar prompt" button in modal when prompt text is missing (shows "Prompt não disponível")
+- Browser verified all checks pass
+
+Stage Summary:
+- 97 prompts identified without prompt text (all from PDF extraction, IDs starting with pdf-)
+- "Sem Prompt" filter fully functional in sidebar with count badge
+- Visual indicators on cards and modal clearly identify missing prompts
+- Copy buttons properly disabled for prompts without text
+- Normal prompts completely unaffected

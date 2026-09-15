@@ -26,6 +26,7 @@ import {
   Users,
   Move,
   Shirt,
+  AlertTriangle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -56,6 +57,7 @@ const MAIN_NAV: NavItem[] = [
   { label: "Imagem", icon: ImageIcon, filter: { kind: "type", value: "Imagem" } },
   { label: "Vídeo", icon: Film, filter: { kind: "videos-with-ref" } },
   { label: "Vídeos Parte 2", icon: Film, filter: { kind: "videos-no-ref" } },
+  { label: "Sem Prompt", icon: AlertTriangle, filter: { kind: "no-prompt" }, isNew: true },
   { label: "UGC", icon: Camera, filter: { kind: "category", value: "UGC" } },
   { label: "POV", icon: Eye, filter: { kind: "category", value: "POV" } },
   {

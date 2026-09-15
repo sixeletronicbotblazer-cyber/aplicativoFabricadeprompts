@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, Heart, Check, X, Film, ImageIcon, Lightbulb } from "lucide-react";
+import { Copy, Heart, Check, X, Film, ImageIcon, Lightbulb, AlertCircle } from "lucide-react";
 import { useState } from "react";
 import {
   Dialog,
@@ -42,6 +42,7 @@ export function PromptModal({
   const hasImage = Boolean(prompt?.image);
   const hasVideo = Boolean(prompt?.videoUrl);
   const hasMedia = hasImage || hasVideo;
+  const missingPrompt = !prompt?.prompt || prompt.prompt.trim().length < 10;
 
   const handleCopy = async () => {
     if (!prompt) return;
@@ -189,6 +190,17 @@ export function PromptModal({
                 <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground/60">
                   Prompt
                 </p>
+                {(!prompt.prompt || prompt.prompt.trim().length < 10) ? (
+                  <div className="rounded-xl border border-amber-400/20 bg-amber-500/[0.06] p-4">
+                    <div className="flex items-center gap-2 text-amber-300">
+                      <AlertCircle className="h-4 w-4 shrink-0" />
+                      <p className="text-sm font-semibold">Prompt não disponível</p>
+                    </div>
+                    <p className="mt-2 text-xs text-muted-foreground/70 leading-relaxed">
+                      Este prompt possui apenas referência visual (imagem/vídeo) mas o texto do prompt ainda não foi adicionado. Ele será atualizado em breve.
+                    </p>
+                  </div>
+                ) : (
                 <ScrollArea className="max-h-[38vh] md:max-h-none scrollbar-premium">
                   <div className="relative rounded-xl border border-white/8 bg-black/30">
                     <pre className="whitespace-pre-wrap break-words p-4 text-[13px] leading-[1.7] text-foreground/90 font-mono selection:bg-brand-purple/30">
@@ -213,6 +225,7 @@ export function PromptModal({
                     </button>
                   </div>
                 </ScrollArea>
+                )}
               </div>
 
               {/* Bottom actions */}
@@ -220,14 +233,22 @@ export function PromptModal({
                 <Button
                   type="button"
                   onClick={handleCopy}
+                  disabled={missingPrompt}
                   className={cn(
                     "h-11 flex-1 gap-2 text-[15px] font-bold border-0 transition-all active:scale-[0.97]",
-                    copied
-                      ? "bg-emerald-500/90 text-white hover:bg-emerald-500"
-                      : "bg-brand-gradient text-white hover:brightness-110"
+                    missingPrompt
+                      ? "bg-white/5 text-muted-foreground/30 cursor-not-allowed"
+                      : copied
+                        ? "bg-emerald-500/90 text-white hover:bg-emerald-500"
+                        : "bg-brand-gradient text-white hover:brightness-110"
                   )}
                 >
-                  {copied ? (
+                  {missingPrompt ? (
+                    <>
+                      <AlertCircle className="h-4 w-4" />
+                      Prompt não disponível
+                    </>
+                  ) : copied ? (
                     <>
                       <Check className="h-4 w-4" />
                       Copiado
