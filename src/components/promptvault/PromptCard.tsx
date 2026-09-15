@@ -9,6 +9,7 @@ import {
   Check,
   Play,
   AlertTriangle,
+  Loader2,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -46,6 +47,7 @@ export function PromptCard({
   onOpen,
 }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
+  const [videoLoading, setVideoLoading] = useState(true);
   const hasImage = Boolean(prompt.image);
   const hasVideo = Boolean(prompt.videoUrl);
   const missingPrompt = !prompt.prompt || prompt.prompt.trim().length < 10;
@@ -65,16 +67,16 @@ export function PromptCard({
   /* ─── COMPACT CARD (no preview at all — no image AND no video) ─── */
   if (!hasImage && !hasVideo) {
     return (
-      <article className="group glass relative rounded-xl overflow-hidden transition-all duration-300 hover:border-white/15 hover:shadow-lg hover:shadow-black/20">
-        <div className="flex items-center gap-3 p-3 sm:p-3.5">
-          {/* Type icon */}
+      <article className="group pv-card relative overflow-hidden">
+        <div className="flex items-center gap-3 p-4">
+          {/* Type icon — larger container */}
           <span
             className={cn(
-              "inline-flex items-center justify-center shrink-0 rounded-lg border h-10 w-10",
+              "inline-flex items-center justify-center shrink-0 rounded-xl border h-12 w-12",
               TYPE_STYLE[prompt.type]
             )}
           >
-            <TypeIcon type={prompt.type} className="h-4 w-4" />
+            <TypeIcon type={prompt.type} className="h-5 w-5" />
           </span>
 
           {/* Text */}
@@ -84,7 +86,7 @@ export function PromptCard({
             className="flex-1 min-w-0 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple/60 rounded"
             aria-label={`Ver detalhes de ${prompt.title}`}
           >
-            <h3 className="text-[14px] font-semibold leading-tight line-clamp-1 text-foreground">
+            <h3 className="text-sm font-semibold leading-tight line-clamp-1 text-foreground">
               {prompt.title}
               {missingPrompt && (
                 <span className="ml-1.5 inline-flex items-center gap-0.5 rounded-full border border-amber-400/40 bg-amber-500/20 px-1 py-px text-[7px] font-bold uppercase tracking-wider text-amber-300">
@@ -93,7 +95,7 @@ export function PromptCard({
                 </span>
               )}
             </h3>
-            <p className="mt-0.5 text-[12px] text-muted-foreground/70 leading-snug line-clamp-1">
+            <p className="mt-0.5 text-xs text-muted-foreground/60 leading-snug line-clamp-1">
               {prompt.description}
             </p>
           </button>
@@ -106,12 +108,12 @@ export function PromptCard({
               size="sm"
               disabled={missingPrompt}
               className={cn(
-                "h-8 px-3 gap-1.5 text-xs font-bold border-0 transition-all active:scale-[0.97] rounded-lg",
+                "h-9 px-3 gap-1.5 text-xs font-bold border-0 rounded-xl transition-all active:scale-[0.97]",
                 missingPrompt
                   ? "bg-white/5 text-muted-foreground/30 cursor-not-allowed"
                   : copied
                     ? "bg-emerald-500/90 text-white"
-                    : "bg-brand-gradient text-white hover:brightness-110"
+                    : "bg-brand-gradient text-white hover:brightness-110 hover:glow-purple"
               )}
             >
               {missingPrompt ? (
@@ -126,10 +128,10 @@ export function PromptCard({
               type="button"
               onClick={() => onToggleFavorite(prompt.id)}
               className={cn(
-                "grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition-all",
+                "grid h-9 w-9 shrink-0 place-items-center rounded-xl border transition-all",
                 isFavorite
                   ? "border-brand-pink/40 bg-brand-pink/20 text-brand-pink"
-                  : "border-white/10 bg-white/5 text-muted-foreground/70 hover:text-brand-pink hover:border-brand-pink/40"
+                  : "border-border-card bg-surface-card text-muted-foreground/70 hover:text-brand-pink hover:border-brand-pink/40"
               )}
               aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
             >
@@ -146,25 +148,34 @@ export function PromptCard({
     );
   }
 
-  /* ─── FULL CARD (with reference image) ─── */
+  /* ─── FULL CARD (with reference image or video) ─── */
   return (
-    <article className="group glass relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-white/15 hover:shadow-xl hover:shadow-black/30 flex flex-col">
+    <article className="group pv-card relative overflow-hidden flex flex-col">
       {/* Image / Video thumb */}
       <button
         type="button"
         onClick={() => onOpen(prompt)}
-        className="relative block w-full overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple/60"
+        className="relative block w-full overflow-hidden rounded-t-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple/60"
         aria-label={`Ver detalhes de ${prompt.title}`}
       >
-        <div className="aspect-[4/5] w-full bg-white/5">
+        <div className="aspect-[3/4] w-full bg-surface-card">
           {showVideoThumb ? (
             <div className="relative h-full w-full bg-black/40">
+              {videoLoading && (
+                <div className="absolute inset-0 grid place-items-center">
+                  <Loader2 className="h-6 w-6 text-white/40 animate-spin" />
+                </div>
+              )}
               <video
                 src={prompt.videoUrl}
                 muted
                 playsInline
                 preload="metadata"
-                className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+                onLoadedData={() => setVideoLoading(false)}
+                className={cn(
+                  "h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100",
+                  videoLoading && "opacity-0"
+                )}
               />
               <div className="absolute inset-0 grid place-items-center">
                 <div className="grid h-14 w-14 place-items-center rounded-full bg-white/15 backdrop-blur-md border border-white/20 transition-transform duration-300 group-hover:scale-110">
@@ -184,7 +195,7 @@ export function PromptCard({
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-        {/* Type badge */}
+        {/* Type badge — left-3 top-3 */}
         <span
           className={cn(
             "absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider backdrop-blur-md",
@@ -194,21 +205,29 @@ export function PromptCard({
           <TypeIcon type={prompt.type} className="h-3 w-3" />
           {prompt.type}
         </span>
-        {/* Missing prompt warning */}
+
+        {/* NOVO badge — right-3 top-3 (only when isNew) */}
+        {prompt.isNew && (
+          <span className="absolute right-12 top-3 inline-flex items-center gap-1 rounded-full border border-brand-purple/40 bg-brand-purple/20 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-brand-purple backdrop-blur-md z-[2]">
+            Novo
+          </span>
+        )}
+
+        {/* Missing prompt warning badge — positioned to left of favorite button */}
         {missingPrompt && (
-          <span className="absolute right-12 top-3 inline-flex items-center gap-0.5 rounded-full border border-amber-400/40 bg-amber-500/20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-amber-300 backdrop-blur-md z-[2]">
+          <span className="absolute right-14 top-3 inline-flex items-center gap-0.5 rounded-full border border-amber-400/40 bg-amber-500/20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-amber-300 backdrop-blur-md z-[2]">
             <AlertTriangle className="h-2.5 w-2.5" />
             Sem prompt
           </span>
         )}
       </button>
 
-      {/* Favorite */}
+      {/* Favorite button — absolute right-3 top-3 z-10 */}
       <button
         type="button"
         onClick={() => onToggleFavorite(prompt.id)}
         className={cn(
-          "absolute right-3 top-3 z-10 grid h-8 w-8 place-items-center rounded-full border backdrop-blur-md transition-all",
+          "absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-xl border backdrop-blur-md transition-all",
           isFavorite
             ? "border-brand-pink/40 bg-brand-pink/20 text-brand-pink"
             : "border-white/10 bg-black/25 text-white/70 hover:text-brand-pink hover:border-brand-pink/40"
@@ -220,15 +239,16 @@ export function PromptCard({
         />
       </button>
 
-      {/* Body */}
-      <div className="flex flex-1 flex-col p-4 pb-3">
-        <h3 className="text-[15px] font-bold leading-tight line-clamp-1 text-foreground">
+      {/* Body section — p-4 with more space */}
+      <div className="flex flex-1 flex-col p-4">
+        <h3 className="text-sm font-bold leading-tight line-clamp-2 text-foreground">
           {prompt.title}
         </h3>
-        <p className="mt-1 text-[13px] text-muted-foreground/80 leading-relaxed line-clamp-2">
+        <p className="mt-1 text-xs text-muted-foreground/60 leading-relaxed line-clamp-2">
           {prompt.description}
         </p>
 
+        {/* Action bar at bottom — mt-auto pt-3 */}
         <div className="mt-auto pt-3 flex items-center gap-2">
           <Button
             type="button"
@@ -236,7 +256,7 @@ export function PromptCard({
             size="sm"
             disabled={missingPrompt}
             className={cn(
-              "h-9 flex-1 gap-1.5 text-sm font-bold border-0 transition-all active:scale-[0.97]",
+              "h-9 flex-1 gap-1.5 text-xs font-bold border-0 rounded-xl transition-all active:scale-[0.97]",
               missingPrompt
                 ? "bg-white/5 text-muted-foreground/30 cursor-not-allowed"
                 : copied
@@ -246,17 +266,17 @@ export function PromptCard({
           >
             {missingPrompt ? (
               <>
-                <AlertTriangle className="h-4 w-4" />
+                <AlertTriangle className="h-3.5 w-3.5" />
                 Sem prompt
               </>
             ) : copied ? (
               <>
-                <Check className="h-4 w-4" />
+                <Check className="h-3.5 w-3.5" />
                 Copiado
               </>
             ) : (
               <>
-                <Copy className="h-4 w-4" />
+                <Copy className="h-3.5 w-3.5" />
                 Copiar
               </>
             )}
@@ -266,10 +286,25 @@ export function PromptCard({
             variant="outline"
             size="sm"
             onClick={() => onOpen(prompt)}
-            className="h-9 w-9 p-0 border-white/10 bg-white/5 text-foreground/70 hover:bg-white/10 hover:text-foreground"
+            className="h-9 w-9 p-0 rounded-xl border-border-card bg-surface-card text-foreground/70 hover:bg-surface-card-hover hover:text-foreground"
           >
             <Eye className="h-4 w-4" />
           </Button>
+          <button
+            type="button"
+            onClick={() => onToggleFavorite(prompt.id)}
+            className={cn(
+              "grid h-9 w-9 shrink-0 place-items-center rounded-xl border transition-all",
+              isFavorite
+                ? "border-brand-pink/40 bg-brand-pink/20 text-brand-pink"
+                : "border-border-card bg-surface-card text-muted-foreground/70 hover:text-brand-pink hover:border-brand-pink/40"
+            )}
+            aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+          >
+            <Heart
+              className={cn("h-3.5 w-3.5 transition-transform", isFavorite && "fill-current scale-110")}
+            />
+          </button>
         </div>
       </div>
     </article>

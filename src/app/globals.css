@@ -40,6 +40,12 @@
   --color-brand-purple: var(--brand-purple);
   --color-brand-pink: var(--brand-pink);
   --color-brand-cyan: var(--brand-cyan);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-sidebar: var(--surface-sidebar);
+  --color-surface-card: var(--surface-card);
+  --color-surface-card-hover: var(--surface-card-hover);
+  --color-border-card: var(--border-card);
+  --color-border-subtle: var(--border-subtle);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -85,6 +91,14 @@
   --brand-purple: oklch(0.62 0.24 300);
   --brand-pink: oklch(0.72 0.24 350);
   --brand-cyan: oklch(0.78 0.16 195);
+
+  /* Premium surfaces */
+  --surface-dark: #050509;
+  --surface-sidebar: #070711;
+  --surface-card: #0D0D16;
+  --surface-card-hover: #131322;
+  --border-card: #24243A;
+  --border-subtle: #1A1A2E;
 }
 
 .dark {
@@ -123,6 +137,14 @@
   --brand-purple: oklch(0.62 0.24 300);
   --brand-pink: oklch(0.72 0.24 350);
   --brand-cyan: oklch(0.78 0.16 195);
+
+  /* Premium surfaces */
+  --surface-dark: #050509;
+  --surface-sidebar: #070711;
+  --surface-card: #0D0D16;
+  --surface-card-hover: #131322;
+  --border-card: #24243A;
+  --border-subtle: #1A1A2E;
 }
 
 @layer base {
@@ -173,17 +195,17 @@
 
   .bg-brand-gradient {
     background-image: linear-gradient(
-      120deg,
-      oklch(0.62 0.24 300 / 0.85),
-      oklch(0.72 0.24 350 / 0.85) 50%,
-      oklch(0.78 0.16 195 / 0.85)
+      135deg,
+      oklch(0.55 0.24 300 / 0.9),
+      oklch(0.65 0.24 350 / 0.9) 60%,
+      oklch(0.75 0.16 195 / 0.8)
     );
   }
 
   /* Subtle glow shadows */
   .glow-purple {
     box-shadow: 0 0 0 1px oklch(0.62 0.24 300 / 0.25),
-      0 18px 50px -12px oklch(0.62 0.24 300 / 0.45);
+      0 4px 20px oklch(0.62 0.24 300 / 0.35);
   }
   .glow-soft {
     box-shadow: 0 24px 60px -20px oklch(0 0 0 / 0.7);
@@ -206,6 +228,32 @@
   }
   .scrollbar-premium::-webkit-scrollbar-thumb:hover {
     background: oklch(1 0 0 / 0.24);
+  }
+
+  /* Premium card base */
+  .pv-card {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-card);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+  .pv-card:hover {
+    border-color: oklch(1 0 0 / 0.1);
+    box-shadow: 0 20px 40px -12px oklch(0 0 0 / 0.3);
+  }
+
+  /* Tool chip base */
+  .chip-tool {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 9999px;
+    padding: 0.375rem 0.75rem;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.15s ease;
   }
 
   .animate-fade-in {

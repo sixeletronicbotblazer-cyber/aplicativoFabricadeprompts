@@ -177,3 +177,152 @@ Stage Summary:
 - Visual indicators on cards and modal clearly identify missing prompts
 - Copy buttons properly disabled for prompts without text
 - Normal prompts completely unaffected
+
+---
+Task ID: 2-b
+Agent: Sub-agent (PromptModal redesign)
+Task: Redesign PromptModal.tsx to match premium dark Aurora Prompts style
+
+Work Log:
+- Read worklog.md for context on prior agents' work (Tasks 1-3)
+- Read current PromptModal.tsx (287 lines) — single-column modal with basic image/video/prompt display
+- Read prompts.ts for Prompt/PromptType interfaces, copy.ts for clipboard helper
+- Checked prompts-data.json for refImages/referenceImages fields (none present in data)
+- Verified CSS custom properties: brand-gradient, brand-purple, brand-cyan, brand-pink, glow-purple, border-border-card all defined
+- Redesigned PromptModal.tsx with the following changes:
+  1. TOOL CHIPS: Added "Copiar para:" section with 6 colored chips (PADRÃO slate-700, AURORA purple-600 with Sparkles icon, GROK gray-800 with border, GEMINI blue-600, KLING orange-600, FLOW indigo-500) — each copies prompt text on click with toast "Copiado para {TOOL}!"
+  2. 2-COLUMN LAYOUT: Desktop uses md:grid-cols-5 (left 2/5 media, right 3/5 details); mobile single column
+  3. MODAL SIZING: max-w-[90vw] lg:max-w-[85vw] xl:max-w-5xl for media prompts; max-w-2xl for text-only; max-h-[92vh]; bg-popover/98 backdrop-blur-2xl; border-border-card rounded-2xl
+  4. LEFT COLUMN (Media): Image with object-contain + gradient overlay; video below image or full height; type badge positioned on media
+  5. RIGHT COLUMN (Details): Close button (h-9 w-9 rounded-full bg-black/30), title (text-lg lg:text-xl), category+tags row, "Copiar para:" chips, explanation box (border-brand-purple/20 bg-brand-purple/[0.04]), prompt text block with scroll, copy button inside
+  6. VIDEO PLAYBACK: Added videoLoading, videoError, isPlaying states; render-time reset on prompt ID change (avoids lint error); autoplay effect; handleVideoPlayPause and handleVideoRetry; pointer-events-none overlay with pointer-events-auto play button; loading spinner; error with retry button; controls + controlsList="nodownload" + playsInline + preload="auto"
+  7. CONTENT PROTECTION: data-protected, data-no-select, data-copy-prompt, data-prompt-text, data-allow-select attributes preserved
+  8. MISSING PROMPT: Amber warning box, disabled copy/chips, "Prompt não disponível" on bottom button
+  9. BOTTOM ACTIONS: Copy button with bg-brand-gradient + glow-purple, rounded-xl; Favorite outline button with rounded-xl
+  10. Added Produto to TYPE_STYLE mapping
+  11. Added Play, Loader2, RefreshCw, Sparkles icon imports
+- Fixed lint error: React set-state-in-effect by replacing useEffect-based reset with render-time sync pattern (lastKeyRef comparison)
+- Lint clean, dev server compiling successfully
+
+Stage Summary:
+- PromptModal fully redesigned to premium dark Aurora style
+- 2-column desktop layout with 5-col grid (2:3 ratio)
+- 6 tool chips for quick copy-to-tool functionality
+- Full video playback with loading/error/play states — NO blocking overlays on video
+- All existing functionality preserved: copy, favorites, video, image, content protection attributes
+- Missing prompt handling intact with amber warning
+- Mobile-responsive single column layout
+- Zero lint errors
+
+---
+Task ID: 2-a
+Agent: Sub-agent (globals.css + PromptCard + SearchBar premium redesign)
+Task: Redesign globals.css, PromptCard.tsx, and SearchBar.tsx to match premium dark Aurora Prompts style
+
+Work Log:
+- Read worklog.md for context on prior agents' work (Tasks 1, 2, 3, 2-b)
+- Read current globals.css, PromptCard.tsx, SearchBar.tsx
+- Verified no content protection CSS rules or mobile @media (pointer: coarse) rules exist in current globals.css (nothing to preserve beyond what's already there)
+
+globals.css changes:
+1. Added 6 premium surface color tokens to @theme inline: surface-dark, surface-sidebar, surface-card, surface-card-hover, border-card, border-subtle
+2. Added premium surface CSS variable definitions to both :root and .dark sections: --surface-dark: #050509, --surface-sidebar: #070711, --surface-card: #0D0D16, --surface-card-hover: #131322, --border-card: #24243A, --border-subtle: #1A1A2E
+3. Updated .bg-brand-gradient: changed from 120deg/0.85 opacity to 135deg with oklch(0.55 0.24 300 / 0.9), oklch(0.65 0.24 350 / 0.9) 60%, oklch(0.75 0.16 195 / 0.8)
+4. Updated .glow-purple: changed from large spread shadow to tighter glow — 0 4px 20px oklch(0.62 0.24 300 / 0.35)
+5. Added .pv-card utility: bg-surface-card + border-border-card + rounded-2xl + hover:border-white/10 + hover:shadow-xl
+6. Added .chip-tool utility: inline-flex rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider
+7. Kept all existing utilities intact: .glass, .glass-strong, .text-gradient-brand, .scrollbar-premium, .glow-soft, animations
+
+PromptCard.tsx changes:
+1. COMPACT CARD: Replaced glass class with pv-card; increased padding to p-4; type icon container enlarged to h-12 w-12 with rounded-xl; title text-sm font-semibold; description text-xs text-muted-foreground/60; copy button h-9 rounded-xl bg-brand-gradient with glow-purple on hover; heart button h-9 w-9 rounded-xl; Sem prompt badge preserved
+2. FULL CARD: Replaced glass class with pv-card + flex flex-col; image area changed to aspect-[3/4] (taller) with rounded-t-2xl; type badge at left-3 top-3 rounded-full with smaller text; added NOVO badge (right-12 top-3) when prompt.isNew; missing prompt badge repositioned to right-14 top-3 to not overlap with favorite button; body section p-4 with more space; title text-sm font-bold line-clamp-2; description text-xs text-muted-foreground/60 line-clamp-2; action bar mt-auto pt-3 with copy h-9 flex-1 rounded-xl, eye h-9 w-9 rounded-xl, heart h-9 w-9 rounded-xl; video thumbnail with Loader2 loading spinner and Play overlay; favorite button absolute right-3 top-3 z-10 h-9 w-9 rounded-xl
+3. Added Loader2 import for video loading state
+4. Added videoLoading state with onLoadedData handler
+
+SearchBar.tsx changes:
+1. Search input: h-11, rounded-xl, bg-surface-card, border-border-card; placeholder "Buscar prompt por título, categoria ou objetivo..."; focus border-brand-purple/50 ring-brand-purple/20
+2. Added format filter pills row below search: 6 type pills (Imagem, Vídeo, POV, Selfie, UGC, Produto) with rounded-xl px-4 py-2 text-xs font-semibold
+3. Active pill: bg-brand-purple/20 text-brand-purple border-brand-purple/30
+4. Inactive pill: bg-white/[0.03] text-muted-foreground/60 border-transparent hover:bg-white/[0.06]
+5. Pill click toggles type filter or resets to "all" if already active
+6. Mobile hamburger: h-11 w-11 border-border-card bg-surface-card
+7. Horizontally scrollable with scrollbar-premium
+
+Verification:
+- bun run lint: zero errors
+- Dev server compiling successfully (✓ Compiled in 328ms)
+- All existing features preserved: copy, favorites, search, modal, missingPrompt logic, video thumbnails
+
+Stage Summary:
+- globals.css: 6 premium surface tokens + pv-card + chip-tool utilities + updated gradient/glow
+- PromptCard: premium pv-card styling, taller aspect ratio (3/4), larger type icons, rounded-xl buttons, NOVO badge, video loading spinner
+- SearchBar: premium search input styling + format filter pills row
+- All existing functionality preserved — no prompts, categories, filters, or features deleted
+- Zero lint errors
+---
+Task ID: 2-c
+Agent: Sub-agent (Gallery & Sidebar redesign)
+Task: Redesign Gallery.tsx and Sidebar.tsx to match premium dark Aurora Prompts style
+
+Work Log:
+- Read worklog.md for context on prior agents' work (Tasks 1-3, 2-b)
+- Read current Gallery.tsx (178 lines) and Sidebar.tsx (346 lines)
+- Verified CSS custom properties already defined: border-card, border-subtle, surface-card, surface-sidebar, brand-gradient, glow-purple, scrollbar-premium
+- Redesigned Sidebar.tsx with the following changes:
+  1. NAV_SECTIONS: Reorganized flat MAIN_NAV array into 5 collapsible NavSection groups:
+     - PRINCIPAL (defaultOpen: true): Todos os prompts, Novidades, Imagem, Vídeo, Vídeos Parte 2, Sem Prompt
+     - ESTILO & MODA (defaultOpen: true): UGC, POV, POV Avançado, Selfie, Produto, Moda, Masculino, Casal, Lingerie, Movimento
+     - TEMAS (defaultOpen: true): Natal, Ganchos, Transições, PET, Infantil
+     - TikTok (defaultOpen: false): TikTok Shop, Identidade AI, Selfie UGC
+     - MEUS (defaultOpen: true): Favoritos, Atualizações
+  2. Section headers: text-[10px] font-bold uppercase tracking-widest text-muted-foreground/35 with ChevronDown toggle (rotate animation)
+  3. Item button: rounded-lg px-2.5 py-2 text-[13px]
+  4. Active: bg-brand-purple/15 text-white; icon: bg-brand-gradient text-white shadow-sm (h-7 w-7 rounded-md)
+  5. Inactive: text-muted-foreground/60 hover:bg-white/[0.04]; icon: bg-white/[0.04] text-muted-foreground/40
+  6. Counter badge: text-[10px] tabular-nums; active: bg-white/10 text-white/80; inactive: bg-white/[0.03] text-muted-foreground/35
+  7. NOVO badge: emerald colors, text-[7px] (smaller than before)
+  8. Brand section: text-sm font-bold, text-[10px] text-muted-foreground/60
+  9. Desktop sidebar: w-[260px] xl:w-[280px], sticky top-0 h-screen, border-r border-border-subtle, bg-surface-sidebar
+  10. CONTA section (footer of sidebar): always visible, border-t border-border-subtle, "Conta" label, Minha conta/Suporte/Sair
+  11. Mobile sidebar (Sheet): w-[280px] max-w-[85vw], border-border-subtle bg-surface-sidebar/95
+  12. Scroll: overflow-y-auto overscroll-contain scrollbar-premium
+  13. Removed unused Separator and ScrollArea imports
+  14. Added ChevronDown import for section toggle
+- Redesigned Gallery.tsx with the following changes:
+  1. Mobile header (lg:hidden): sticky top-0 z-30, border-b border-border-subtle, bg-background/80 backdrop-blur-xl; prompt count in muted text; favorites button with count badge; hamburger Menu button for sidebar
+  2. Desktop header: "Galeria de Prompts" title (text-xl font-bold), subtitle text-muted-foreground/60, prompt counter styled card with LayoutGrid icon (rounded-xl border-border-card bg-white/[0.03] px-4 py-2)
+  3. Filter info bar: Added Novidades badge (emerald) when filter.kind === "novidades"
+  4. Grid: All grids changed to start with grid-cols-2 on mobile (not 1), gap-4 sm:gap-5 lg:gap-6
+  5. "Ver mais" button: border-border-card bg-white/5 (matching premium styling)
+  6. Footer: border-t border-border-subtle (matching sidebar border)
+  7. Added LayoutGrid and Menu icon imports
+- Zero lint errors
+- Dev server compiling successfully (✓ Compiled in 263ms)
+
+Stage Summary:
+- Gallery.tsx: premium desktop header with counter card, mobile header with hamburger + favorites + prompt count, grid starts at 2 cols on mobile, Novidades badge, border-border-subtle/footer consistency
+- Sidebar.tsx: 5 collapsible nav sections (PRINCIPAL, ESTILO & MODA, TEMAS, TikTok, MEUS), CONTA footer, narrower width (260px/280px), premium active/hover styling, emerald NOVO badge at text-[7px]
+- All existing functionality preserved: filters, favorites, search, modal, copy, UpdateBanner, ManequimPopup, EmptyState
+- No database or login changes
+- Zero lint errors, zero compilation errors
+---
+Task ID: 3
+Agent: Main
+Task: Redesign PromptVault visual based on Aurora Prompts references
+
+Work Log:
+- Analyzed both reference images (iPhone screenshots of auroraprompts.com) with VLM
+- Extracted detailed design specs: colors, typography, spacing, chip styles, button gradients, glassmorphism
+- Parallel subagent 2-a: Redesigned globals.css (premium tokens, pv-card, chip-tool utilities), PromptCard (taller aspect-[3/4], pv-card class, rounded buttons, missing prompt badges), SearchBar (premium input, filter pills)
+- Parallel subagent 2-b: Redesigned PromptModal (2-col desktop, tool chips with 6 colors, video playback preserved, missing prompt handling, premium spacing)
+- Parallel subagent 2-c: Redesigned Gallery (mobile header with menu button, prompt counter, 2-col mobile grid, spacious gaps) and Sidebar (5 collapsible sections, CONTA footer, premium nav items)
+- Browser verified: All features working - login, sidebar, search, filters, cards, modal, tool chips, copy, favorites, video, Sem Prompt filter, responsive mobile
+
+Stage Summary:
+- PromptVault visually redesigned to match Aurora Prompts reference
+- Premium dark theme with spacious layout
+- 6 tool chips (PADRÃO, AURORA, GROK, GEMINI, KLING, FLOW) in modal
+- 2-column desktop modal, single-column mobile
+- Sidebar with 5 collapsible groups + CONTA section
+- All existing features preserved: copy, favorites, search, filters, video, protection
+- Zero lint errors, zero runtime errors
