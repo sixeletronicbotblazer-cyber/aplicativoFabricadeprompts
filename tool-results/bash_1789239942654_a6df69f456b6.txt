@@ -1,0 +1,620 @@
+Generic/placeholder prompts: 20
+1. [doc-029] POV Roupa no corpo
+   prompt: "Retrato vertical fotorrealista de um homem vestindo a camisa exata da imagem de referência anexada. A camisa deve reproduzir fielmente o design enviado, incluindo a cor exata, a textura do tecido, o formato da gola, o comprimento da manga, a posição da estampa, as proporções e a aparência geral, adaptando-se ao corpo do modelo de forma natural, sem alterações ou modificações. Composição: enquadramento em close-up, do peito até um pouco abaixo da boca, com o topo da cabeça fora do enquadramento. O homem veste a camisa e segura levemente o tecido próximo aos ombros com ambas as mãos, como se estivesse apresentando a peça. Pose neutra e confiante, pegada natural, mãos e antebraços limpos, sem tatuagens. Fundo: loja de roupas escura com leve desfoque ou estúdio de alta qualidade, iluminação cinematográfica quente, reflexos dourados sutis, sombras realistas, atmosfera de moda luxuosa. Estilo: fotografia de moda comercial ultrarrealista, foco nítido na camisa, textura do tecido com alto nível de detalhes, dobras e caimento naturais, textura de pele realista, profundidade de campo reduzida, apresentação profissional do produto, composição vertical 9:16, alta resolução. Importante: use a camisa anexada como referência visual exata para a peça, mas mantenha o modelo sem tatuagens. Avisos negativos: tatuagens, braços tatuados, design da camisa alterado, cores alteradas, estampa distorcida, dedos extras, mãos deformadas, camisa cortada, imagem borrada, baixa qualidade, desenho animado, ilustração, CGI, cores saturadas demais, fundo confuso, membros duplicados, tecido irrealista."
+   has image: true | has video: false
+   referencia: false
+
+2. [doc-035] CTA Carrinho Laranja
+   prompt: "{ "version": "3.1", "aspectRatio": "9:16", "durationSeconds": 8, "seed": 12345, "subjectRef": "usar a imagem transmitida como âncora de identidade, mantendo exatamente as mesmas feições, tom de pele, cor de cabelo, mesma cor, mesma textura, mesmo volume e mesmo comprimento durante TODO o vídeo, sem qualquer alteração em nenhum momento", "referenceStyle": "realismo cinematográfico natural, interação direta com a câmera estilo gravação em celular", "negativePrompt": "sem falas, sem áudio vocal, sem movimento labial articulando palavras, sem legendas, sem texto na tela, sem logos, sem marcas d\'água, sem deformações corporais, sem dedos extras, sem passar de mãos, sem artefatos de IA, sem mudança de cor do cabelo, sem mudança de textura do cabelo, sem mudança de estilo do cabelo, sem alteração de iluminação que modifica a cor do cabelo", "segurança": { "allowMinorViolence": false, "allowNudity": false }, "shots": [ { "scene": "ambiente interno residencial com moldura de madeira e iluminação quente natural", "action": "ela dá um passo natural para frente, inclina o tronco entre 30 e 40 graus em direção à câmera, mantém contato visual constante com um sorriso cativante e vendedor durante toda a cena. Sem falar absolutamente nada e sem articular palavras com os lábios. Ela levanta a mão direita e posição o dedo indicador referência para baixo (direção inferior) da tela, não para a lente). O gesto é intencional e expressivo, realizando um leve movimento repetido de cima para baixo com o dedo indicador, como uma chamada visual para ação. O sorriso permanece natural, envolvente e confiante do início ao fim. o fundo levemente desfocado", "lighting": "luz quente lateral suave com leve preenchimento frontal; iluminação estável e constante, sem variação de temperatura de cor ao longo do vídeo", "environment": "fundo levemente desfocado; movimento natural dos cabelos ao inclinar; leve sensação de profundidade realista sem passar de mãos; manter consistência total de aparência do cabelo do início ao fim" } ] }"
+   has image: false | has video: true
+   referencia: false
+
+3. [doc-053] POV: produto na mão
+   prompt: "Crie uma imagem vertical ultra-fotorrealista (9:16) de uma pessoa segurando o produto EXATO da imagem de referência anexada em uma das mãos, a partir de uma perspectiva em primeira pessoa, como se a pessoa estivesse mostrando o produto para a câmera em um momento natural da vida real. PRIORIDADE ABSOLUTA: O produto enviado deve ser reproduzido com a máxima fidelidade e sem nenhuma alteração no design. Preserve a embalagem, o rótulo, as cores, a tipografia, a posição do logotipo, o formato da garrafa/pote/caixa/recipiente, o acabamento do material, os detalhes da tampa/bocal/bomba/bico, os reflexos, a transparência, as proporções e todos os elementos de design visíveis exatamente como na referência anexada. Não simplifique, reinterprete ou substitua nenhuma parte do produto. O produto deve permanecer instantaneamente reconhecível como o mesmo item da referência. CENA PRINCIPAL: O produto está sendo segurado naturalmente em uma das mãos, próximo à câmera, ocupando uma posição de destaque no primeiro plano. Apenas a mão e parte do antebraço podem aparecer. Sem rosto, sem corpo inteiro, sem uma segunda mão, a menos que seja absolutamente necessário para o realismo físico. A pegada deve ser anatomicamente correta e adaptada ao tamanho, peso e ergonomia reais do produto. REGRA DE TAMANHO E PROPORÇÃO: Analise as dimensões reais do produto e ajuste-as corretamente à escala da mão humana. O produto nunca deve parecer muito grande, muito pequeno, esticado, achatado ou distorcido. O tamanho da mão, a posição dos dedos, a tensão da pegada e o ângulo do antebraço devem ser consistentes com as dimensões e o uso reais do produto. Se o produto for pequeno, a pegada deve ser delicada e precisa. Se o produto for maior, a postura da mão deve se adaptar de forma natural e convincente. REGRA DE AUTOSELEÇÃO DE AMBIENTE: Posicione automaticamente o produto no ambiente real mais verossímil para sua categoria e função, mantendo-o como protagonista da imagem. O ambiente deve se assemelhar a um cenário real da classe média brasileira: funcional, organizado, autêntico e com aspecto de vida cotidiana — nunca luxuoso, nunca pobre, nunca teatral, nunca artificial. A IA deve inferir o contexto ideal a partir do tipo de produto. Exemplos de lógica de ambiente ideal: - Perfume/cosméticos/cuidados com a pele: penteadeira brasileira autêntica, bancada do banheiro, cômoda do quarto, prateleira de beleza - Bebida/suplemento/xícara/caneca: cozinha, sala de jantar, mesa de escritório, mesa de café da manhã - Lanche/embalagem de alimentos: bancada da cozinha, mesa de jantar, despensa - Acessórios tecnológicos/eletrônicos: mesa de trabalho, escrivaninha do quarto, mesa de escritório, ambiente da sala de estar - Acessórios de moda: área do espelho do quarto, espaço do guarda-roupa, ambiente que simule uma loja, mas que reflita a realidade de uma casa - Produtos de limpeza/casa: área de lavanderia, área de serviço, zona da pia da cozinha - Produtos de higiene pessoal: pia do banheiro, prateleira do chuveiro, penteadeira, área de produtos de higiene - Produtos para bebês/família: cantinho do bebê, sala de estar, ambiente prático para a casa - Artigos esportivos: cantinho da academia, área da bolsa de treino, seção de artigos esportivos, prateleira do quarto com temática esportiva - Qualquer outro produto: escolha o ambiente de uso mais natural em uma casa brasileira autênticaLoja ou ambiente de rotina ESTILO CENÁRIO BRASILEIRO: O fundo deve transmitir a sensação de um ambiente brasileiro real, de padrão médio, funcional, limpo, verossímil e prático. Use um realismo local sutil: - interiores comuns de apartamentos ou casas brasileiras - móveis de MDF ou madeira, paredes neutras, organização prática - objetos domésticos autênticos dispostos naturalmente - leves sinais de uso diário, sem bagunça - estética acessível, vivida e realista da classe média - sem luxo exagerado, sem minimalismo extremo, sem aparência de showroom estrangeiro COMPOSIÇÃO VISUAL: - Enquadramento vertical 9:16 - sensação de ponto de vista de smartphone - Produto centralizado ou ligeiramente descentralizado para realismo natural - Mão em primeiro plano, produto mais próximo da câmera - Fundo visível, mas secundário - Leve profundidade de campo, com o rótulo e a embalagem do produto em foco nítido - O produto deve permanecer totalmente legível e visualmente limpo - O enquadramento deve parecer espontâneo, mas bem composto, como conteúdo orgânico premium para redes sociais REALISMO DA MÃO E DA PELE: - Uma mão humana realista segurando o produto naturalmente - Anatomia correta, flexão natural dos dedos, textura de pele realista, unhas convincentes - Sem dedos extras, sem articulações deformadas, sem pele derretida - Tom de pele natural e uniforme - Sem retoques de beleza exagerados - Sem tatuagens, a menos que solicitado - Sem Anéis, relógios, pulseiras ou acessórios, a menos que façam sentido e não chamem a atenção. A pegada deve respeitar a geometria real e o centro de massa do produto. ILUMINAÇÃO: Use luz ambiente natural ou prática realista que combine com o produto e o ambiente: - luz suave do dia vinda de uma janela ou iluminação natural interna - reflexos realistas em superfícies de plástico, vidro, metal, fosco, papel ou tecido - exposição equilibrada - sombras suaves - sem flash forte - sem áreas superexpostas - sem configurações de estúdio artificiais - sem iluminação artificial brilhante de anúncios, a menos que o produto se encaixe naturalmente nessa estética. PRECISÃO DE TEXTURA E MATERIAL: Todos os materiais devem parecer reais: - o plástico deve parecer plástico de verdade - o vidro deve mostrar transparência e reflexos precisos - o papelão deve mostrar impressão e textura realistas - o metal deve refletir naturalmente - os rótulos devem envolver corretamente a embalagem - embalagens de tecido ou flexíveis devem mostrar dobras e tensão realistas - os elementos impressos devem permanecer consistentes, legíveis e sem distorção. PADRÃO DE QUALIDADE DE REALISMO: A imagem final deve parecer uma foto real tirada com um smartphone no Brasil, não uma maquete renderizada. Deveria ter: - detalhes ultra fotorrealistas - microimperfeições naturais - perspectiva realista - profundidade óptica correta - autenticidade semelhante à do iPhone - contexto ambiental crível - realismo comercialmente forte, mas orgânico, típico das redes sociais. ESTILO DA CÂMERA:- Visual da câmera traseira do iPhone 15 Pro Max - equivalente a 24 mm grande angular - perspectiva autêntica de câmera na mão - leve distorção natural da lente nas bordas - imagem limpa, mas sem excesso de processamento - alcance dinâmico realista de smartphone - foco nítido no produto e no rótulo - granulação natural sutil permitida HIERARQUIA DE FOCO: 1. Embalagem/rótulo/marca do produto 2. Realismo da mão e da pegada 3. Escala e proporção corretas 4. Coerência com o ambiente 5. Atmosfera e realismo funcional do fundo INSTRUÇÕES RIGOROSAS: - Use o produto em anexo como referência visual exata - Não altere a identidade da marca - Não crie um novo rótulo - Não altere o formato da embalagem - Não recorte o produto de forma inadequada - Não oculte o rótulo principal - Não crie um substituto genérico - Não gere uma escala irrealista entre a mão e o produto - Não coloque o produto em um ambiente sem relação com a imagem - Não use estética de showroom de luxo, a menos que o produto realmente a exija - Não crie um fundo de estúdio falso - Não decore a cena em excesso AVISO NEGATIVO: baixa qualidade, produto desfocado, rótulo ilegível, embalagem alterada, marca alterada Logotipo falso, tipografia distorcida, proporções incorretas, produto superdimensionado, produto subdimensionado, mão deformada, dedos extras, mão extra, anatomia quebrada, antebraço deformado, produto flutuando, pegada irrealista, fundo bagunçado, showroom de luxo, estúdio estéril, CGI, renderização 3D, ilustração, desenho animado, cores supersaturadas, reflexos falsos, objetos duplicados, textura de material incorreta, embalagem esticada, garrafa torta, plástico derretido, texto ilegível, ambiente inadequado, cena desorganizada, flash forte, realces superexpostos, imagem subexposta, aparência artificial de anúncio. OBJETIVO: Gerar uma imagem POV impecável do produto na mão que pareça uma foto real do estilo de vida da classe média brasileira, com o produto exato reproduzido fielmente, dimensionado corretamente na mão e posicionado no ambiente do mundo real mais apropriado para sua categoria.CGI, renderização 3D, ilustração, desenho animado, cores supersaturadas, reflexos falsos, objetos duplicados, textura de material incorreta, embalagem esticada, garrafa torta, plástico derretido, texto ilegível, ambiente inadequado, cena confusa, flash forte, realces superexpostos, imagem subexposta, aparência artificial de anúncio. OBJETIVO DO RESULTADO: Gerar uma imagem perfeita em primeira pessoa do produto na mão, que pareça uma foto real do estilo de vida da classe média brasileira, com o produto exato reproduzido fielmente, dimensionado corretamente na mão e posicionado no ambiente real mais apropriado para sua categoria.CGI, renderização 3D, ilustração, desenho animado, cores supersaturadas, reflexos falsos, objetos duplicados, textura de material incorreta, embalagem esticada, garrafa torta, plástico derretido, texto ilegível, ambiente inadequado, cena confusa, flash forte, realces superexpostos, imagem subexposta, aparência artificial de anúncio. OBJETIVO DO RESULTADO: Gerar uma imagem perfeita em primeira pessoa do produto na mão, que pareça uma foto real do estilo de vida da classe média brasileira, com o produto exato reproduzido fielmente, dimensionado corretamente na mão e posicionado no ambiente real mais apropriado para sua categoria."
+   has image: true | has video: false
+   referencia: false
+
+4. [doc-060] POV SEGURANDO A MEIA
+   prompt: "Use a imagem da meia em anexo como a única fonte de referência para o produto. Crie uma foto ultrarrealista em primeira pessoa, tirada com um smartphone, da meia, do par de meias ou do conjunto de meias exatos, sendo segurados casualmente por uma mão humana adulta em um quarto ou closet confortável de uma pessoa de classe média brasileira. O resultado deve parecer uma foto real tirada com um iPhone, não uma imagem de catálogo, não uma imagem gerada por computador e não uma composição criada por inteligência artificial. FINALIDADE DO PRODUTO: Preserve o produto exato da imagem em anexo: mesma quantidade, mesmas cores, mesmas estampas, mesma disposição do padrão, mesmos personagens ou gráficos, mesma categoria de meia, mesmo comprimento, mesma altura do cano, mesma construção do calcanhar, mesma construção da ponta, mesma textura de tricô ou pelúcia, mesma espessura do material, mesmas proporções e mesmos detalhes de construção visíveis. Não redesenhe, altere as cores, simplifique, duplique, remova, substitua, encurte ou invente qualquer detalhe do produto. Se o produto for liso, mantenha-o liso. Se tiver estampas ou personagens, preserve-os exatamente. Não adicione logotipos, textos, marcas, etiquetas, marcas d\'água ou sinalização irrelevantes. ESTILO DE SEGURANÇA — CRÍTICO: Mostre exatamente uma mão adulta real segurando as meias, agarrando o tecido no meio, e não apenas os punhos. A mão deve juntar as meias casualmente, de forma suave, natural e imperfeita, como se uma pessoa real as tivesse pegado rapidamente. Não as separe. Não as disponha em forma de leque. Não as segure como se fossem cartas rígidas. Não mostre cada meia completamente e separadamente. As meias devem permanecer parcialmente sobrepostas, parcialmente escondidas, agrupadas naturalmente e posicionadas de forma irregular. DOBRAS ORGÂNICAS — CRÍTICO: As meias devem mostrar dobras orgânicas reais, não curvas suaves e simples. Crie: dobras suaves e irregulares, pequenos vincos aleatórios, franzidos naturais, rugas de compressão do tecido, estrutura de tricô colapsada e drapeados assimétricos. As dobras devem parecer espontâneas e causadas fisicamente pela pressão da mão e pela gravidade. Não crie dobras decorativas perfeitas. Não crie superfícies lisas e rígidas. VOLUME IRREGULAR — CRÍTICO: As meias não devem parecer planas ou com formato uniforme. Apresente: volume irregular, distribuição de espessura variável, pequenas protuberâncias, massa de tecido em camadas, leve inchaço onde o tecido se acumula, áreas mais densas e comprimidas sob os dedos e áreas mais macias e soltas penduradas abaixo da pegada. Cada meia deve contribuir para um aglomerado irregular de tecido macio. Não faça todas as meias idênticas em formato, ângulo ou comprimento visível. CAIMENTO GRAVITACIONAL — CRÍTICO: As partes inferiores das meias devem pender visivelmente para baixo sob a ação da gravidade. Abaixo da pegada, as meias devem apresentar: caimento vertical natural, ponta solta, peso suave pendurado, leve curvatura, sutil variação de comprimento e tecido pendurado relaxado. As seções inferiores não devem ser retas, rígidas, infladas ou perfeitamente alinhadas. As meias devem parecer vestíveis e reais, com uma força gravitacional convincente. ANATOMIA DA MÃO REAL — CRÍTICO: A mão deve ser anatomicamente real e fisicamente convincente. Mostre: cinco dedos corretos,Comprimento natural dos dedos, articulações realistas, mecânica correta do polegar, unhas naturais, veias sutis apenas quando apropriado, poros da pele reais, dobras normais, estrutura da palma da mão verdadeira e anatomia do pulso crível. Os dedos devem comprimir visivelmente o tecido. O polegar deve pressionar as meias naturalmente. O tecido deve responder à pressão da mão. Crie sombras de contato realistas e oclusão entre os dedos e o tecido. A mão não deve parecer posicionada como um manequim. A mão não deve parecer colada. A mão não deve parecer excessivamente suavizada ou artificial. ESCALA REAL: As meias devem permanecer meias adultas de tamanho normal em relação à mão. Não crie meias em miniatura. Não comprima as meias em um objeto minúsculo. Não encurte meias longas para meias de cano curto. Não distorça a escala original do produto. AMBIENTE: Coloque a cena em um ambiente doméstico confortável de classe média brasileira real, como um quarto, área de guarda-roupa ou canto aconchegante para se vestir. O ambiente deve parecer: real, brasileiro, limpo, organizado, funcional, confortável, habitado e naturalmente atraente. Uso: paredes acabadas, móveis comuns e práticos, roupa de cama natural ou têxteis macios para o lar, luz natural ou luz ambiente suave, e pisos de cerâmica, porcelana, laminado ou madeira clara. Evite estéticas de showroom de luxo, mansões, interiores com aparência estrangeira, estúdios falsos, espaços inacabados, desordem ou aparência de renderização 3D. CÂMERA: Foto no estilo do iPhone. Câmera principal equivalente a 24 mm a 28 mm. Modo de foto padrão. Enquadramento natural sem tripé. Foco amplo e natural. A mão e as meias devem permanecer nítidas e legíveis. Suavidade mínima do fundo natural apenas a partir de uma distância real. Use exposição realista de smartphone, cores fiéis à realidade, fotografia computacional sutil e nitidez normal de smartphone em ambientes internos. Sem modo retrato. Sem bokeh acentuado. Sem isolamento artificial do assunto. RESTRIÇÕES NEGATIVAS: sem pegada apenas no punho, sem disposição em leque, sem exibição tipo cartão, sem meias rígidas, sem meias planas, sem ângulos idênticos das meias, sem meias perfeitamente alinhadas, sem meias em miniatura, sem textura de pelúcia falsa, sem tecido inflado, sem tecido flutuante, sem dobras artificiais, sem formato de dedo do pé ausente, sem formato de calcanhar ausente, sem meias extras, sem meias faltando, sem estampas alteradas, sem cores alteradas, sem segunda mão, sem dedos deformados, sem mão de manequim, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO: Uma foto autêntica em primeira pessoa tirada com smartphone das meias exatas sendo seguradas em uma mão humana real, com dobras orgânicas, volume irregular, caimento natural da gravidade, anatomia real da mão, compressão realista do tecido, escala correta para uso e um ambiente doméstico brasileiro confortável.O tecido deve responder à pressão da mão. Crie sombras de contato realistas e oclusão entre os dedos e o tecido. A mão não deve parecer posada como um manequim. A mão não deve parecer colada. A mão não deve parecer excessivamente suavizada ou artificial. ESCALA REAL: As meias devem manter o tamanho normal de meias de adulto usáveis ​​em relação à mão. Não crie meias em miniatura. Não comprima as meias em um objeto minúsculo. Não encurte meias compridas para meias curtas. Não distorça a escala original do produto. AMBIENTE: Coloque a cena em um ambiente residencial confortável de classe média brasileira real, como um quarto, closet ou cantinho aconchegante para se vestir. O ambiente deve transmitir: realismo, estilo brasileiro, limpeza, organização, funcionalidade, conforto, aconchego e um charme natural. Utilize: paredes com acabamento, móveis comuns e práticos, roupas de cama naturais ou têxteis macios para o lar, luz natural ou iluminação ambiente suave e pisos de cerâmica, porcelanato, laminado ou madeira clara. Evite estéticas de showrooms de luxo, mansões, interiores com aparência estrangeira, estúdios falsos, espaços inacabados, desordem ou aparência de renderização 3D. CÂMERA: Foto no estilo do iPhone. Câmera principal equivalente a 24 mm a 28 mm. Modo de foto padrão. Enquadramento natural sem tripé. Foco amplo e natural. A mão e as meias devem permanecer nítidas e legíveis. Suavização mínima do fundo natural apenas a partir de uma distância real. Use exposição realista de smartphone, cores fiéis à realidade, fotografia computacional sutil e nitidez normal de smartphone em ambientes internos. Sem modo retrato. Sem bokeh acentuado. Sem isolamento artificial do assunto. RESTRIÇÕES NEGATIVAS: sem pegada apenas no punho, sem disposição em leque, sem exibição tipo cartão, sem meias rígidas, sem meias planas, sem ângulos idênticos das meias, sem meias perfeitamente alinhadas, sem meias em miniatura, sem textura de pelúcia falsa, sem tecido inflado, sem tecido flutuante, sem dobras artificiais, sem formato de dedo do pé ausente, sem formato de calcanhar ausente, sem meias extras, sem meias faltando, sem estampas alteradas, sem cores alteradas, sem segunda mão, sem dedos deformados, sem mão de manequim, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO: Uma foto autêntica em primeira pessoa tirada com smartphone das meias exatas sendo seguradas em uma mão humana real, com dobras orgânicas, volume irregular, caimento natural da gravidade, anatomia real da mão, compressão realista do tecido, escala correta para uso e um ambiente doméstico brasileiro confortável.O tecido deve responder à pressão da mão. Crie sombras de contato realistas e oclusão entre os dedos e o tecido. A mão não deve parecer posada como um manequim. A mão não deve parecer colada. A mão não deve parecer excessivamente suavizada ou artificial. ESCALA REAL: As meias devem manter o tamanho normal de meias de adulto usáveis ​​em relação à mão. Não crie meias em miniatura. Não comprima as meias em um objeto minúsculo. Não encurte meias compridas para meias curtas. Não distorça a escala original do produto. AMBIENTE: Coloque a cena em um ambiente residencial confortável de classe média brasileira real, como um quarto, closet ou cantinho aconchegante para se vestir. O ambiente deve transmitir: realismo, estilo brasileiro, limpeza, organização, funcionalidade, conforto, aconchego e um charme natural. Utilize: paredes com acabamento, móveis comuns e práticos, roupas de cama naturais ou têxteis macios para o lar, luz natural ou iluminação ambiente suave e pisos de cerâmica, porcelanato, laminado ou madeira clara. Evite estéticas de showrooms de luxo, mansões, interiores com aparência estrangeira, estúdios falsos, espaços inacabados, desordem ou aparência de renderização 3D. CÂMERA: Foto no estilo do iPhone. Câmera principal equivalente a 24 mm a 28 mm. Modo de foto padrão. Enquadramento natural sem tripé. Foco amplo e natural. A mão e as meias devem permanecer nítidas e legíveis. Suavização mínima do fundo natural apenas a partir de uma distância real. Use exposição realista de smartphone, cores fiéis à realidade, fotografia computacional sutil e nitidez normal de smartphone em ambientes internos. Sem modo retrato. Sem bokeh acentuado. Sem isolamento artificial do assunto. RESTRIÇÕES NEGATIVAS: sem pegada apenas no punho, sem disposição em leque, sem exibição tipo cartão, sem meias rígidas, sem meias planas, sem ângulos idênticos das meias, sem meias perfeitamente alinhadas, sem meias em miniatura, sem textura de pelúcia falsa, sem tecido inflado, sem tecido flutuante, sem dobras artificiais, sem formato de dedo do pé ausente, sem formato de calcanhar ausente, sem meias extras, sem meias faltando, sem estampas alteradas, sem cores alteradas, sem segunda mão, sem dedos deformados, sem mão de manequim, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO: Uma foto autêntica em primeira pessoa tirada com smartphone das meias exatas sendo seguradas em uma mão humana real, com dobras orgânicas, volume irregular, caimento natural da gravidade, anatomia real da mão, compressão realista do tecido, escala correta para uso e um ambiente doméstico brasileiro confortável.como um quarto, um closet ou um cantinho aconchegante para se vestir. O ambiente deve transmitir uma sensação de autenticidade, estilo brasileiro, limpeza, organização, funcionalidade, conforto, aconchego e beleza natural. Utilize: paredes com acabamento, móveis práticos comuns, roupa de cama natural ou têxteis macios para o lar, luz natural ou iluminação ambiente suave e pisos de cerâmica, porcelanato, laminado ou madeira clara. Evite estética de showroom de luxo, mansões, interiores com aparência estrangeira, estúdios falsos, espaços inacabados, bagunça ou aparência de renderização 3D. CÂMERA: Foto no estilo iPhone. Câmera principal equivalente a 24 mm a 28 mm. Modo foto padrão. Enquadramento natural sem tripé. Foco amplo e natural. A mão e as meias devem permanecer nítidas e legíveis. Desfoque natural mínimo no fundo, apenas a partir de uma distância real. Utilize exposição realista de smartphone, cores fiéis à realidade, fotografia computacional sutil e nitidez normal de smartphone em ambientes internos. Sem modo retrato. Sem bokeh acentuado. Sem isolamento artificial do sujeito. RESTRIÇÕES NEGATIVAS: sem pegada apenas no punho, sem disposição em leque, sem exibição tipo cartão, sem meias rígidas, sem meias planas, sem ângulos idênticos das meias, sem meias perfeitamente alinhadas, sem meias em miniatura, sem textura de pelúcia falsa, sem tecido inflado, sem tecido flutuante, sem dobras artificiais, sem formato de dedo do pé ausente, sem formato de calcanhar ausente, sem meias extras, sem meias faltando, sem estampas alteradas, sem cores alteradas, sem segunda mão, sem dedos deformados, sem mão de manequim, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO: Uma foto autêntica em primeira pessoa tirada com smartphone das meias exatas sendo seguradas em uma mão humana real, com dobras orgânicas, volume irregular, caimento natural da gravidade, anatomia real da mão, compressão realista do tecido, escala correta para uso e um ambiente doméstico brasileiro confortável.como um quarto, um closet ou um cantinho aconchegante para se vestir. O ambiente deve transmitir uma sensação de autenticidade, estilo brasileiro, limpeza, organização, funcionalidade, conforto, aconchego e beleza natural. Utilize: paredes com acabamento, móveis práticos comuns, roupa de cama natural ou têxteis macios para o lar, luz natural ou iluminação ambiente suave e pisos de cerâmica, porcelanato, laminado ou madeira clara. Evite estética de showroom de luxo, mansões, interiores com aparência estrangeira, estúdios falsos, espaços inacabados, bagunça ou aparência de renderização 3D. CÂMERA: Foto no estilo iPhone. Câmera principal equivalente a 24 mm a 28 mm. Modo foto padrão. Enquadramento natural sem tripé. Foco amplo e natural. A mão e as meias devem permanecer nítidas e legíveis. Desfoque natural mínimo no fundo, apenas a partir de uma distância real. Utilize exposição realista de smartphone, cores fiéis à realidade, fotografia computacional sutil e nitidez normal de smartphone em ambientes internos. Sem modo retrato. Sem bokeh acentuado. Sem isolamento artificial do sujeito. RESTRIÇÕES NEGATIVAS: sem pegada apenas no punho, sem disposição em leque, sem exibição tipo cartão, sem meias rígidas, sem meias planas, sem ângulos idênticos das meias, sem meias perfeitamente alinhadas, sem meias em miniatura, sem textura de pelúcia falsa, sem tecido inflado, sem tecido flutuante, sem dobras artificiais, sem formato de dedo do pé ausente, sem formato de calcanhar ausente, sem meias extras, sem meias faltando, sem estampas alteradas, sem cores alteradas, sem segunda mão, sem dedos deformados, sem mão de manequim, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO: Uma foto autêntica em primeira pessoa tirada com smartphone das meias exatas sendo seguradas em uma mão humana real, com dobras orgânicas, volume irregular, caimento natural da gravidade, anatomia real da mão, compressão realista do tecido, escala correta para uso e um ambiente doméstico brasileiro confortável.Sem tecido flutuante, sem dobras artificiais, sem formato de dedo faltando, sem formato de calcanhar faltando, sem meias extras, sem meias faltando, sem estampas alteradas, sem cores alteradas, sem mão de segunda mão, sem dedos deformados, sem mão de manequim, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO: Uma foto autêntica em primeira pessoa tirada com smartphone das meias exatas sendo seguradas por uma mão humana real, com dobras orgânicas, volume irregular, caimento natural da gravidade, anatomia real da mão, compressão realista do tecido, escala correta para uso e um ambiente doméstico brasileiro confortável.Sem tecido flutuante, sem dobras artificiais, sem formato de dedo faltando, sem formato de calcanhar faltando, sem meias extras, sem meias faltando, sem estampas alteradas, sem cores alteradas, sem mão de segunda mão, sem dedos deformados, sem mão de manequim, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO: Uma foto autêntica em primeira pessoa tirada com smartphone das meias exatas sendo seguradas por uma mão humana real, com dobras orgânicas, volume irregular, caimento natural da gravidade, anatomia real da mão, compressão realista do tecido, escala correta para uso e um ambiente doméstico brasileiro confortável."
+   has image: true | has video: false
+   referencia: false
+
+5. [doc-089] Passando produto no rosto
+   prompt: ""Um vídeo cinematográfico ultrarrealista de 6 segundos com transições suaves feitas com a câmera na mão e movimento natural de paralaxe.\n\nUse a imagem anexada como referência visual para a estrutura facial, tom de pele, penteado e aparência geral da mulher. Mantenha uma forte consistência visual, preservando o realismo natural.\n\n[0,00–2,00 s] Plano médio fechado feito com a câmera na mão em um ambiente natural de quarto. A mulher olha para a câmera com foco relaxado enquanto segura uma pequena quantidade de pomada na ponta dos dedos. A textura natural da pele é claramente visível: olheiras, pequenas imperfeições, poros visíveis, marcas leves de acne, linhas de expressão sutis, leve vermelhidão e irregularidades realistas na pele. Sem maquiagem perfeita. A luz suave do dia vinda de uma janela próxima cria sombras suaves e tons neutros. Micromovimentos controlados com a câmera na mão e piscadas naturais. Sem diálogos. Som ambiente sutil.\n\n[2,00–4,00 s] Movimento lento e orgânico da câmera na mão enquanto ela aplica suavemente a pomada em uma das bochechas usando movimentos circulares naturais. A textura do produto aparece." Ligeiramente brilhante e espessa, espalhando-se de forma realista pela pele. As imperfeições da pele permanecem visíveis e não desfocadas. Microexpressões faciais e ligeiros movimentos musculares ao redor dos olhos e da boca. Luz natural constante e pouca profundidade de campo. [4,00–6,00 s] A câmera na mão aproxima-se subitamente, mantendo um movimento natural. Ela massageia suavemente a pomada na pele, mostrando uma absorção realista e um ligeiro brilho. A textura sob os olhos, as linhas finas, os poros e os detalhes naturais da pele permanecem claramente visíveis. Ela mantém um contato visual calmo e neutro, com respiração relaxada. Os sons ambientes da sala diminuem suavemente. Características visuais e atmosfera: Filmado com uma lente prime equivalente a 50 mm. Detalhes da pele ultrarrealistas com poros visíveis, variação de textura, olheiras, linhas finas e imperfeições naturais. Sem suavização da pele. Sem filtro de beleza. Sem brilho artificial. Iluminação equilibrada com luz natural e gradação de cores neutras e suaves. Pouca profundidade de campo enfatizando a textura real da pele. Movimento orgânico da câmera na mão, imitando filmagens autênticas de rotina de cuidados com a pele. Sem estilização, sem\... Processamento excessivo, sem efeito de pele plástica.""
+   has image: false | has video: true
+   referencia: false
+
+6. [doc-093] POV MEIAS NA CAMA
+   prompt: "Use a imagem da meia em anexo como única e absoluta referência visual para o produto. Crie uma fotografia ultrarrealista em primeira pessoa, tirada com um smartphone, da meia, do par de meias ou do conjunto de meias exatamente iguais, dispostos naturalmente sobre uma cama real em um quarto confortável de classe média brasileira. A imagem deve parecer uma fotografia genuína tirada por uma pessoa real, com uma mão segurando o smartphone enquanto a outra toca casualmente ou ajusta delicadamente as meias na cama. As meias nunca devem ser seguradas no ar. PRESERVAÇÃO DO PRODUTO: Preserve o produto exato mostrado na referência em anexo: mesma quantidade, mesmo número de pares, mesmas cores, mesmas estampas, mesmas ilustrações, mesma disposição do padrão, mesmo tipo de meia, mesmo comprimento, mesma altura do cano, mesma construção do calcanhar, mesma construção da ponta, mesma textura de tricô ou pelúcia, mesma espessura do material, mesmas proporções e mesmos detalhes visíveis de construção. Não redesenhe, altere as cores, encurte, alongue, duplique, remova, substitua, simplifique ou invente qualquer detalhe do produto. Se as meias forem lisas, mantenha-as lisas. Se as meias contiverem estampas, personagens, símbolos ou gráficos, reproduza-os fielmente como parte do tecido. Não reproduza logotipos, textos, marcas d\'água, etiquetas ou marcas do fundo de referência. COMPOSIÇÃO DO PONTO DE VISTA: A câmera deve representar claramente o ponto de vista do fotógrafo, de cima para baixo. A pessoa deve estar em pé, sentada ou encostada naturalmente ao lado da cama enquanto fotografa as meias. Mostre exatamente uma mão humana real entrando naturalmente pela borda inferior ou lateral do enquadramento. A mão pode: repousar levemente sobre uma meia, tocar suavemente o tecido, mover levemente a barra, pressionar suavemente parte do conjunto ou separar casualmente duas meias sobrepostas. A mão não deve levantar o produto. A mão não deve segurar as meias. A mão não deve mostrá-las em direção à câmera. As meias devem permanecer apoiadas na cama durante toda a imagem. REALISMO FÍSICO DO TECIDO: As meias devem se comportar como um tecido real repousando sobre uma roupa de cama macia. Apresente: dobras orgânicas, volume irregular, colapso natural do tecido, espessura realista, rugas suaves, compressão sutil da malha, leve sobreposição, orientação irregular, volume natural do calcanhar, formato relaxado dos dedos e contato convincente com a cama. A roupa de cama deve comprimir-se sutilmente sob as meias. As meias devem acompanhar as pequenas inclinações, rugas e maciez do cobertor ou colcha. Evite meias perfeitamente planas. Evite alinhamento rígido. Evite ângulos idênticos. Evite organização estilo catálogo. Para um kit, preserve a quantidade exata enquanto organiza as meias naturalmente, com leve sobreposição e espaçamento irregular. O kit deve parecer colocado casualmente na cama, não exibido profissionalmente. REALISMO DA MÃO E DA APARÊNCIA HUMANA: A mão visível deve ser totalmente anatômica e fisicamente convincente. Apresente: cinco dedos corretos, comprimentos naturais dos dedos, articulações realistas, mecânica correta do polegar, unhas naturais, poros visíveis na pele, rugas sutis, pequenas variações de tonalidade,Anatomia realista do pulso e pressão de contato convincente. Os dedos devem criar uma leve compressão no tecido apenas onde tocam as meias. Crie sombras de contato precisas e oclusão natural entre os dedos, as meias e a roupa de cama. A mão não deve parecer colada na cena. A mão, as meias, a cama e o quarto devem compartilhar a mesma iluminação, balanço de branco, perspectiva, foco, nitidez, exposição e textura fotográfica. QUARTO BRASILEIRO: Use um quarto real, confortável e típico da classe média brasileira. O ambiente deve transmitir uma sensação de limpeza, organização, funcionalidade, conforto, aconchego, vida, humanidade e beleza natural. Inclua elementos realistas como: uma cama de verdade com roupa de cama comum, paredes pintadas com bom acabamento, móveis práticos e proporcionais, um guarda-roupa ou cômoda simples, piso de cerâmica, porcelanato, laminado ou madeira clara, luz natural da janela e decoração discreta para o dia a dia. O quarto deve parecer agradável e bem cuidado, sem ostentar luxo. Nada de mansão. Nada de showroom de luxo. Nada de quarto de hotel artificial. Nada de interiores estrangeiros genéricos. Nada de estúdio falso. Nada de construção inacabada. Nada de decoração excessiva. Nada de bagunça. QUALIDADE DA CÂMERA E DA FOTOGRAFIA: Fotografado como se tivesse sido capturado com um iPhone 15 Pro ou um smartphone moderno similar. Use a câmera principal equivalente a 24 mm a 28 mm. Modo de foto padrão. Enquadramento natural em primeira pessoa, sem tripé. Foco amplo e natural. Mantenha a mão, as meias, a roupa de cama e os detalhes do ambiente próximos visualmente conectados. Utilize: cores fiéis à realidade, exposição realista de smartphone, transição natural de altas luzes, textura sutil do sensor, contraste equilibrado, nitidez autêntica em ambientes internos e fotografia computacional discreta. Sem modo retrato. Sem bokeh exagerado. Sem desfoque artificial de fundo. Sem névoa de foco suave. Sem HDR excessivo. Sem suavização por filtro de beleza. Sem efeito de pele artificial. Sem textura de tecido sintético. RESTRIÇÕES ANTI-IA: Sem produto alterado. Sem meias extras. Sem meias faltando. Sem pares duplicados. Sem estampas alteradas. Sem cores alteradas. Sem meias em miniatura. Sem tecido rígido. Sem produto flutuando. Sem kit perfeitamente alinhado. Sem disposição em leque. Sem layout de catálogo. Sem mão segurando as meias no ar. Sem segunda mão. Sem dedos extras. Sem dedos faltando. Sem dedos fundidos. Sem mãos de manequim. Sem pele cerosa. Sem efeito de colagem. Sem iluminação inadequada. Sem CGI. Sem renderização 3D. Sem aparência artificial de estúdio. Sem sobreposições de texto. Sem marca d\'água. Sem bordas. RESULTADO FINAL: Uma fotografia ultrarrealista em primeira pessoa, no estilo iPhone, das meias aplicadas, dispostas naturalmente sobre uma cama de verdade, com uma mão humana anatomicamente correta tocando casualmente o tecido, dobras orgânicas, volume irregular, compressão realista da cama, comportamento fiel do material, iluminação coerente, perspectiva natural de smartphone e um quarto confortável de classe média brasileira.e roupa de cama. A mão não deve parecer colada na cena. A mão, as meias, a cama e o quarto devem compartilhar a mesma iluminação, balanço de branco, perspectiva, foco, nitidez, exposição e textura fotográfica. QUARTO BRASILEIRO: Use um quarto real de classe média brasileira, confortável. O ambiente deve transmitir: limpeza, organização, funcionalidade, conforto, aconchego, vida, humanidade e beleza natural. Inclua elementos realistas como: uma cama de verdade com roupa de cama comum, paredes pintadas com bom acabamento, móveis práticos e proporcionais, um guarda-roupa ou cômoda simples, piso de cerâmica, porcelanato, laminado ou madeira clara, luz natural da janela e decoração discreta do dia a dia. O quarto deve ser agradável e bem cuidado, sem parecer luxuoso. Nada de mansão. Nada de showroom de luxo. Nada de quarto de hotel artificial. Nada de interior estrangeiro genérico. Nada de estúdio falso. Nada de construção inacabada. Nada de decoração excessiva. Nada de bagunça. CÂMERA E QUALIDADE FOTOGRÁFICA: Fotografe como se tivesse sido tirada com um iPhone 15 Pro ou um smartphone moderno similar. Use a câmera principal equivalente a 24 mm a 28 mm. Modo foto padrão. Enquadramento natural em primeira pessoa, com a câmera na mão. Foco amplo e natural. Mantenha a mão, as meias, a roupa de cama e os detalhes do ambiente próximos visualmente conectados. Uso: cores realistas, exposição realista de smartphone, transição natural de realce, textura sutil do sensor, contraste equilibrado, nitidez autêntica em ambientes internos e fotografia computacional discreta. Sem modo retrato. Sem bokeh exagerado. Sem desfoque artificial de fundo. Sem névoa de foco suave. Sem HDR excessivo. Sem suavização por filtro de beleza. Sem pele artificial. Sem textura de tecido sintético. RESTRIÇÕES ANTI-IA: Sem produto alterado. Sem meias extras. Sem meias faltando. Sem pares duplicados. Sem estampas alteradas. Sem cores alteradas. Sem meias em miniatura. Sem tecido rígido. Sem produto flutuando. Sem kit perfeitamente alinhado. Sem disposição em leque. Sem layout de catálogo. Sem mão segurando as meias no ar. Sem segunda mão. Sem dedos extras. Sem dedos faltando. Sem dedos fundidos. Sem mão de manequim. Sem pele cerosa. Sem efeito de colagem. Sem iluminação inadequada. Sem CGI. Sem renderização 3D. Sem aparência artificial de estúdio. Sem sobreposições de texto. Sem marca d\'água. Sem bordas. RESULTADO FINAL: Uma fotografia ultrarrealista em primeira pessoa, no estilo iPhone, das meias exatamente iguais, posicionadas naturalmente sobre uma cama real, com uma mão humana anatomicamente correta tocando casualmente o tecido, dobras orgânicas, volume irregular, compressão realista da cama, comportamento material autêntico, iluminação coerente, perspectiva natural de smartphone e um quarto confortável de classe média brasileira.e roupa de cama. A mão não deve parecer colada na cena. A mão, as meias, a cama e o quarto devem compartilhar a mesma iluminação, balanço de branco, perspectiva, foco, nitidez, exposição e textura fotográfica. QUARTO BRASILEIRO: Use um quarto real de classe média brasileira, confortável. O ambiente deve transmitir: limpeza, organização, funcionalidade, conforto, aconchego, vida, humanidade e beleza natural. Inclua elementos realistas como: uma cama de verdade com roupa de cama comum, paredes pintadas com bom acabamento, móveis práticos e proporcionais, um guarda-roupa ou cômoda simples, piso de cerâmica, porcelanato, laminado ou madeira clara, luz natural da janela e decoração discreta do dia a dia. O quarto deve ser agradável e bem cuidado, sem parecer luxuoso. Nada de mansão. Nada de showroom de luxo. Nada de quarto de hotel artificial. Nada de interior estrangeiro genérico. Nada de estúdio falso. Nada de construção inacabada. Nada de decoração excessiva. Nada de bagunça. CÂMERA E QUALIDADE FOTOGRÁFICA: Fotografe como se tivesse sido tirada com um iPhone 15 Pro ou um smartphone moderno similar. Use a câmera principal equivalente a 24 mm a 28 mm. Modo foto padrão. Enquadramento natural em primeira pessoa, com a câmera na mão. Foco amplo e natural. Mantenha a mão, as meias, a roupa de cama e os detalhes do ambiente próximos visualmente conectados. Uso: cores realistas, exposição realista de smartphone, transição natural de realce, textura sutil do sensor, contraste equilibrado, nitidez autêntica em ambientes internos e fotografia computacional discreta. Sem modo retrato. Sem bokeh exagerado. Sem desfoque artificial de fundo. Sem névoa de foco suave. Sem HDR excessivo. Sem suavização por filtro de beleza. Sem pele artificial. Sem textura de tecido sintético. RESTRIÇÕES ANTI-IA: Sem produto alterado. Sem meias extras. Sem meias faltando. Sem pares duplicados. Sem estampas alteradas. Sem cores alteradas. Sem meias em miniatura. Sem tecido rígido. Sem produto flutuando. Sem kit perfeitamente alinhado. Sem disposição em leque. Sem layout de catálogo. Sem mão segurando as meias no ar. Sem segunda mão. Sem dedos extras. Sem dedos faltando. Sem dedos fundidos. Sem mão de manequim. Sem pele cerosa. Sem efeito de colagem. Sem iluminação inadequada. Sem CGI. Sem renderização 3D. Sem aparência artificial de estúdio. Sem sobreposições de texto. Sem marca d\'água. Sem bordas. RESULTADO FINAL: Uma fotografia ultrarrealista em primeira pessoa, no estilo iPhone, das meias exatamente iguais, posicionadas naturalmente sobre uma cama real, com uma mão humana anatomicamente correta tocando casualmente o tecido, dobras orgânicas, volume irregular, compressão realista da cama, comportamento material autêntico, iluminação coerente, perspectiva natural de smartphone e um quarto confortável de classe média brasileira.Uma cama de verdade com roupa de cama comum, paredes pintadas com bom acabamento, móveis práticos e proporcionais, um guarda-roupa ou cômoda simples, piso de cerâmica, porcelanato, laminado ou madeira clara, luz natural da janela e decoração discreta para o dia a dia. O quarto deve ser agradável e bem cuidado, sem parecer luxuoso. Nada de mansão. Nada de showroom de luxo. Nada de quarto de hotel artificial. Nada de interiores estrangeiros genéricos. Nada de estúdio falso. Nada de construção inacabada. Nada de decoração excessiva. Nada de bagunça. QUALIDADE DA CÂMERA E DA FOTOGRAFIA: Fotografe como se tivesse sido tirada com um iPhone 15 Pro ou um smartphone moderno similar. Use a câmera principal equivalente a 24 mm ou 28 mm. Modo foto padrão. Enquadramento natural em primeira pessoa, sem tripé. Foco amplo e natural. Mantenha a mão, as meias, a roupa de cama e os detalhes próximos do quarto visualmente conectados. Utilize: cores fiéis à realidade, exposição realista de smartphone, transição natural de altas luzes, textura sutil do sensor, contraste equilibrado, nitidez autêntica em ambientes internos e fotografia computacional discreta. Sem modo retrato. Sem bokeh forte. Sem desfoque artificial de fundo. Sem névoa de foco suave. Sem HDR excessivo. Sem suavização com filtro de beleza. Sem pele plástica. Sem textura de tecido sintético. RESTRIÇÕES ANTI-IA: Sem produto alterado. Sem meias extras. Sem meias faltando. Sem pares duplicados. Sem estampas alteradas. Sem cores alteradas. Sem meias em miniatura. Sem tecido rígido. Sem produto flutuante. Sem kit perfeitamente alinhado. Sem disposição de ventilador. Sem layout de catálogo. Sem mão segurando as meias no ar. Sem segunda mão. Sem dedos extras. Sem dedos faltando. Sem dedos fundidos. Sem mão de manequim. Sem pele cerosa. Sem efeito de colagem. Sem iluminação inadequada. Sem CGI. Sem renderização 3D. Sem aparência artificial de estúdio. Sem sobreposições de texto. Sem marca d\'água. Sem bordas. RESULTADO FINAL: Uma fotografia ultrarrealista em primeira pessoa, no estilo iPhone, das meias exatas anexadas, repousando naturalmente em uma cama real, com uma mão humana anatomicamente correta tocando casualmente o tecido, dobras orgânicas, volume irregular, compressão realista da cama, comportamento real do material, iluminação coerente, perspectiva natural de smartphone e um quarto confortável de classe média brasileira.Uma cama de verdade com roupa de cama comum, paredes pintadas com bom acabamento, móveis práticos e proporcionais, um guarda-roupa ou cômoda simples, piso de cerâmica, porcelanato, laminado ou madeira clara, luz natural da janela e decoração discreta para o dia a dia. O quarto deve ser agradável e bem cuidado, sem parecer luxuoso. Nada de mansão. Nada de showroom de luxo. Nada de quarto de hotel artificial. Nada de interiores estrangeiros genéricos. Nada de estúdio falso. Nada de construção inacabada. Nada de decoração excessiva. Nada de bagunça. QUALIDADE DA CÂMERA E DA FOTOGRAFIA: Fotografe como se tivesse sido tirada com um iPhone 15 Pro ou um smartphone moderno similar. Use a câmera principal equivalente a 24 mm ou 28 mm. Modo foto padrão. Enquadramento natural em primeira pessoa, sem tripé. Foco amplo e natural. Mantenha a mão, as meias, a roupa de cama e os detalhes próximos do quarto visualmente conectados. Utilize: cores fiéis à realidade, exposição realista de smartphone, transição natural de altas luzes, textura sutil do sensor, contraste equilibrado, nitidez autêntica em ambientes internos e fotografia computacional discreta. Sem modo retrato. Sem bokeh forte. Sem desfoque artificial de fundo. Sem névoa de foco suave. Sem HDR excessivo. Sem suavização com filtro de beleza. Sem pele plástica. Sem textura de tecido sintético. RESTRIÇÕES ANTI-IA: Sem produto alterado. Sem meias extras. Sem meias faltando. Sem pares duplicados. Sem estampas alteradas. Sem cores alteradas. Sem meias em miniatura. Sem tecido rígido. Sem produto flutuante. Sem kit perfeitamente alinhado. Sem disposição de ventilador. Sem layout de catálogo. Sem mão segurando as meias no ar. Sem segunda mão. Sem dedos extras. Sem dedos faltando. Sem dedos fundidos. Sem mão de manequim. Sem pele cerosa. Sem efeito de colagem. Sem iluminação inadequada. Sem CGI. Sem renderização 3D. Sem aparência artificial de estúdio. Sem sobreposições de texto. Sem marca d\'água. Sem bordas. RESULTADO FINAL: Uma fotografia ultrarrealista em primeira pessoa, no estilo iPhone, das meias exatas anexadas, repousando naturalmente em uma cama real, com uma mão humana anatomicamente correta tocando casualmente o tecido, dobras orgânicas, volume irregular, compressão realista da cama, comportamento real do material, iluminação coerente, perspectiva natural de smartphone e um quarto confortável de classe média brasileira.Transição natural de realce, textura sutil do sensor, contraste equilibrado, nitidez autêntica em ambientes internos e fotografia computacional discreta. Sem modo retrato. Sem bokeh acentuado. Sem desfoque artificial de fundo. Sem névoa de foco suave. Sem HDR excessivo. Sem suavização por filtro de beleza. Sem pele artificial. Sem textura de tecido sintético. RESTRIÇÕES ANTI-IA: Sem produto alterado. Sem meias extras. Sem meias faltando. Sem pares duplicados. Sem estampas alteradas. Sem cores alteradas. Sem meias em miniatura. Sem tecido rígido. Sem produto flutuante. Sem kit perfeitamente alinhado. Sem disposição em leque. Sem layout de catálogo. Sem mão segurando as meias no ar. Sem segunda mão. Sem dedos extras. Sem dedos faltando. Sem dedos fundidos. Sem mão de manequim. Sem pele cerosa. Sem efeito de colagem. Sem iluminação inadequada. Sem CGI. Sem renderização 3D. Sem aparência artificial de estúdio. Sem sobreposições de texto. Sem marca d\'água. Sem bordas. RESULTADO FINAL: Uma fotografia ultrarrealista em primeira pessoa, no estilo iPhone, das meias exatamente iguais, posicionadas naturalmente sobre uma cama real, com uma mão humana anatomicamente correta tocando casualmente o tecido, dobras orgânicas, volume irregular, compressão realista da cama, comportamento material autêntico, iluminação coerente, perspectiva natural de smartphone e um quarto confortável de classe média brasileira.Transição natural de realce, textura sutil do sensor, contraste equilibrado, nitidez autêntica em ambientes internos e fotografia computacional discreta. Sem modo retrato. Sem bokeh acentuado. Sem desfoque artificial de fundo. Sem névoa de foco suave. Sem HDR excessivo. Sem suavização por filtro de beleza. Sem pele artificial. Sem textura de tecido sintético. RESTRIÇÕES ANTI-IA: Sem produto alterado. Sem meias extras. Sem meias faltando. Sem pares duplicados. Sem estampas alteradas. Sem cores alteradas. Sem meias em miniatura. Sem tecido rígido. Sem produto flutuante. Sem kit perfeitamente alinhado. Sem disposição em leque. Sem layout de catálogo. Sem mão segurando as meias no ar. Sem segunda mão. Sem dedos extras. Sem dedos faltando. Sem dedos fundidos. Sem mão de manequim. Sem pele cerosa. Sem efeito de colagem. Sem iluminação inadequada. Sem CGI. Sem renderização 3D. Sem aparência artificial de estúdio. Sem sobreposições de texto. Sem marca d\'água. Sem bordas. RESULTADO FINAL: Uma fotografia ultrarrealista em primeira pessoa, no estilo iPhone, das meias exatamente iguais, posicionadas naturalmente sobre uma cama real, com uma mão humana anatomicamente correta tocando casualmente o tecido, dobras orgânicas, volume irregular, compressão realista da cama, comportamento material autêntico, iluminação coerente, perspectiva natural de smartphone e um quarto confortável de classe média brasileira."
+   has image: true | has video: false
+   referencia: false
+
+7. [doc-097] UGC UNIVERSAL QUALQUER PRODUTO CORPO TODO
+   prompt: "Utilize a imagem 1 em anexo como única e absoluta referência de identidade para a influenciadora. Utilize a imagem 2 em anexo como única e absoluta referência visual para o produto. Crie uma fotografia profissional ultra-realista vertical no formato 9:16, no estilo UGC (conteúdo gerado pelo usuário), da influenciadora em pé, de corpo inteiro, em um ambiente neutro e real no Brasil, apresentando naturalmente o produto em anexo em suas mãos. GARANTIA DE IDENTIDADE: Preserve a identidade exata da influenciadora da imagem 1: mesma identidade facial, mesmo formato de rosto, mesmo tom de pele, mesma idade aparente, mesmos olhos, mesmas sobrancelhas, mesmo nariz, mesmos lábios, mesmo contorno do queixo, mesmo penteado, mesma cor de cabelo, mesma textura de cabelo, mesmo tipo físico, mesma altura aparente, mesmas proporções corporais e mesma aparência humana natural. Não a embeleze, rejuvenesça, envelheça, emagreça, aumente, estilize, substitua ou reinterprete. A mulher gerada deve ser a mesma pessoa da imagem 1, não uma influenciadora semelhante. COMPOSIÇÃO DE CORPO INTEIRO — CRUCIAL: A influenciadora deve aparecer completamente visível da cabeça aos pés. Não recorte: a cabeça, o cabelo, os braços, as mãos, os quadris, as pernas, os tornozelos, os sapatos ou os pés. Deixe uma pequena margem visual natural acima da cabeça e abaixo dos pés. Ela deve estar em uma posição natural, de frente para a câmera, com o peso do corpo distribuído de forma crível entre as duas pernas. Use uma postura humana, relaxada e confiante, adequada para conteúdo gerado pelo usuário (CGU) autêntico. Não crie uma pose rígida de manequim, pose de passarela, ângulo de quadril exagerado ou gesto comercial artificial. BLOQUEIO DO PRODUTO — FIDELIDADE MÁXIMA: Preserve o produto exato da imagem 2: mesma categoria de produto, mesma quantidade, mesmas dimensões, mesmas proporções, mesmo formato, mesmas cores, mesmos materiais, mesma embalagem, mesmo acabamento superficial, mesma marca, mesmo logotipo, mesmas letras impressas, mesmas palavras, mesma ortografia, mesma tipografia, mesmo posicionamento da etiqueta, mesmos gráficos, mesmas ilustrações, mesmos símbolos, mesmas tampas, mesmas alças, mesmos fechos, mesmos acessórios e os mesmos detalhes de construção visíveis. O produto deve ser exatamente o item anexado, não um modelo similar ou um substituto genérico. Não redesenhe, altere as cores, simplifique, aprimore, remova, substitua, duplique ou invente qualquer detalhe. Não altere o rótulo. Não reescreva o texto. Não espelhe o logotipo. Não invente letras ou símbolos. Não duplique a arte do rótulo em nenhum outro lugar da cena. APRESENTAÇÃO DO PRODUTO: O influenciador segura o produto naturalmente na altura da cintura, do estômago ou da parte inferior do peito, dependendo do seu tamanho real. Mantenha a parte principal do produto e o rótulo claramente voltados para a câmera. Produtos pequenos e leves podem ser segurados naturalmente com uma ou duas mãos. Produtos médios devem ser apoiados com segurança com ambas as mãos, quando apropriado. Produtos grandes ou pesados ​​devem permanecer apoiados no chão, em uma mesa baixa ou em outra superfície real enquanto o influenciador os toca ou os estabiliza naturalmente. Respeite as dimensões e o peso reais do produto. Não faça produtos pesados ​​flutuarem.Não amplie produtos pequenos de forma artificial. Não deixe que os dedos cubram o logotipo principal, a etiqueta, o texto ou detalhes visuais importantes. ANATOMIA HUMANA E MICROTEXTURA: Mostre uma anatomia humana fisicamente precisa com: cinco dedos em cada mão visível, posicionamento correto do polegar, comprimento natural dos dedos, articulações realistas, unhas naturais, pulsos precisos, cotovelos realistas, ombros corretos, joelhos naturais, tornozelos realistas e pés firmemente apoiados no chão. Mostre a microtextura humana visível: poros naturais da pele, linhas faciais finas, variações sutis de tonalidade, textura realista sob os olhos, pequenas imperfeições da pele, pelos finos no corpo quando naturalmente visíveis, fios de cabelo individuais, textura labial realista, umidade natural nos olhos, fibras de tecido autênticas, costuras e rugas nas roupas. Evite pele com filtro de beleza, textura cerosa, aparência plástica, suavização excessiva, simetria artificial, olhos de boneca e cabelo sintético. VESTUÁRIO: Vista o(a) influenciador(a) com roupas simples, limpas e contemporâneas, apropriadas para conteúdo gerado pelo usuário brasileiro. Use uma roupa casual neutra que não concorra com o produto, como: uma blusa lisa, justa ou folgada, jeans, calças neutras, uma saia simples ou outra roupa realista para o dia a dia. Não adicione marcas visíveis, estampas grandes, textos irrelevantes ou acessórios que distraiam a atenção. As roupas devem mostrar o peso real do tecido, dobras naturais, costuras, contato com o corpo e caimento fisicamente correto. AMBIENTE BRASILEIRO: Use um ambiente neutro real da classe média brasileira, como: uma sala de estar limpa de apartamento, um interior de casa moderno, porém acessível, um corredor neutro, uma sala de jantar, um canto de escritório em casa ou um espaço residencial simples e organizado. O ambiente pode variar entre gerações, mantendo: paredes com acabamento neutro, móveis práticos e proporcionais, pisos limpos de cerâmica, porcelanato, laminado ou madeira clara, cortinas de cor natural, plantas discretas, detalhes residenciais brasileiros comuns, luz natural e uma aparência aconchegante e habitada. O espaço deve parecer real, limpo, organizado, humano e acessível. Não crie uma mansão, um showroom de luxo, um estúdio fotográfico vazio, um saguão de hotel, um interior com aparência estrangeira, uma construção inacabada ou um ambiente artificial de IA. FOCO E PROFUNDIDADE: Mantenha o influenciador e o produto em foco nítido no mesmo plano focal. O rótulo, as letras, a marca e os detalhes da embalagem do produto devem permanecer legíveis. O ambiente pode estar ligeiramente mais suave devido à profundidade óptica real e à distância física. Use apenas uma separação discreta do fundo. Sem recortes artificiais no modo retrato. Sem bokeh extremo. Sem desfoque artificial ao redor do corpo, cabelo, dedos ou bordas do produto. CÂMERA: Fotografia tirada com uma câmera profissional full-frame. Formato vertical 9:16. Qualidade de imagem comercial 4K. Enquadramento de corpo inteiro. Posição natural da câmera na altura dos olhos. Lente de 50 mm ou perspectiva fisicamente equivalente com distância de disparo suficiente para mostrar o corpo inteiro sem distorção. Profundidade de campo óptica de f/2.8 a f/4.Fotografia profissional com luz natural. Tons de pele realistas. Cores do produto fiéis à realidade. Exposição equilibrada. Transição natural de realce. Alto nível de detalhes sem nitidez excessiva. Textura sutil do sensor real. Sem distorção de grande angular. Sem HDR exagerado. Sem brilho artificial de estúdio. COERÊNCIA FÍSICA: O influenciador, o produto, a roupa, o chão, os móveis e o fundo devem compartilhar as mesmas características: direção da luz, temperatura da cor, perspectiva, comportamento do foco, exposição, suavidade das sombras, reflexos e textura fotográfica. O produto deve estar em contato físico correto com as mãos ou a superfície de apoio. A imagem deve parecer uma única fotografia capturada em um instante. ENQUADRAMENTO LIMPO: Além da marca legítima e dos detalhes impressos fisicamente presentes no produto, não devem ser adicionados: textos, letras, números, logotipos, legendas, frases promocionais, ícones, adesivos, interfaces de mídias sociais, barras de pesquisa, botões de reação, etiquetas de preço, marcas d\'água ou sobreposições de texto. RESTRIÇÕES NEGATIVAS: sem alteração de identidade, sem influenciador substituto semelhante, sem corpo cortado, sem pés faltando, sem cabeça cortada, sem anatomia deformada, sem dedos extras, sem dedos faltando, sem dedos fundidos, sem mãos distorcidas, sem produto flutuante, sem escala incorreta do produto, sem produto alterado, sem embalagem alterada, sem rótulo alterado, sem texto do produto com erro ortográfico, sem logotipo espelhado, sem produto duplicado, sem acessórios inventados, sem pele com filtro de beleza, sem rosto com aspecto ceroso, sem cabelo artificial, sem desfoque de fundo falso, sem recorte em modo retrato, sem CGI, sem renderização 3D, sem efeito de colagem, sem artefatos com aparência de IA, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO FINAL: Uma fotografia profissional vertical 4K ultra-realista do influenciador da imagem 1, totalmente visível da cabeça aos pés em um ambiente brasileiro neutro real, segurando e apresentando naturalmente o produto da imagem 2 com máxima fidelidade ao rótulo, letras, marca, cores, proporções, embalagem e detalhes físicos.ou sobreposições de texto. RESTRIÇÕES NEGATIVAS: sem alteração de identidade, sem influenciador substituto semelhante, sem corpo cortado, sem pés faltando, sem cabeça cortada, sem anatomia deformada, sem dedos extras, sem dedos faltando, sem dedos fundidos, sem mãos distorcidas, sem produto flutuante, sem escala incorreta do produto, sem produto alterado, sem embalagem alterada, sem rótulo alterado, sem texto do produto com erro ortográfico, sem logotipo espelhado, sem produto duplicado, sem acessórios inventados, sem pele com filtro de beleza, sem rosto ceroso, sem cabelo artificial, sem desfoque de fundo falso, sem recorte em modo retrato, sem CGI, sem renderização 3D, sem efeito de colagem, sem artefatos com aparência de IA, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO FINAL: Uma fotografia profissional vertical 4K ultra-realista do influenciador da imagem 1, totalmente visível da cabeça aos pés em um ambiente brasileiro neutro real, segurando e apresentando naturalmente o produto da imagem 2 com máxima fidelidade ao seu rótulo, letras, marca, cores, proporções, embalagem e detalhes físicos.ou sobreposições de texto. RESTRIÇÕES NEGATIVAS: sem alteração de identidade, sem influenciador substituto semelhante, sem corpo cortado, sem pés faltando, sem cabeça cortada, sem anatomia deformada, sem dedos extras, sem dedos faltando, sem dedos fundidos, sem mãos distorcidas, sem produto flutuante, sem escala incorreta do produto, sem produto alterado, sem embalagem alterada, sem rótulo alterado, sem texto do produto com erro ortográfico, sem logotipo espelhado, sem produto duplicado, sem acessórios inventados, sem pele com filtro de beleza, sem rosto ceroso, sem cabelo artificial, sem desfoque de fundo falso, sem recorte em modo retrato, sem CGI, sem renderização 3D, sem efeito de colagem, sem artefatos com aparência de IA, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO FINAL: Uma fotografia profissional vertical 4K ultra-realista do influenciador da imagem 1, totalmente visível da cabeça aos pés em um ambiente brasileiro neutro real, segurando e apresentando naturalmente o produto da imagem 2 com máxima fidelidade ao seu rótulo, letras, marca, cores, proporções, embalagem e detalhes físicos."
+   has image: true | has video: false
+   referencia: false
+
+8. [doc-101] Foto realista no restaurante
+   prompt: "[INSTRUÇÕES DO FIREBASE: NÃO ALTERE NADA ALÉM DAS ALTERAÇÕES SOLICITADAS PARA O PROJETO ATUAL. MANTENHA TODOS OS PARÂMETROS NÃO RELACIONADOS INTACTOS. APLIQUE APENAS A CENA, A POSE E AS ROUPAS DESCRITAS.] [SOBREPOSIÇÃO DE IDENTIDADE: FAÇA COM QUE O SUJEITO CORRESPONDA À IMAGEM DE REFERÊNCIA ANEXADA. Replique suas características faciais exatas, tom de pele e textura do cabelo. NÃO gere uma pessoa genérica; use a foto de referência para todas as características físicas.] Um plano médio captura a mulher da imagem de referência anexada sentada a uma mesa de jantar ao ar livre. Seu cabelo está penteado em um coque elegante e ela usa como acessórios uma pulseira dourada e brincos redondos ornamentados. Sua roupa inclui uma blusa azul-escura de alças com um decote profundo. Ela apoia a mão na bochecha, exibindo um anel no dedo médio, e posa pensativamente. À sua frente, Uma mesa de madeira serve de base para um prato de cerâmica branca com uma salada parcialmente comida, com folhas verdes visíveis, vinagrete e uma pequena pétala de flor branca. O cenário é uma cena noturna iluminada por luzes artificiais quentes que realçam a pele da modelo. O fundo é exuberante, com folhagem verdejante, sugerindo um ambiente de jantar ao ar livre no verão, enquanto o céu azul escuro indica o crepúsculo. A atmosfera geral é íntima e relaxante.\n\nVALORES HEX: [\"#0d0d04\", \"#21210e\", \"#36361f\", \"#a35f3c\", \"#824a2b\", \"#5f3319\", \"#0e173b\", \"#c67a4d\", \"#c4b199\", \"#524f38\", \"#dbc7aa\", \"#efddbf\", \"#736a4f\", \"#e69c56\", \"#9d8d6e\"]""
+   has image: true | has video: false
+   referencia: false
+
+9. [doc-107] UGC com influenciador, produto e PET no colo
+   prompt: "Use a imagem anexa 1 como única e absoluta referência de identidade para a influenciadora. Use a imagem anexa 2 como única e absoluta referência visual para o produto para animais de estimação. Crie uma fotografia vertical ultrarrealista no formato 9:16, no estilo UGC (conteúdo gerado pelo usuário), da influenciadora apresentando o produto para animais de estimação de forma natural, enquanto segura um animal de estimação doméstico real no colo, dentro de uma confortável casa de classe média brasileira. A imagem final deve parecer uma fotografia casual genuína tirada com um iPhone em casa, e não uma campanha profissional, não uma imagem gerada por computador (CGI), não uma renderização 3D e não uma composição criada por inteligência artificial. IDENTIDADE DA INFLUENCIADORA: Preserve as características exatas da influenciadora, incluindo: identidade facial, formato do rosto, tom de pele, idade aparente, formato dos olhos, nariz, boca, linha do maxilar, cor do cabelo, penteado, comprimento do cabelo, proporções corporais e aparência natural, conforme a imagem anexa 1. Não a embeleze, emagreça, aumente, envelheça, rejuvenesça, substitua, estilize ou reinterprete. A mulher gerada deve ser a mesma pessoa da imagem 1, e não uma influenciadora semelhante. BLOQUEIO DO PRODUTO: Mantenha o produto exatamente como na imagem 2 em anexo: mesma categoria, mesma quantidade, mesmas dimensões, mesmas proporções, mesmo formato de embalagem, mesmas cores, mesmos materiais, mesma marca, mesmo texto impresso, mesmos rótulos, mesmos gráficos, mesmos fechos, mesmos componentes funcionais e mesmos detalhes de construção visíveis. Não redesenhe, altere as cores, simplifique, duplique, remova, substitua, aprimore ou invente qualquer detalhe do produto. Gere o produto exato, não uma variação similar. Textos, logotipos, ilustrações e gráficos legítimos podem permanecer apenas no produto físico, exatamente como mostrado na imagem 2. Não duplique, amplie, extraia ou coloque a arte do produto em outro lugar na imagem. COMPOSIÇÃO DO UGC: O influenciador está sentado naturalmente em um sofá, poltrona, cadeira ou cama real. Um animal de estimação doméstico real descansa confortavelmente e com segurança em seu colo. Ele apresenta ou apoia levemente o produto com uma mão enquanto a outra mão apoia ou toca suavemente o animal de estimação. A pose deve parecer espontânea, acolhedora, crível e ligeiramente imperfeita, como um UGC doméstico real. Não crie uma pose publicitária rígida. Não faça a influenciadora segurar o produto diretamente em frente ao rosto. O produto deve permanecer claramente visível e legível, sem parecer colado na cena. PESO E SUPORTE DO PRODUTO: A interação deve respeitar o tamanho e o peso reais do produto. Produtos pequenos e leves podem ser segurados naturalmente com uma mão. Produtos médios podem repousar parcialmente no colo ou ao lado da influenciadora enquanto ela os segura. Produtos grandes ou pesados ​​devem permanecer apoiados no chão, sofá, mesa ou outra superfície real enquanto ela apenas os toca ou apresenta. Não faça um produto pesado flutuar em uma mão. REALISMO HUMANO: Mostre uma anatomia humana realista com: cinco dedos em cada mão visível, comprimento natural dos dedos, mecânica correta do polegar, articulações realistas, unhas naturais, poros visíveis, rugas sutis, pequenas variações de tonalidade e pressão de preensão convincente.e sombras de contato fisicamente precisas. A pele deve parecer natural e humana, com microtextura real e sem suavização por filtros de beleza. As mãos não devem parecer coladas, cerosas, plásticas ou iluminadas separadamente. REALISMO DO ANIMAL DE ESTIMAÇÃO: Use um animal de estimação doméstico real que seja naturalmente compatível com a cena. O animal deve apresentar: anatomia correta, pelagem natural, patas realistas, peso corporal crível, estrutura articular adequada, olhos naturais, focinho correto, orelhas realistas e postura relaxada. O animal deve estar fisicamente no colo da influenciadora, com distribuição de peso crível e contato natural com seu corpo e roupas. O animal não deve flutuar, duplicar, deformar ou parecer um brinquedo de pelúcia. CASA BRASILEIRA: Use uma casa brasileira real, confortável e de classe média. Escolha uma sala de estar, quarto ou área de estar aconchegante e crível com: paredes em tons neutros, um sofá, cadeira ou cama reais, móveis práticos e proporcionais, piso limpo de cerâmica, porcelanato, laminado ou madeira clara, luz natural da janela, plantas discretas ou objetos domésticos comuns e decoração sóbria. O ambiente deve transmitir uma sensação: brasileira, limpa, organizada, funcional, confortável, acolhedora, habitada, humana e naturalmente atraente. Não crie uma mansão, um showroom de luxo, um quarto de hotel falso, um interior estrangeiro genérico, um estúdio artificial, uma construção inacabada ou um ambiente desorganizado. CÂMERA: As fotos devem ser tiradas como se tivessem sido capturadas com um iPhone 15 Pro ou um smartphone moderno similar. Formato vertical 9:16. Câmera principal equivalente a 24 mm a 28 mm. Modo foto padrão. Enquadramento natural na altura dos olhos ou ligeiramente na altura do peito. Foco amplo e natural. Cores fiéis à realidade. Exposição realista. Transição natural de altas luzes. Processamento sutil do smartphone. Leves imperfeições de imagem sem tripé. Sem modo retrato. Sem desfoque de fundo extremo. Sem bokeh excessivo. Sem HDR artificial. Sem iluminação de estúdio comercial. COERÊNCIA FOTOGRÁFICA: O influenciador, o produto, o animal de estimação, os móveis e o ambiente devem compartilhar as mesmas características: direção da luz, balanço de branco, perspectiva, comportamento do foco, nitidez, exposição, suavidade das sombras e textura fotográfica. O resultado deve parecer uma única fotografia genuína capturada em um único momento. MOLDURA LIMPA: Fora da embalagem física do produto, não gere: texto flutuante, legendas, símbolos, ícones, corações, setas, interface de mídia social, controles de câmera, adesivos, emblemas, banners promocionais, gráficos de preço ou marcas d\'água. RESTRIÇÕES NEGATIVAS: sem alteração de identidade, sem influenciador substituto semelhante, sem rosto alterado, sem pele com filtro de beleza, sem pele com aspecto ceroso, sem dedos extras, sem dedos faltando, sem dedos fundidos, sem mãos deformadas, sem produto alterado, sem embalagem alterada, sem marca alterada, sem texto impresso alterado, sem produto duplicado, sem produto flutuante, sem animal de estimação deformado, sem patas extras, sem animal de estimação duplicado, sem aparência de brinquedo de pelúcia, sem efeito de colagem, sem CGI, sem renderização 3D, sem aparência artificial de estúdio, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO FINAL:Uma fotografia UGC vertical, nítida e ultrarrealista, no estilo iPhone, da influenciadora da imagem 1 apresentando naturalmente o mesmo produto para animais de estimação da imagem 2, enquanto um animal de estimação doméstico realista descansa confortavelmente em seu colo, dentro de uma casa confortável de classe média brasileira."
+   has image: true | has video: false
+   referencia: false
+
+10. [doc-114] Roupinha PET vestida sem animal
+   prompt: "Use a imagem anexa como única e absoluta referência para a roupa do animal de estimação. Crie uma fotografia vertical ultrarrealista no formato 9:16, estilo iPhone, de um animal de estimação real vestindo a roupa anexada em um ambiente confortável de uma casa brasileira de classe média. BLOQUEIO DO PRODUTO: Mantenha a roupa do animal de estimação exatamente como na referência: mesma categoria, mesma quantidade, mesmo design, mesmo corte, mesmas dimensões, mesmas proporções, mesmas cores, mesmo tecido, mesma textura, mesma estampa, mesmos gráficos, mesmas costuras, mesma gola, mesmas mangas, mesmas aberturas das pernas, mesmos fechos, mesmo acabamento, mesma barra, mesmos acessórios fisicamente presos à roupa e os mesmos detalhes de construção visíveis. Não redesenhe, altere as cores, simplifique, duplique, remova, substitua, melhore ou invente qualquer parte da roupa. Crie a roupa anexada exatamente como na referência, não uma variação similar. SELEÇÃO DO ANIMAL DE ESTIMAÇÃO: Escolha um animal de estimação real cuja espécie, tamanho do corpo, comprimento do torso, circunferência do pescoço e proporções das pernas sejam fisicamente compatíveis com a roupa. Use um cão ou gato de acordo com o design e o uso pretendido da roupa. O animal de estimação deve estar em escala correta em relação à roupa. CAIMENTO DA ROUPA: Vista o animal de estimação de forma correta e natural. A roupa deve se ajustar ao corpo do animal com: posicionamento correto do pescoço, aberturas corretas para as pernas, cobertura realista do torso, tensão do tecido convincente, dobras naturais, costuras precisas, fechos adequados, interação realista com a pelagem e caimento coerente. A roupa não deve parecer pintada no animal. Ela não deve se fundir com a pelagem, flutuar para longe do corpo, deslizar para a posição errada ou alterar seu design original. Não estique a roupa de forma artificial para que caiba em um animal incompatível. POSE DO ANIMAL DE ESTIMAÇÃO: Mostre o animal de estimação em uma pose calma e natural: em pé, sentado, descansando ou olhando para a câmera. A pose deve exibir claramente a roupa, mantendo-se fisicamente convincente. O animal não deve ser posicionado como um manequim rígido ou modelo de moda. REALISMO DO ANIMAL DE ESTIMAÇÃO: O animal deve ter: anatomia correta, pelagem natural, patas realistas, número correto de membros, articulações convincentes, olhos naturais, orelhas adequadas, focinho correto, peso corporal condizente e postura doméstica relaxada. A roupa deve criar uma pressão sutil e realista, simulando a compressão natural da pelagem nos pontos de contato com o corpo. CASA BRASILEIRA: Utilize uma sala de estar, quarto, corredor ou um cantinho dedicado ao animal de estimação típicos do Brasil. O ambiente deve transmitir uma sensação de limpeza, organização, conforto, funcionalidade, aconchego, vida e beleza natural. Inclua paredes com acabamento neutro, móveis práticos e proporcionais, pisos limpos de cerâmica, porcelanato, laminado ou madeira clara, iluminação natural e decoração discreta. Não crie uma mansão, showroom de luxo, boutique estrangeira, estúdio artificial, cômodo inacabado ou ambiente visualmente desorganizado. CÂMERA: As fotos devem ser tiradas como se tivessem sido feitas com um iPhone 15 Pro ou um smartphone moderno similar. Formato vertical 9:16.Câmera principal equivalente a 24 mm a 28 mm. Modo de foto padrão. Enquadramento baixo, ao nível do animal de estimação, ou enquadramento natural ligeiramente elevado. Foco amplo e legível. Cores fiéis à realidade. Exposição realista. Transição natural de altas luzes. Processamento sutil de smartphone. Sem modo retrato. Sem desfoque de fundo extremo. Sem bokeh artificial. Sem HDR excessivo. COERÊNCIA FOTOGRÁFICA: O animal de estimação, a roupa, a pelagem, o chão, os móveis e o ambiente devem compartilhar as mesmas características: direção da luz, balanço de branco, perspectiva, comportamento do foco, exposição, suavidade das sombras e textura fotográfica. O resultado deve parecer uma única fotografia genuína de iPhone capturada em um único instante. ENQUADRAMENTO LIMPO: Textos, marcas, ilustrações e gráficos legítimos só podem permanecer se estiverem fisicamente presentes na peça de roupa em si. Fora da roupa, não adicione textos, logotipos, símbolos, legendas, adesivos, elementos de interface, gráficos promocionais ou marcas d\'água. RESTRIÇÕES NEGATIVAS: sem alterações nas roupas, sem substituição por peças similares, sem alteração de cor, sem alteração de estampa, sem duplicação de roupas, sem acessórios inventados, sem ajuste incorreto, sem pintura de roupas sobre a pelagem, sem fusão de tecido e pelagem, sem tecido flutuando, sem aberturas de pernas incorretas, sem roupas torcidas, sem animais de estimação deformados, sem patas extras, sem membros faltando, sem focinho distorcido, sem poses de manequim, sem CGI, sem renderização 3D, sem efeito de colagem, sem aparência artificial de estúdio, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO FINAL: Uma fotografia vertical ultrarrealista, no estilo iPhone, de um animal de estimação doméstico compatível, vestindo naturalmente a roupa anexada, dentro de uma confortável casa brasileira de classe média, com fidelidade total à peça, ajuste anatômico correto, comportamento realista do tecido e foco visual claro no produto.Sem poses de manequim, sem CGI, sem renderização 3D, sem efeito de colagem, sem aparência artificial de estúdio, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO FINAL: Uma fotografia vertical ultrarrealista, no estilo iPhone, de um animal de estimação compatível, vestindo naturalmente a roupa anexada, dentro de uma confortável casa brasileira de classe média, com fidelidade total à peça, caimento anatômico correto, comportamento realista do tecido e foco visual claro no produto.Sem poses de manequim, sem CGI, sem renderização 3D, sem efeito de colagem, sem aparência artificial de estúdio, sem sobreposições de texto, sem marca d\'água, sem bordas. RESULTADO FINAL: Uma fotografia vertical ultrarrealista, no estilo iPhone, de um animal de estimação compatível, vestindo naturalmente a roupa anexada, dentro de uma confortável casa brasileira de classe média, com fidelidade total à peça, caimento anatômico correto, comportamento realista do tecido e foco visual claro no produto."
+   has image: true | has video: false
+   referencia: false
+
+11. [doc-115] CAMISAS DE KIT POV
+   prompt: "Crie uma foto de produto hiper-realista em primeira pessoa de um conjunto de roupas, utilizando as imagens de referência anexadas como referência visual exata para todas as peças. Todas as peças de roupa mostradas no anexo devem aparecer na imagem final, preservando a quantidade exata, cores, estampas, aparência do tecido e detalhes gerais do design. A IA deve escolher o arranjo mais natural, fisicamente realista e comercialmente viável para as peças de roupa. As peças devem ser posicionadas da maneira como uma pessoa real as apresentaria naturalmente em uma foto de produto, com base no número de peças, sua espessura e o volume do conjunto. Se o conjunto de roupas contiver várias peças ou parecer volumoso, as peças devem repousar naturalmente sobre uma superfície real, como uma mesa, cama, sofá, bancada ou base de tecido neutro, enquanto apenas uma mão humana realista aparece no quadro, tocando, segurando, levantando ou apresentando suavemente parte do conjunto de forma natural. A mão não deve sustentar de forma irrealista todo o peso das peças no ar. Se o número de peças for menor, as roupas podem ser ligeiramente empilhadas, abertas em leque, dobradas ou parcialmente sobrepostas, desde que a disposição permaneça fisicamente plausível, visualmente clara e organizada naturalmente. As roupas devem seguir a gravidade, a espessura, as dobras, o espaçamento e o comportamento das sombras de forma realista. A imagem final deve parecer uma foto POV real tirada por uma pessoa com um iPhone 15 Pro Max. Apenas uma mão deve estar visível. As roupas devem ser o foco principal, fáceis de identificar individualmente, totalmente visíveis ou suficientemente visíveis para confirmar cada peça incluída no anexo. Estilo: fotografia de produto ultra fotorrealista, estética realista de e-commerce, composição natural, textura de tecido altamente detalhada, costura realista, proporções fiéis à vida real, escala fisicamente precisa, anatomia realista da mão humana, foco nítido, alta clareza, sombras naturais, iluminação equilibrada e realismo autêntico de câmera de smartphone. Iluminação: luz natural brilhante ou luz suave de ambiente interno, realista e limpa, com sombras definidas, porém suaves, alta visibilidade, sem superexposição, sem suavização artificial. Fundo: minimalista e realista, limpo e neutro, com uma aparência natural de foto de produto para o dia a dia. O cenário deve favorecer o realismo e fazer com que as roupas pareçam posicionadas naturalmente, em vez de artificialmente encenadas. Regra importante de composição: as roupas não devem parecer flutuando, excessivamente perfeitas, alinhadas de forma não natural, sem peso, em miniatura ou dispostas de uma maneira que um ser humano real não as seguraria ou apresentaria fisicamente. Instruções negativas: sem mãos extras, sem segunda mão, sem roupas flutuando, sem pegada impossível, sem empilhamento irrealista, sem anatomia distorcida, sem dedos deformados, sem roupas em miniatura, sem dobras falsas, sem tecido com aparência plástica, sem desfoque, sem suavidade, sem baixo nível de detalhes, sem artefatos de IA, sem peças duplicadas, sem peças omitidas, sem sobreposições de texto, sem marcas d\'água."
+   has image: true | has video: false
+   referencia: false
+
+12. [vid-link-001] Vídeo UGC Universal
+   prompt: "Vídeo UGC universal — referência visual para criação de conteúdo."
+   has image: false | has video: true
+   referencia: true
+
+13. [vid-link-002] POV Sapatos (Vídeo)
+   prompt: "POV de sapatos — vídeo de referência para criação de conteúdo de calçados."
+   has image: false | has video: true
+   referencia: true
+
+14. [vid-link-003] POV Capinha (Vídeo)
+   prompt: "POV de capinha — vídeo de referência para criação de conteúdo."
+   has image: false | has video: true
+   referencia: true
+
+15. [vid-link-004] Selfie Pensativo
+   prompt: "Selfie pensativo — vídeo de referência para criação de conteúdo."
+   has image: false | has video: true
+   referencia: true
+
+16. [vid-link-005] Selfie Cabelo
+   prompt: "Selfie cabelo — vídeo de referência para criação de conteúdo."
+   has image: false | has video: true
+   referencia: true
+
+17. [vid-link-006] POV Outfit Universal
+   prompt: "POV outfit universal — vídeo de referência para criação de conteúdo."
+   has image: false | has video: true
+   referencia: true
+
+18. [pdf-019-pov-arvore-de-natal] POV ARVORE DE NATAL
+   prompt: "PROMPT - Crie um vídeo **POV ultra-realista de 10 segundos, vertical 9:16**, utilizando
+exatamente duas imagens de referência:
+**IMAGEM 1 = caixa de presente, referência visual absoluta.**
+**IMAGEM 2 = produto que deverá ser encontrado dentro da caixa.**
+### REGRA ABSOLUTA — CAIXA IDÊNTICA À IMAGEM 1
+A caixa deve permanecer **100% IDÊNTICA à primeira imagem de referência durante todo
+o vídeo**.
+Não alterar absolutamente nada: formato, tamanho, proporções, cor, estampa, desenhos,
+textos, logos, textura, material, tampa, bordas, fita ou laço.
+**NÃO recriar uma caixa parecida. Use exatamente a caixa da referência.**
+As únicas mudanças permitidas são físicas: **o laço pode ser desamarrado e a tampa pode
+ser aberta pelas mãos.**
+### 0–2s — DESAMARRANDO
+A câmera está em **POV**, olhando para a caixa.
+Exatamente duas mãos da mesma pessoa aparecem.
+Uma mão segura a caixa enquanto a outra pega **a ponta do laço original da própria caixa**
+e puxa.
+O laço se desfaz naturalmente e a fita fica solta sobre a caixa.
+### 2–4s — ABRINDO
+As mesmas duas mãos seguram a tampa original e **levantam a tampa fisicamente**,
+abrindo a caixa.
+**IMPORTANTE: o produto da Imagem 2 NÃO deve simplesmente aparecer perfeitamente
+apresentado assim que a caixa abrir.**
+O interior deve parecer uma caixa de presente real, e o produto deve estar **acomodado
+dentro dela**, parcialmente escondido pelo conteúdo/embalagem interna já compatível com
+a cena.
+### 4–6s — PROCURANDO DENTRO DA CAIXA
+As duas mãos entram fisicamente dentro da caixa e **procuram pelo produto**.
+Elas afastam suavemente o conteúdo interno, movimentam o que estiver cobrindo o produto
+e exploram o interior da caixa de maneira natural.
+Então uma das mãos **encontra o produto correspondente EXATAMENTE à Imagem 2**.
+A outra mão ajuda a liberar o produto de dentro da caixa.
+O produto precisa ser realmente **ENCONTRADO E RETIRADO DE DENTRO**, e não
+surgir, materializar ou substituir outro objeto.
+### 6–8s — RETIRANDO O PRODUTO
+As duas mãos seguram o produto encontrado e **puxam fisicamente para fora da caixa**.
+Mostre claramente o movimento completo:
+**produto dentro da caixa → mãos encontram → mãos seguram → produto sobe → produto
+sai completamente da caixa.**
+Preserve o produto **100% idêntico à Imagem 2**, incluindo formato, embalagem, cores,
+estampas, textos, logos, proporções e todos os detalhes.
+### 8–10s — MOSTRANDO DE PERTO
+As mãos aproximam o produto da câmera para apresentá-lo.
+Faça um **close-up ultra-realista**, com foco automático natural de smartphone.
+O produto fica extremamente nítido próximo à câmera enquanto **a mesma caixa original
+permanece aberta ao fundo**, levemente desfocada.
+Faça um pequeno movimento natural com o produto para mostrar seus detalhes.
+### REGRAS CRÍTICAS
+**IMAGEM 1:** identidade absoluta da caixa. Não alterar nada.
+**IMAGEM 2:** identidade absoluta do produto. Não alterar nada.
+O produto deve **existir fisicamente dentro da caixa desde o início**, mesmo que esteja
+escondido. Ele só se torna visível quando as mãos realmente o encontram.
+**NÃO fazer o produto surgir magicamente. NÃO fazer transformação de objetos. NÃO
+trocar a caixa. NÃO alterar a estampa. NÃO alterar o produto. NÃO gerar mãos extras.**
+Exatamente **duas mãos da mesma pessoa**, movimentos humanos naturais, física
+realista, sombras e contato físico corretos.
+**Sem rosto, sem corpo, sem fala, sem texto adicional, sem legendas e sem música.
+Aparência de vídeo UGC real gravado com smartphone.**
+PROMPT GROK - Crie um vídeo **POV ultra-realista de 10 segundos, vertical 9:16**,
+utilizando exatamente duas imagens de referência:
+**IMAGEM 1 = caixa de presente, referência visual absoluta.**
+**IMAGEM 2 = produto que deverá ser encontrado dentro da caixa.**
+### REGRA ABSOLUTA — CAIXA IDÊNTICA À IMAGEM 1
+A caixa deve permanecer **100% IDÊNTICA à primeira imagem de referência durante todo
+o vídeo**.
+Não alterar absolutamente nada: formato, tamanho, proporções, cor, estampa, desenhos,
+textos, logos, textura, material, tampa, bordas, fita ou laço.
+**NÃO recriar uma caixa parecida. Use exatamente a caixa da referência.**
+As únicas mudanças permitidas são físicas: **o laço pode ser desamarrado e a tampa pode
+ser aberta pelas mãos.**
+### 0–2s — DESAMARRANDO
+A câmera está em **POV**, olhando para a caixa.
+Exatamente duas mãos da mesma pessoa aparecem.
+Uma mão segura a caixa enquanto a outra pega **a ponta do laço original da própria caixa**
+e puxa.
+O laço se desfaz naturalmente e a fita fica solta sobre a caixa.
+### 2–4s — ABRINDO
+As mesmas duas mãos seguram a tampa original e **levantam a tampa fisicamente**,
+abrindo a caixa.
+**IMPORTANTE: o produto da Imagem 2 NÃO deve simplesmente aparecer perfeitamente
+apresentado assim que a caixa abrir.**
+O interior deve parecer uma caixa de presente real, e o produto deve estar **acomodado
+dentro dela**, parcialmente escondido pelo conteúdo/embalagem interna já compatível com
+a cena.
+### 4–6s — PROCURANDO DENTRO DA CAIXA
+As duas mãos entram fisicamente dentro da caixa e **procuram pelo produto**.
+Elas afastam suavemente o conteúdo interno, movimentam o que estiver cobrindo o produto
+e exploram o interior da caixa de maneira natural.
+Então uma das mãos **encontra o produto correspondente EXATAMENTE à Imagem 2**.
+A outra mão ajuda a liberar o produto de dentro da caixa.
+O produto precisa ser realmente **ENCONTRADO E RETIRADO DE DENTRO**, e não
+surgir, materializar ou substituir outro objeto.
+### 6–8s — RETIRANDO O PRODUTO
+As duas mãos seguram o produto encontrado e **puxam fisicamente para fora da caixa**.
+Mostre claramente o movimento completo:
+**produto dentro da caixa → mãos encontram → mãos seguram → produto sobe → produto
+sai completamente da caixa.**
+Preserve o produto **100% idêntico à Imagem 2**, incluindo formato, embalagem, cores,
+estampas, textos, logos, proporções e todos os detalhes.
+### 8–10s — MOSTRANDO DE PERTO
+As mãos aproximam o produto da câmera para apresentá-lo.
+Faça um **close-up ultra-realista**, com foco automático natural de smartphone.
+O produto fica extremamente nítido próximo à câmera enquanto **a mesma caixa original
+permanece aberta ao fundo**, levemente desfocada.
+Faça um pequeno movimento natural com o produto para mostrar seus detalhes.
+### REGRAS CRÍTICAS
+**IMAGEM 1:** identidade absoluta da caixa. Não alterar nada.
+**IMAGEM 2:** identidade absoluta do produto. Não alterar nada.
+O produto deve **existir fisicamente dentro da caixa desde o início**, mesmo que esteja
+escondido. Ele só se torna visível quando as mãos realmente o encontram.
+**NÃO fazer o produto surgir magicamente. NÃO fazer transformação de objetos. NÃO
+trocar a caixa. NÃO alterar a estampa. NÃO alterar o produto. NÃO gerar mãos extras.**
+Exatamente **duas mãos da mesma pessoa**, movimentos humanos naturais, física
+realista, sombras e contato físico corretos.
+**Sem rosto, sem corpo, sem fala, sem texto adicional, sem legendas e sem música.
+Aparência de vídeo UGC real gravado com smartphone.**
+PROMPT FLOW - Crie um vídeo **POV ultra-realista de 10 segundos, vertical 9:16**,
+utilizando exatamente duas imagens de referência:
+**IMAGEM 1 = caixa de presente, referência visual absoluta.**
+**IMAGEM 2 = produto que deverá ser encontrado dentro da caixa.**
+### REGRA ABSOLUTA — CAIXA IDÊNTICA À IMAGEM 1
+A caixa deve permanecer **100% IDÊNTICA à primeira imagem de referência durante todo
+o vídeo**.
+Não alterar absolutamente nada: formato, tamanho, proporções, cor, estampa, desenhos,
+textos, logos, textura, material, tampa, bordas, fita ou laço.
+**NÃO recriar uma caixa parecida. Use exatamente a caixa da referência.**
+As únicas mudanças permitidas são físicas: **o laço pode ser desamarrado e a tampa pode
+ser aberta pelas mãos.**
+### 0–2s — DESAMARRANDO
+A câmera está em **POV**, olhando para a caixa.
+Exatamente duas mãos da mesma pessoa aparecem.
+Uma mão segura a caixa enquanto a outra pega **a ponta do laço original da própria caixa**
+e puxa.
+O laço se desfaz naturalmente e a fita fica solta sobre a caixa.
+### 2–4s — ABRINDO
+As mesmas duas mãos seguram a tampa original e **levantam a tampa fisicamente**,
+abrindo a caixa.
+**IMPORTANTE: o produto da Imagem 2 NÃO deve simplesmente aparecer perfeitamente
+apresentado assim que a caixa abrir.**
+O interior deve parecer uma caixa de presente real, e o produto deve estar **acomodado
+dentro dela**, parcialmente escondido pelo conteúdo/embalagem interna já compatível com
+a cena.
+### 4–6s — PROCURANDO DENTRO DA CAIXA
+As duas mãos entram fisicamente dentro da caixa e **procuram pelo produto**.
+Elas afastam suavemente o conteúdo interno, movimentam o que estiver cobrindo o produto
+e exploram o interior da caixa de maneira natural.
+Então uma das mãos **encontra o produto correspondente EXATAMENTE à Imagem 2**.
+A outra mão ajuda a liberar o produto de dentro da caixa.
+O produto precisa ser realmente **ENCONTRADO E RETIRADO DE DENTRO**, e não
+surgir, materializar ou substituir outro objeto.
+### 6–8s — RETIRANDO O PRODUTO
+As duas mãos seguram o produto encontrado e **puxam fisicamente para fora da caixa**.
+Mostre claramente o movimento completo:
+**produto dentro da caixa → mãos encontram → mãos seguram → produto sobe → produto
+sai completamente da caixa.**
+Preserve o produto **100% idêntico à Imagem 2**, incluindo formato, embalagem, cores,
+estampas, textos, logos, proporções e todos os detalhes.
+### 8–10s — MOSTRANDO DE PERTO
+As mãos aproximam o produto da câmera para apresentá-lo.
+Faça um **close-up ultra-realista**, com foco automático natural de smartphone.
+O produto fica extremamente nítido próximo à câmera enquanto **a mesma caixa original
+permanece aberta ao fundo**, levemente desfocada.
+Faça um pequeno movimento natural com o produto para mostrar seus detalhes.
+### REGRAS CRÍTICAS
+**IMAGEM 1:** identidade absoluta da caixa. Não alterar nada.
+**IMAGEM 2:** identidade absoluta do produto. Não alterar nada.
+O produto deve **existir fisicamente dentro da caixa desde o início**, mesmo que esteja
+escondido. Ele só se torna visível quando as mãos realmente o encontram.
+**NÃO fazer o produto surgir magicamente. NÃO fazer transformação de objetos. NÃO
+trocar a caixa. NÃO alterar a estampa. NÃO alterar o produto. NÃO gerar mãos extras.**
+Exatamente **duas mãos da mesma pessoa**, movimentos humanos naturais, física
+realista, sombras e contato físico corretos.
+**Sem rosto, sem corpo, sem fala, sem texto adicional, sem legendas e sem música.
+Aparência de vídeo UGC real gravado com smartphone.**
+POV ARVORE DE NATAL"
+   has image: true | has video: true
+   referencia: undefined
+
+19. [pdf-028-produto-que-quer-que-ela-tire-do-roupeiro] Gancho Roupeiro
+   prompt: "PROMPT - Use exclusivamente a imagem de referência para definir personagem, produto,
+posição, cenário, iluminação e enquadramento.
+A câmera permanece 100% FIXA, mantendo exatamente o mesmo enquadramento da
+referência.
+A personagem permanece na posição inicial mostrada na imagem, segurando com apenas
+UMA mão o produto/objeto presente na referência. Ela olha naturalmente para a câmera
+com expressão divertida e confiante.
+Sem fala. Sem áudio. Sem lip sync.
+Primeiro, ela faz um pequeno impulso natural com o braço e lança suavemente o MESMO
+PRODUTO para cima.
+IMPORTANTE — FÍSICA REAL:
+O produto sobe apenas alguns centímetros acima da mão. A gravidade atua imediatamente:
+ele perde velocidade durante a subida, atinge rapidamente o ponto máximo e começa a cair.
+O produto NÃO flutua, NÃO congela no ar, NÃO permanece suspenso e NÃO realiza giros
+exagerados. Todo o lançamento acontece rapidamente, como na vida real.
+Enquanto o produto começa a cair, a personagem reage imediatamente e levanta a perna
+que já está posicionada para realizar uma tentativa rápida e divertida de tocar/chutar
+suavemente o produto enquanto ele passa pela frente do pé.
+O movimento deve ser espontâneo, rápido e humano.
+Se ela não acertar, o produto simplesmente continua sua trajetória determinada pela
+gravidade, cai naturalmente para fora do enquadramento e NÃO retorna.
+O produto nunca volta sozinho para a mão, nunca muda de direção sem contato físico e
+nunca permanece suspenso.
+Após a tentativa, ela reage naturalmente olhando para a câmera, com um sorriso
+espontâneo e uma pequena risada silenciosa.
+REFERENCE LOCK:
+Preservar EXATAMENTE personagem, identidade, rosto, corpo, cabelo, maquiagem,
+acessórios, roupa, produto, cenário, iluminação, posição inicial e proporções da referência.
+O produto permanece EXATAMENTE O MESMO durante toda a ação. Não alterar cor,
+formato, tamanho, textura, design ou detalhes.
+Câmera 100% fixa.
+Um único take contínuo.
+Sem cortes ou transições.
+Sem zoom, pan ou tilt.
+Sem teleportes.
+Sem objetos extras.
+Sem duplicação.
+Sem deformações.
+Sem movimentos robóticos.
+Movimentos rápidos, naturais e fluidos, com anatomia humana e física realista. Aparência
+autêntica de vídeo UGC gravado com smartphone, ultra-realista 4K, sem aspecto de IA.
+PROMPT GROK 0- Use exclusivamente a imagem de referência para definir personagem,
+produto, posição, cenário, iluminação e enquadramento.
+A câmera permanece 100% FIXA, mantendo exatamente o mesmo enquadramento da
+referência.
+A personagem permanece na posição inicial mostrada na imagem, segurando com apenas
+UMA mão o produto/objeto presente na referência. Ela olha naturalmente para a câmera
+com expressão divertida e confiante.
+Sem fala. Sem áudio. Sem lip sync.
+Primeiro, ela faz um pequeno impulso natural com o braço e lança suavemente o MESMO
+PRODUTO para cima.
+IMPORTANTE — FÍSICA REAL:
+O produto sobe apenas alguns centímetros acima da mão. A gravidade atua imediatamente:
+ele perde velocidade durante a subida, atinge rapidamente o ponto máximo e começa a cair.
+O produto NÃO flutua, NÃO congela no ar, NÃO permanece suspenso e NÃO realiza giros
+exagerados. Todo o lançamento acontece rapidamente, como na vida real.
+Enquanto o produto começa a cair, a personagem reage imediatamente e levanta a perna
+que já está posicionada para realizar uma tentativa rápida e divertida de tocar/chutar
+suavemente o produto enquanto ele passa pela frente do pé.
+O movimento deve ser espontâneo, rápido e humano.
+Se ela não acertar, o produto simplesmente continua sua trajetória determinada pela
+gravidade, cai naturalmente para fora do enquadramento e NÃO retorna.
+O produto nunca volta sozinho para a mão, nunca muda de direção sem contato físico e
+nunca permanece suspenso.
+Após a tentativa, ela reage naturalmente olhando para a câmera, com um sorriso
+espontâneo e uma pequena risada silenciosa.
+REFERENCE LOCK:
+Preservar EXATAMENTE personagem, identidade, rosto, corpo, cabelo, maquiagem,
+acessórios, roupa, produto, cenário, iluminação, posição inicial e proporções da referência.
+O produto permanece EXATAMENTE O MESMO durante toda a ação. Não alterar cor,
+formato, tamanho, textura, design ou detalhes.
+Câmera 100% fixa.
+Um único take contínuo.
+Sem cortes ou transições.
+Sem zoom, pan ou tilt.
+Sem teleportes.
+Sem objetos extras.
+Sem duplicação.
+Sem deformações.
+Sem movimentos robóticos.
+Movimentos rápidos, naturais e fluidos, com anatomia humana e física realista. Aparência
+autêntica de vídeo UGC gravado com smartphone, ultra-realista 4K, sem aspecto de IA.
+PROMPT FLOW - Use exclusivamente a imagem de referência para definir personagem,
+produto, posição, cenário, iluminação e enquadramento.
+A câmera permanece 100% FIXA, mantendo exatamente o mesmo enquadramento da
+referência.
+A personagem permanece na posição inicial mostrada na imagem, segurando com apenas
+UMA mão o produto/objeto presente na referência. Ela olha naturalmente para a câmera
+com expressão divertida e confiante.
+Sem fala. Sem áudio. Sem lip sync.
+Primeiro, ela faz um pequeno impulso natural com o braço e lança suavemente o MESMO
+PRODUTO para cima.
+IMPORTANTE — FÍSICA REAL:
+O produto sobe apenas alguns centímetros acima da mão. A gravidade atua imediatamente:
+ele perde velocidade durante a subida, atinge rapidamente o ponto máximo e começa a cair.
+O produto NÃO flutua, NÃO congela no ar, NÃO permanece suspenso e NÃO realiza giros
+exagerados. Todo o lançamento acontece rapidamente, como na vida real.
+Enquanto o produto começa a cair, a personagem reage imediatamente e levanta a perna
+que já está posicionada para realizar uma tentativa rápida e divertida de tocar/chutar
+suavemente o produto enquanto ele passa pela frente do pé.
+O movimento deve ser espontâneo, rápido e humano.
+Se ela não acertar, o produto simplesmente continua sua trajetória determinada pela
+gravidade, cai naturalmente para fora do enquadramento e NÃO retorna.
+O produto nunca volta sozinho para a mão, nunca muda de direção sem contato físico e
+nunca permanece suspenso.
+Após a tentativa, ela reage naturalmente olhando para a câmera, com um sorriso
+espontâneo e uma pequena risada silenciosa.
+REFERENCE LOCK:
+Preservar EXATAMENTE personagem, identidade, rosto, corpo, cabelo, maquiagem,
+acessórios, roupa, produto, cenário, iluminação, posição inicial e proporções da referência.
+O produto permanece EXATAMENTE O MESMO durante toda a ação. Não alterar cor,
+formato, tamanho, textura, design ou detalhes.
+Câmera 100% fixa.
+Um único take contínuo.
+Sem cortes ou transições.
+Sem zoom, pan ou tilt.
+Sem teleportes.
+Sem objetos extras.
+Sem duplicação.
+Sem deformações.
+Sem movimentos robóticos.
+Movimentos rápidos, naturais e fluidos, com anatomia humana e física realista. Aparência
+autêntica de vídeo UGC gravado com smartphone, ultra-realista 4K, sem aspecto de IA.
+GANCHO NEGATIVO PACOTE FEMINIO
+DETALHE
+💡
+adicione a foto da sua modelo + a do pacote para gerar o video
+LINK IMAGEM
+https://auroraprompts.com/storage/prompts/ref_1786583603_6a7d1a33cee43.png
+https://auroraprompts.com/storage/prompts/ref_1786583604_6a7d1a3479818.jpg
+https://auroraprompts.com/storage/prompts/1786583603_6a7d1a33ccf16.mp4
+PROMPT - Use a imagem de referência para preservar EXATAMENTE rosto, corpo, roupa,
+pacote, iluminação, enquadramento e ambiente.
+A câmera permanece 100% FIXA durante todo o vídeo. Plano-sequência único, sem cortes,
+transições, zoom ou mudança de enquadramento.
+O vídeo começa com o rapaz SEM NENHUM OBJETO NAS MÃOS. Ele olha para a própria
+camiseta, segura levemente a barra inferior com as duas mãos, faz um pequeno ajuste no
+tecido e demonstra uma expressão discreta de dúvida.
+Em seguida, olhando para a camiseta, faz claramente o gesto universal de desaprovação:
+levanta UMA mão, fecha os dedos e mantém SOMENTE O POLEGAR ESTENDIDO PARA
+BAIXO (THUMBS DOWN) por aproximadamente 1 segundo.
+IMPORTANTE: é obrigatoriamente um THUMBS DOWN. NÃO apontar para baixo com o
+dedo indicador.
+Imediatamente depois, UM ÚNICO PACOTE entra rapidamente no enquadramento vindo de
+fora da câmera, como se tivesse sido lançado por alguém que nunca aparece.
+O rapaz segura imediatamente o pacote com as duas mãos, em um movimento contínuo e
+natural, sem deixá-lo cair.
+O pacote permanece EXATAMENTE O MESMO OBJETO durante toda a ação. Preservar
+tamanho, formato, cor, textura, etiqueta, impressão e todas as informações visíveis. Não
+alterar, deformar, substituir ou duplicar.
+Sem pausa, ele leva fisicamente O MESMO PACOTE diretamente em direção à câmera.
+O pacote se aproxima progressivamente da lente, aumentando naturalmente pela
+perspectiva, até ENCOSTAR FISICAMENTE NA CÂMERA E COBRIR 100% DO
+ENQUADRAMENTO.
+O último frame deve ficar completamente preenchido pelo pacote, sem nenhuma parte do
+cenário ou personagem visível.
+Sem fala e sem áudio.
+REGRAS:
+- Câmera 100% fixa.
+- Um único take.
+- Ele começa sem pacote.
+- Apenas o pacote entra; quem lança nunca aparece.
+- Exatamente UM pacote.
+- Thumbs down com POLEGAR, nunca indicador.
+- Pacote não muda, desaparece ou duplica.
+- Sem teleportes.
+- Sem mãos, braços ou dedos extras.
+- Não deformar rosto, corpo, camiseta, mãos ou embalagem.
+- Final obrigatório: O MESMO PACOTE cobre fisicamente 100% da lente.
+Movimentos rápidos, fluidos e humanos. Física natural, aparência UGC premium gravada
+com smartphone, ultra-realista 4K, sem aparência de IA.
+PROMPT GROK - Use a imagem de referência para preservar EXATAMENTE rosto, corpo,
+roupa, pacote, iluminação, enquadramento e ambiente.
+A câmera permanece 100% FIXA durante todo o vídeo. Plano-sequência único, sem cortes,
+transições, zoom ou mudança de enquadramento.
+O vídeo começa com o rapaz SEM NENHUM OBJETO NAS MÃOS. Ele olha para a própria
+camiseta, segura levemente a barra inferior com as duas mãos, faz um pequeno ajuste no
+tecido e demonstra uma expressão discreta de dúvida.
+Em seguida, olhando para a camiseta, faz claramente o gesto universal de desaprovação:
+levanta UMA mão, fecha os dedos e mantém SOMENTE O POLEGAR ESTENDIDO PARA
+BAIXO (THUMBS DOWN) por aproximadamente 1 segundo.
+IMPORTANTE: é obrigatoriamente um THUMBS DOWN. NÃO apontar para baixo com o
+dedo indicador.
+Imediatamente depois, UM ÚNICO PACOTE entra rapidamente no enquadramento vindo de
+fora da câmera, como se tivesse sido lançado por alguém que nunca aparece.
+O rapaz segura imediatamente o pacote com as duas mãos, em um movimento contínuo e
+natural, sem deixá-lo cair.
+O pacote permanece EXATAMENTE O MESMO OBJETO durante toda a ação. Preservar
+tamanho, formato, cor, textura, etiqueta, impressão e todas as informações visíveis. Não
+alterar, deformar, substituir ou duplicar.
+Sem pausa, ele leva fisicamente O MESMO PACOTE diretamente em direção à câmera.
+O pacote se aproxima progressivamente da lente, aumentando naturalmente pela
+perspectiva, até ENCOSTAR FISICAMENTE NA CÂMERA E COBRIR 100% DO
+ENQUADRAMENTO.
+O último frame deve ficar completamente preenchido pelo pacote, sem nenhuma parte do
+cenário ou personagem visível.
+Sem fala e sem áudio.
+REGRAS:
+- Câmera 100% fixa.
+- Um único take.
+- Ele começa sem pacote.
+- Apenas o pacote entra; quem lança nunca aparece.
+- Exatamente UM pacote.
+- Thumbs down com POLEGAR, nunca indicador.
+- Pacote não muda, desaparece ou duplica.
+- Sem teleportes.
+- Sem mãos, braços ou dedos extras.
+- Não deformar rosto, corpo, camiseta, mãos ou embalagem.
+- Final obrigatório: O MESMO PACOTE cobre fisicamente 100% da lente.
+Movimentos rápidos, fluidos e humanos. Física natural, aparência UGC premium gravada
+com smartphone, ultra-realista 4K, sem aparência de IA.
+PROMPT FLOW - Use a imagem de referência para preservar EXATAMENTE rosto, corpo,
+roupa, pacote, iluminação, enquadramento e ambiente.
+A câmera permanece 100% FIXA durante todo o vídeo. Plano-sequência único, sem cortes,
+transições, zoom ou mudança de enquadramento.
+O vídeo começa com o rapaz SEM NENHUM OBJETO NAS MÃOS. Ele olha para a própria
+camiseta, segura levemente a barra inferior com as duas mãos, faz um pequeno ajuste no
+tecido e demonstra uma expressão discreta de dúvida.
+Em seguida, olhando para a camiseta, faz claramente o gesto universal de desaprovação:
+levanta UMA mão, fecha os dedos e mantém SOMENTE O POLEGAR ESTENDIDO PARA
+BAIXO (THUMBS DOWN) por aproximadamente 1 segundo.
+IMPORTANTE: é obrigatoriamente um THUMBS DOWN. NÃO apontar para baixo com o
+dedo indicador.
+Imediatamente depois, UM ÚNICO PACOTE entra rapidamente no enquadramento vindo de
+fora da câmera, como se tivesse sido lançado por alguém que nunca aparece.
+O rapaz segura imediatamente o pacote com as duas mãos, em um movimento contínuo e
+natural, sem deixá-lo cair.
+O pacote permanece EXATAMENTE O MESMO OBJETO durante toda a ação. Preservar
+tamanho, formato, cor, textura, etiqueta, impressão e todas as informações visíveis. Não
+alterar, deformar, substituir ou duplicar.
+Sem pausa, ele leva fisicamente O MESMO PACOTE diretamente em direção à câmera.
+O pacote se aproxima progressivamente da lente, aumentando naturalmente pela
+perspectiva, até ENCOSTAR FISICAMENTE NA CÂMERA E COBRIR 100% DO
+ENQUADRAMENTO.
+O último frame deve ficar completamente preenchido pelo pacote, sem nenhuma parte do
+cenário ou personagem visível.
+Sem fala e sem áudio.
+REGRAS:
+- Câmera 100% fixa.
+- Um único take.
+- Ele começa sem pacote.
+- Apenas o pacote entra; quem lança nunca aparece.
+- Exatamente UM pacote.
+- Thumbs down com POLEGAR, nunca indicador.
+- Pacote não muda, desaparece ou duplica.
+- Sem teleportes.
+- Sem mãos, braços ou dedos extras.
+- Não deformar rosto, corpo, camiseta, mãos ou embalagem.
+- Final obrigatório: O MESMO PACOTE cobre fisicamente 100% da lente.
+Movimentos rápidos, fluidos e humanos. Física natural, aparência UGC premium gravada
+com smartphone, ultra-realista 4K, sem aparência de IA.
+GANCHO TIRANDO QUALQUER PEÇA DO ROUPEIRO
+DETALHE
+💡
+coloque a imagem da sua modelo em frente a um roupeiro aberto + A IMAGEM DO
+PRODUTO QUE QUER QUE ELA TIRE DO ROUPEIRO"
+   has image: true | has video: true
+   referencia: undefined
+
+20. [pdf-088-neutro-qualquer-peca] neutro qualquer peça
+   prompt: "PROMPT A cena acontece em um único plano-sequência contínuo, sem cortes, sem
+transições, sem zoom e com a câmera completamente fixa em visão superior/primeira
+pessoa, preservando exatamente o enquadramento da imagem de referência.
+A IMAGEM DE REFERÊNCIA É A ÚNICA FONTE PARA DETERMINAR AS PEÇAS.
+Antes da ação, identifique visualmente quantas peças de roupa distintas existem na imagem
+de referência. Durante o vídeo, utilize EXATAMENTE essas peças, uma única vez cada.
+NÃO existe quantidade pré-definida.
+Se a referência possuir 1 peça, utilize somente 1.
+Se possuir 2 peças, utilize somente 2.
+Se possuir 3 peças, utilize somente 3.
+Se possuir mais peças, repita o processo somente até completar exatamente todas as
+peças visíveis na referência.
+NUNCA invente peças adicionais e NUNCA duplique uma peça para aumentar a
+quantidade.
+Preserve exatamente cada peça da referência: tipo de roupa, formato, cor, estampa, tecido,
+detalhes, gola, mangas, costuras, proporções e características visuais.
+NO PRIMEIRO FRAME, A CAMA ESTÁ COMPLETAMENTE VAZIA.
+Nenhuma das peças da imagem de referência está inicialmente sobre a cama. A superfície
+encontra-se totalmente livre.
+A influenciadora aparece somente através de UMA mão feminina e parte do antebraço. A
+segunda mão nunca aparece em nenhum momento.
+AÇÃO PARA CADA PEÇA:
+A mesma mão traz UMA das peças da referência para dentro do enquadramento,
+segurando-a naturalmente pela região superior apropriada da própria peça.
+Ela aproxima rapidamente a peça da câmera por aproximadamente 1 segundo, permitindo
+visualizar seus detalhes.
+Em seguida, afasta a peça da câmera e a coloca cuidadosamente sobre a cama.
+Com a MESMA mão, realiza pequenos movimentos rápidos e naturais para alisar e
+organizar o tecido.
+Depois disso, a mão traz a próxima peça existente na imagem de referência e repete
+exatamente o mesmo processo:
+• segura a peça com uma única mão;
+• aproxima rapidamente da câmera;
+• mostra seus detalhes;
+• afasta;
+• coloca sobre a cama;
+• alisa o tecido;
+• realiza pequenos ajustes naturais.
+Esse processo é repetido SOMENTE pela quantidade de peças realmente existentes na
+imagem de referência.
+Cada peça entra na cena apenas no momento em que é apresentada pela mão. Nenhuma
+peça pode surgir espontaneamente, aparecer antecipadamente ou materializar-se sobre a
+cama.
+Durante a organização, mantenha espaço suficiente entre as peças para permitir
+movimentos naturais sem sobreposição excessiva.
+À medida que a sequência avança, a mesma mão pode realizar pequenos ajustes de
+posicionamento para construir progressivamente a composição final.
+NO FINAL, todas e somente as peças presentes na imagem de referência devem estar
+sobre a cama.
+A disposição final deve reproduzir o mais fielmente possível a imagem de referência,
+preservando posição, orientação, ordem, alinhamento, espaçamento e eventuais
+sobreposições existentes na composição original.
+Se a referência mostrar peças sobrepostas, a sobreposição acontece somente durante os
+ajustes finais.
+Se a referência mostrar peças separadas, elas permanecem separadas.
+MOVIMENTO:
+Os movimentos devem ser rápidos, simples, naturais e humanos, como uma pessoa real
+organizando roupas para um vídeo UGC.
+Adicionar pequenas imperfeições naturais nos movimentos da mão e dos dedos. Nada deve
+parecer robótico, coreografado ou artificial.
+A câmera permanece 100% imóvel durante toda a sequência.
+IMPORTANTE:
+A cama começa COMPLETAMENTE VAZIA.
+Use SOMENTE as peças realmente visíveis na imagem de referência.
+A quantidade de peças é determinada automaticamente pela referência.
+NÃO adicionar peças extras.
+NÃO duplicar peças.
+NÃO remover nenhuma peça existente na referência.
+Cada peça aparece UMA ÚNICA VEZ.
+Cada peça entra individualmente através da mesma mão.
+Somente UMA mão e parte do antebraço podem aparecer.
+A segunda mão NUNCA aparece.
+Nenhuma peça surge magicamente sobre a cama.
+Nenhuma peça pode estar presente antes de ser trazida pela mão.
+Cada peça é rapidamente apresentada à câmera antes de ser colocada.
+Preservar rigorosamente identidade, cor, formato e detalhes de cada peça.
+A composição final deve corresponder à disposição mostrada na referência.
+Plano-sequência único.
+SEM cortes.
+SEM transições.
+SEM zoom.
+SEM movimento de câmera.
+SEM troca de enquadramento.
+SEM texto.
+SEM interface.
+SEM elementos adicionados.
+Estilo UGC ultra-realista, gravado com celular, movimentos espontâneos, física realista dos
+tecidos, gravidade natural e nenhuma aparência de IA.
+POV ADICIONANDO PECAS EM CENA
+DETALHE
+💡
+neutro qualquer peça"
+   has image: true | has video: true
+   referencia: undefined

@@ -1,0 +1,301 @@
+Total video prompts: 300
+1 doc-002 Toque sutil no tecido https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/toquetecido.mp4#t=0.1
+2 doc-003 Micro-Sorriso https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/microsorriso.mp4#t=0.1
+3 doc-007 and de tecido https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/Movimento%20fashion.mp4#t=0.1
+4 doc-008 casual https://i.imgur.com/qddqpxw.mp4
+5 doc-010 Desvio lateral lento https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/giro%20lento%20360%20controlado.mp4#t=0.1
+6 doc-014 Mao na cintura + movimentos leves https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/Ma%CC%83o%20na%20cintura%20%2B%20movimento%20lev
+7 doc-024 Movimento Moda https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/movimentoassimetrico.mp4#t=0.1
+8 doc-026 Arrumando https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/arrumandocabelo.mp4#t=0.1
+9 doc-030 Tapar a câmera para transicao https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/tamparcamera.mp4#t=0.1
+10 doc-035 CTA Carrinho Laranja https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/cta.mp4#t=0.1
+11 doc-038 coisas amigas https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/dancinhattk.mp4#t=0.1
+12 doc-043 Movimentos Naturais https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/movimentonatural.mp4#t=0.1
+13 doc-048 Foco de movimento acimétrico https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/Foco%20no%20look.mp4#t=0.1
+14 doc-049 Dancinha do tiktok https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/dancinhattk.mp4#t=0.1
+15 doc-050 Segurando pacote do TikTok (Vídeo) https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/Woman_walking_with_package_covering_202606081637
+16 doc-054 Danças e movimentos ritímicos https://i.imgur.com/32Hrn3g.mp4
+17 doc-055 Pose de maos no bolso https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/maosnobolso.mp4#t=0.1
+18 doc-056 Giro Lento 360 Controlado https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/giro%20lento%20360%20controlado.mp4#t=0.1
+19 doc-058 Fechamento Natural de Zíper https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/cta.mp4#t=0.1
+20 doc-059 Giro lento e olhar https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/girolentoeolhar.mp4#t=0.1
+21 doc-061 Textural https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/espelhotextura.mp4#t=0.1
+22 doc-062 Energia alta (Promoções rápidas) https://i.imgur.com/4UkK3Es.mp4
+23 doc-063 Pan Lento e Zoom https://i.imgur.com/cSSrDfw.mp4
+24 doc-069 Foco Sem Olhar https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/alturaalta.mp4#t=0.1
+25 doc-070 Enfase na altura da cintura https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/alturacintura.mp4#t=0.1
+26 doc-073 Abrindo pacote transparente https://files.catbox.moe/aolllm.mp4#t=0.1
+27 doc-075 Estilo de vida https://files.catbox.moe/8d6z2n.mp4#t=0.1
+28 doc-080 Relaxar https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/espelhorelax.mp4#t=0.1
+29 doc-081 confiança https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/espelhoconfianca.mp4#t=0.1
+30 doc-086 Câmera estática + Movimento corporal https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/estaticacorporal.mp4#t=0.1
+31 doc-089 Passando produto no rosto https://i.imgur.com/ef19i1w.mp4
+32 doc-095 Gancho premium https://files.catbox.moe/1kvpg2.mp4#t=0.1
+33 doc-096 Movimento não https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/movimentonatural.mp4#t=0.1
+34 doc-098 Giro Lento Sem Olhar https://pub-9b5db9949ec94c9c902c92518dd1e633.r2.dev/Giro%20lento%20no%20look.mp4#t=0.1
+35 doc-099 Tapar a câmera para transição (Vídeo) https://pub-7bd32367acba47e19c505d9b7b5e5443.r2.dev/tamparcamera.mp4#t=0.1
+36 doc-108 Movimento natural + mão na câmera https://files.catbox.moe/cxz32z.mp4#t=0.1
+37 doc-111 Movimento Natural Novo https://files.catbox.moe/48yur8.mp4#t=0.1
+38 doc-118 Revelação e admiração https://i.imgur.com/HHpJzw9.mp4
+39 doc-121 Foco na parte superior do corpo https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/detalhesacessorios.mp4#t=0.1
+40 doc-122 Enfase nos acessórios https://pub-ca0d2a10ad82400499e3c71076ca9623.r2.dev/detalhesacessorios.mp4#t=0.1
+41 doc-123 Movimento Rítmico + Apontar https://i.imgur.com/1CixWG7.mp4
+42 vid-link-001 Vídeo UGC Universal https://files.catbox.moe/c19s4b.mp4#t=0.1
+43 vid-link-002 POV Sapatos (Vídeo) https://i.imgur.com/dYbhl7c.mp4
+44 vid-link-003 POV Capinha (Vídeo) https://i.imgur.com/ZpytNmp.mp4
+45 vid-link-004 Selfie Pensativo https://i.imgur.com/OQXds0Y.mp4
+46 vid-link-005 Selfie Cabelo https://i.imgur.com/QgfXnQv.mp4
+47 vid-link-006 POV Outfit Universal https://files.catbox.moe/mq8o9f.mp4#t=0.1
+48 manequim-fase1 Modo Manequim — Fase 1: Roupa Tradicional (Hook) https://i.imgur.com/AOEQTFE.mp4
+49 manequim-fase2 Modo Manequim — Fase 2: Segurando a Peça no Cabide https://i.imgur.com/zOKt3lT.mp4
+50 manequim-fase3 Modo Manequim — Fase 3: Vestindo a Roupa https://i.imgur.com/Yj8WqoR.mp4
+51 selfie-ugc-vid-001 Zoom Lento — Modelo Quase Parada https://i.imgur.com/z8btlR3.mp4#t=0.1
+52 selfie-ugc-vid-002 Leve Mudança de Peso Corporal https://i.imgur.com/X6vB3k6.mp4#t=0.1
+53 selfie-ugc-vid-003 Pequena Virada Lateral e Volta https://i.imgur.com/AXiuITY.mp4#t=0.1
+54 selfie-ugc-vid-004 Ajuste Suave de Postura + Cabelo Parado https://i.imgur.com/EDwaKWx.mp4#t=0.1
+55 selfie-ugc-vid-005 Mão Livre Tocando Levemente a Roupa https://i.imgur.com/EDwaKWx.mp4#t=0.1
+56 selfie-ugc-vid-006 Passo Pequeno para Trás — Mostrar Look https://i.imgur.com/oKMvhkR.mp4#t=0.1
+57 selfie-ugc-vid-007 Leve Inclinação de Cabeça https://i.imgur.com/1egpHjA.mp4#t=0.1
+58 selfie-ugc-vid-008 Respiração Visível no Tronco https://i.imgur.com/BSFGvtn.mp4#t=0.1
+59 selfie-ugc-vid-009 Ajuste do Cabelo com uma Mão https://i.imgur.com/DetZIox.mp4#t=0.1
+60 selfie-ugc-vid-010 Micro Passo Lateral https://i.imgur.com/SqNm1Q9.mp4#t=0.1
+61 selfie-ugc-vid-011 Tocando a Peça de Forma Leve https://i.imgur.com/EDU1JLm.mp4#t=0.1
+62 selfie-ugc-vid-012 Passo para Trás Mostrando o Look https://i.imgur.com/JiYsAHU.mp4#t=0.1
+63 selfie-ugc-vid-013 Leve Virada Lateral para Mostrar Caimento https://i.imgur.com/M262fFy.mp4#t=0.1
+64 selfie-ugc-vid-014 Aponta Brevemente para a Peça https://i.imgur.com/Jv0j4yV.mp4#t=0.1
+65 selfie-ugc-vid-015 Ajusta Postura como se Fosse Falar (Sem Falar) https://i.imgur.com/YbwNZPK.mp4#t=0.1
+66 aug22-007b Casa | Fruteira Mostrando Detalhes (Vídeo) https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/object/sign/prompt-media/video/1787020771547-qtg
+67 aug22-018 Estilo POV - Camisa na cama https://files.catbox.moe/8d6z2n.mp4#t=0.1
+68 aug22-020 Movimento | Mostrando detalhes https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/object/sign/prompt-media/video/1786567140055-vav
+69 aug22-021 Movimento | Transição Troca de roupa https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/object/sign/prompt-media/video/1787868703961-axm
+70 aug22-025b Ponto de vista | Jogando e tirando CONJUNTO (Vídeo) https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/object/sign/prompt-media/video/1787575806410-hxi
+71 aug22-039 POV | Elasticidade Cropeed https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/object/sign/prompt-media/video/1786594241941-u5y
+72 aug22-042 POV | Lingerie https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/object/sign/prompt-media/video/1787575411501-ms2
+73 pdf-001-dentro-do Gancho papai Noel https://auroraprompts.com/storage/prompts/1789057113_6aa2d859bd38b.mp4
+74 pdf-002-gancho-gatinho-arvore-de-natal GANCHO GATINHO ARVORE DE NATAL https://auroraprompts.com/storage/prompts/1789056215_6aa2d4d7661e5.mp4
+75 pdf-004-xicara-de-natal XICARA DE NATAL https://auroraprompts.com/storage/prompts/1788445136_6a9981d02a46a.mp4
+76 pdf-005-estrelas-arvore-de-natal ESTRELAS ARVORE DE NATAL https://auroraprompts.com/storage/prompts/1788443425_6a997b2135e12.mp4
+77 pdf-007-toalha-de-natal TOALHA DE NATAL https://auroraprompts.com/storage/prompts/1788362988_6a9840ec92c04.mp4
+78 pdf-008-almofadas-natal ALMOFADAS NATAL https://auroraprompts.com/storage/prompts/1787921683_6a91851394fd3.mp4
+79 pdf-009-decoracao-natal-neutro-para-qualquer-decoracao-de-natal DECORACAO NATAL ( NEUTRO PARA QUALQUER DECORACAO DE NATAL ) https://auroraprompts.com/storage/prompts/1787921219_6a9183437ac95.mp4
+80 pdf-010-presepio-de-natal PRESÉPIO DE NATAL https://auroraprompts.com/storage/prompts/1787920412_6a91801ce756e.mp4
+81 pdf-011-guirlanda-de-natal GUIRLANDA DE NATAL https://auroraprompts.com/storage/prompts/1787919936_6a917e40d5d57.mp4
+82 pdf-012-cortina-de-luz-natal CORTINA DE LUZ NATAL https://auroraprompts.com/storage/prompts/1787919739_6a917d7b6dfdb.mp4
+83 pdf-013-arvore-de-natal ARVORE DE NATAL https://auroraprompts.com/storage/prompts/1787919587_6a917ce3a3641.mp4
+84 pdf-014-caixa-de-bolinha-natal CAIXA DE BOLINHA NATAL https://auroraprompts.com/storage/prompts/1787919311_6a917bcf5283c.mp4
+85 pdf-015-bolinhas-de-natal BOLINHAS DE NATAL https://auroraprompts.com/storage/prompts/1787919216_6a917b702f877.mp4
+86 pdf-016-pov-tapete-natal POV TAPETE NATAL https://auroraprompts.com/storage/prompts/1787414121_6a89c669da505.mp4
+87 pdf-017-projetor-natal PROJETOR NATAL https://auroraprompts.com/storage/prompts/1787413781_6a89c51519276.mp4
+88 pdf-018-pov-caixa-de-presente-abrindo-o-laco POV CAIXA DE PRESENTE ABRINDO O LAÇO https://auroraprompts.com/storage/prompts/1787412427_6a89bfcb500dc.mp4
+89 pdf-019-pov-arvore-de-natal POV ARVORE DE NATAL https://auroraprompts.com/storage/prompts/1787411663_6a89bccf2f0b5.mp4
+90 pdf-020-pov-toalha-de-mesa POV TOALHA DE MESA https://auroraprompts.com/storage/prompts/1787352955_6a88d77b86c6e.mp4
+91 pdf-022-que-voce-quer-quer-ela-vista que voce quer quer ela vista https://auroraprompts.com/storage/prompts/1788225629_6a96285dd97c0.mp4
+92 pdf-023-transicao-chiclete-modelo Transição Chiclete Modelo https://auroraprompts.com/storage/prompts/1788224671_6a96249f25999.mp4
+93 pdf-024-um-pirulito-maior-talvez-chame-mais-atencao Gancho Pirulito https://auroraprompts.com/storage/prompts/1788175518_6a95649ea859e.mp4
+94 pdf-025-gancho-bolsa-caindo Gancho Bolsa Caindo https://auroraprompts.com/storage/prompts/1787788372_6a8f7c5451006.mp4
+95 pdf-026-use-com-qualquer-roupa-e-qualquer-modelo Transição Roupa Neutro https://auroraprompts.com/storage/prompts/1786755434_6a7fb96ad8d10.mp4
+96 pdf-027-coloque-o-sapato-que-quiser-na-mao-da-sua-modelo POV Calçado na Mão https://auroraprompts.com/storage/prompts/1786584816_6a7d1ef04e1fe.mp4
+97 pdf-028-produto-que-quer-que-ela-tire-do-roupeiro Gancho Roupeiro https://auroraprompts.com/storage/prompts/1786580693_6a7d0ed537687.mp4
+98 pdf-029-adicione-uma-foto-da-sua-modelo-ao-lado-de-um-roupeiro Modelo Roupeiro Aberto https://auroraprompts.com/storage/prompts/1786580555_6a7d0e4b1508e.mp4
+99 pdf-030-use-com-qualquer-roupa-que-estiver-na-mao-da-modelo Transição Roupa na Mão https://auroraprompts.com/storage/prompts/1786620551_6a7daa87813d4.mp4
+100 pdf-031-use-a-foto-da-sua-modelo-com-qualquer-roupa Modelo com Roupa https://auroraprompts.com/storage/prompts/1786576924_6a7d001c1a558.mp4
+101 pdf-032-gancho-coracao-com-a-mao Gancho Coração com a Mão https://auroraprompts.com/storage/prompts/1786391963_6a7a2d9b01f70.mp4
+102 pdf-033-gancho-coracao-com-os-dedos-sem-celular GANCHO CORACAO COM OS DEDOS SEM CELULAR https://auroraprompts.com/storage/prompts/1786291281_6a78a451222f9.mp4
+103 pdf-034-coloque-a-peca-que-deseja-divulgar-nos-bracos-da-modelo Modelo Peça nos Braços https://auroraprompts.com/storage/prompts/1786049416_6a74f388aeae6.mp4
+104 pdf-035-iniciar-o-video-cochichando iniciar o video cochichando https://auroraprompts.com/storage/prompts/1785525957_6a6cf6c5114d2.mp4
+105 pdf-036-gancho-soco-acelerar Gancho Soco Acelerar https://auroraprompts.com/storage/prompts/1785115235_6a66b263ae7cb.mp4
+106 pdf-037-masculino-gancho-soco-acelerar Gancho Masculino Soco https://auroraprompts.com/storage/prompts/1785114678_6a66b0362d852.mp4
+107 pdf-038-modelo-colando-chapeu-na-cabeca Modelo Colocando Chapéu https://auroraprompts.com/storage/prompts/1784907092_6a6385543d0da.mp4
+108 pdf-039-gancho-chapeu-na-camera Gancho Chapéu na Câmera https://auroraprompts.com/storage/prompts/1784907011_6a638503293ba.mp4
+109 pdf-040-gancho-muito-surpresa Gancho Muito Surpresa https://auroraprompts.com/storage/prompts/1784905572_6a637f647e077.mp4
+110 pdf-041-gancho-surpresa Gancho Surpresa https://auroraprompts.com/storage/prompts/1784905519_6a637f2f549bc.mp4
+111 pdf-042-gancho-moleton Gancho Moletom https://auroraprompts.com/storage/prompts/1784833401_6a626579821fc.mp4
+112 pdf-043-gancho-celular Gancho Celular https://auroraprompts.com/storage/prompts/1784644409_6a5f8339e7639.mp4
+113 pdf-044-transicao-celular Transição Celular https://auroraprompts.com/storage/prompts/1784509673_6a5d74e9875ee.mp4
+114 pdf-045-gancho-roupa-na-camera Gancho Roupa na Câmera https://auroraprompts.com/storage/prompts/1784483257_6a5d0db932e04.mp4
+115 pdf-046-modelo-transicao-mao-pos-banho Transição Mão Pós Banho https://auroraprompts.com/storage/prompts/1784483098_6a5d0d1a5f146.mp4
+116 pdf-047-movimentos-roupa Movimento Roupa https://auroraprompts.com/storage/prompts/1784203757_6a58c9ed2b509.mp4
+117 pdf-048-camiseta-careta Movimento Camiseta Careta https://auroraprompts.com/storage/prompts/1783704177_6a512a71676bc.mp4
+118 pdf-049-gancho-1 Gancho 1 https://auroraprompts.com/storage/prompts/1783602427_6a4f9cfbbc1c5.mp4
+119 pdf-050-frontal-regata-2 POV Frontal Regata 2 https://auroraprompts.com/storage/prompts/1783602100_6a4f9bb487034.mp4
+120 pdf-051-gancho-com-desfoque-3 GANCHO COM DESFOQUE 3 https://auroraprompts.com/storage/prompts/1783601909_6a4f9af536c10.mp4
+121 pdf-052-blusa-de-times-e-beijo-para-tela-e-coracao Movimento Blusa Time Beijo https://auroraprompts.com/storage/prompts/1783601622_6a4f99d644193.mp4
+122 pdf-053-gancho-roupa-homem-aranha Gancho Roupa Homem Aranha https://auroraprompts.com/storage/prompts/1783512682_6a4e3e6a09280.mp4
+123 pdf-054-ganho-4 Gancho 4 https://auroraprompts.com/storage/prompts/1783512526_6a4e3dce37dc1.mp4
+124 pdf-055-bolhas-de-sabao-assoprando Gancho Bolhas de Sabão https://auroraprompts.com/storage/prompts/1783507854_6a4e2b8e31b80.mp4
+125 pdf-056-gancho-homem-aranha-com-a-mao-gesto Gancho Homem Aranha Gesto https://auroraprompts.com/storage/prompts/1783424778_6a4ce70adff51.mp4
+126 pdf-057-gancho-segurando-pacote-roupa GANCHO SEGURANDO PACOTE ROUPA https://auroraprompts.com/storage/prompts/1783371492_6a4c16e4b6834.mp4
+127 pdf-058-segurando-pacote-2 Segurando Pacote 2 https://auroraprompts.com/storage/prompts/1783371389_6a4c167d4157e.mp4
+128 pdf-059-seguirando-pacote-2-sala-gamer Segurando Pacote Sala Gamer https://auroraprompts.com/storage/prompts/1783371278_6a4c160e321d3.mp4
+129 pdf-060-pacote-segurando-5 Segurando Pacote 5 https://auroraprompts.com/storage/prompts/1783371150_6a4c158ee1cec.mp4
+130 pdf-061-gancho-chamando-com-a-mao Gancho Chamando com a Mão https://auroraprompts.com/storage/prompts/1783342220_6a4ba48c0f768.mp4
+131 pdf-062-prompt-unboxing-abrindo-pacote Gancho Unboxing Pacote https://auroraprompts.com/storage/prompts/1783342038_6a4ba3d66b907.mp4
+132 pdf-063-gancho-pacote-7 Gancho Pacote 7 https://auroraprompts.com/storage/prompts/1783341373_6a4ba13dbe3eb.mp4
+133 pdf-064-gancho-colocando-a-calca Gancho Colocando a Calça https://auroraprompts.com/storage/prompts/1781792754_6a33fff282a79.mp4}
+134 pdf-065-gancho-caixa-de-papel Gancho Caixa de Papel https://auroraprompts.com/storage/prompts/1781545819_6a303b5b4f080.mp4
+135 pdf-066-gancho-pactore-preto-viral Gancho Pacote Preto Viral https://auroraprompts.com/storage/prompts/1781545697_6a303ae13fa34.mp4
+136 pdf-067-transicao-academia Transição Academia https://auroraprompts.com/storage/prompts/1788365235_6a9849b3913bb.mp4
+137 pdf-068-quer-que-ela-vista Transição Roupa Vestir https://auroraprompts.com/storage/prompts/1788363456_6a9842c0552dc.mp4
+138 pdf-069-mao-da-modelo POV Peça na Mão da Modelo https://auroraprompts.com/storage/prompts/1787828968_6a901ae860c43.mp4
+139 pdf-070-coloque-qualquer-roupa-na-manequim-que-o-prompt-da-a Coloque qualquer roupa na manequim que o prompt da a transição https://auroraprompts.com/storage/prompts/1786227583_6a77ab7f54f81.mp4
+140 pdf-071-transicao-roupa-amassada-neutro-qualquer-peca Transição Roupa Amassada https://auroraprompts.com/storage/prompts/1785022416_6a6547d0b40d3.mp4
+141 pdf-072-modelo-cinta-com-barriga Modelo Cinta Barriga https://auroraprompts.com/storage/prompts/1784938729_6a6400e9bf63e.mp4
+142 pdf-073-transicao-pulinho Transição Pulinho https://auroraprompts.com/storage/prompts/1784673316_6a5ff4249f029.mp4
+143 pdf-074-rtansicao-mao-neutr-coim-giro Transição Mão Neutro com Giro https://auroraprompts.com/storage/prompts/1784508691_6a5d711389b43.mp4
+144 pdf-075-transicao-vestido-sem-estar-vestido-na-mao Transição Vestido na Mão https://auroraprompts.com/storage/prompts/1784428287_6a5c36ff3cf74.mp4
+145 pdf-076-de-toalha-com-roupa-na-mao DE TOALHA COM ROUPA NA MAO https://auroraprompts.com/storage/prompts/1783341819_6a4ba2fba1762.mp4
+146 pdf-078-trocando-de-vestidos Troca de Vestidos https://auroraprompts.com/storage/prompts/1781873091_6a3539c3ddd74.mp4
+147 pdf-082-camisa-video-01 Camisa Vídeo 01 https://auroraprompts.com/storage/prompts/1781545219_6a30390365eb3.mp4
+148 pdf-084-l POV Lingerie https://auroraprompts.com/storage/prompts/1788132602_6a94bcfa7c45f.mp4
+149 pdf-085-da-camiseta-aberta POV Camiseta Aberta https://auroraprompts.com/storage/prompts/1788132194_6a94bb623eb43.mp4
+150 pdf-086-neutro-qualquer-blusa-ou-cropped neutro qualquer blusa ou cropped https://auroraprompts.com/storage/prompts/1786819101_6a80b21d6ea39.mp4
+151 pdf-087-neutro-qualquer-conjunto neutro qualquer conjunto https://auroraprompts.com/storage/prompts/1786816116_6a80a6743e76e.mp4
+152 pdf-088-neutro-qualquer-peca neutro qualquer peça https://auroraprompts.com/storage/prompts/1786815901_6a80a59d75816.mp4
+153 pdf-089-neutro POV Neutro Qualquer Peça https://auroraprompts.com/storage/prompts/1786815820_6a80a54c24947.mp4}
+154 pdf-090-neutro-qualqueer-top-tube POV Top Tube Neutro https://auroraprompts.com/storage/prompts/1786814436_6a809fe46f420.mp4
+155 pdf-091-neutro-qualquer-kit-ou-unidade-de-bermuda POV Bermuda Kit Neutro https://auroraprompts.com/storage/prompts/1786814208_6a809f00d4ec7.mp4
+156 pdf-092-neutro-para-qualquer-biquini POV Biquíni Neutro https://auroraprompts.com/storage/prompts/1786813053_6a809a7dd9082.mp4
+157 pdf-093-manga-comprida POV Manga Comprida https://auroraprompts.com/storage/prompts/1786811985_6a809651bf5c8.mp4
+158 pdf-094-para-qualquer-peca-na-manequim POV Manequim Qualquer Peça https://auroraprompts.com/storage/prompts/1786765314_6a7fe0022d455.mp4
+159 pdf-095-adicione-sempre-uma-doto-do-cenario-e-uma-das-pecas POV Cenário e Peça https://auroraprompts.com/storage/prompts/1786581904_6a7d1390c59e5.mp4
+160 pdf-096-para-qualquer-peca POV Qualquer Peça https://auroraprompts.com/storage/prompts/1786581535_6a7d121fa549e.mp4
+161 pdf-097-zoom-para-qualquer-peca-mostrando-tecido POV Zoom Tecido https://auroraprompts.com/storage/prompts/1786581374_6a7d117ec9cf6.mp4
+162 pdf-098-imagem-so POV Imagem Referência https://auroraprompts.com/storage/prompts/1786579731_6a7d0b137d089.mp4
+163 pdf-100-no-seu-gerador-de-videos-com-o-prompt-e-gere-o-video no seu gerador de videos com o prompt e gere o video https://auroraprompts.com/storage/prompts/1786578646_6a7d06d62a53e.mp4
+164 pdf-101-use-a-imagem-da-peca-que-deseja-divulgar-e-a-do-saco-que POV Saco com Peça https://auroraprompts.com/storage/prompts/1786578220_6a7d052c1447f.mp4
+165 pdf-102-em-cima-da-cama-ou-bancada-de-loja em cima da cama ou bancada de loja https://auroraprompts.com/storage/prompts/1786577856_6a7d03c0d89f2.mp4
+166 pdf-103-pacote pacote https://auroraprompts.com/storage/prompts/1786575915_6a7cfc2b1eb6a.mp4
+167 pdf-104-mostrando-detalhes-da-peca-camisola-ou-lingerie POV Lingerie Detalhes https://auroraprompts.com/storage/prompts/1786575501_6a7cfa8dbc492.mp4
+168 pdf-105-use-com-qualquer-produto use com qualquer produto https://auroraprompts.com/storage/prompts/1786574237_6a7cf59dbce09.mp4
+169 pdf-106-pov-qualquer-peca-neutro POV QUALQUER PECA NEUTRO https://auroraprompts.com/storage/prompts/1785806633_6a713f29a3b02.mp4
+170 pdf-107-pov-neutro POV NEUTRO https://auroraprompts.com/storage/prompts/1785803189_6a7131b5216b4.mp4
+171 pdf-108-prompt-neutro-para-qualquer-camiseta POV Camiseta Neutro https://auroraprompts.com/storage/prompts/1785629458_6a6e8b12ebd9f.mp4
+172 pdf-109-pov-roupa-na-cama-mostra-de-perto-textuta POV Roupa Cama Textura https://auroraprompts.com/storage/prompts/1785519754_6a6cde8a75173.mp4
+173 pdf-110-coloque-no-reverso-que-ele-faz-a-peca-sendo-colocada-na coloque no reverso que ele faz a peça sendo colocada na cama caso queira https://auroraprompts.com/storage/prompts/1785519609_6a6cddf922a61.mp4
+174 pdf-111-pov-conjunto-na-cama POV Conjunto na Cama https://auroraprompts.com/storage/prompts/1785519523_6a6cdda32a31e.mp4
+175 pdf-112-pov-conjunto-neutro POV Conjunto Neutro https://auroraprompts.com/storage/prompts/1785519289_6a6cdcb9673eb.mp4
+176 pdf-113-pov-regatas POV Regatas https://auroraprompts.com/storage/prompts/1785467305_6a6c11a956ae5.mp4
+177 pdf-114-pov-conjunto-pegando-parte-de-cima POV Conjunto Parte Cima https://auroraprompts.com/storage/prompts/1785334272_6a6a0a005d326.mp4
+178 pdf-115-pov-conjunto-2-sobre-a-cama POV Conjunto Sobre Cama 2 https://auroraprompts.com/storage/prompts/1785293308_6a6969fc9a076.mp4
+179 pdf-116-pov-calca-sobre-a-cama POV Calça Sobre Cama https://auroraprompts.com/storage/prompts/1785114735_6a66b06f1cb4a.mp4
+180 pdf-117-pov-blusa-sobre-a-cama-3 POV Blusa Sobre Cama 3 https://auroraprompts.com/storage/prompts/1784947522_6a6423429c216.mp4
+181 pdf-118-pov-camisola POV Camisola https://auroraprompts.com/storage/prompts/1784937084_6a63fa7cc8bca.mp4
+182 pdf-119-camisa-masculina-costas POV Camisa Masculina Costas https://auroraprompts.com/storage/prompts/1784680500_6a6010349611b.mp4
+183 pdf-120-pov-camiseta-no-cabide-com-a-mao POV Camiseta Cabide Mão https://auroraprompts.com/storage/prompts/ref_1784678461_6a60083d12f28.mp4#t=0.1
+184 pdf-121-pov-pacote-grok-ou-omin-flash POV Pacote Grok/Flash https://auroraprompts.com/storage/prompts/1784638424_6a5f6bd84a773.mp4
+185 pdf-122-pov-shorts-2 POV Shorts 2 https://auroraprompts.com/storage/prompts/1784419295_6a5c13df8474a.mp4
+186 pdf-123-pov-vestido-manequim POV Vestido Manequim https://auroraprompts.com/storage/prompts/1784413722_6a5bfe1a635ad.mp4
+187 pdf-124-pov-shorts-sobre-a-cama-3 POV SHORTS SOBRE A CAMA 3 https://auroraprompts.com/storage/prompts/1784413290_6a5bfc6a7216d.mp4
+188 pdf-125-pov-blusa-sobre-a-cama-top POV Blusa Cama Top https://auroraprompts.com/storage/prompts/1784411091_6a5bf3d360d7f.mp4
+189 pdf-126-pov-roupas-cabide POV Roupas Cabide https://auroraprompts.com/storage/prompts/1784410794_6a5bf2aad7e03.mp4
+190 pdf-127-pov-camiseta-sobre-a-cama POV Camiseta Sobre Cama https://auroraprompts.com/storage/prompts/1784410262_6a5bf096b1be7.mp4
+191 pdf-128-pov-camiseta-solo-na-cama ´POV CAMISETA SOLO NA CAMA https://auroraprompts.com/storage/prompts/1784409833_6a5beee935c10.mp4
+192 pdf-129-pov-gancho POV Gancho https://auroraprompts.com/storage/prompts/1784409660_6a5bee3c9f432.mp4
+193 pdf-130-pov-conjunto-sobre-a-cama-5 POV Conjunto Sobre Cama 5 https://auroraprompts.com/storage/prompts/1784409199_6a5bec6f4a03b.mp4
+194 pdf-131-pov-manequim-vitrine POV Manequim Vitrine https://auroraprompts.com/storage/prompts/1784409007_6a5bebaf5ce09.mp4
+195 pdf-132-pov-camisetas-sobre-a-cama-com-narracao POV CAMISETAS SOBRE A CAMA COM NARRACAO https://auroraprompts.com/storage/prompts/1784406267_6a5be0fbda429.mp4
+196 pdf-133-pov-bermuda-masculina-sobre-a-cama POV Bermuda Masculina Cama https://auroraprompts.com/storage/prompts/1784403564_6a5bd66cbf598.mp4
+197 pdf-134-pov-moletom-no-manequim POV Moletom Manequim https://auroraprompts.com/storage/prompts/1784392633_6a5babb9554d3.mp4
+198 pdf-135-pov-camisa-no-cabide-giro-360 POV Camisa Cabide Giro 360 https://auroraprompts.com/storage/prompts/1784392513_6a5bab415179c.mp4}
+199 pdf-136-pov-camiseta-cabide-de-frente POV Camiseta Cabide Frente https://auroraprompts.com/storage/prompts/1784392372_6a5baab4e22a6.mp4
+200 pdf-137-pov-loja-manequim-10-segundos POV Loja Manequim 10s https://auroraprompts.com/storage/prompts/1784392021_6a5ba9559a630.mp4
+201 pdf-138-pov-manequim-masculino-bv POV Manequim Masculino https://auroraprompts.com/storage/prompts/1784390230_6a5ba256b0d92.mp4
+202 pdf-139-shortinhos POV Shortinhos https://auroraprompts.com/storage/prompts/1784290515_6a5a1cd3eec62.mp4
+203 pdf-140-pov-shortinhos-trio-na-cama POV Shortinhos Trio Cama https://auroraprompts.com/storage/prompts/1784290486_6a5a1cb6d13f6.mp4
+204 pdf-141-pov-blusinhas-na-cama-em-trio POV Blusinhas Trio Cama https://auroraprompts.com/storage/prompts/1784290429_6a5a1c7d97554.mp4
+205 pdf-142-pov-regatas-soltas POV Regatas Soltas https://auroraprompts.com/storage/prompts/1784289909_6a5a1a75ef04f.mp4
+206 pdf-143-pov-camiseta-no-cabide POV Camiseta Cabide https://auroraprompts.com/storage/prompts/1784289741_6a5a19cdc7544.mp4
+207 pdf-144-pov-camiseta-no-cabide POV Camiseta Cabide https://auroraprompts.com/storage/prompts/1784289690_6a5a199ae8c3a.mp4
+208 pdf-145-manequin-feminino POV Manequim Feminino https://auroraprompts.com/storage/prompts/1783799759_6a529fcf5881f.mp4
+209 pdf-146-pov-manequin-2 POV Manequim 2 https://auroraprompts.com/storage/prompts/1783797212_6a5295dc348a3.mp4
+210 pdf-147-pov-camisa-na-cama-apontando POV Camisa Cama Apontando https://auroraprompts.com/storage/prompts/1783653631_6a5064ff597d0.mp4
+211 pdf-149-pov-calca-jeans-video POV Calça Jeans Vídeo https://auroraprompts.com/storage/prompts/1783546154_6a4ec12aeee10.mp4
+212 pdf-151-ugc-com-panelas-a-mostra UGC Panelas https://auroraprompts.com/storage/prompts/1787146450_6a85b0d208ac9.mp4
+213 pdf-152-pov-jogo-de-pratos POV Jogo de Pratos https://auroraprompts.com/storage/prompts/1785801191_6a7129e7833e4.mp4
+214 pdf-153-pov-roupa-de-cama POV Roupa de Cama https://auroraprompts.com/storage/prompts/1785377730_6a6ab3c260c11.mp4
+215 pdf-154-pov-camera-fotografica POV Câmera Fotográfica https://auroraprompts.com/storage/prompts/1785364050_6a6a7e52a55ec.mp4
+216 pdf-155-pov-tablet POV Tablet https://auroraprompts.com/storage/prompts/1785363899_6a6a7dbb81312.mp4
+217 pdf-156-neutro-qualquer-video-game POV Video Game Neutro https://auroraprompts.com/storage/prompts/1785363052_6a6a7a6c4852a.mp4
+218 pdf-157-use-para-qualquer-video-game POV Video Game https://auroraprompts.com/storage/prompts/1785362998_6a6a7a3676f4b.mp4
+219 pdf-158-use-a-imagem-da-tv-como-referencia-em-qualquer-cenario POV TV Cenário https://auroraprompts.com/storage/prompts/1785362732_6a6a792cb25c4.mp4
+220 pdf-159-use-em-qualquer-liquidificador POV Liquidificador https://auroraprompts.com/storage/prompts/1785362438_6a6a7806430a0.mp4
+221 pdf-160-use-em-qualquer-batedeira POV Batedeira https://auroraprompts.com/storage/prompts/1785362349_6a6a77ad748bf.mp4
+222 pdf-161-use-para-qualquer-eletro-de-banheiro use para qualquer eletro de banheiro https://auroraprompts.com/storage/prompts/1785362119_6a6a76c7d7447.mp4
+223 pdf-162-pov-furadeira POV Furadeira https://auroraprompts.com/storage/prompts/1785266813_6a69027dc5fa1.mp4
+224 pdf-163-pov-decoracao-festa-qualquer-uma POV Decoração Festa https://auroraprompts.com/storage/prompts/1785266623_6a6901bf831ef.mp4
+225 pdf-164-pov-bandeira-de-neutro POV Bandeira Neutro https://auroraprompts.com/storage/prompts/1785265694_6a68fe1e36537.mp4
+226 pdf-165-pov-caixinha-de-som-relogio-neutro POV Caixinha de Som Relógio https://auroraprompts.com/storage/prompts/1785265120_6a68fbe0bb802.mp4
+227 pdf-166-pov-baba-eletronica-neutro POV Babá Eletrônica https://auroraprompts.com/storage/prompts/1785265015_6a68fb7793e8b.mp4
+228 pdf-167-pov-ventilador POV Ventilador https://auroraprompts.com/storage/prompts/1785264923_6a68fb1b84f21.mp4
+229 pdf-168-pov-wap-neutro POV Wap Neutro https://auroraprompts.com/storage/prompts/1785264858_6a68fada0ebd4.mp4
+230 pdf-169-churrasqueira-qualquier-uma POV Churrasqueira https://auroraprompts.com/storage/prompts/1785264728_6a68fa588e0bd.mp4
+231 pdf-170-pov-airfryer-qualquer-uma POV AirFryer https://auroraprompts.com/storage/prompts/1785264659_6a68fa132da36.mp4
+232 pdf-171-modelo-mesa-neutro-qualquier-mesa POV Mesa Neutro https://auroraprompts.com/storage/prompts/1785264552_6a68f9a8aa0a3.mp4
+233 pdf-172-pov-mobilia-quarto-neutro POV Mobília Quarto https://auroraprompts.com/storage/prompts/1785264363_6a68f8eb89e15.mp4
+234 pdf-173-pov-mesa-uiniversal-qualquer-mesa POV Mesa Universal https://auroraprompts.com/storage/prompts/1785264183_6a68f837d45d0.mp4
+235 pdf-174-pov-armario-banheiro-neutro-quauqluer-armario-baheiro POV Armário Banheiro https://auroraprompts.com/storage/prompts/1785264044_6a68f7acaac0f.mp4
+236 pdf-175-pov-armario-qualquer-armario POV Armário https://auroraprompts.com/storage/prompts/1785263936_6a68f7403b83a.mp4
+237 pdf-176-pov-sofa-qualquer-sofa POV Sofá https://auroraprompts.com/storage/prompts/1785263823_6a68f6cfaaa47.mp4
+238 pdf-177-pov-jogo-de-cama-neutro POV Jogo de Cama https://auroraprompts.com/storage/prompts/1785263748_6a68f6845c780.mp4
+239 pdf-178-pov-cama-qualquer-coberta-e-lecol POV Cama Coberta https://auroraprompts.com/storage/prompts/1785019016_6a653a88942d7.mp4
+240 pdf-179-pov-roupa-de-cama POV Roupa de Cama https://auroraprompts.com/storage/prompts/1784506208_6a5d67608941f.mp4
+241 pdf-180-pov-saco-organizador POV Saco Organizador https://auroraprompts.com/storage/prompts/1784419588_6a5c15049f3f2.mp4
+242 pdf-181-pov-sofa-capa POV Sofá Capa https://auroraprompts.com/storage/prompts/1784404839_6a5bdb670bcc8.mp4
+243 pdf-182-pov-louca POV LOUÇA https://auroraprompts.com/storage/prompts/1784404677_6a5bdac5b5722.mp4
+244 pdf-183-pov-coberto-de-cama POV Coberto de Cama https://auroraprompts.com/storage/prompts/1784404434_6a5bd9d267704.mp4
+245 pdf-184-neutro-qualquer-calcado POV Calçado Neutro https://auroraprompts.com/storage/prompts/1786236317_6a77cd9d223b2.mp4
+246 pdf-185-pov-calcado-2 POV Calçado 2 https://auroraprompts.com/storage/prompts/1785113027_6a66a9c3785fe.mp4
+247 pdf-186-pov-calcado-3 POV Calçado 3 https://auroraprompts.com/storage/prompts/1784841863_6a62868753456.mp4
+248 pdf-187-pov-calcado-5 POV Calçado 5 https://auroraprompts.com/storage/prompts/1784761986_6a614e820d3e8.mp4
+249 pdf-188-pov-calcado-ugc-1 POV Calçado UGC https://auroraprompts.com/storage/prompts/1784681572_6a60146429aba.mp4
+250 pdf-189-pov-calcado-na-caixa POV Calçado na Caixa https://auroraprompts.com/storage/prompts/1784680583_6a6010877bf5c.mp4
+251 pdf-190-pov-tenis POV Tênis https://auroraprompts.com/storage/prompts/1784675552_6a5ffce072a4e.mp4
+252 pdf-191-pov-tenis-de-luzinha-crianca POV Tênis Luzinha Criança https://auroraprompts.com/storage/prompts/1784566906_6a5e547ac58e9.mp4
+253 pdf-192-pov-calcado-feminino-1 POV Calçado Feminino 1 https://auroraprompts.com/storage/prompts/1784414095_6a5bff8f652b2.mp4
+254 pdf-193-pov-calcada-feminino-2 POV Calçado Feminino 2 https://auroraprompts.com/storage/prompts/1784413775_6a5bfe4f776fd.mp4
+255 pdf-194-pov-rasteirinha POV Rasteirinha https://auroraprompts.com/storage/prompts/1784413239_6a5bfc3746f4e.mp4
+256 pdf-195-pov-bolsa-feminina POV Bolsa Feminina https://auroraprompts.com/storage/prompts/1787929842_6a91a4f251a05.mp4
+257 pdf-196-neutro-qualquer-capinha POV Capinha Neutro https://auroraprompts.com/storage/prompts/1786813836_6a809d8c37864.mp4
+258 pdf-197-use-a-capinha-que-deseja-gerar-o-video POV Capinha Vídeo https://auroraprompts.com/storage/prompts/1786583869_6a7d1b3d88b85.mp4
+259 pdf-198-pov-livro POV Livro https://auroraprompts.com/storage/prompts/1785266976_6a6903203aa49.mp4
+260 pdf-199-pov-mala-neutro POV Mala Neutro https://auroraprompts.com/storage/prompts/1785266431_6a6900ff05bb8.mp4
+261 pdf-200-pov-bolsa-neutra POV Bolsa Neutra https://auroraprompts.com/storage/prompts/1785265440_6a68fd206a7d0.mp4
+262 pdf-201-pov-garrafinha POV Garrafinha https://auroraprompts.com/storage/prompts/1785192399_6a67dfcff2e23.mp4
+263 pdf-202-pov-body-splahs POV Body Splash https://auroraprompts.com/storage/prompts/1785095607_6a6665b74efb6.mp4
+264 pdf-203-pov-creme-hidratantes POV Creme Hidratante https://auroraprompts.com/storage/prompts/1784943477_6a641375d89cd.mp4
+265 pdf-204-pov-livro-na-mao POV Livro na Mão https://auroraprompts.com/storage/prompts/ref_1784819293_6a622e5d90a3a.mp4#t=0.1
+266 pdf-205-pov-oculos POV Óculos https://auroraprompts.com/storage/prompts/1784507653_6a5d6d05dfb8f.mp4
+267 pdf-206-pov-perfuma POV Perfume https://auroraprompts.com/storage/prompts/1784501965_6a5d56cd20eba.mp4
+268 pdf-207-pov-relogio-pulso POV Relógio Pulso https://auroraprompts.com/storage/prompts/1784416405_6a5c08953def1.mp4
+269 pdf-208-modelo-na-moto Modelo na Moto https://auroraprompts.com/storage/prompts/1788097216_6a9432c0722e8.mp4
+270 pdf-209-acelere-os-movimentos-no-capcut-para-ficar-dinamico Modelo Movimento Dinâmico https://auroraprompts.com/storage/prompts/1788096826_6a94313ad7b00.mp4
+271 pdf-210-neutro-para-qualquer-roupa-e-cenario Movimento Roupa Cenário Neutro https://auroraprompts.com/storage/prompts/1787444723_6a8a3df390967.mp4
+272 pdf-211-modelo-moto-capacete Modelo Moto Capacete https://auroraprompts.com/storage/prompts/1787443470_6a8a390eae73d.mp4
+273 pdf-212-modelo-moto-capacete Modelo Moto Capacete 2 https://auroraprompts.com/storage/prompts/1787442543_6a8a356f5f927.mp4
+274 pdf-213-neutro-qualquer-roupa Movimento Roupa Neutro 2 https://auroraprompts.com/storage/prompts/1787441408_6a8a3100833b3.mp4
+275 pdf-214-coloque-seu-modelo-a-imagem-do-pacote-no-seu-gerador-de coloque seu modelo + a imagem do pacote no seu gerador de video e adicione o prompt https://auroraprompts.com/storage/prompts/1786583273_6a7d18e9d8c69.mp4
+276 pdf-215-peca-para-o-chat-colocar-a-camiseta-que-voce-deseja peça para o chat colocar a camiseta que você deseja divulgar na mao do seu modelo https://auroraprompts.com/storage/prompts/1786582883_6a7d176370a24.mp4}
+277 pdf-216-neutro-para-qualquer-roupa Movimento Roupa Neutro https://auroraprompts.com/storage/prompts/1786582723_6a7d16c30d778.mp4
+278 pdf-217-exemplo POV Exemplo Referência https://auroraprompts.com/storage/prompts/1786582377_6a7d15693ef02.mp4
+279 pdf-218-use-qualquer-roupa-no-manequim-que-ele-faz-a-transicao Transição Manequim Roupa https://auroraprompts.com/storage/prompts/ref_1786232392_6a77be489d5bf.mp4#t=0.1
+280 pdf-219-modelo-masculino-4 Modelo Masculino 4 https://auroraprompts.com/storage/prompts/1785024810_6a65512abaac9.mp4
+281 pdf-220-modelo-masculino-camiseta-qualquer-neutro Modelo Masculino Camiseta https://auroraprompts.com/storage/prompts/1785022656_6a6548c0553ad.mp4
+282 pdf-221-masculino-calca Masculino Calça https://auroraprompts.com/storage/prompts/1785021406_6a6543de5e20f.mp4
+283 pdf-222-jaqueta-mascuklina Masculino Jaqueta https://auroraprompts.com/storage/prompts/1784949027_6a6429232f5d4.mp4
+284 pdf-223-jaquela-masculina-2 Masculino Jaqueta 2 https://auroraprompts.com/storage/prompts/1784948982_6a6428f6b4b82.mp4
+285 pdf-224-jaquela-papeluciada-mascuolina Masculino Jaqueta Papelucciada https://auroraprompts.com/storage/prompts/1784948924_6a6428bc50010.mp4
+286 pdf-225-mascculino-blus-de-time Masculino Blusa de Time https://auroraprompts.com/storage/prompts/1784947960_6a6424f88817c.mp4
+287 pdf-226-costa-masculino-neutro-blusa-ou-moleton Masculino Costas Neutro https://auroraprompts.com/storage/prompts/1784840942_6a6282eef2bb8.mp4
+288 pdf-227-masculino-andar-para-frent Masculino Andar para Frente https://auroraprompts.com/storage/prompts/1784679536_6a600c70c2504.mp4
+289 pdf-228-masculino-bermuda Masculino Bermuda https://auroraprompts.com/storage/prompts/1784679383_6a600bd7b87f9.mp4
+290 pdf-229-prompt-masculiono-novo Masculino Novo https://auroraprompts.com/storage/prompts/1784678923_6a600a0b9caa6.mp4
+291 pdf-230-casal-selfie CASAL SELFIE https://auroraprompts.com/storage/prompts/1784310000_6a5a68f071d7b.mp4
+292 pdf-231-casal-2 Casal 2 https://auroraprompts.com/storage/prompts/1784309869_6a5a686d4b2d1.mp4
+293 pdf-232-casal-3 Casal 3 https://auroraprompts.com/storage/prompts/1784309831_6a5a6847d1929.mp4
+294 pdf-233-casal-vitalicio Casal Vitalício https://auroraprompts.com/storage/prompts/1784309783_6a5a68177ebdd.mp4
+295 pdf-234-casal-5-movimento-fora-casa Casal Movimento Fora https://auroraprompts.com/storage/prompts/1784205426_6a58d072cd37d.mp4
+296 pdf-235-casal-elevador-1 Casal Elevador https://auroraprompts.com/storage/prompts/1783762462_6a520e1e39905.mp4
+297 pdf-236-casal-apresentacao Casal Apresentação https://auroraprompts.com/storage/prompts/1783690029_6a50f32dc85af.mp4
+298 pdf-237-casal-2-apresentando Casal Apresentando https://auroraprompts.com/storage/prompts/1783628809_6a500409e540e.mp4
+299 pdf-238-casal-colocando-a-mao-na-tela Casal Mão na Tela https://auroraprompts.com/storage/prompts/1783628767_6a5003df5df55.mp4
+300 pdf-239-casal-apresentando-8 CASAL APRESENTANDO 8 https://auroraprompts.com/storage/prompts/1783628709_6a5003a5a4353.mp4

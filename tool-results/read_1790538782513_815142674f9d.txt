@@ -1,0 +1,801 @@
+     1→Total prompts: 487
+     2→
+     3→================================================================================
+     4→PROMPTS WITH NO MEDIA (no image, no video): 186
+     5→================================================================================
+     6→  ID: doc-002  |  Title: Toque sutil no tecido
+     7→  ID: doc-003  |  Title: Micro-Sorriso
+     8→  ID: doc-007  |  Title: and de tecido
+     9→  ID: doc-008  |  Title: casual
+    10→  ID: doc-010  |  Title: Desvio lateral lento
+    11→  ID: doc-011  |  Title: POV Cabide (vídeo)
+    12→  ID: doc-013  |  Title: POV Sapatos (vídeo)
+    13→  ID: doc-014  |  Title: Mao na cintura + movimentos leves
+    14→  ID: doc-023  |  Title: POV capinha (vídeo)
+    15→  ID: doc-024  |  Title: Movimento Moda
+    16→  ID: doc-025  |  Title: POV (falando na cama)
+    17→  ID: doc-026  |  Title: Arrumando
+    18→  ID: doc-030  |  Title: Tapar a câmera para transicao
+    19→  ID: doc-035  |  Title: CTA Carrinho Laranja
+    20→  ID: doc-038  |  Title: coisas amigas
+    21→  ID: doc-043  |  Title: Movimentos Naturais
+    22→  ID: doc-046  |  Title: Vídeo UGC universal
+    23→  ID: doc-048  |  Title: Foco de movimento acimétrico
+    24→  ID: doc-049  |  Title: Dancinha do tiktok
+    25→  ID: doc-050  |  Title: Segurando pacote do TikTok (Vídeo)
+    26→  ID: doc-054  |  Title: Danças e movimentos ritímicos
+    27→  ID: doc-055  |  Title: Pose de maos no bolso
+    28→  ID: doc-056  |  Title: Giro Lento 360 Controlado
+    29→  ID: doc-058  |  Title: Fechamento Natural de Zíper
+    30→  ID: doc-059  |  Title: Giro lento e olhar
+    31→  ID: doc-061  |  Title: Textural
+    32→  ID: doc-062  |  Title: Energia alta (Promoções rápidas)
+    33→  ID: doc-063  |  Title: Pan Lento e Zoom
+    34→  ID: doc-065  |  Title: Estilo POV - Camisa na cama
+    35→  ID: doc-069  |  Title: Foco Sem Olhar
+    36→  ID: doc-070  |  Title: Enfase na altura da cintura
+    37→  ID: doc-073  |  Title: Abrindo pacote transparente
+    38→  ID: doc-074  |  Title: Selfie Pensativo
+    39→  ID: doc-075  |  Title: Estilo de vida
+    40→  ID: doc-080  |  Title: Relaxar
+    41→  ID: doc-081  |  Title: confiança
+    42→  ID: doc-085  |  Title: Roupa POV universal
+    43→  ID: doc-086  |  Title: Câmera estática + Movimento corporal
+    44→  ID: doc-087  |  Title: POV produto Pequeno (vídeo)
+    45→  ID: doc-089  |  Title: Passando produto no rosto
+    46→  ID: doc-095  |  Title: Gancho premium
+    47→  ID: doc-096  |  Title: Movimento não
+    48→  ID: doc-098  |  Title: Giro Lento Sem Olhar
+    49→  ID: doc-099  |  Title: Tapar a câmera para transição (Vídeo)
+    50→  ID: doc-108  |  Title: Movimento natural + mão na câmera
+    51→  ID: doc-111  |  Title: Movimento Natural Novo
+    52→  ID: doc-117  |  Title: Selfie
+    53→  ID: doc-118  |  Title: Revelação e admiração
+    54→  ID: doc-121  |  Title: Foco na parte superior do corpo
+    55→  ID: doc-122  |  Title: Enfase nos acessórios
+    56→  ID: doc-123  |  Title: Movimento Rítmico + Apontar
+    57→  ID: vid-link-001  |  Title: Vídeo UGC Universal
+    58→  ID: vid-link-002  |  Title: POV Sapatos (Vídeo)
+    59→  ID: vid-link-003  |  Title: POV Capinha (Vídeo)
+    60→  ID: vid-link-004  |  Title: Selfie Pensativo
+    61→  ID: vid-link-005  |  Title: Selfie Cabelo
+    62→  ID: vid-link-006  |  Title: POV Outfit Universal
+    63→  ID: selfie-ugc-vid-001  |  Title: Zoom Lento — Modelo Quase Parada
+    64→  ID: selfie-ugc-vid-002  |  Title: Leve Mudança de Peso Corporal
+    65→  ID: selfie-ugc-vid-003  |  Title: Pequena Virada Lateral e Volta
+    66→  ID: selfie-ugc-vid-004  |  Title: Ajuste Suave de Postura + Cabelo Parado
+    67→  ID: selfie-ugc-vid-005  |  Title: Mão Livre Tocando Levemente a Roupa
+    68→  ID: selfie-ugc-vid-006  |  Title: Passo Pequeno para Trás — Mostrar Look
+    69→  ID: selfie-ugc-vid-007  |  Title: Leve Inclinação de Cabeça
+    70→  ID: selfie-ugc-vid-008  |  Title: Respiração Visível no Tronco
+    71→  ID: selfie-ugc-vid-009  |  Title: Ajuste do Cabelo com uma Mão
+    72→  ID: selfie-ugc-vid-010  |  Title: Micro Passo Lateral
+    73→  ID: selfie-ugc-vid-011  |  Title: Tocando a Peça de Forma Leve
+    74→  ID: selfie-ugc-vid-012  |  Title: Passo para Trás Mostrando o Look
+    75→  ID: selfie-ugc-vid-013  |  Title: Leve Virada Lateral para Mostrar Caimento
+    76→  ID: selfie-ugc-vid-014  |  Title: Aponta Brevemente para a Peça
+    77→  ID: selfie-ugc-vid-015  |  Title: Ajusta Postura como se Fosse Falar (Sem Falar)
+    78→  ID: aug22-001  |  Title: Beleza Pov — Produto Fiel
+    79→  ID: aug22-002b  |  Title: Beleza | Pov Skin Care Banheiro (Vídeo)
+    80→  ID: aug22-003  |  Title: Brincos UGC
+    81→  ID: aug22-004  |  Title: Caixa de transporte PET em área externa
+    82→  ID: aug22-005b  |  Title: Casa Pov | Duas Mãos Fronha (Vídeo)
+    83→  ID: aug22-006b  |  Title: Casa Pov | Fronha (Vídeo)
+    84→  ID: aug22-007a  |  Title: Casa | Fruteira Mostrando Detalhes (Imagem)
+    85→  ID: aug22-007b  |  Title: Casa | Fruteira Mostrando Detalhes (Vídeo)
+    86→  ID: aug22-008  |  Title: Casa | Kit Lençol
+    87→  ID: aug22-009b  |  Title: Casa | Mobiliário Quarto (Vídeo)
+    88→  ID: aug22-010  |  Title: Casa | Mobiliário Área Externa
+    89→  ID: aug22-011b  |  Title: Comedouro, bebedouro ou fonte PET em casa (Vídeo)
+    90→  ID: aug22-012b  |  Title: Crianças | Brinquedos na loja (Vídeo)
+    91→  ID: aug22-013b  |  Title: Crianças | Calçado noser (Vídeo)
+    92→  ID: aug22-014b  |  Title: Crianças | Qualquer produto infantil (Vídeo)
+    93→  ID: aug22-015b  |  Title: Crianças | Roupa Infantil Na Loja (Vídeo)
+    94→  ID: aug22-016  |  Title: Eletros | Air Fryer Produto em Destaque
+    95→  ID: aug22-017  |  Title: Embalagem pequena de ração ou produto PET em bancada
+    96→  ID: aug22-018  |  Title: Estilo POV - Camisa na cama
+    97→  ID: aug22-019b  |  Title: Loja infantil / Influencer Segurando roupa no cabidel (Vídeo)
+    98→  ID: aug22-020  |  Title: Movimento | Mostrando detalhes
+    99→  ID: aug22-021  |  Title: Movimento | Transição Troca de roupa
+   100→  ID: aug22-022  |  Title: Movimento | Virando de lado
+   101→  ID: aug22-023b  |  Title: PET dentro de casa (Vídeo)
+   102→  ID: aug22-024b  |  Title: Ponto de vista | Bolsa em destaque sozinha (Vídeo)
+   103→  ID: aug22-025a  |  Title: Ponto de vista | Jogando e tirando CONJUNTO (Imagem)
+   104→  ID: aug22-025b  |  Title: Ponto de vista | Jogando e tirando CONJUNTO (Vídeo)
+   105→  ID: aug22-026b  |  Title: Ponto de vista | Mostrando Detalhes Da Bolsak (Vídeo)
+   106→  ID: aug22-027b  |  Title: Ponto de vista | Tênis Nos Pés Feminino (Vídeo)
+   107→  ID: aug22-028b  |  Title: POV - Sem Cabide (Vídeo)
+   108→  ID: aug22-029b  |  Title: Pov abrindo pacote de guia (Vídeo)
+   109→  ID: aug22-030b  |  Title: POV mostrando pulseira (Vídeo)
+   110→  ID: aug22-031b  |  Title: POV no trocador / infantil (Vídeo)
+   111→  ID: aug22-032b  |  Title: POV | Anel (Vídeo)
+   112→  ID: aug22-033b  |  Title: Pov | Calçado Na Caixa (Vídeo)
+   113→  ID: aug22-034  |  Title: Pov | Calçados
+   114→  ID: aug22-035  |  Title: POV | Camisetas Cores
+   115→  ID: aug22-036b  |  Title: POV | Camisola no cabide (Vídeo)
+   116→  ID: aug22-037b  |  Title: POV | Camisola no cabide 2 (Vídeo)
+   117→  ID: aug22-038b  |  Title: POV | Colar Detalhes Premium (Vídeo)
+   118→  ID: aug22-039  |  Title: POV | Elasticidade Cropeed
+   119→  ID: aug22-040b  |  Title: POV | Itens de Banheiro (Vídeo)
+   120→  ID: aug22-041  |  Title: POV | Joia Toque
+   121→  ID: aug22-042  |  Title: POV | Lingerie
+   122→  ID: aug22-043b  |  Title: POV | Mão Pegando Eletro (Vídeo)
+   123→  ID: aug22-044  |  Title: POV | Perfume na penteadeira
+   124→  ID: aug22-045b  |  Title: POV | Perfumes (Vídeo)
+   125→  ID: aug22-046  |  Title: POV | Roupa no cabide
+   126→  ID: aug22-047b  |  Title: Pov | Óculos na case (Vídeo)
+   127→  ID: aug22-048b  |  Title: Produto PET em bancada (Vídeo)
+   128→  ID: aug22-049b  |  Title: relogio bonito na mesa (Vídeo)
+   129→  ID: aug22-050b  |  Title: relogio no pulso (Vídeo)
+   130→  ID: aug22-051  |  Title: RELOGIOA na caixa
+   131→  ID: aug22-052b  |  Title: Saco grande de ração em loja PET premium brasileira (Vídeo)
+   132→  ID: aug22-054  |  Title: Ugc Garrafa Na Mão
+   133→  ID: aug22-055b  |  Title: UGC suplemento alimentar (Vídeo)
+   134→  ID: aug22-056b  |  Title: UGC | Anel + Modelo (Vídeo)
+   135→  ID: aug22-057  |  Title: Ugc | Produto na mão
+   136→  ID: aug22-058  |  Title: unhas finalizadas com a cor exata
+   137→  ID: aug22-059b  |  Title: Veja na perspectiva de Cama (Vídeo)
+   138→  ID: pdf-001-dentro-do  |  Title: Gancho papai Noel
+   139→  ID: pdf-002-gancho-gatinho-arvore-de-natal  |  Title: GANCHO GATINHO ARVORE DE NATAL
+   140→  ID: pdf-004-xicara-de-natal  |  Title: XICARA DE NATAL
+   141→  ID: pdf-026-use-com-qualquer-roupa-e-qualquer-modelo  |  Title: Transição Roupa Neutro
+   142→  ID: pdf-027-coloque-o-sapato-que-quiser-na-mao-da-sua-modelo  |  Title: POV Calçado na Mão
+   143→  ID: pdf-031-use-a-foto-da-sua-modelo-com-qualquer-roupa  |  Title: Modelo com Roupa
+   144→  ID: pdf-032-gancho-coracao-com-a-mao  |  Title: Gancho Coração com a Mão
+   145→  ID: pdf-035-iniciar-o-video-cochichando  |  Title: iniciar o video cochichando
+   146→  ID: pdf-045-gancho-roupa-na-camera  |  Title: Gancho Roupa na Câmera
+   147→  ID: pdf-046-modelo-transicao-mao-pos-banho  |  Title: Transição Mão Pós Banho
+   148→  ID: pdf-047-movimentos-roupa  |  Title: Movimento Roupa
+   149→  ID: pdf-049-gancho-1  |  Title: Gancho 1
+   150→  ID: pdf-050-frontal-regata-2  |  Title: POV Frontal Regata 2
+   151→  ID: pdf-051-gancho-com-desfoque-3  |  Title: GANCHO COM DESFOQUE 3
+   152→  ID: pdf-052-blusa-de-times-e-beijo-para-tela-e-coracao  |  Title: Movimento Blusa Time Beijo
+   153→  ID: pdf-053-gancho-roupa-homem-aranha  |  Title: Gancho Roupa Homem Aranha
+   154→  ID: pdf-054-ganho-4  |  Title: Gancho 4
+   155→  ID: pdf-055-bolhas-de-sabao-assoprando  |  Title: Gancho Bolhas de Sabão
+   156→  ID: pdf-056-gancho-homem-aranha-com-a-mao-gesto  |  Title: Gancho Homem Aranha Gesto
+   157→  ID: pdf-061-gancho-chamando-com-a-mao  |  Title: Gancho Chamando com a Mão
+   158→  ID: pdf-062-prompt-unboxing-abrindo-pacote  |  Title: Gancho Unboxing Pacote
+   159→  ID: pdf-063-gancho-pacote-7  |  Title: Gancho Pacote 7
+   160→  ID: pdf-076-de-toalha-com-roupa-na-mao  |  Title: DE TOALHA COM ROUPA NA MAO
+   161→  ID: pdf-119-camisa-masculina-costas  |  Title: POV Camisa Masculina Costas
+   162→  ID: pdf-120-pov-camiseta-no-cabide-com-a-mao  |  Title: POV Camiseta Cabide Mão
+   163→  ID: pdf-123-pov-vestido-manequim  |  Title: POV Vestido Manequim
+   164→  ID: pdf-124-pov-shorts-sobre-a-cama-3  |  Title: POV SHORTS SOBRE A CAMA 3
+   165→  ID: pdf-127-pov-camiseta-sobre-a-cama  |  Title: POV Camiseta Sobre Cama
+   166→  ID: pdf-128-pov-camiseta-solo-na-cama  |  Title: ´POV CAMISETA SOLO NA CAMA
+   167→  ID: pdf-129-pov-gancho  |  Title: POV Gancho
+   168→  ID: pdf-139-shortinhos  |  Title: POV Shortinhos
+   169→  ID: pdf-140-pov-shortinhos-trio-na-cama  |  Title: POV Shortinhos Trio Cama
+   170→  ID: pdf-141-pov-blusinhas-na-cama-em-trio  |  Title: POV Blusinhas Trio Cama
+   171→  ID: pdf-142-pov-regatas-soltas  |  Title: POV Regatas Soltas
+   172→  ID: pdf-143-pov-camiseta-no-cabide  |  Title: POV Camiseta Cabide
+   173→  ID: pdf-144-pov-camiseta-no-cabide  |  Title: POV Camiseta Cabide
+   174→  ID: pdf-180-pov-saco-organizador  |  Title: POV Saco Organizador
+   175→  ID: pdf-194-pov-rasteirinha  |  Title: POV Rasteirinha
+   176→  ID: pdf-196-neutro-qualquer-capinha  |  Title: POV Capinha Neutro
+   177→  ID: pdf-197-use-a-capinha-que-deseja-gerar-o-video  |  Title: POV Capinha Vídeo
+   178→  ID: pdf-207-pov-relogio-pulso  |  Title: POV Relógio Pulso
+   179→  ID: pdf-216-neutro-para-qualquer-roupa  |  Title: Movimento Roupa Neutro
+   180→  ID: pdf-226-costa-masculino-neutro-blusa-ou-moleton  |  Title: Masculino Costas Neutro
+   181→  ID: pdf-227-masculino-andar-para-frent  |  Title: Masculino Andar para Frente
+   182→  ID: pdf-228-masculino-bermuda  |  Title: Masculino Bermuda
+   183→  ID: pdf-230-casal-selfie  |  Title: CASAL SELFIE
+   184→  ID: pdf-231-casal-2  |  Title: Casal 2
+   185→  ID: pdf-232-casal-3  |  Title: Casal 3
+   186→  ID: pdf-233-casal-vitalicio  |  Title: Casal Vitalício
+   187→  ID: pdf-234-casal-5-movimento-fora-casa  |  Title: Casal Movimento Fora
+   188→  ID: pdf-236-casal-apresentacao  |  Title: Casal Apresentação
+   189→  ID: pdf-237-casal-2-apresentando  |  Title: Casal Apresentando
+   190→  ID: pdf-238-casal-colocando-a-mao-na-tela  |  Title: Casal Mão na Tela
+   191→  ID: pdf-239-casal-apresentando-8  |  Title: CASAL APRESENTANDO 8
+   192→
+   193→================================================================================
+   194→PROMPTS WITH VIDEO: 0
+   195→================================================================================
+   196→
+   197→================================================================================
+   198→PROMPTS WITH IMAGE ONLY (no video): 301
+   199→================================================================================
+   200→  ID: doc-001  |  Title: Calçado UNIVERSAL
+   201→    Image: /prompts/doc/img_001.jpg
+   202→  ID: doc-004  |  Title: Segurando pacote do TikTok (Imagem)
+   203→    Image: /prompts/doc/img_004.jpg
+   204→  ID: doc-005  |  Title: Calçando na loja
+   205→    Image: /prompts/doc/img_005.jpg
+   206→  ID: doc-006  |  Title: POV Roupa na caixa
+   207→    Image: /prompts/doc/img_006.jpg
+   208→  ID: doc-009  |  Title: POV Roupa na mala
+   209→    Image: /prompts/doc/img_009.jpg
+   210→  ID: doc-012  |  Title: POV Loja de camisa de time
+   211→    Image: /prompts/doc/img_012.jpg
+   212→  ID: doc-015  |  Title: UGC baixar Descolada 8)
+   213→    Image: /prompts/doc/img_015.jpg
+   214→  ID: doc-016  |  Title: POV Loja luxo
+   215→    Image: /prompts/doc/img_016.jpg
+   216→  ID: doc-017  |  Title: UGC Segurando a roupa
+   217→    Image: /prompts/doc/img_017.jpg
+   218→  ID: doc-018  |  Title: POV MEIAS FLAT LAY
+   219→    Image: /prompts/doc/img_018.jpg
+   220→  ID: doc-019  |  Title: POV - cabine
+   221→    Image: /prompts/doc/img_019.jpg
+   222→  ID: doc-020  |  Title: POV - Produto pequeno
+   223→    Image: /prompts/doc/img_020.jpg
+   224→  ID: doc-021  |  Title: SUPLEMENTO VIII
+   225→    Image: /prompts/doc/img_021.jpg
+   226→  ID: doc-022  |  Title: cidadã na academia
+   227→    Image: /prompts/doc/img_022.jpg
+   228→  ID: doc-027  |  Title: UGC foto realista universal
+   229→    Image: /prompts/doc/img_027.jpg
+   230→  ID: doc-028  |  Title: Pés na loja
+   231→    Image: /prompts/doc/img_028.jpg
+   232→  ID: doc-029  |  Title: POV Roupa no corpo
+   233→    Image: /prompts/doc/img_029.jpg
+   234→  ID: doc-031  |  Title: Ultra realismo = Realismo detalhes naturais do rosto (imagem)
+   235→    Image: /prompts/doc/img_031.jpg
+   236→  ID: doc-032  |  Title: Calçado exposição
+   237→    Image: /prompts/doc/img_032.jpg
+   238→  ID: doc-033  |  Title: POV Segura camisa
+   239→    Image: /prompts/doc/img_033.jpg
+   240→  ID: doc-034  |  Title: POV MEIAS
+   241→    Image: /prompts/doc/img_034.jpg
+   242→  ID: doc-036  |  Title: POV Langerie Camisola No Manequim
+   243→    Image: /prompts/doc/img_036.jpg
+   244→  ID: doc-037  |  Title: Selfie próxima do rosto (imagem)
+   245→    Image: /prompts/doc/img_037.jpg
+   246→  ID: doc-039  |  Title: POV cozinha universal
+   247→    Image: /prompts/doc/img_039.jpg
+   248→  ID: doc-040  |  Title: Suplemento Alimentar III
+   249→    Image: /prompts/doc/img_040.jpg
+   250→  ID: doc-041  |  Title: UGC Garrafa Ao Livre
+   251→    Image: /prompts/doc/img_041.jpg
+   252→  ID: doc-042  |  Title: Calçado suspenso
+   253→    Image: /prompts/doc/img_042.jpg
+   254→  ID: doc-044  |  Title: POV - Sapatos
+   255→    Image: /prompts/doc/img_044.jpg
+   256→  ID: doc-045  |  Title: Foto no aus V2 (imagem)
+   257→    Image: /prompts/doc/img_045.jpg
+   258→  ID: doc-047  |  Title: POV MEIAS NOS PÉS II
+   259→    Image: /prompts/doc/img_047.jpg
+   260→  ID: doc-051  |  Title: Foto no gravíssimo V1 (imagem)
+   261→    Image: /prompts/doc/img_051.jpg
+   262→  ID: doc-052  |  Title: KIT POV - Peças Múltiplas
+   263→    Image: /prompts/doc/img_052.jpg
+   264→  ID: doc-053  |  Title: POV: produto na mão
+   265→    Image: /prompts/doc/img_053.jpg
+   266→  ID: doc-057  |  Title: Tênis nos
+   267→    Image: /prompts/doc/img_057.jpg
+   268→  ID: doc-060  |  Title: POV SEGURANDO A MEIA
+   269→    Image: /prompts/doc/img_060.jpg
+   270→  ID: doc-066  |  Title: POV Corta etiqueta
+   271→    Image: /prompts/doc/img_066.jpg
+   272→  ID: doc-067  |  Title: POV Loja Esportes
+   273→    Image: /prompts/doc/img_067.jpg
+   274→  ID: doc-068  |  Title: Foto no espelho corpo todo (imagem)
+   275→    Image: /prompts/doc/img_068.jpg
+   276→  ID: doc-071  |  Title: Variação de cores calçados
+   277→    Image: /prompts/doc/img_071.jpg
+   278→  ID: doc-072  |  Title: UGC Bebendo no Copo
+   279→    Image: /prompts/doc/img_072.jpg
+   280→  ID: doc-076  |  Title: Selfie no carro = Influencer (imagem)
+   281→    Image: /prompts/doc/img_076.jpg
+   282→  ID: doc-077  |  Title: Suplemento Alimentar II
+   283→    Image: /prompts/doc/img_077.jpg
+   284→  ID: doc-078  |  Title: POV Loja de camisa de time II
+   285→    Image: /prompts/doc/img_078.jpg
+   286→  ID: doc-079  |  Title: POV-Capinha
+   287→    Image: /prompts/doc/img_079.jpg
+   288→  ID: doc-082  |  Title: provador
+   289→    Image: /prompts/doc/img_082.jpg
+   290→  ID: doc-083  |  Title: Suplemento Alimentar
+   291→    Image: /prompts/doc/img_083.jpg
+   292→  ID: doc-084  |  Title: POV Langerie Camisola Na Cama
+   293→    Image: /prompts/doc/img_084.jpg
+   294→  ID: doc-088  |  Title: Suplemento IV
+   295→    Image: /prompts/doc/img_088.jpg
+   296→  ID: doc-090  |  Title: POV Langerie Camisola No Balcão
+   297→    Image: /prompts/doc/img_090.jpg
+   298→  ID: doc-091  |  Title: Espelho com pose natural na academia
+   299→    Image: /prompts/doc/img_091.jpg
+   300→  ID: doc-092  |  Title: Calçado na caixa
+   301→    Image: /prompts/doc/img_092.jpg
+   302→  ID: doc-093  |  Title: POV MEIAS NA CAMA
+   303→    Image: /prompts/doc/img_093.jpg
+   304→  ID: doc-094  |  Title: Suplemento VI
+   305→    Image: /prompts/doc/img_094.jpg
+   306→  ID: doc-097  |  Title: UGC UNIVERSAL QUALQUER PRODUTO CORPO TODO
+   307→    Image: /prompts/doc/img_097.jpg
+   308→  ID: doc-100  |  Title: Roupa Universal
+   309→    Image: /prompts/doc/img_100.jpg
+   310→  ID: doc-101  |  Title: Foto realista no restaurante
+   311→    Image: /prompts/doc/img_101.jpg
+   312→  ID: doc-102  |  Title: UGC não é carro
+   313→    Image: /prompts/doc/img_102.jpg
+   314→  ID: doc-103  |  Title: Suplemento V
+   315→    Image: /prompts/doc/img_103.jpg
+   316→  ID: doc-104  |  Title: Levantamento terra academia
+   317→    Image: /prompts/doc/img_104.jpg
+   318→  ID: doc-105  |  Title: POV Roupa no cabide
+   319→    Image: /prompts/doc/img_105.jpg
+   320→  ID: doc-106  |  Title: UGC Garrafa Na Mão
+   321→    Image: /prompts/doc/img_106.jpg
+   322→  ID: doc-107  |  Title: UGC com influenciador, produto e PET no colo
+   323→    Image: /prompts/doc/img_107.jpg
+   324→  ID: doc-109  |  Title: POV loja de calçados
+   325→    Image: /prompts/doc/img_109.jpg
+   326→  ID: doc-110  |  Title: SUPLEMENTO VII
+   327→    Image: /prompts/doc/img_110.jpg
+   328→  ID: doc-112  |  Title: POV Roupa cores
+   329→    Image: /prompts/doc/img_112.jpg
+   330→  ID: doc-113  |  Title: POV dito na cama
+   331→    Image: /prompts/doc/img_113.jpg
+   332→  ID: doc-114  |  Title: Roupinha PET vestida sem animal
+   333→    Image: /prompts/doc/img_114.jpg
+   334→  ID: doc-115  |  Title: CAMISAS DE KIT POV
+   335→    Image: /prompts/doc/img_115.jpg
+   336→  ID: doc-116  |  Title: Suplementos IX
+   337→    Image: /prompts/doc/img_116.jpg
+   338→  ID: doc-119  |  Title: Calçado caminhando
+   339→    Image: /prompts/doc/img_119.jpg
+   340→  ID: doc-120  |  Title: Selfie com qualquer produto
+   341→    Image: /prompts/doc/img_120.jpg
+   342→  ID: doc-124  |  Title: UGC gere Ao Ar Livre
+   343→    Image: /prompts/doc/img_124.jpg
+   344→  ID: identity-001  |  Title: Frame Mestre — Identidade + Composição
+   345→    Image: /prompts/identity/img_001.jpg
+   346→  ID: identity-002  |  Title: Identity Replacement Task
+   347→    Image: /prompts/identity/img_002.jpg
+   348→  ID: identity-003  |  Title: Retrato Estúdio — Imagem Mestra
+   349→    Image: /prompts/identity/img_003.jpg
+   350→  ID: identity-004  |  Title: Substituição de Pessoa — Versão Curta
+   351→    Image: /prompts/identity/img_004.jpg
+   352→  ID: identity-005  |  Title: Substituição de Pessoa — Ultra Curta
+   353→    Image: /prompts/identity/img_005.jpg
+   354→  ID: manequim-fase1  |  Title: Modo Manequim — Fase 1: Roupa Tradicional (Hook)
+   355→    Image: https://i.imgur.com/uRghAnK.jpeg
+   356→  ID: manequim-fase2  |  Title: Modo Manequim — Fase 2: Segurando a Peça no Cabide
+   357→    Image: https://i.imgur.com/W9qyLGM.png
+   358→  ID: manequim-fase3  |  Title: Modo Manequim — Fase 3: Vestindo a Roupa
+   359→    Image: https://i.imgur.com/dV4Gdoa.png
+   360→  ID: selfie-ugc-base  |  Title: Selfie UGC — Criar Influencer do Zero
+   361→    Image: https://i.imgur.com/gSutSyz.jpeg
+   362→  ID: aug22-002a  |  Title: Beleza | Pov Skin Care Banheiro (Imagem)
+   363→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786566311682-zkkn1o.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU2NjMxMTY4Mi16a2tuMW8uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU2NjMxNSwiZXhwIjoyMTAxOTI2MzE1fQ.y-CBQbHCpKp6RkhFMQJs1JRuP4EmF7thweYcf10tEM4&width=560&quality=70&resize=contain
+   364→  ID: aug22-005a  |  Title: Casa Pov | Duas Mãos Fronha (Imagem)
+   365→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1787010447880-izunky.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NzAxMDQ0Nzg4MC1penVua3kuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NzAxMDQ1NywiZXhwIjoyMTAyMzcwNDU3fQ.eFHrcIkaNBw2rWFFLiYiTX9saymgar3kjLRk2E49uU8&width=560&quality=70&resize=contain
+   366→  ID: aug22-006a  |  Title: Casa Pov | Fronha (Imagem)
+   367→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1787009987516-qbho9a.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NzAwOTk4NzUxNi1xYmhvOWEuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NzAwOTk5MCwiZXhwIjoyMTAyMzY5OTkwfQ.XfaX0M-1fuaE4Z-KbZW4PnLYYcYGsUKvXed3N9UXovA&width=560&quality=70&resize=containCasa
+   368→  ID: aug22-009a  |  Title: Casa | Mobiliário Quarto (Imagem)
+   369→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786556619960-a0m9jw.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU1NjYxOTk2MC1hMG05ancuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU1NjYyMiwiZXhwIjoyMTAxOTE2NjIyfQ.mmtWILoiIYxHJfHylqwWaTyPxaK0cZ0QMxC3-ML9Wgk&width=560&quality=70&resize=contain
+   370→  ID: aug22-011a  |  Title: Comedouro, bebedouro ou fonte PET em casa (Imagem)
+   371→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786157201848-sq7n2d.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjE1NzIwMTg0OC1zcTduMmQuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjE1ODAxMywiZXhwIjoyMTAxNTE4MDEzfQ.3DDFCM8PJfWT7jFQ37EP77PtCTeCr4MMF5CAb_9qoi8&width=560&quality=70&resize=contain
+   372→  ID: aug22-012a  |  Title: Crianças | Brinquedos na loja (Imagem)
+   373→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1787011302924-ij6tvc.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NzAxMTMwMjkyNC1pajZ0dmMuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NzAxMTMwNiwiZXhwIjoyMTAyMzcxMzA2fQ.72Ss5mHvui_u9j8CbYUWXyb5qWgbvZyTCZrZapBLhaA&width=560&quality=70&resize=contain
+   374→  ID: aug22-013a  |  Title: Crianças | Calçado noser (Imagem)
+   375→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786559537635-t2r53o.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU1OTUzNzYzNS10MnI1M28uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU1OTU0MCwiZXhwIjoyMTAxOTE5NTQwfQ.XKisMUAd6-snlW6y5XKALjgbZJVer5h7MIfh5Yvyor0&width=560&quality=70&resize=contain
+   376→  ID: aug22-014a  |  Title: Crianças | Qualquer produto infantil (Imagem)
+   377→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786559425501-es3axf.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU1OTQyNTUwMS1lczNheGYuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU1OTQyOCwiZXhwIjoyMTAxOTE5NDI4fQ.Q1ngIz1v55bOSZnwm5vwzW0Q6t3W5vzGry834fC-H_4&width=560&quality=70&resize=contain
+   378→  ID: aug22-015a  |  Title: Crianças | Roupa Infantil Na Loja (Imagem)
+   379→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786558901449-010pmp.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU1ODkwMTQ0OS0wMTBwbXAuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU1ODkwNCwiZXhwIjoyMTAxOTE4OTA0fQ.1z6zszGrjaBnJiWOerpZu6lFPbrFmtAg_GZ0Sckvl8E&width=560&quality=70&resize=contain
+   380→  ID: aug22-019a  |  Title: Loja infantil / Influencer Segurando roupa no cabidel (Imagem)
+   381→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786549669836-8nyqxb.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU0OTY2OTgzNi04bnlxeGIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU0OTY3MywiZXhwIjoyMTAxOTA5NjczfQ.jGYIcBysVJYb8w4E5OVmEIsWq-oOkENy7J5f8OnS-OQ&width=560&quality=70&resize=contain
+   382→  ID: aug22-023a  |  Title: PET dentro de casa (Imagem)
+   383→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786154384083-gd4vf2.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjE1NDM4NDA4My1nZDR2ZjIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjE1NTE5NSwiZXhwIjoyMTAxNTE1MTk1fQ.noAaFepUfn5PgIsw0IeswHSChGXi7C3k78SBBDyFK94&width=560&quality=70&resize=contain
+   384→  ID: aug22-024a  |  Title: Ponto de vista | Bolsa em destaque sozinha (Imagem)
+   385→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786645052657-kbp1pv.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjY0NTA1MjY1Ny1rYnAxcHYuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjY0NTA2MCwiZXhwIjoyMTAyMDA1MDYwfQ.bRQyu3lugW59SZejCIoLeRxOS-qJRXYRQb3YRXIpPYU&width=560&quality=70&resize=contain
+   386→  ID: aug22-026a  |  Title: Ponto de vista | Mostrando Detalhes Da Bolsak (Imagem)
+   387→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786645362276-t6ztpb.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjY0NTM2MjI3Ni10Nnp0cGIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjY0NTM2NCwiZXhwIjoyMTAyMDA1MzY0fQ.jMLRiiRVi1xoLjqiKn63JUpllrBICsu8aX5z4J58O8I&width=560&quality=70&resize=contain
+   388→  ID: aug22-027a  |  Title: Ponto de vista | Tênis Nos Pés Feminino (Imagem)
+   389→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786562712483-zfdd64.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU2MjcxMjQ4My16ZmRkNjQuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU2MjcxNSwiZXhwIjoyMTAxOTIyNzE1fQ.xecufQWaHGcsGqajKEhYQnRHW3aqmwIQkAJp1mHepsk&width=560&quality=70&resize=contain
+   390→  ID: aug22-028a  |  Title: POV - Sem Cabide (Imagem)
+   391→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786589026836-cyvo2k.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU4OTAyNjgzNi1jeXZvMmsuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU4OTAyOCwiZXhwIjoyMTAxOTQ5MDI4fQ.8dXjkae150VYZQSCgW6JUKcV1-fJrr9PSiKU1jzQcvs&width=560&quality=70&resize=contain
+   392→  ID: aug22-029a  |  Title: Pov abrindo pacote de guia (Imagem)
+   393→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786548372641-o0kvum.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU0ODM3MjY0MS1vMGt2dW0uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU0ODM3NSwiZXhwIjoyMTAxOTA4Mzc1fQ.Vv_alkY8JydRBXuw7T479kjMu--RgM9xAR2oD6F1lvc&width=560&quality=70&resize=contain
+   394→  ID: aug22-030a  |  Title: POV mostrando pulseira (Imagem)
+   395→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786545987675-t82q04.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU0NTk4NzY3NS10ODJxMDQuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU0NTk5MCwiZXhwIjoyMTAxOTA1OTkwfQ.i71wtMCZOQRmbFZ-cpeQxwX6NrUdUnVTiygp0Ppl69s&width=560&quality=70&resize=contain
+   396→  ID: aug22-031a  |  Title: POV no trocador / infantil (Imagem)
+   397→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786550031298-0puo54.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU1MDAzMTI5OC0wcHVvNTQuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU1MDAzNCwiZXhwIjoyMTAxOTEwMDM0fQ.wpr2VjjVSZcKKLxsi-XtVmTwNg9UdaLigJU3EDSMiSk&width=560&quality=70&resize=contain
+   398→  ID: aug22-032a  |  Title: POV | Anel (Imagem)
+   399→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786644090494-1rl4sc.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjY0NDA5MDQ5NC0xcmw0c2MuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjY0NDA5MiwiZXhwIjoyMTAyMDA0MDkyfQ.3Cme_57oRf7qHhFNn7AuHm5Rb84DmL7cTQhaxiAg3sI&width=560&quality=70&resize=containPOV
+   400→  ID: aug22-033a  |  Title: Pov | Calçado Na Caixa (Imagem)
+   401→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786561723586-iifgw6.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU2MTcyMzU4Ni1paWZndzYuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU2MTcyNiwiZXhwIjoyMTAxOTIxNzI2fQ.oHqYnffvJF7q86k5mnnmjA1xupjNbJU_eOaYEe2N20U&width=560&quality=70&resize=contain
+   402→  ID: aug22-036a  |  Title: POV | Camisola no cabide (Imagem)
+   403→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786591183448-3w35z3.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU5MTE4MzQ0OC0zdzM1ejMuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU5MTE4NSwiZXhwIjoyMTAxOTUxMTg1fQ.PmX5zDGPRH5X0XK2Wpvpbkasd3CFI33xgYWj8i5NVRo&width=560&quality=70&resize=contain
+   404→  ID: aug22-037a  |  Title: POV | Camisola no cabide 2 (Imagem)
+   405→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1787570742467-2gjr1m.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NzU3MDc0MjQ2Ny0yZ2pyMW0uanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc1NzA3NDQsImV4cCI6MjEwMjkzMDc0NH0.E3szBocGjB1CYPahhhpjTTGaKnUMjsfMnNR8QNpIV6w&width=560&quality=70&resize=contain
+   406→  ID: aug22-038a  |  Title: POV | Colar Detalhes Premium (Imagem)
+   407→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1787001944007-5x3vmf.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NzAwMTk0NDAwNy01eDN2bWYuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NzAwMTk0NiwiZXhwIjoyMTAyMzYxOTQ2fQ.Vn438sOP7-kIa6SMZK9W4gzek1RFsO-dHRRYf1IxcAI&width=560&quality=70&resize=contain
+   408→  ID: aug22-040a  |  Title: POV | Itens de Banheiro (Imagem)
+   409→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786565031090-mxn08b.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU2NTAzMTA5MC1teG4wOGIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU2NTAzMywiZXhwIjoyMTAxOTI1MDMzfQ.1HY_rFQQRucUZm3mVU8MTe-21ShNyr-6Qtv-O85H6vs&width=560&quality=70&resize=contain
+   410→  ID: aug22-043a  |  Title: POV | Mão Pegando Eletro (Imagem)
+   411→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1787005845383-zo31h5.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NzAwNTg0NTM4My16bzMxaDUuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NzAwNTg1NSwiZXhwIjoyMTAyMzY1ODU1fQ.vwN2AsUVXeP7K0tNn1vQdYM0tPKO8LWRuJiiLb7hny0&width=560&quality=70&resize=contain
+   412→  ID: aug22-045a  |  Title: POV | Perfumes (Imagem)
+   413→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786566064589-76o74h.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU2NjA2NDU4OS03Nm83NGguanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU2NjA2NywiZXhwIjoyMTAxOTI2MDY3fQ.dWvXIOzdJZlXv-ynBCC_iUnIhx_EQVodmtYlExPA8Ro&width=560&quality=70&resize=contain
+   414→  ID: aug22-047a  |  Title: Pov | Óculos na case (Imagem)
+   415→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786646731345-owsyub.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjY0NjczMTM0NS1vd3N5dWIuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjY0NjczMywiZXhwIjoyMTAyMDA2NzMzfQ.fmqbV_dXSpMpZ_nThBWjihWhfLr170VBhQ_72Itwb_s&width=560&quality=70&resize=contain
+   416→  ID: aug22-048a  |  Title: Produto PET em bancada (Imagem)
+   417→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786157069736-sgdq44.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjE1NzA2OTczNi1zZ2RxNDQuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjE1Nzg4MCwiZXhwIjoyMTAxNTE3ODgwfQ.nMtk29jMOMwBdn0laNbxw4ymXc8LD754TG8BNgfE6x4&width=560&quality=70&resize=contain
+   418→  ID: aug22-049a  |  Title: relogio bonito na mesa (Imagem)
+   419→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786546887588-soitry.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU0Njg4NzU4OC1zb2l0cnkuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU0Njg5MCwiZXhwIjoyMTAxOTA2ODkwfQ.EgbcNanoQaycjEqPVHjEJDp_Zw1N-rpAbp2LCDkK8KI&width=560&quality=70&resize=contain
+   420→  ID: aug22-050a  |  Title: relogio no pulso (Imagem)
+   421→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786546747983-pkgq7z.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU0Njc0Nzk4My1wa2dxN3ouanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU0Njc1MSwiZXhwIjoyMTAxOTA2NzUxfQ.nYOaBwzCk8BtzzQT8Of6IDrRRWsCslUw52RFVMwI27k&width=560&quality=70&resize=contain
+   422→  ID: aug22-052a  |  Title: Saco grande de ração em loja PET premium brasileira (Imagem)
+   423→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786157596186-14fh8y.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjE1NzU5NjE4Ni0xNGZoOHkuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjE1ODQwNywiZXhwIjoyMTAxNTE4NDA3fQ.OYpPEl2eSRYKDLCx3gU7zzUH0P0jqoeTgiAb1jcNuc0&width=560&quality=70&resize=contain
+   424→  ID: aug22-053  |  Title: Selfie no carro = Influencer (imagem)
+   425→    Image: https://imgur.com/i5QahBh
+   426→  ID: aug22-055a  |  Title: UGC suplemento alimentar (Imagem)
+   427→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786552465622-9u2ue0.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU1MjQ2NTYyMi05dTJ1ZTAuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU1MjQ2OCwiZXhwIjoyMTAxOTEyNDY4fQ.eKKaFF9cSIXMOiLoAG5YI8UnSa_D9DIUmAC684YcRtE&width=560&quality=70&resize=contain
+   428→  ID: aug22-056a  |  Title: UGC | Anel + Modelo (Imagem)
+   429→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786661846891-nes8f7.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjY2MTg0Njg5MS1uZXM4ZjcuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjY2MTg0OSwiZXhwIjoyMTAyMDIxODQ5fQ.BkfgKqbLoJzXWcTx39qDynjx7-jiFvEN35L8FHtpR3E&width=560&quality=70&resize=contain
+   430→  ID: aug22-059a  |  Title: Veja na perspectiva de Cama (Imagem)
+   431→    Image: https://wpevghcfmjwmidcjdtnd.supabase.co/storage/v1/render/image/sign/prompt-media/image/1786545684485-n6svsh.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8zNDM0YzgxZi0wMzRmLTRlNTEtYWYzYy01MzkxYWNjYjgxODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9tcHQtbWVkaWEvaW1hZ2UvMTc4NjU0NTY4NDQ4NS1uNnN2c2guanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjU0NTY4OCwiZXhwIjoyMTAxOTA1Njg4fQ.JQdZ1Q15eaW49N-Hmi_jsEDCbrvlMKG7hjuuLrhoCyY&width=560&quality=70&resize=contain
+   432→  ID: pdf-003-natal-gancho-pet  |  Title: NATAL GANCHO PET
+   433→    Image: https://auroraprompts.com/storage/prompts/1789055722_6aa2d2ead0b45.png
+   434→  ID: pdf-005-estrelas-arvore-de-natal  |  Title: ESTRELAS ARVORE DE NATAL
+   435→    Image: https://auroraprompts.com/storage/prompts/ref_1788443425_6a997b2144b90.jpg
+   436→  ID: pdf-006-arvore-de-natal  |  Title: ARVORE DE NATAL
+   437→    Image: https://auroraprompts.com/storage/prompts/ref_1788443577_6a997bb99784d.jpg
+   438→  ID: pdf-007-toalha-de-natal  |  Title: TOALHA DE NATAL
+   439→    Image: https://auroraprompts.com/storage/prompts/ref_1788362988_6a9840eca767c.png
+   440→  ID: pdf-008-almofadas-natal  |  Title: ALMOFADAS NATAL
+   441→    Image: https://auroraprompts.com/storage/prompts/ref_1787921683_6a9185139aa9d.png
+   442→  ID: pdf-009-decoracao-natal-neutro-para-qualquer-decoracao-de-natal  |  Title: DECORACAO NATAL ( NEUTRO PARA QUALQUER DECORACAO DE NATAL )
+   443→    Image: https://auroraprompts.com/storage/prompts/ref_1787921219_6a9183437dcdf.jpg
+   444→  ID: pdf-010-presepio-de-natal  |  Title: PRESÉPIO DE NATAL
+   445→    Image: https://auroraprompts.com/storage/prompts/ref_1787920412_6a91801ce9459.png
+   446→  ID: pdf-011-guirlanda-de-natal  |  Title: GUIRLANDA DE NATAL
+   447→    Image: https://auroraprompts.com/storage/prompts/ref_1787919936_6a917e40d9615.png
+   448→  ID: pdf-012-cortina-de-luz-natal  |  Title: CORTINA DE LUZ NATAL
+   449→    Image: https://auroraprompts.com/storage/prompts/ref_1787919739_6a917d7b70866.png
+   450→  ID: pdf-013-arvore-de-natal  |  Title: ARVORE DE NATAL
+   451→    Image: https://auroraprompts.com/storage/prompts/ref_1787919587_6a917ce3a7c12.png
+   452→  ID: pdf-014-caixa-de-bolinha-natal  |  Title: CAIXA DE BOLINHA NATAL
+   453→    Image: https://auroraprompts.com/storage/prompts/ref_1787919311_6a917bcf5559b.png
+   454→  ID: pdf-015-bolinhas-de-natal  |  Title: BOLINHAS DE NATAL
+   455→    Image: https://auroraprompts.com/storage/prompts/ref_1787919216_6a917b7031f92.png
+   456→  ID: pdf-016-pov-tapete-natal  |  Title: POV TAPETE NATAL
+   457→    Image: https://auroraprompts.com/storage/prompts/ref_1787414121_6a89c669de4db.png
+   458→  ID: pdf-017-projetor-natal  |  Title: PROJETOR NATAL
+   459→    Image: https://auroraprompts.com/storage/prompts/ref_1787413781_6a89c5151c467.png
+   460→  ID: pdf-018-pov-caixa-de-presente-abrindo-o-laco  |  Title: POV CAIXA DE PRESENTE ABRINDO O LAÇO
+   461→    Image: https://auroraprompts.com/storage/prompts/ref_1787412427_6a89bfcb52a60.jpg
+   462→  ID: pdf-019-pov-arvore-de-natal  |  Title: POV ARVORE DE NATAL
+   463→    Image: https://auroraprompts.com/storage/prompts/ref_1787411663_6a89bccf34ab4.jpg
+   464→  ID: pdf-020-pov-toalha-de-mesa  |  Title: POV TOALHA DE MESA
+   465→    Image: https://auroraprompts.com/storage/prompts/ref_1787352955_6a88d77babc2d.jpg
+   466→  ID: pdf-021-ganho-queimando-roupa  |  Title: Gancho Queimando Roupa
+   467→    Image: https://auroraprompts.com/storage/prompts/ref_1788227644_6a96303c4b168.png
+   468→  ID: pdf-022-que-voce-quer-quer-ela-vista  |  Title: que voce quer quer ela vista
+   469→    Image: https://auroraprompts.com/storage/prompts/ref_1788225629_6a96285ddb8da.png
+   470→  ID: pdf-023-transicao-chiclete-modelo  |  Title: Transição Chiclete Modelo
+   471→    Image: https://auroraprompts.com/storage/prompts/ref_1788224671_6a96249f2beae.png
+   472→  ID: pdf-024-um-pirulito-maior-talvez-chame-mais-atencao  |  Title: Gancho Pirulito
+   473→    Image: https://auroraprompts.com/storage/prompts/ref_1788175518_6a95649eb55a8.png
+   474→  ID: pdf-025-gancho-bolsa-caindo  |  Title: Gancho Bolsa Caindo
+   475→    Image: https://auroraprompts.com/storage/prompts/ref_1787788372_6a8f7c5459788.png
+   476→  ID: pdf-028-produto-que-quer-que-ela-tire-do-roupeiro  |  Title: Gancho Roupeiro
+   477→    Image: https://auroraprompts.com/storage/prompts/ref_1786580693_6a7d0ed539e63.png
+   478→  ID: pdf-029-adicione-uma-foto-da-sua-modelo-ao-lado-de-um-roupeiro  |  Title: Modelo Roupeiro Aberto
+   479→    Image: https://auroraprompts.com/storage/prompts/ref_1786580555_6a7d0e4b175e2.png
+   480→  ID: pdf-030-use-com-qualquer-roupa-que-estiver-na-mao-da-modelo  |  Title: Transição Roupa na Mão
+   481→    Image: https://auroraprompts.com/storage/prompts/ref_1786620551_6a7daa87862dd.png
+   482→  ID: pdf-033-gancho-coracao-com-os-dedos-sem-celular  |  Title: GANCHO CORACAO COM OS DEDOS SEM CELULAR
+   483→    Image: https://auroraprompts.com/storage/prompts/ref_1786291281_6a78a45125b12.png
+   484→  ID: pdf-034-coloque-a-peca-que-deseja-divulgar-nos-bracos-da-modelo  |  Title: Modelo Peça nos Braços
+   485→    Image: https://auroraprompts.com/storage/prompts/ref_1786049416_6a74f388b3e31.png
+   486→  ID: pdf-036-gancho-soco-acelerar  |  Title: Gancho Soco Acelerar
+   487→    Image: https://auroraprompts.com/storage/prompts/ref_1785115235_6a66b263efc42.jpeg
+   488→  ID: pdf-037-masculino-gancho-soco-acelerar  |  Title: Gancho Masculino Soco
+   489→    Image: https://auroraprompts.com/storage/prompts/ref_1785114678_6a66b03636815.png
+   490→  ID: pdf-038-modelo-colando-chapeu-na-cabeca  |  Title: Modelo Colocando Chapéu
+   491→    Image: https://auroraprompts.com/storage/prompts/ref_1784907092_6a63855451138.png
+   492→  ID: pdf-039-gancho-chapeu-na-camera  |  Title: Gancho Chapéu na Câmera
+   493→    Image: https://auroraprompts.com/storage/prompts/ref_1784907011_6a638503406d7.png
+   494→  ID: pdf-040-gancho-muito-surpresa  |  Title: Gancho Muito Surpresa
+   495→    Image: https://auroraprompts.com/storage/prompts/ref_1784905572_6a637f648897c.jpeg
+   496→  ID: pdf-041-gancho-surpresa  |  Title: Gancho Surpresa
+   497→    Image: https://auroraprompts.com/storage/prompts/ref_1784905519_6a637f2f5def8.jpeg
+   498→  ID: pdf-042-gancho-moleton  |  Title: Gancho Moletom
+   499→    Image: https://auroraprompts.com/storage/prompts/ref_1784833401_6a6265799e40f.png
+   500→  ID: pdf-043-gancho-celular  |  Title: Gancho Celular
+   501→    Image: https://auroraprompts.com/storage/prompts/ref_1784644409_6a5f8339f3068.jfif
+   502→  ID: pdf-044-transicao-celular  |  Title: Transição Celular
+   503→    Image: https://auroraprompts.com/storage/prompts/ref_1784509673_6a5d74e991ab9.png
+   504→  ID: pdf-048-camiseta-careta  |  Title: Movimento Camiseta Careta
+   505→    Image: https://auroraprompts.com/storage/prompts/ref_1783704177_6a512a7178827.png
+   506→  ID: pdf-057-gancho-segurando-pacote-roupa  |  Title: GANCHO SEGURANDO PACOTE ROUPA
+   507→    Image: https://auroraprompts.com/storage/prompts/ref_1783371492_6a4c16e4b9cd4.jpg
+   508→  ID: pdf-058-segurando-pacote-2  |  Title: Segurando Pacote 2
+   509→    Image: https://auroraprompts.com/storage/prompts/ref_1783371389_6a4c167d43dca.jpg
+   510→  ID: pdf-059-seguirando-pacote-2-sala-gamer  |  Title: Segurando Pacote Sala Gamer
+   511→    Image: https://auroraprompts.com/storage/prompts/ref_1783371278_6a4c160e33470.jpg
+   512→  ID: pdf-060-pacote-segurando-5  |  Title: Segurando Pacote 5
+   513→    Image: https://auroraprompts.com/storage/prompts/ref_1783360736_6a4bece09aada.png
+   514→  ID: pdf-064-gancho-colocando-a-calca  |  Title: Gancho Colocando a Calça
+   515→    Image: https://auroraprompts.com/storage/prompts/ref_1781792754_6a33fff29e45f.jpg
+   516→  ID: pdf-065-gancho-caixa-de-papel  |  Title: Gancho Caixa de Papel
+   517→    Image: https://auroraprompts.com/storage/prompts/ref_1781545819_6a303b5b5236f.jpg
+   518→  ID: pdf-066-gancho-pactore-preto-viral  |  Title: Gancho Pacote Preto Viral
+   519→    Image: https://auroraprompts.com/storage/prompts/ref_1781545697_6a303ae14399b.jpg
+   520→  ID: pdf-067-transicao-academia  |  Title: Transição Academia
+   521→    Image: https://auroraprompts.com/storage/prompts/ref_1788365235_6a9849b39ce5f.png
+   522→  ID: pdf-068-quer-que-ela-vista  |  Title: Transição Roupa Vestir
+   523→    Image: https://auroraprompts.com/storage/prompts/ref_1788363456_6a9842c075665.png
+   524→  ID: pdf-069-mao-da-modelo  |  Title: POV Peça na Mão da Modelo
+   525→    Image: https://auroraprompts.com/storage/prompts/ref_1787828968_6a901ae88315e.jpeg
+   526→  ID: pdf-070-coloque-qualquer-roupa-na-manequim-que-o-prompt-da-a  |  Title: Coloque qualquer roupa na manequim que o prompt da a transição
+   527→    Image: https://auroraprompts.com/storage/prompts/ref_1786227583_6a77ab7f5c601.png
+   528→  ID: pdf-071-transicao-roupa-amassada-neutro-qualquer-peca  |  Title: Transição Roupa Amassada
+   529→    Image: https://auroraprompts.com/storage/prompts/ref_1785022416_6a6547d0c1b94.png
+   530→  ID: pdf-072-modelo-cinta-com-barriga  |  Title: Modelo Cinta Barriga
+   531→    Image: https://auroraprompts.com/storage/prompts/ref_1784938729_6a6400e9cc643.png
+   532→  ID: pdf-073-transicao-pulinho  |  Title: Transição Pulinho
+   533→    Image: https://auroraprompts.com/storage/prompts/ref_1784673316_6a5ff424b0f43.png
+   534→  ID: pdf-074-rtansicao-mao-neutr-coim-giro  |  Title: Transição Mão Neutro com Giro
+   535→    Image: https://auroraprompts.com/storage/prompts/ref_1784508691_6a5d71139395c.jpg
+   536→  ID: pdf-075-transicao-vestido-sem-estar-vestido-na-mao  |  Title: Transição Vestido na Mão
+   537→    Image: https://auroraprompts.com/storage/prompts/ref_1784428287_6a5c36ff47049.png
+   538→  ID: pdf-077-transicao-troca-de-roupa  |  Title: Transição Troca de Roupa
+   539→    Image: https://auroraprompts.com/storage/prompts/1783087186_6a47c05248dd8.png
+   540→  ID: pdf-078-trocando-de-vestidos  |  Title: Troca de Vestidos
+   541→    Image: https://auroraprompts.com/storage/prompts/ref_1781873091_6a3539c3e7a1c.jpeg
+   542→  ID: pdf-079-gerandi-iamgens-para-trocar-a-calca-03  |  Title: Troca de Calça 03
+   543→    Image: https://auroraprompts.com/storage/prompts/1781794014_6a3404de0bbf4.png
+   544→  ID: pdf-080-gerando-imagenjs-para-troca-de-calca-01  |  Title: Troca de Calça 01
+   545→    Image: https://auroraprompts.com/storage/prompts/1781793043_6a340113cc91b.jpg
+   546→  ID: pdf-081-troca-de-camisa-2  |  Title: Troca de Camisa 2
+   547→    Image: https://auroraprompts.com/storage/prompts/ref_1781545501_6a303a1d96dd6.jpg
+   548→  ID: pdf-082-camisa-video-01  |  Title: Camisa Vídeo 01
+   549→    Image: https://auroraprompts.com/storage/prompts/ref_1781545219_6a3039036c702.jpg
+   550→  ID: pdf-083-camisa-foto-01  |  Title: Camisa Foto 01
+   551→    Image: https://auroraprompts.com/storage/prompts/ref_1781545163_6a3038cb7196e.jpg
+   552→  ID: pdf-084-l  |  Title: POV Lingerie
+   553→    Image: https://auroraprompts.com/storage/prompts/ref_1788132602_6a94bcfa90675.jpg
+   554→  ID: pdf-085-da-camiseta-aberta  |  Title: POV Camiseta Aberta
+   555→    Image: https://auroraprompts.com/storage/prompts/ref_1788132194_6a94bb6254918.jpg
+   556→  ID: pdf-086-neutro-qualquer-blusa-ou-cropped  |  Title: neutro qualquer blusa ou cropped
+   557→    Image: https://auroraprompts.com/storage/prompts/ref_1786819101_6a80b21d7404f.jpg
+   558→  ID: pdf-087-neutro-qualquer-conjunto  |  Title: neutro qualquer conjunto
+   559→    Image: https://auroraprompts.com/storage/prompts/ref_1786816116_6a80a67441280.jpg
+   560→  ID: pdf-088-neutro-qualquer-peca  |  Title: neutro qualquer peça
+   561→    Image: https://auroraprompts.com/storage/prompts/ref_1786815901_6a80a59d777e1.jpg
+   562→  ID: pdf-089-neutro  |  Title: POV Neutro Qualquer Peça
+   563→    Image: https://auroraprompts.com/storage/prompts/ref_1786815820_6a80a54c27a1b.png
+   564→  ID: pdf-090-neutro-qualqueer-top-tube  |  Title: POV Top Tube Neutro
+   565→    Image: https://auroraprompts.com/storage/prompts/ref_1786814436_6a809fe471ba4.jpg
+   566→  ID: pdf-091-neutro-qualquer-kit-ou-unidade-de-bermuda  |  Title: POV Bermuda Kit Neutro
+   567→    Image: https://auroraprompts.com/storage/prompts/ref_1786814208_6a809f00d8b3f.jpg
+   568→  ID: pdf-092-neutro-para-qualquer-biquini  |  Title: POV Biquíni Neutro
+   569→    Image: https://auroraprompts.com/storage/prompts/ref_1786813053_6a809a7ddb9a0.jpg
+   570→  ID: pdf-093-manga-comprida  |  Title: POV Manga Comprida
+   571→    Image: https://auroraprompts.com/storage/prompts/ref_1786811985_6a809651c3923.jpg
+   572→  ID: pdf-094-para-qualquer-peca-na-manequim  |  Title: POV Manequim Qualquer Peça
+   573→    Image: https://auroraprompts.com/storage/prompts/ref_1786765314_6a7fe0022fdd0.png
+   574→  ID: pdf-095-adicione-sempre-uma-doto-do-cenario-e-uma-das-pecas  |  Title: POV Cenário e Peça
+   575→    Image: https://auroraprompts.com/storage/prompts/ref_1786581904_6a7d1390c78a2.png
+   576→  ID: pdf-096-para-qualquer-peca  |  Title: POV Qualquer Peça
+   577→    Image: https://auroraprompts.com/storage/prompts/ref_1786581535_6a7d121fa7e4d.png
+   578→  ID: pdf-097-zoom-para-qualquer-peca-mostrando-tecido  |  Title: POV Zoom Tecido
+   579→    Image: https://auroraprompts.com/storage/prompts/ref_1786581374_6a7d117eccafa.png
+   580→  ID: pdf-098-imagem-so  |  Title: POV Imagem Referência
+   581→    Image: https://auroraprompts.com/storage/prompts/ref_1786579731_6a7d0b137ff06.png
+   582→  ID: pdf-099-limpo-e-um-com-a-peca-ja-em-cima-igual-o-exemplo-acima  |  Title: LIMPO e um com a peça ja em cima igual o exemplo acima
+   583→    Image: https://auroraprompts.com/storage/prompts/ref_1786579460_6a7d0a0461fc9.png
+   584→  ID: pdf-100-no-seu-gerador-de-videos-com-o-prompt-e-gere-o-video  |  Title: no seu gerador de videos com o prompt e gere o video
+   585→    Image: https://auroraprompts.com/storage/prompts/ref_1786578646_6a7d06d62cfaa.jpg
+   586→  ID: pdf-101-use-a-imagem-da-peca-que-deseja-divulgar-e-a-do-saco-que  |  Title: POV Saco com Peça
+   587→    Image: https://auroraprompts.com/storage/prompts/ref_1786578220_6a7d052c16f2d.jpg
+   588→  ID: pdf-102-em-cima-da-cama-ou-bancada-de-loja  |  Title: em cima da cama ou bancada de loja
+   589→    Image: https://auroraprompts.com/storage/prompts/ref_1786577856_6a7d03c0db115.png
+   590→  ID: pdf-103-pacote  |  Title: pacote
+   591→    Image: https://auroraprompts.com/storage/prompts/ref_1786575915_6a7cfc2b21db2.jpg
+   592→  ID: pdf-104-mostrando-detalhes-da-peca-camisola-ou-lingerie  |  Title: POV Lingerie Detalhes
+   593→    Image: https://auroraprompts.com/storage/prompts/ref_1786575501_6a7cfa8dbfac6.jpg
+   594→  ID: pdf-105-use-com-qualquer-produto  |  Title: use com qualquer produto
+   595→    Image: https://auroraprompts.com/storage/prompts/ref_1786574237_6a7cf59dc5e06.jpg
+   596→  ID: pdf-106-pov-qualquer-peca-neutro  |  Title: POV QUALQUER PECA NEUTRO
+   597→    Image: https://auroraprompts.com/storage/prompts/ref_1785806633_6a713f29ac702.png
+   598→  ID: pdf-107-pov-neutro  |  Title: POV NEUTRO
+   599→    Image: https://auroraprompts.com/storage/prompts/ref_1785803189_6a7131b529d3e.jpg
+   600→  ID: pdf-108-prompt-neutro-para-qualquer-camiseta  |  Title: POV Camiseta Neutro
+   601→    Image: https://auroraprompts.com/storage/prompts/ref_1785629458_6a6e8b12ed64f.jfif
+   602→  ID: pdf-109-pov-roupa-na-cama-mostra-de-perto-textuta  |  Title: POV Roupa Cama Textura
+   603→    Image: https://auroraprompts.com/storage/prompts/ref_1785519754_6a6cde8a77a6d.jpg
+   604→  ID: pdf-110-coloque-no-reverso-que-ele-faz-a-peca-sendo-colocada-na  |  Title: coloque no reverso que ele faz a peça sendo colocada na cama caso queira
+   605→    Image: https://auroraprompts.com/storage/prompts/ref_1785519609_6a6cddf924df9.jpg
+   606→  ID: pdf-111-pov-conjunto-na-cama  |  Title: POV Conjunto na Cama
+   607→    Image: https://auroraprompts.com/storage/prompts/ref_1785519523_6a6cdda32cbe8.png
+   608→  ID: pdf-112-pov-conjunto-neutro  |  Title: POV Conjunto Neutro
+   609→    Image: https://auroraprompts.com/storage/prompts/ref_1785519289_6a6cdcb969777.jpg
+   610→  ID: pdf-113-pov-regatas  |  Title: POV Regatas
+   611→    Image: https://auroraprompts.com/storage/prompts/ref_1785467305_6a6c11a959cba.png
+   612→  ID: pdf-114-pov-conjunto-pegando-parte-de-cima  |  Title: POV Conjunto Parte Cima
+   613→    Image: https://auroraprompts.com/storage/prompts/ref_1785334272_6a6a0a00a6087.png
+   614→  ID: pdf-115-pov-conjunto-2-sobre-a-cama  |  Title: POV Conjunto Sobre Cama 2
+   615→    Image: https://auroraprompts.com/storage/prompts/ref_1785293308_6a6969fca3e77.jpeg
+   616→  ID: pdf-116-pov-calca-sobre-a-cama  |  Title: POV Calça Sobre Cama
+   617→    Image: https://auroraprompts.com/storage/prompts/ref_1785114735_6a66b06f280cb.jpeg
+   618→  ID: pdf-117-pov-blusa-sobre-a-cama-3  |  Title: POV Blusa Sobre Cama 3
+   619→    Image: https://auroraprompts.com/storage/prompts/ref_1784947522_6a6423429f0a9.webp
+   620→  ID: pdf-118-pov-camisola  |  Title: POV Camisola
+   621→    Image: https://auroraprompts.com/storage/prompts/ref_1784937084_6a63fa7cd0e20.jpg
+   622→  ID: pdf-121-pov-pacote-grok-ou-omin-flash  |  Title: POV Pacote Grok/Flash
+   623→    Image: https://auroraprompts.com/storage/prompts/ref_1784638424_6a5f6bd85e270.png
+   624→  ID: pdf-122-pov-shorts-2  |  Title: POV Shorts 2
+   625→    Image: https://auroraprompts.com/storage/prompts/ref_1784415696_6a5c05d0a742b.jpg
+   626→  ID: pdf-125-pov-blusa-sobre-a-cama-top  |  Title: POV Blusa Cama Top
+   627→    Image: https://auroraprompts.com/storage/prompts/ref_1784411091_6a5bf3d36a7b9.jfif
+   628→  ID: pdf-126-pov-roupas-cabide  |  Title: POV Roupas Cabide
+   629→    Image: https://auroraprompts.com/storage/prompts/ref_1784410794_6a5bf2aae3ffb.jfif
+   630→  ID: pdf-130-pov-conjunto-sobre-a-cama-5  |  Title: POV Conjunto Sobre Cama 5
+   631→    Image: https://auroraprompts.com/storage/prompts/ref_1784409199_6a5bec6f5abe5.jfif
+   632→  ID: pdf-131-pov-manequim-vitrine  |  Title: POV Manequim Vitrine
+   633→    Image: https://auroraprompts.com/storage/prompts/ref_1784409007_6a5bebaf6d195.jfif
+   634→  ID: pdf-132-pov-camisetas-sobre-a-cama-com-narracao  |  Title: POV CAMISETAS SOBRE A CAMA COM NARRACAO
+   635→    Image: https://auroraprompts.com/storage/prompts/ref_1784406267_6a5be0fbe6bb3.jpg
+   636→  ID: pdf-133-pov-bermuda-masculina-sobre-a-cama  |  Title: POV Bermuda Masculina Cama
+   637→    Image: https://auroraprompts.com/storage/prompts/ref_1784403564_6a5bd66cccac1.jfif
+   638→  ID: pdf-134-pov-moletom-no-manequim  |  Title: POV Moletom Manequim
+   639→    Image: https://auroraprompts.com/storage/prompts/ref_1784392633_6a5babb95f076.jfif
+   640→  ID: pdf-135-pov-camisa-no-cabide-giro-360  |  Title: POV Camisa Cabide Giro 360
+   641→    Image: https://auroraprompts.com/storage/prompts/ref_1784392513_6a5bab415ce40.jfif
+   642→  ID: pdf-136-pov-camiseta-cabide-de-frente  |  Title: POV Camiseta Cabide Frente
+   643→    Image: https://auroraprompts.com/storage/prompts/ref_1784392372_6a5baab4f1afb.jfif
+   644→  ID: pdf-137-pov-loja-manequim-10-segundos  |  Title: POV Loja Manequim 10s
+   645→    Image: https://auroraprompts.com/storage/prompts/ref_1784392021_6a5ba955a336c.jfif
+   646→  ID: pdf-138-pov-manequim-masculino-bv  |  Title: POV Manequim Masculino
+   647→    Image: https://auroraprompts.com/storage/prompts/ref_1784390230_6a5ba256bc022.jfif
+   648→  ID: pdf-145-manequin-feminino  |  Title: POV Manequim Feminino
+   649→    Image: https://auroraprompts.com/storage/prompts/ref_1783799759_6a529fcf6311e.png
+   650→  ID: pdf-146-pov-manequin-2  |  Title: POV Manequim 2
+   651→    Image: https://auroraprompts.com/storage/prompts/ref_1783797212_6a5295dc4f105.png
+   652→  ID: pdf-147-pov-camisa-na-cama-apontando  |  Title: POV Camisa Cama Apontando
+   653→    Image: https://auroraprompts.com/storage/prompts/ref_1783653631_6a5064ff67e8a.png
+   654→  ID: pdf-148-pov-manequim-4  |  Title: POV Manequim 4
+   655→    Image: https://auroraprompts.com/storage/prompts/1783601375_6a4f98dfda6a3.jpeg
+   656→  ID: pdf-149-pov-calca-jeans-video  |  Title: POV Calça Jeans Vídeo
+   657→    Image: https://auroraprompts.com/storage/prompts/ref_1783546155_6a4ec12b036ab.png
+   658→  ID: pdf-150-pov-panelas-cozinha  |  Title: POV Panelas Cozinha
+   659→    Image: https://auroraprompts.com/storage/prompts/ref_1787925204_6a9192d4c94c4.png
+   660→  ID: pdf-151-ugc-com-panelas-a-mostra  |  Title: UGC Panelas
+   661→    Image: https://auroraprompts.com/storage/prompts/ref_1787091864_6a84db989ad9a.jpg
+   662→  ID: pdf-152-pov-jogo-de-pratos  |  Title: POV Jogo de Pratos
+   663→    Image: https://auroraprompts.com/storage/prompts/ref_1785801191_6a7129e78da8f.png
+   664→  ID: pdf-153-pov-roupa-de-cama  |  Title: POV Roupa de Cama
+   665→    Image: https://auroraprompts.com/storage/prompts/ref_1785377730_6a6ab3c2685bf.png
+   666→  ID: pdf-154-pov-camera-fotografica  |  Title: POV Câmera Fotográfica
+   667→    Image: https://auroraprompts.com/storage/prompts/ref_1785364050_6a6a7e52ab7ca.jpg
+   668→  ID: pdf-155-pov-tablet  |  Title: POV Tablet
+   669→    Image: https://auroraprompts.com/storage/prompts/ref_1785363899_6a6a7dbb8d098.png
+   670→  ID: pdf-156-neutro-qualquer-video-game  |  Title: POV Video Game Neutro
+   671→    Image: https://auroraprompts.com/storage/prompts/ref_1785363052_6a6a7a6c54178.jpg
+   672→  ID: pdf-157-use-para-qualquer-video-game  |  Title: POV Video Game
+   673→    Image: https://auroraprompts.com/storage/prompts/ref_1785362998_6a6a7a367cab3.jpg
+   674→  ID: pdf-158-use-a-imagem-da-tv-como-referencia-em-qualquer-cenario  |  Title: POV TV Cenário
+   675→    Image: https://auroraprompts.com/storage/prompts/ref_1785362732_6a6a792cbe64c.jpg
+   676→  ID: pdf-159-use-em-qualquer-liquidificador  |  Title: POV Liquidificador
+   677→    Image: https://auroraprompts.com/storage/prompts/ref_1785362438_6a6a780652e2f.jpg
+   678→  ID: pdf-160-use-em-qualquer-batedeira  |  Title: POV Batedeira
+   679→    Image: https://auroraprompts.com/storage/prompts/ref_1785362349_6a6a77ad85a49.jpg
+   680→  ID: pdf-161-use-para-qualquer-eletro-de-banheiro  |  Title: use para qualquer eletro de banheiro
+   681→    Image: https://auroraprompts.com/storage/prompts/ref_1785362119_6a6a76c7e75a4.jpg
+   682→  ID: pdf-162-pov-furadeira  |  Title: POV Furadeira
+   683→    Image: https://auroraprompts.com/storage/prompts/ref_1785266813_6a69027dd5697.jpeg
+   684→  ID: pdf-163-pov-decoracao-festa-qualquer-uma  |  Title: POV Decoração Festa
+   685→    Image: https://auroraprompts.com/storage/prompts/ref_1785266623_6a6901bf8e7cf.jpeg
+   686→  ID: pdf-164-pov-bandeira-de-neutro  |  Title: POV Bandeira Neutro
+   687→    Image: https://auroraprompts.com/storage/prompts/ref_1785265694_6a68fe1e41220.jpg
+   688→  ID: pdf-165-pov-caixinha-de-som-relogio-neutro  |  Title: POV Caixinha de Som Relógio
+   689→    Image: https://auroraprompts.com/storage/prompts/ref_1785265120_6a68fbe0d1ffb.jpg
+   690→  ID: pdf-166-pov-baba-eletronica-neutro  |  Title: POV Babá Eletrônica
+   691→    Image: https://auroraprompts.com/storage/prompts/ref_1785265015_6a68fb77a1180.jpg
+   692→  ID: pdf-167-pov-ventilador  |  Title: POV Ventilador
+   693→    Image: https://auroraprompts.com/storage/prompts/ref_1785264923_6a68fb1b92ecd.jpg
+   694→  ID: pdf-168-pov-wap-neutro  |  Title: POV Wap Neutro
+   695→    Image: https://auroraprompts.com/storage/prompts/ref_1785264858_6a68fada2108c.jpg
+   696→  ID: pdf-169-churrasqueira-qualquier-uma  |  Title: POV Churrasqueira
+   697→    Image: https://auroraprompts.com/storage/prompts/ref_1785264728_6a68fa58a3b3a.jpg
+   698→  ID: pdf-170-pov-airfryer-qualquer-uma  |  Title: POV AirFryer
+   699→    Image: https://auroraprompts.com/storage/prompts/ref_1785264659_6a68fa133a992.jpg
+   700→  ID: pdf-171-modelo-mesa-neutro-qualquier-mesa  |  Title: POV Mesa Neutro
+   701→    Image: https://auroraprompts.com/storage/prompts/ref_1785264552_6a68f9a8b4d71.jpg
+   702→  ID: pdf-172-pov-mobilia-quarto-neutro  |  Title: POV Mobília Quarto
+   703→    Image: https://auroraprompts.com/storage/prompts/ref_1785264363_6a68f8eb95a14.jpg
+   704→  ID: pdf-173-pov-mesa-uiniversal-qualquer-mesa  |  Title: POV Mesa Universal
+   705→    Image: https://auroraprompts.com/storage/prompts/ref_1785264183_6a68f837de13f.jpg
+   706→  ID: pdf-174-pov-armario-banheiro-neutro-quauqluer-armario-baheiro  |  Title: POV Armário Banheiro
+   707→    Image: https://auroraprompts.com/storage/prompts/ref_1785264044_6a68f7acb255c.jpg
+   708→  ID: pdf-175-pov-armario-qualquer-armario  |  Title: POV Armário
+   709→    Image: https://auroraprompts.com/storage/prompts/ref_1785263936_6a68f740465e0.jpg
+   710→  ID: pdf-176-pov-sofa-qualquer-sofa  |  Title: POV Sofá
+   711→    Image: https://auroraprompts.com/storage/prompts/ref_1785263823_6a68f6cfbf1a9.jpg
+   712→  ID: pdf-177-pov-jogo-de-cama-neutro  |  Title: POV Jogo de Cama
+   713→    Image: https://auroraprompts.com/storage/prompts/ref_1785263748_6a68f68467873.jpg
+   714→  ID: pdf-178-pov-cama-qualquer-coberta-e-lecol  |  Title: POV Cama Coberta
+   715→    Image: https://auroraprompts.com/storage/prompts/ref_1785019017_6a653a890b27c.png
+   716→  ID: pdf-179-pov-roupa-de-cama  |  Title: POV Roupa de Cama
+   717→    Image: https://auroraprompts.com/storage/prompts/ref_1784506208_6a5d67608cc81.png
+   718→  ID: pdf-181-pov-sofa-capa  |  Title: POV Sofá Capa
+   719→    Image: https://auroraprompts.com/storage/prompts/ref_1784404839_6a5bdb67196ee.jfif
+   720→  ID: pdf-182-pov-louca  |  Title: POV LOUÇA
+   721→    Image: https://auroraprompts.com/storage/prompts/ref_1784404677_6a5bdac5c2264.jfif
+   722→  ID: pdf-183-pov-coberto-de-cama  |  Title: POV Coberto de Cama
+   723→    Image: https://auroraprompts.com/storage/prompts/ref_1784404434_6a5bd9d27487c.jpg
+   724→  ID: pdf-184-neutro-qualquer-calcado  |  Title: POV Calçado Neutro
+   725→    Image: https://auroraprompts.com/storage/prompts/ref_1786236317_6a77cd9d253a3.png
+   726→  ID: pdf-185-pov-calcado-2  |  Title: POV Calçado 2
+   727→    Image: https://auroraprompts.com/storage/prompts/ref_1785113027_6a66a9c3852f6.jpeg
+   728→  ID: pdf-186-pov-calcado-3  |  Title: POV Calçado 3
+   729→    Image: https://auroraprompts.com/storage/prompts/ref_1784841863_6a6286875b78a.jfif
+   730→  ID: pdf-187-pov-calcado-5  |  Title: POV Calçado 5
+   731→    Image: https://auroraprompts.com/storage/prompts/ref_1784761986_6a614e82297dc.png
+   732→  ID: pdf-188-pov-calcado-ugc-1  |  Title: POV Calçado UGC
+   733→    Image: https://auroraprompts.com/storage/prompts/ref_1784681572_6a601464382f7.jpeg
+   734→  ID: pdf-189-pov-calcado-na-caixa  |  Title: POV Calçado na Caixa
+   735→    Image: https://auroraprompts.com/storage/prompts/ref_1784680583_6a60108785e93.jpeg
+   736→  ID: pdf-190-pov-tenis  |  Title: POV Tênis
+   737→    Image: https://auroraprompts.com/storage/prompts/ref_1784675552_6a5ffce086eb9.png
+   738→  ID: pdf-191-pov-tenis-de-luzinha-crianca  |  Title: POV Tênis Luzinha Criança
+   739→    Image: https://auroraprompts.com/storage/prompts/ref_1784566906_6a5e547ad2e4c.png
+   740→  ID: pdf-192-pov-calcado-feminino-1  |  Title: POV Calçado Feminino 1
+   741→    Image: https://auroraprompts.com/storage/prompts/ref_1784414095_6a5bff8f6f5b8.jpg
+   742→  ID: pdf-193-pov-calcada-feminino-2  |  Title: POV Calçado Feminino 2
+   743→    Image: https://auroraprompts.com/storage/prompts/ref_1784413775_6a5bfe4f86bc0.jpg
+   744→  ID: pdf-195-pov-bolsa-feminina  |  Title: POV Bolsa Feminina
+   745→    Image: https://auroraprompts.com/storage/prompts/ref_1787929842_6a91a4f256a77.jpg
+   746→  ID: pdf-198-pov-livro  |  Title: POV Livro
+   747→    Image: https://auroraprompts.com/storage/prompts/ref_1785266976_6a69032043003.jpeg
+   748→  ID: pdf-199-pov-mala-neutro  |  Title: POV Mala Neutro
+   749→    Image: https://auroraprompts.com/storage/prompts/ref_1785266431_6a6900ff07cc0.jpeg}
+   750→  ID: pdf-200-pov-bolsa-neutra  |  Title: POV Bolsa Neutra
+   751→    Image: https://auroraprompts.com/storage/prompts/ref_1785265440_6a68fd207b08e.jpg
+   752→  ID: pdf-201-pov-garrafinha  |  Title: POV Garrafinha
+   753→    Image: https://auroraprompts.com/storage/prompts/ref_1785192400_6a67dfd009366.png
+   754→  ID: pdf-202-pov-body-splahs  |  Title: POV Body Splash
+   755→    Image: https://auroraprompts.com/storage/prompts/ref_1785095607_6a6665b756591.jfif
+   756→  ID: pdf-203-pov-creme-hidratantes  |  Title: POV Creme Hidratante
+   757→    Image: https://auroraprompts.com/storage/prompts/ref_1784943477_6a641375e3ccd.jfif
+   758→  ID: pdf-204-pov-livro-na-mao  |  Title: POV Livro na Mão
+   759→    Image: https://auroraprompts.com/storage/prompts/ref_1784819293_6a622e5d9605d.webp
+   760→  ID: pdf-205-pov-oculos  |  Title: POV Óculos
+   761→    Image: https://auroraprompts.com/storage/prompts/ref_1784507653_6a5d6d05e90e8.png
+   762→  ID: pdf-206-pov-perfuma  |  Title: POV Perfume
+   763→    Image: https://auroraprompts.com/storage/prompts/ref_1784501965_6a5d56cd28a73.jpeg
+   764→  ID: pdf-208-modelo-na-moto  |  Title: Modelo na Moto
+   765→    Image: https://auroraprompts.com/storage/prompts/ref_1788097216_6a9432c0879e6.png
+   766→  ID: pdf-209-acelere-os-movimentos-no-capcut-para-ficar-dinamico  |  Title: Modelo Movimento Dinâmico
+   767→    Image: https://auroraprompts.com/storage/prompts/ref_1788096826_6a94313ad935e.png
+   768→  ID: pdf-210-neutro-para-qualquer-roupa-e-cenario  |  Title: Movimento Roupa Cenário Neutro
+   769→    Image: https://auroraprompts.com/storage/prompts/ref_1787444723_6a8a3df3968de.jpeg
+   770→  ID: pdf-211-modelo-moto-capacete  |  Title: Modelo Moto Capacete
+   771→    Image: https://auroraprompts.com/storage/prompts/ref_1787443470_6a8a390eb248b.jpeg
+   772→  ID: pdf-212-modelo-moto-capacete  |  Title: Modelo Moto Capacete 2
+   773→    Image: https://auroraprompts.com/storage/prompts/ref_1787442543_6a8a356f644c1.jpeg
+   774→  ID: pdf-213-neutro-qualquer-roupa  |  Title: Movimento Roupa Neutro 2
+   775→    Image: https://auroraprompts.com/storage/prompts/ref_1787441408_6a8a3100894de.jpeg
+   776→  ID: pdf-214-coloque-seu-modelo-a-imagem-do-pacote-no-seu-gerador-de  |  Title: coloque seu modelo + a imagem do pacote no seu gerador de video e adicione o prompt
+   777→    Image: https://auroraprompts.com/storage/prompts/ref_1786583273_6a7d18e9daa79.png
+   778→  ID: pdf-215-peca-para-o-chat-colocar-a-camiseta-que-voce-deseja  |  Title: peça para o chat colocar a camiseta que você deseja divulgar na mao do seu modelo
+   779→    Image: https://auroraprompts.com/storage/prompts/ref_1786582883_6a7d176372dd5.png
+   780→  ID: pdf-217-exemplo  |  Title: POV Exemplo Referência
+   781→    Image: https://auroraprompts.com/storage/prompts/ref_1786582377_6a7d156941626.png
+   782→  ID: pdf-218-use-qualquer-roupa-no-manequim-que-ele-faz-a-transicao  |  Title: Transição Manequim Roupa
+   783→    Image: https://auroraprompts.com/storage/prompts/1786232391_6a77be47f2b71.png
+   784→  ID: pdf-219-modelo-masculino-4  |  Title: Modelo Masculino 4
+   785→    Image: https://auroraprompts.com/storage/prompts/ref_1785024810_6a65512ac5fde.jpg
+   786→  ID: pdf-220-modelo-masculino-camiseta-qualquer-neutro  |  Title: Modelo Masculino Camiseta
+   787→    Image: https://auroraprompts.com/storage/prompts/ref_1785022656_6a6548c0608b1.jpg
+   788→  ID: pdf-221-masculino-calca  |  Title: Masculino Calça
+   789→    Image: https://auroraprompts.com/storage/prompts/ref_1785021406_6a6543de6ae3c.jpg
+   790→  ID: pdf-222-jaqueta-mascuklina  |  Title: Masculino Jaqueta
+   791→    Image: https://auroraprompts.com/storage/prompts/ref_1784949027_6a6429233d156.webp
+   792→  ID: pdf-223-jaquela-masculina-2  |  Title: Masculino Jaqueta 2
+   793→    Image: https://auroraprompts.com/storage/prompts/ref_1784948982_6a6428f6d24a1.webp
+   794→  ID: pdf-224-jaquela-papeluciada-mascuolina  |  Title: Masculino Jaqueta Papelucciada
+   795→    Image: https://auroraprompts.com/storage/prompts/ref_1784948924_6a6428bc66be3.webp
+   796→  ID: pdf-225-mascculino-blus-de-time  |  Title: Masculino Blusa de Time
+   797→    Image: https://auroraprompts.com/storage/prompts/ref_1784947960_6a6424f893855.webp
+   798→  ID: pdf-229-prompt-masculiono-novo  |  Title: Masculino Novo
+   799→    Image: https://auroraprompts.com/storage/prompts/ref_1788109055_6a9460ff535c0.jpg
+   800→  ID: pdf-235-casal-elevador-1  |  Title: Casal Elevador
+   801→    Image: https://auroraprompts.com/storage/prompts/ref_1783762462_6a520e1e3f88a.png
