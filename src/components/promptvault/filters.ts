@@ -14,8 +14,7 @@ export type Filter =
   | { kind: "updates" }
   | { kind: "novidades" }
   | { kind: "videos-with-ref" }
-  | { kind: "videos-no-ref" }
-  | { kind: "no-prompt" };
+  | { kind: "videos-no-ref" };
 
 export const ALL_FILTER: Filter = { kind: "all" };
 
@@ -40,8 +39,7 @@ export function filterKey(f: Filter): string {
       return "videos-with-ref";
     case "videos-no-ref":
       return "videos-no-ref";
-    case "no-prompt":
-      return "no-prompt";
+
   }
 }
 
@@ -65,8 +63,7 @@ export function countFor(f: Filter, favIds: string[]): number {
       return PROMPTS.filter((p) => p.type === "Vídeo" && (Boolean(p.image) || Boolean(p.videoUrl))).length;
     case "videos-no-ref":
       return PROMPTS.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl).length;
-    case "no-prompt":
-      return PROMPTS.filter((p) => !p.prompt || p.prompt.trim().length < 10).length;
+
   }
 }
 
@@ -104,21 +101,40 @@ function hasPreview(p: Prompt): boolean {
   return Boolean(p.image) || Boolean(p.videoUrl);
 }
 
+/** Score: has BOTH image + video → 0 (top), only one → 1, none → 2 */
+function mediaScore(p: Prompt): number {
+  const hasImg = Boolean(p.image);
+  const hasVid = Boolean(p.videoUrl);
+  if (hasImg && hasVid) return 0;
+  if (hasImg || hasVid) return 1;
+  return 2;
+}
+
+/** Has usable prompt text (>10 chars) */
+function hasPromptText(p: Prompt): boolean {
+  return Boolean(p.prompt) && p.prompt.trim().length >= 10;
+}
+
 /**
- * Sort helper: prompts WITH preview (image or video) → first, WITHOUT → last.
- * Within each group: new items first, then images before videos.
+ * Sort helper: prompts with BOTH image+video → first,
+ * then with either → second, then without media → last.
+ * Within each group: new items first, then has prompt text, then images before videos.
  */
 function sortByReference(list: Prompt[]): Prompt[] {
   return [...list].sort((a, b) => {
-    // 1. With preview first
-    const aRef = hasPreview(a) ? 0 : 1;
-    const bRef = hasPreview(b) ? 0 : 1;
-    if (aRef !== bRef) return aRef - bRef;
+    // 1. Media score: both → 0, either → 1, none → 2
+    const aMedia = mediaScore(a);
+    const bMedia = mediaScore(b);
+    if (aMedia !== bMedia) return aMedia - bMedia;
     // 2. New items first
     const aNew = a.isNew ? 0 : 1;
     const bNew = b.isNew ? 0 : 1;
     if (aNew !== bNew) return aNew - bNew;
-    // 3. Images before videos
+    // 3. Has prompt text first
+    const aText = hasPromptText(a) ? 0 : 1;
+    const bText = hasPromptText(b) ? 0 : 1;
+    if (aText !== bText) return aText - bText;
+    // 4. Images before videos
     const aVid = a.type === "Vídeo" ? 1 : 0;
     const bVid = b.type === "Vídeo" ? 1 : 0;
     if (aVid !== bVid) return aVid - bVid;
@@ -153,8 +169,7 @@ export function applyFilter(
       );
     case "videos-no-ref":
       return prompts.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl);
-    case "no-prompt":
-      return sortByReference(prompts.filter((p) => !p.prompt || p.prompt.trim().length < 10));
+
   }
 }
 
@@ -178,7 +193,6 @@ export function filterLabel(f: Filter): string {
       return "Vídeo";
     case "videos-no-ref":
       return "Vídeos Parte 2";
-    case "no-prompt":
-      return "Sem Prompt";
+
   }
 }

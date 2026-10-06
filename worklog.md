@@ -326,3 +326,30 @@ Stage Summary:
 - Sidebar with 5 collapsible groups + CONTA section
 - All existing features preserved: copy, favorites, search, filters, video, protection
 - Zero lint errors, zero runtime errors
+
+---
+Task ID: 4
+Agent: Main
+Task: Remove "Sem Prompt" section and prioritize prompts with images+videos at front
+
+Work Log:
+- Removed "no-prompt" filter kind from filters.ts (type, filterKey, countFor, applyFilter, filterLabel)
+- Removed "Sem Prompt" nav item from Sidebar.tsx PRINCIPAL section
+- Removed AlertTriangle import from Sidebar.tsx (no longer needed)
+- Removed amber "Sem prompt" badge from PromptCard.tsx full card view
+- Removed disabled state from "Copiar prompt" button in PromptCard (always enabled, opens modal)
+- Removed AlertTriangle import from PromptCard.tsx
+- Updated PromptModal.tsx: replaced big amber "Prompt não disponível" warning with subtle "Referência visual disponível — o texto do prompt será adicionado em breve." message
+- Updated PromptModal.tsx bottom button: changed "Prompt não disponível" → "Em breve" with Copy icon
+- Removed AlertCircle import from PromptModal.tsx
+- Updated sorting in filters.ts: new mediaScore function scores prompts with BOTH image+video → 0 (top), either → 1, none → 2
+- Added hasPromptText function to sort prompts with text before those without
+- sortByReference now sorts by: 1) media score (both>either>none), 2) isNew first, 3) has prompt text first, 4) images before videos
+- Browser verified: all 8 checks pass (sidebar no "Sem Prompt", no amber badges, all buttons enabled, both-media cards first, modal subtle message, "Em breve" button)
+
+Stage Summary:
+- "Sem Prompt" section completely removed from sidebar and filters
+- Amber warning badges removed from cards and modal
+- Sorting now puts prompts with both image+video at the very top
+- Modal shows subtle message instead of big amber warning for missing prompts
+- Zero lint errors, zero runtime errors

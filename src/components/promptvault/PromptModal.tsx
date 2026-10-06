@@ -8,7 +8,6 @@ import {
   Film,
   ImageIcon,
   Lightbulb,
-  AlertCircle,
   Play,
   Loader2,
   RefreshCw,
@@ -377,13 +376,9 @@ export function PromptModal({
                   Prompt
                 </p>
                 {missingPrompt ? (
-                  <div className="rounded-xl border border-amber-400/20 bg-amber-500/[0.06] p-4">
-                    <div className="flex items-center gap-2 text-amber-300">
-                      <AlertCircle className="h-4 w-4 shrink-0" />
-                      <p className="text-sm font-semibold">Prompt não disponível</p>
-                    </div>
-                    <p className="mt-2 text-xs text-muted-foreground/70 leading-relaxed">
-                      Este prompt possui apenas referência visual (imagem/vídeo) mas o texto do prompt ainda não foi adicionado. Ele será atualizado em breve.
+                  <div className="rounded-xl border border-white/8 bg-black/20 p-4">
+                    <p className="text-sm text-muted-foreground/60 leading-relaxed">
+                      Referência visual disponível — o texto do prompt será adicionado em breve.
                     </p>
                   </div>
                 ) : (
@@ -433,7 +428,7 @@ export function PromptModal({
                   className={cn(
                     "h-11 flex-1 gap-2 text-[15px] font-bold border-0 rounded-xl transition-all active:scale-[0.97]",
                     missingPrompt
-                      ? "bg-white/5 text-muted-foreground/30 cursor-not-allowed"
+                      ? "bg-white/5 text-muted-foreground/40 cursor-not-allowed"
                       : copied
                         ? "bg-emerald-500/90 text-white hover:bg-emerald-500"
                         : "bg-brand-gradient text-white hover:brightness-110 glow-purple"
@@ -441,8 +436,8 @@ export function PromptModal({
                 >
                   {missingPrompt ? (
                     <>
-                      <AlertCircle className="h-4 w-4" />
-                      Prompt não disponível
+                      <Copy className="h-4 w-4" />
+                      Em breve
                     </>
                   ) : copied ? (
                     <>

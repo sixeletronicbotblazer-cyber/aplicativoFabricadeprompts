@@ -27,7 +27,6 @@ import {
   Users,
   Move,
   Shirt,
-  AlertTriangle,
   ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -67,7 +66,6 @@ const NAV_SECTIONS: NavSection[] = [
       { label: "Imagem", icon: ImageIcon, filter: { kind: "type", value: "Imagem" } },
       { label: "Vídeo", icon: Film, filter: { kind: "videos-with-ref" } },
       { label: "Vídeos Parte 2", icon: Film, filter: { kind: "videos-no-ref" } },
-      { label: "Sem Prompt", icon: AlertTriangle, filter: { kind: "no-prompt" }, isNew: true },
     ],
   },
   {

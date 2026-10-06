@@ -8,7 +8,6 @@ import {
   Check,
   Play,
   Pause,
-  AlertTriangle,
   Loader2,
 } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
@@ -64,6 +63,7 @@ export function PromptCard({
   const hasVideo = Boolean(prompt.videoUrl);
   const missingPrompt = !prompt.prompt || prompt.prompt.trim().length < 10;
   const imageIsBroken = isBrokenImageUrl(prompt.image || "");
+  /* Compact card when no media — always allow opening modal (no disabled state) */
 
   /*
    * Show video thumbnail if:
@@ -171,15 +171,9 @@ export function PromptCard({
               type="button"
               onClick={handleOpenModal}
               size="sm"
-              disabled={missingPrompt}
-              className={cn(
-                "h-8 px-3 gap-1.5 text-[11px] font-bold border-0 rounded-lg transition-all active:scale-[0.97]",
-                missingPrompt
-                  ? "bg-surface-secondary text-text-secondary/30 cursor-not-allowed"
-                  : "bg-turquesa-gradient text-surface-dark hover:brightness-110"
-              )}
+              className="h-8 px-3 gap-1.5 text-[11px] font-bold border-0 rounded-lg transition-all active:scale-[0.97] bg-turquesa-gradient text-surface-dark hover:brightness-110"
             >
-              {missingPrompt ? <AlertTriangle className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
+              <Copy className="h-3 w-3" />
             </Button>
             <button
               type="button"
@@ -302,13 +296,7 @@ export function PromptCard({
           </span>
         )}
 
-        {/* Missing prompt badge */}
-        {missingPrompt && (
-          <span className="absolute right-14 top-3 inline-flex items-center gap-0.5 rounded-full border border-amber-400/30 bg-amber-500/15 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-amber-300 backdrop-blur-md z-[2] pointer-events-none">
-            <AlertTriangle className="h-2.5 w-2.5" />
-            Sem prompt
-          </span>
-        )}
+
       </div>
 
       {/* Favorite button */}
@@ -338,25 +326,10 @@ export function PromptCard({
             type="button"
             onClick={handleOpenModal}
             size="sm"
-            disabled={missingPrompt}
-            className={cn(
-              "h-9 w-full gap-1.5 text-[12px] font-bold border-0 rounded-lg transition-all active:scale-[0.97]",
-              missingPrompt
-                ? "bg-surface-secondary text-text-secondary/30 cursor-not-allowed"
-                : "bg-turquesa-gradient text-surface-dark hover:brightness-110"
-            )}
+            className="h-9 w-full gap-1.5 text-[12px] font-bold border-0 rounded-lg transition-all active:scale-[0.97] bg-turquesa-gradient text-surface-dark hover:brightness-110"
           >
-            {missingPrompt ? (
-              <>
-                <AlertTriangle className="h-3.5 w-3.5" />
-                Sem prompt
-              </>
-            ) : (
-              <>
-                <Copy className="h-3.5 w-3.5" />
-                Copiar prompt
-              </>
-            )}
+            <Copy className="h-3.5 w-3.5" />
+            Copiar prompt
           </Button>
         </div>
       </div>
