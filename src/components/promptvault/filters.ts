@@ -60,9 +60,9 @@ export function countFor(f: Filter, favIds: string[]): number {
     case "category":
       return PROMPTS.filter((p) => p.category === f.value).length;
     case "videos-with-ref":
-      return PROMPTS.filter((p) => p.type === "Vídeo" && (Boolean(p.image) || Boolean(p.videoUrl))).length;
+      return PROMPTS.filter((p) => p.type === "Vídeo" && hasWorkingMedia(p)).length;
     case "videos-no-ref":
-      return PROMPTS.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl).length;
+      return PROMPTS.filter((p) => p.type === "Vídeo" && !hasWorkingMedia(p)).length;
 
   }
 }
@@ -97,17 +97,30 @@ function sortVideoWithRef(list: Prompt[]): Prompt[] {
   });
 }
 
-function hasPreview(p: Prompt): boolean {
-  return Boolean(p.image) || Boolean(p.videoUrl);
+/** Known broken / unreachable hosts for images and videos. */
+const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "drive.usercontent.google.com", "files.catbox.moe"];
+
+function isBrokenUrl(url: string | undefined): boolean {
+  if (!url) return true;
+  return BROKEN_HOSTS.some((h) => url.includes(h));
 }
 
-/** Score: has BOTH image + video → 0 (top), only one → 1, none → 2 */
-function mediaScore(p: Prompt): number {
-  const hasImg = Boolean(p.image);
-  const hasVid = Boolean(p.videoUrl);
-  if (hasImg && hasVid) return 0;
-  if (hasImg || hasVid) return 1;
-  return 2;
+function hasWorkingImage(p: Prompt): boolean {
+  return Boolean(p.image) && !isBrokenUrl(p.image);
+}
+
+function hasWorkingVideo(p: Prompt): boolean {
+  return Boolean(p.videoUrl) && !isBrokenUrl(p.videoUrl);
+}
+
+/** Has any working media (image or video from a working host). */
+function hasWorkingMedia(p: Prompt): boolean {
+  return hasWorkingImage(p) || hasWorkingVideo(p);
+}
+
+/** Has any media URL at all (even from broken hosts). */
+function hasAnyMedia(p: Prompt): boolean {
+  return Boolean(p.image) || Boolean(p.videoUrl);
 }
 
 /** Has usable prompt text (>10 chars) */
@@ -116,16 +129,34 @@ function hasPromptText(p: Prompt): boolean {
 }
 
 /**
- * Sort helper: prompts with BOTH image+video → first,
- * then with either → second, then without media → last.
+ * Media quality score:
+ * 0 = both working image + working video  (best)
+ * 1 = working image only                  (visually appealing in gallery)
+ * 2 = working video only                  (play button overlay)
+ * 3 = has media but ALL broken            (degraded — show last)
+ * 4 = no media at all                     (worst)
+ */
+function mediaQualityScore(p: Prompt): number {
+  const wImg = hasWorkingImage(p);
+  const wVid = hasWorkingVideo(p);
+  if (wImg && wVid) return 0;
+  if (wImg) return 1;
+  if (wVid) return 2;
+  if (hasAnyMedia(p)) return 3;  // has URLs but all broken
+  return 4;
+}
+
+/**
+ * Sort helper: prompts with WORKING media → first,
+ * then broken media → second, then no media → last.
  * Within each group: new items first, then has prompt text, then images before videos.
  */
 function sortByReference(list: Prompt[]): Prompt[] {
   return [...list].sort((a, b) => {
-    // 1. Media score: both → 0, either → 1, none → 2
-    const aMedia = mediaScore(a);
-    const bMedia = mediaScore(b);
-    if (aMedia !== bMedia) return aMedia - bMedia;
+    // 1. Media quality score (working media first, broken last)
+    const aScore = mediaQualityScore(a);
+    const bScore = mediaQualityScore(b);
+    if (aScore !== bScore) return aScore - bScore;
     // 2. New items first
     const aNew = a.isNew ? 0 : 1;
     const bNew = b.isNew ? 0 : 1;
@@ -165,10 +196,10 @@ export function applyFilter(
       return sortByReference(prompts.filter((p) => p.category === f.value));
     case "videos-with-ref":
       return sortVideoWithRef(
-        prompts.filter((p) => p.type === "Vídeo" && (Boolean(p.image) || Boolean(p.videoUrl)))
+        prompts.filter((p) => p.type === "Vídeo" && hasWorkingMedia(p))
       );
     case "videos-no-ref":
-      return prompts.filter((p) => p.type === "Vídeo" && !p.image && !p.videoUrl);
+      return prompts.filter((p) => p.type === "Vídeo" && !hasWorkingMedia(p));
 
   }
 }

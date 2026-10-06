@@ -32,10 +32,11 @@ function TypeIcon({ type, className }: { type: PromptType; className?: string })
   return <ImageIcon className={className} />;
 }
 
-/** Check if an image URL is from a known broken host. */
-function isBrokenImageUrl(url: string): boolean {
-  if (!url) return false;
-  return url.includes("auroraprompts.com") || url.includes("imgur.com");
+/** Check if a URL is from a known broken host (applies to both images and videos). */
+const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "drive.usercontent.google.com", "files.catbox.moe"];
+function isBrokenUrl(url: string | undefined): boolean {
+  if (!url) return true;
+  return BROKEN_HOSTS.some((h) => url.includes(h));
 }
 
 interface PromptCardProps {
@@ -62,16 +63,19 @@ export function PromptCard({
   const hasImage = Boolean(prompt.image);
   const hasVideo = Boolean(prompt.videoUrl);
   const missingPrompt = !prompt.prompt || prompt.prompt.trim().length < 10;
-  const imageIsBroken = isBrokenImageUrl(prompt.image || "");
-  /* Compact card when no media — always allow opening modal (no disabled state) */
+  const imageIsBroken = isBrokenUrl(prompt.image);
+  const videoIsBroken = isBrokenUrl(prompt.videoUrl);
+  const hasWorkingImg = hasImage && !imageIsBroken;
+  const hasWorkingVid = hasVideo && !videoIsBroken;
+  /* Compact card when no working media — always allow opening modal (no disabled state) */
 
   /*
-   * Show video thumbnail if:
-   * - Has video AND (no image OR image is from a broken host OR type is Vídeo)
-   * This ensures Drive/R2 videos show even when auroraprompts images are broken
+   * Show video thumbnail if video is from a working host:
+   * - Has working video AND (no image OR image is broken OR type is Vídeo)
+   * Skip broken video URLs (auroraprompts.com, imgur.com)
    */
-  const showVideoThumb = hasVideo && (!hasImage || imageIsBroken || prompt.type === "Vídeo");
-  const hasAnyMedia = hasImage || hasVideo;
+  const showVideoThumb = hasWorkingVid && (!hasImage || imageIsBroken || prompt.type === "Vídeo");
+  const hasAnyMedia = hasWorkingImg || hasWorkingVid || hasImage || hasVideo;
 
   /* Intersection Observer for lazy loading */
   useEffect(() => {

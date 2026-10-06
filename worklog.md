@@ -353,3 +353,27 @@ Stage Summary:
 - Sorting now puts prompts with both image+video at the very top
 - Modal shows subtle message instead of big amber warning for missing prompts
 - Zero lint errors, zero runtime errors
+
+---
+Task ID: 5
+Agent: Main
+Task: Put prompts with working images/videos on the first page; remove broken prompts from initial view
+
+Work Log:
+- Analyzed all 487 prompts: only 146 have working media (111 from supabase.co images + 35 from r2.dev/supabase.co videos)
+- Added drive.usercontent.google.com and files.catbox.moe to BROKEN_HOSTS (Google Drive videos return format errors, catbox.moe blocked)
+- Updated BROKEN_HOSTS in all 4 files: filters.ts, Gallery.tsx, PromptCard.tsx, PromptModal.tsx
+- Created mediaQualityScore function: 0=both working, 1=working image, 2=working video, 3=broken URLs, 4=no media
+- Updated sortByReference to use mediaQualityScore: working media first → broken → no media
+- Updated Gallery.tsx hasPreview to check for broken hosts (not just Boolean)
+- Updated PromptCard.tsx: isBrokenUrl now checks both image AND video URLs; showVideoThumb skips broken videos
+- Updated PromptModal.tsx: hasImage/hasVideo flags check for broken hosts
+- Updated videos-with-ref/videos-no-ref filters to use hasWorkingMedia
+- Browser verified: first page shows 12 working image cards, zero broken/placeholder cards
+
+Stage Summary:
+- First page of gallery now shows ONLY prompts with working media
+- 146 working prompts (111 images + 35 videos) sorted to top
+- 341 broken/missing prompts pushed to later pages
+- All broken hosts properly detected: auroraprompts.com, imgur.com, drive.usercontent.google.com, files.catbox.moe
+- Zero lint errors, zero runtime errors
