@@ -47,7 +47,7 @@ export function Gallery() {
   const visibleCount = PAGE_SIZE * (page + 1);
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
-  const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "drive.usercontent.google.com", "files.catbox.moe"];
+  const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "files.catbox.moe"];
   const isBroken = (url: string | undefined) => !url || BROKEN_HOSTS.some((h) => url.includes(h));
   const hasPreview = (p: Prompt) => !isBroken(p.image) || !isBroken(p.videoUrl);
   const previewCards = visible.filter(hasPreview);

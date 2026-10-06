@@ -33,7 +33,7 @@ function TypeIcon({ type, className }: { type: PromptType; className?: string })
 }
 
 /** Check if a URL is from a known broken host (applies to both images and videos). */
-const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "drive.usercontent.google.com", "files.catbox.moe"];
+const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "files.catbox.moe"];
 function isBrokenUrl(url: string | undefined): boolean {
   if (!url) return true;
   return BROKEN_HOSTS.some((h) => url.includes(h));

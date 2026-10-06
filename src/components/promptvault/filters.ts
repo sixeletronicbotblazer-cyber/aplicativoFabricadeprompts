@@ -98,7 +98,7 @@ function sortVideoWithRef(list: Prompt[]): Prompt[] {
 }
 
 /** Known broken / unreachable hosts for images and videos. */
-const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "drive.usercontent.google.com", "files.catbox.moe"];
+const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "files.catbox.moe"];
 
 function isBrokenUrl(url: string | undefined): boolean {
   if (!url) return true;
@@ -131,8 +131,8 @@ function hasPromptText(p: Prompt): boolean {
 /**
  * Media quality score:
  * 0 = both working image + working video  (best)
- * 1 = working image only                  (visually appealing in gallery)
- * 2 = working video only                  (play button overlay)
+ * 1 = working video only                  (recently uploaded Drive/R2 videos)
+ * 2 = working image only                  (static image cards)
  * 3 = has media but ALL broken            (degraded — show last)
  * 4 = no media at all                     (worst)
  */
@@ -140,8 +140,8 @@ function mediaQualityScore(p: Prompt): number {
   const wImg = hasWorkingImage(p);
   const wVid = hasWorkingVideo(p);
   if (wImg && wVid) return 0;
-  if (wImg) return 1;
-  if (wVid) return 2;
+  if (wVid) return 1;
+  if (wImg) return 2;
   if (hasAnyMedia(p)) return 3;  // has URLs but all broken
   return 4;
 }

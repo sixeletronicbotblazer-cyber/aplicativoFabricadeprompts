@@ -404,3 +404,29 @@ Stage Summary:
 - Two codes alternate based on email hash: 0519 or 280394 (same email always gets same code)
 - WhatsApp button completely removed
 - Zero lint errors, zero runtime errors
+
+---
+Task ID: 7
+Agent: Main
+Task: Import prompts from Google Doc, match with Drive videos, put at front of gallery
+
+Work Log:
+- Downloaded Google Doc content from user's link (PROMPTS DOS VIDEOS FACELESS)
+- Parsed 31 sections from document, extracted 53 prompt entries with titles and full text
+- Matched prompts with existing 50 Google Drive video prompts by title similarity
+- Updated 53 prompts with new text from the Google Doc
+- 15 of 16 previously-missing-text Drive prompts now have prompt text
+- Set isNew:true on all 50 Drive URL prompts so they appear first
+- Removed drive.usercontent.google.com from BROKEN_HOSTS in all 4 files
+- Converted Google Drive download URLs to /api/drive-video?id=FILE_ID proxy format
+- Created /api/drive-video/route.ts proxy API that streams Google Drive videos
+- Fixed Next.js 16 API incompatibility: req.searchParams → req.nextUrl.searchParams
+- Updated sorting: video prompts (score 1) now appear before image-only prompts (score 2)
+- Browser verified: all Drive videos now play correctly via proxy, zero "Vídeo indisponível"
+
+Stage Summary:
+- 53 prompts updated with text from Google Doc
+- 50 Google Drive videos now working via proxy API
+- Working media prompts: 196 (was 146)
+- First page shows video cards (Drive + Supabase) first, then image cards
+- Zero lint errors, zero runtime errors
