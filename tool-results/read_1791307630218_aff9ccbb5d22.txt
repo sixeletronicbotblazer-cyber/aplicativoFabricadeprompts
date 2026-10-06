@@ -1,0 +1,433 @@
+     1→# PromptVault TikTok Shop — Worklog
+     2→
+     3→---
+     4→Task ID: 1
+     5→Agent: Z.ai Code (main orchestrator)
+     6→Task: Build "PromptVault TikTok Shop" — a premium dark-mode visual gallery of prompts, protected by simple login (email + access code), with sidebar, search, filters, favorites, copy-to-clipboard, detail modal, pagination, and responsive mobile layout.
+     7→
+     8→Work Log:
+     9→- Inspected existing Next.js 16 + Tailwind 4 + shadcn/ui scaffold; confirmed dev server running on port 3000.
+    10→- Defined the dark premium brand system in `src/app/globals.css`: forced-dark palette (grafite bg with purple/pink/cyan radial glows), brand tokens, `.glass` / `.glass-strong` glassmorphism utilities, `.bg-brand-gradient`, `.glow-purple`, premium scrollbar, fade-in keyframes.
+    11→- Updated `src/app/layout.tsx`: forced `dark` theme on `<html>`, pt-BR lang, PromptVault metadata, Sonner toaster (dark, top-center, glass styling).
+    12→- Created data layer:
+    13→  - `src/lib/prompts.ts` — 18 example prompts (6 from the spec + 12 extras) across categories Selfie/POV/UGC/Roupas/Produto/Look no corpo/TikTok Shop/Shopee and types Imagem/Vídeo/POV/Selfie/UGC; each with editable `prompt` text and image path.
+    14→  - `src/lib/auth-store.ts` — Zustand persisted auth store (simple email+code validation).
+    15→  - `src/lib/favorites-store.ts` — Zustand persisted favorites store.
+    16→  - `src/lib/copy.ts` — clipboard helper with legacy fallback.
+    17→- Built `src/components/promptvault/`:
+    18→  - `filters.ts` — Filter type + applyFilter/countFor/filterLabel helpers.
+    19→  - `LoginScreen.tsx` — glass card over generated bg, email + código fields, "Acessar galeria" button, microcopy, toast on failure/success.
+    20→  - `Sidebar.tsx` — desktop fixed sidebar + mobile Sheet drawer; nav with per-category counters; Minha conta / Suporte / Sair footer actions.
+    21→  - `Hero.tsx` — glass hero with badge, gradient "Galeria de Prompts" title, subheadline, "Ver favoritos" button.
+    22→  - `SearchBar.tsx` — search input (with clear X) + horizontally scrollable filter chips with counters + mobile hamburger trigger.
+    23→  - `PromptCard.tsx` — image, type badge, favorite heart, title, description, tags, "Copiar prompt" + "Detalhes" buttons, hover lift.
+    24→  - `PromptModal.tsx` — two-column modal (image + details), prompt in mono code box with copy, favorite toggle, close.
+    25→  - `EmptyState.tsx` — "Nenhum prompt encontrado" + reset button.
+    26→  - `InternalCta.tsx` — "Quer usar melhor os prompts?" block + "Ver prompts recomendados".
+    27→  - `Gallery.tsx` — orchestrator: sidebar + main column (mobile brand bar, hero, search, counter, responsive grid 1/2/3/4 cols, "Ver mais" pagination, internal CTA), sticky footer, modal wiring.
+    28→- Wired `src/app/page.tsx` — login gate with mount guard to avoid hydration flash.
+    29→- Generated 7 reference images via z-ai image-generation CLI (1024x1024): p1–p6 prompt images + login-bg.jpg, saved to `public/prompts/`. (Encountered 429 rate limits on parallel runs — switched to sequential generation with retries.)
+    30→- Fixed ESLint `react-hooks/set-state-in-effect` errors: refactored Gallery to page-based pagination with wrapped setters (no effect); added targeted disable for the standard mount guard.
+    31→
+    32→Verification (Agent Browser + VLM):
+    33→- Login renders correctly; empty submit shows toast; valid submit enters gallery.
+    34→- Gallery: sidebar counters correct (Todos 18, Imagem 4, Vídeo 6, UGC 2, POV 3, Selfie 3, Roupas 3, Produto 2, Look no corpo 2, TikTok Shop 2, Shopee 1, Favoritos, Atualizações 6).
+    35→- All 7 images load (naturalWidth 1024, complete).
+    36→- Filter chip (Vídeo) → 6 cards. Search "selfie" → 3 cards. In-app X clear → back to 9/18.
+    37→- Favorite toggle: counter 0→1, persisted to localStorage, toast "Adicionado aos favoritos."
+    38→- Copy prompt: toast "Prompt copiado com sucesso."
+    39→- Modal: opens with prompt code box + copy/favorite buttons; closes with Esc.
+    40→- "Ver mais prompts": 9→18 cards, button disappears. Empty state shows "Nenhum prompt encontrado" + reset works.
+    41→- "Ver prompts recomendados" CTA → 6 recommended prompts.
+    42→- Mobile (390px): desktop sidebar display:none, hamburger + mobile brand bar + favorites badge, drawer opens, single-column grid.
+    43→- Sticky footer: root `min-h-screen flex flex-col` + footer `mt-auto` confirmed.
+    44→- Logout (Sair): clears auth (isAuthenticated:false), returns to login.
+    45→- Zero console errors throughout.
+    46→- VLM analysis confirmed dark premium theme, glassmorphism, gradient hero title, clean card grid, and correct login screen design.
+    47→
+    48→Stage Summary:
+    49→- Delivered a complete, production-quality "PromptVault TikTok Shop" prompt-gallery app at the `/` route.
+    50→- Single-page architecture with state-based login gate (no extra routes).
+    51→- Dark premium identity (purple/pink/cyan, glassmorphism, glow) applied consistently.
+    52→- All requested features implemented: login, sidebar with counters, hero, search, filter chips, responsive card grid, copy prompt + toast, favorites (persisted), detail modal, "Ver mais" pagination, empty state, internal recommended CTA, sticky footer, mobile drawer, logout.
+    53→- Lint clean; dev server healthy; browser-verified end-to-end.
+    54→---
+    55→Task ID: 2
+    56→Agent: Z.ai Code (main orchestrator)
+    57→Task: Add Modo Manequim gallery section with 3 phases, popup banner, fix PromptModal bug
+    58→
+    59→Work Log:
+    60→- Analyzed uploaded screenshot: turned out to be a runtime error (hasMedia not defined in PromptModal.tsx)
+    61→- Resolved 6 imgur album URLs to direct media URLs via imgur API:
+    62→  - Fase 1: image uRghAnK.jpeg, video AOEQTFE.mp4
+    63→  - Fase 2: image W9qyLGM.png, video zOKt3lT.mp4
+    64→  - Fase 3: image dV4Gdoa.png, video Yj8WqoR.mp4
+    65→- Extracted prompt text from Guia_Manequim_Esteira_IA.pdf (6 pages, 2 prompt templates)
+    66→- Fixed PromptModal.tsx: added missing hasMedia and hasVideo variable definitions
+    67→- Fixed PromptCard.tsx: added video thumbnail support for video-only prompts (Play overlay, Assistir label)
+    68→- Added Play icon import to PromptCard
+    69→- Added 3 Manequim phase entries to prompts-data.json:
+    70→  - manequim-fase1: Roupa Tradicional (Hook) — image + video + full prompt
+    71→  - manequim-fase2: Segurando Peça no Cabide — image + video + adapted prompt
+    72→  - manequim-fase3: Vestindo a Roupa — image + video + adapted prompt
+    73→- Removed 3 duplicate stub entries (maneq-001/002/003) from previous session
+    74→- Enhanced ManequimPopup.tsx: sessionStorage-based one-time-show behavior
+    75→- Added NOVO badge to Manequim in sidebar navigation
+    76→- Fixed Sidebar email/code fallback for account toast
+    77→
+    78→Stage Summary:
+    79→- Manequim category shows 3 entries with correct images, videos, and full prompts
+    80→- Popup shows once per session, navigates to Manequim on CTA click
+    81→- PromptModal no longer crashes with hasMedia undefined error
+    82→- PromptCard now renders video thumbnails for video-only prompts
+    83→- Sidebar shows NOVO badge next to Manequim
+    84→- Lint clean, zero console errors, verified desktop and mobile via Agent Browser
+    85→
+    86→---
+    87→Task ID: 1
+    88→Agent: Main Agent
+    89→Task: Add Módulo Selfie UGC section with 16 prompts, replace Manequim popup
+    90→
+    91→Work Log:
+    92→- Read uploaded MODULO SELFIE.docx and extracted 16 prompt entries (1 base image + 10 base movements + 5 seller movements)
+    93→- Resolved 16 imgur album URLs to direct media URLs via imgur API (Client-ID: 546c25a59c58ad7)
+    94→- Added 16 new entries to prompts-data.json under category "Selfie UGC" (total now 153)
+    95→- Updated prompts.ts to add "Selfie UGC" to PromptCategory union and CATEGORIES array
+    96→- Replaced ManequimPopup content with Selfie UGC popup (brief, quick alert with 3 tags)
+    97→- Updated Gallery.tsx to navigate to "Selfie UGC" instead of "Manequim" on popup CTA
+    98→- Added "Selfie UGC" to Sidebar with NOVO badge (isNew property + rendering)
+    99→- Kept ManequimPopup.tsx filename to avoid import changes in Gallery.tsx
+   100→- Verified via agent-browser: popup shows, sidebar badge renders, 16 prompts display, existing sections (Manequim 3, Vídeo 65) still work
+   101→- Zero lint errors, zero console errors
+   102→
+   103→Stage Summary:
+   104→- 16 new Selfie UGC prompts added (1 image + 15 video)
+   105→- New category "Selfie UGC" with NOVO badge in sidebar
+   106→- Popup replaced from Manequim → Selfie UGC (brief format)
+   107→- All existing functionality preserved — NO layout/code changes to working components
+   108→- No git push performed (user requested preview only)
+   109→
+   110→---
+   111→Task ID: 2
+   112→Agent: Sub-agent (general-purpose)
+   113→Task: Update Gallery.tsx to support new video-no-ref and video-with-ref filter kinds
+   114→
+   115→Work Log:
+   116→- Read worklog.md for context
+   117→- Read existing Gallery.tsx to understand current implementation
+   118→- Wrote updated Gallery.tsx with exact content specified:
+   119→  - Removed unused `Menu` import from lucide-react
+   120→  - Added `isVideosNoRef` and `isVideosWithRef` boolean flags based on filter.kind
+   121→  - Removed dynamic `noRefLabel` variable, replaced with static "Sem referência visual"
+   122→  - Restructured grid rendering into 3-way branch: videos-no-ref (compact 3-col), videos-with-ref (full 4-col), or default (image cards + compact cards with divider)
+   123→  - Compacted arrow functions and JSX formatting to match spec
+   124→  - All existing imports, components, and functionality preserved
+   125→- Verified compilation: ✓ Compiled in 252ms, GET / 200 — no errors
+   126→
+   127→Stage Summary:
+   128→- Gallery.tsx updated to support `videos-no-ref` and `videos-with-ref` filter kinds from updated filters.ts
+   129→- Three rendering modes: compact grid for no-ref videos, full grid for with-ref videos, split image/compact layout for all other filters
+   130→- Compilation clean, zero errors
+   131→
+   132→---
+   133→Task ID: 3
+   134→Agent: Sub-agent (general-purpose)
+   135→Task: Merge 239 new prompts from PDF into existing PromptVault app
+   136→
+   137→Work Log:
+   138→- Read worklog.md for context on prior agents' work (Task 1: initial build, Task 2: video filters & Manequim)
+   139→- Read existing prompts-data.json (248 prompts) and upload/new_prompts_fixed.json (239 new prompts)
+   140→- Analyzed new prompts structure: fields include id, title, type, category, description, tags, image, prompt, isNew, videoUrl, refImages, order
+   141→- Analyzed new categories: Natal, Natal Pet, Natal POV, Natal Gancho, Gancho, Gancho Masculino, Transição, Moda, Movimento, Lingerie, POV Calçados, POV Acessórios, POV Moda, POV Casa, Masculino, Casal, Moda Moto, Selfie UGC
+   142→- Analyzed new types: Vídeo, POV, UGC, Selfie (all valid existing PromptTypes)
+   143→- Merged prompts: mapped each new prompt to existing format (id, title, type, category, description, tags, image from first refImages, prompt, isNew: true, videoUrl if present). Zero ID collisions.
+   144→- Updated prompts.ts: added 17 new PromptCategory types to union and CATEGORIES array (POV Calçados, POV Acessórios, POV Moda, POV Casa, Natal, Natal Pet, Natal POV, Natal Gancho, Gancho, Gancho Masculino, Transição, Masculino, Casal, Moda, Moda Moto, Movimento, Lingerie)
+   145→- Updated Sidebar.tsx: added new lucide-react imports (TreePine, Zap, ArrowRightLeft, Users, Move, Shirt), added 8 new sidebar nav items (Novidades, Natal, Ganhos, Transições, Moda, Casal, Masculino, Movimento, Lingerie) with NOVO badges, moved Novidades to top position after "Todos os prompts"
+   146→- Updated filters.ts: added 'novidades' filter kind to Filter union type, filterKey, countFor, applyFilter, and filterLabel functions. Novidades filters prompts where isNew === true (same logic as updates filter but separate navigation item)
+   147→- Verified Next.js build compiles successfully (✓ Generating static pages)
+   148→- Pre-existing lint error in InstallPrompt.tsx (react-hooks/set-state-in-effect) — not caused by these changes
+   149→
+   150→Stage Summary:
+   151→- Total prompts: 487 (248 existing + 239 new)
+   152→- 353 prompts marked isNew (includes previously existing ones + all 239 new)
+   153→- 17 new PromptCategory types added
+   154→- 8 new sidebar navigation items with NOVO badges
+   155→- 'novidades' filter kind added to show all new prompts
+   156→- All existing functionality preserved — no modifications to existing prompts
+   157→- Build compiles clean, no new lint errors
+   158→---
+   159→Task ID: 2
+   160→Agent: Main
+   161→Task: Analyze and filter prompts missing text - add "Sem Prompt" filter and visual indicators
+   162→
+   163→Work Log:
+   164→- Analyzed all 487 prompts: found 97 (19.9%) with empty prompt text, all from PDF extraction
+   165→- Worst categories: POV Calçados (100% empty - 9/9), Casal (67%), Masculino (64%), POV Moda (60%)
+   166→- Added new filter kind "no-prompt" to filters.ts (filterKey, countFor, applyFilter, filterLabel)
+   167→- Added "Sem Prompt" sidebar item with AlertTriangle icon and counter (97)
+   168→- Added amber "SEM PROMPT" warning badge on PromptCard for prompts missing text
+   169→- Disabled copy button on cards when prompt text is missing (shows "Sem prompt" with warning icon)
+   170→- Added warning box in PromptModal: "Prompt não disponível" with explanation message
+   171→- Disabled "Copiar prompt" button in modal when prompt text is missing (shows "Prompt não disponível")
+   172→- Browser verified all checks pass
+   173→
+   174→Stage Summary:
+   175→- 97 prompts identified without prompt text (all from PDF extraction, IDs starting with pdf-)
+   176→- "Sem Prompt" filter fully functional in sidebar with count badge
+   177→- Visual indicators on cards and modal clearly identify missing prompts
+   178→- Copy buttons properly disabled for prompts without text
+   179→- Normal prompts completely unaffected
+   180→
+   181→---
+   182→Task ID: 2-b
+   183→Agent: Sub-agent (PromptModal redesign)
+   184→Task: Redesign PromptModal.tsx to match premium dark Aurora Prompts style
+   185→
+   186→Work Log:
+   187→- Read worklog.md for context on prior agents' work (Tasks 1-3)
+   188→- Read current PromptModal.tsx (287 lines) — single-column modal with basic image/video/prompt display
+   189→- Read prompts.ts for Prompt/PromptType interfaces, copy.ts for clipboard helper
+   190→- Checked prompts-data.json for refImages/referenceImages fields (none present in data)
+   191→- Verified CSS custom properties: brand-gradient, brand-purple, brand-cyan, brand-pink, glow-purple, border-border-card all defined
+   192→- Redesigned PromptModal.tsx with the following changes:
+   193→  1. TOOL CHIPS: Added "Copiar para:" section with 6 colored chips (PADRÃO slate-700, AURORA purple-600 with Sparkles icon, GROK gray-800 with border, GEMINI blue-600, KLING orange-600, FLOW indigo-500) — each copies prompt text on click with toast "Copiado para {TOOL}!"
+   194→  2. 2-COLUMN LAYOUT: Desktop uses md:grid-cols-5 (left 2/5 media, right 3/5 details); mobile single column
+   195→  3. MODAL SIZING: max-w-[90vw] lg:max-w-[85vw] xl:max-w-5xl for media prompts; max-w-2xl for text-only; max-h-[92vh]; bg-popover/98 backdrop-blur-2xl; border-border-card rounded-2xl
+   196→  4. LEFT COLUMN (Media): Image with object-contain + gradient overlay; video below image or full height; type badge positioned on media
+   197→  5. RIGHT COLUMN (Details): Close button (h-9 w-9 rounded-full bg-black/30), title (text-lg lg:text-xl), category+tags row, "Copiar para:" chips, explanation box (border-brand-purple/20 bg-brand-purple/[0.04]), prompt text block with scroll, copy button inside
+   198→  6. VIDEO PLAYBACK: Added videoLoading, videoError, isPlaying states; render-time reset on prompt ID change (avoids lint error); autoplay effect; handleVideoPlayPause and handleVideoRetry; pointer-events-none overlay with pointer-events-auto play button; loading spinner; error with retry button; controls + controlsList="nodownload" + playsInline + preload="auto"
+   199→  7. CONTENT PROTECTION: data-protected, data-no-select, data-copy-prompt, data-prompt-text, data-allow-select attributes preserved
+   200→  8. MISSING PROMPT: Amber warning box, disabled copy/chips, "Prompt não disponível" on bottom button
+   201→  9. BOTTOM ACTIONS: Copy button with bg-brand-gradient + glow-purple, rounded-xl; Favorite outline button with rounded-xl
+   202→  10. Added Produto to TYPE_STYLE mapping
+   203→  11. Added Play, Loader2, RefreshCw, Sparkles icon imports
+   204→- Fixed lint error: React set-state-in-effect by replacing useEffect-based reset with render-time sync pattern (lastKeyRef comparison)
+   205→- Lint clean, dev server compiling successfully
+   206→
+   207→Stage Summary:
+   208→- PromptModal fully redesigned to premium dark Aurora style
+   209→- 2-column desktop layout with 5-col grid (2:3 ratio)
+   210→- 6 tool chips for quick copy-to-tool functionality
+   211→- Full video playback with loading/error/play states — NO blocking overlays on video
+   212→- All existing functionality preserved: copy, favorites, video, image, content protection attributes
+   213→- Missing prompt handling intact with amber warning
+   214→- Mobile-responsive single column layout
+   215→- Zero lint errors
+   216→
+   217→---
+   218→Task ID: 2-a
+   219→Agent: Sub-agent (globals.css + PromptCard + SearchBar premium redesign)
+   220→Task: Redesign globals.css, PromptCard.tsx, and SearchBar.tsx to match premium dark Aurora Prompts style
+   221→
+   222→Work Log:
+   223→- Read worklog.md for context on prior agents' work (Tasks 1, 2, 3, 2-b)
+   224→- Read current globals.css, PromptCard.tsx, SearchBar.tsx
+   225→- Verified no content protection CSS rules or mobile @media (pointer: coarse) rules exist in current globals.css (nothing to preserve beyond what's already there)
+   226→
+   227→globals.css changes:
+   228→1. Added 6 premium surface color tokens to @theme inline: surface-dark, surface-sidebar, surface-card, surface-card-hover, border-card, border-subtle
+   229→2. Added premium surface CSS variable definitions to both :root and .dark sections: --surface-dark: #050509, --surface-sidebar: #070711, --surface-card: #0D0D16, --surface-card-hover: #131322, --border-card: #24243A, --border-subtle: #1A1A2E
+   230→3. Updated .bg-brand-gradient: changed from 120deg/0.85 opacity to 135deg with oklch(0.55 0.24 300 / 0.9), oklch(0.65 0.24 350 / 0.9) 60%, oklch(0.75 0.16 195 / 0.8)
+   231→4. Updated .glow-purple: changed from large spread shadow to tighter glow — 0 4px 20px oklch(0.62 0.24 300 / 0.35)
+   232→5. Added .pv-card utility: bg-surface-card + border-border-card + rounded-2xl + hover:border-white/10 + hover:shadow-xl
+   233→6. Added .chip-tool utility: inline-flex rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider
+   234→7. Kept all existing utilities intact: .glass, .glass-strong, .text-gradient-brand, .scrollbar-premium, .glow-soft, animations
+   235→
+   236→PromptCard.tsx changes:
+   237→1. COMPACT CARD: Replaced glass class with pv-card; increased padding to p-4; type icon container enlarged to h-12 w-12 with rounded-xl; title text-sm font-semibold; description text-xs text-muted-foreground/60; copy button h-9 rounded-xl bg-brand-gradient with glow-purple on hover; heart button h-9 w-9 rounded-xl; Sem prompt badge preserved
+   238→2. FULL CARD: Replaced glass class with pv-card + flex flex-col; image area changed to aspect-[3/4] (taller) with rounded-t-2xl; type badge at left-3 top-3 rounded-full with smaller text; added NOVO badge (right-12 top-3) when prompt.isNew; missing prompt badge repositioned to right-14 top-3 to not overlap with favorite button; body section p-4 with more space; title text-sm font-bold line-clamp-2; description text-xs text-muted-foreground/60 line-clamp-2; action bar mt-auto pt-3 with copy h-9 flex-1 rounded-xl, eye h-9 w-9 rounded-xl, heart h-9 w-9 rounded-xl; video thumbnail with Loader2 loading spinner and Play overlay; favorite button absolute right-3 top-3 z-10 h-9 w-9 rounded-xl
+   239→3. Added Loader2 import for video loading state
+   240→4. Added videoLoading state with onLoadedData handler
+   241→
+   242→SearchBar.tsx changes:
+   243→1. Search input: h-11, rounded-xl, bg-surface-card, border-border-card; placeholder "Buscar prompt por título, categoria ou objetivo..."; focus border-brand-purple/50 ring-brand-purple/20
+   244→2. Added format filter pills row below search: 6 type pills (Imagem, Vídeo, POV, Selfie, UGC, Produto) with rounded-xl px-4 py-2 text-xs font-semibold
+   245→3. Active pill: bg-brand-purple/20 text-brand-purple border-brand-purple/30
+   246→4. Inactive pill: bg-white/[0.03] text-muted-foreground/60 border-transparent hover:bg-white/[0.06]
+   247→5. Pill click toggles type filter or resets to "all" if already active
+   248→6. Mobile hamburger: h-11 w-11 border-border-card bg-surface-card
+   249→7. Horizontally scrollable with scrollbar-premium
+   250→
+   251→Verification:
+   252→- bun run lint: zero errors
+   253→- Dev server compiling successfully (✓ Compiled in 328ms)
+   254→- All existing features preserved: copy, favorites, search, modal, missingPrompt logic, video thumbnails
+   255→
+   256→Stage Summary:
+   257→- globals.css: 6 premium surface tokens + pv-card + chip-tool utilities + updated gradient/glow
+   258→- PromptCard: premium pv-card styling, taller aspect ratio (3/4), larger type icons, rounded-xl buttons, NOVO badge, video loading spinner
+   259→- SearchBar: premium search input styling + format filter pills row
+   260→- All existing functionality preserved — no prompts, categories, filters, or features deleted
+   261→- Zero lint errors
+   262→---
+   263→Task ID: 2-c
+   264→Agent: Sub-agent (Gallery & Sidebar redesign)
+   265→Task: Redesign Gallery.tsx and Sidebar.tsx to match premium dark Aurora Prompts style
+   266→
+   267→Work Log:
+   268→- Read worklog.md for context on prior agents' work (Tasks 1-3, 2-b)
+   269→- Read current Gallery.tsx (178 lines) and Sidebar.tsx (346 lines)
+   270→- Verified CSS custom properties already defined: border-card, border-subtle, surface-card, surface-sidebar, brand-gradient, glow-purple, scrollbar-premium
+   271→- Redesigned Sidebar.tsx with the following changes:
+   272→  1. NAV_SECTIONS: Reorganized flat MAIN_NAV array into 5 collapsible NavSection groups:
+   273→     - PRINCIPAL (defaultOpen: true): Todos os prompts, Novidades, Imagem, Vídeo, Vídeos Parte 2, Sem Prompt
+   274→     - ESTILO & MODA (defaultOpen: true): UGC, POV, POV Avançado, Selfie, Produto, Moda, Masculino, Casal, Lingerie, Movimento
+   275→     - TEMAS (defaultOpen: true): Natal, Ganchos, Transições, PET, Infantil
+   276→     - TikTok (defaultOpen: false): TikTok Shop, Identidade AI, Selfie UGC
+   277→     - MEUS (defaultOpen: true): Favoritos, Atualizações
+   278→  2. Section headers: text-[10px] font-bold uppercase tracking-widest text-muted-foreground/35 with ChevronDown toggle (rotate animation)
+   279→  3. Item button: rounded-lg px-2.5 py-2 text-[13px]
+   280→  4. Active: bg-brand-purple/15 text-white; icon: bg-brand-gradient text-white shadow-sm (h-7 w-7 rounded-md)
+   281→  5. Inactive: text-muted-foreground/60 hover:bg-white/[0.04]; icon: bg-white/[0.04] text-muted-foreground/40
+   282→  6. Counter badge: text-[10px] tabular-nums; active: bg-white/10 text-white/80; inactive: bg-white/[0.03] text-muted-foreground/35
+   283→  7. NOVO badge: emerald colors, text-[7px] (smaller than before)
+   284→  8. Brand section: text-sm font-bold, text-[10px] text-muted-foreground/60
+   285→  9. Desktop sidebar: w-[260px] xl:w-[280px], sticky top-0 h-screen, border-r border-border-subtle, bg-surface-sidebar
+   286→  10. CONTA section (footer of sidebar): always visible, border-t border-border-subtle, "Conta" label, Minha conta/Suporte/Sair
+   287→  11. Mobile sidebar (Sheet): w-[280px] max-w-[85vw], border-border-subtle bg-surface-sidebar/95
+   288→  12. Scroll: overflow-y-auto overscroll-contain scrollbar-premium
+   289→  13. Removed unused Separator and ScrollArea imports
+   290→  14. Added ChevronDown import for section toggle
+   291→- Redesigned Gallery.tsx with the following changes:
+   292→  1. Mobile header (lg:hidden): sticky top-0 z-30, border-b border-border-subtle, bg-background/80 backdrop-blur-xl; prompt count in muted text; favorites button with count badge; hamburger Menu button for sidebar
+   293→  2. Desktop header: "Galeria de Prompts" title (text-xl font-bold), subtitle text-muted-foreground/60, prompt counter styled card with LayoutGrid icon (rounded-xl border-border-card bg-white/[0.03] px-4 py-2)
+   294→  3. Filter info bar: Added Novidades badge (emerald) when filter.kind === "novidades"
+   295→  4. Grid: All grids changed to start with grid-cols-2 on mobile (not 1), gap-4 sm:gap-5 lg:gap-6
+   296→  5. "Ver mais" button: border-border-card bg-white/5 (matching premium styling)
+   297→  6. Footer: border-t border-border-subtle (matching sidebar border)
+   298→  7. Added LayoutGrid and Menu icon imports
+   299→- Zero lint errors
+   300→- Dev server compiling successfully (✓ Compiled in 263ms)
+   301→
+   302→Stage Summary:
+   303→- Gallery.tsx: premium desktop header with counter card, mobile header with hamburger + favorites + prompt count, grid starts at 2 cols on mobile, Novidades badge, border-border-subtle/footer consistency
+   304→- Sidebar.tsx: 5 collapsible nav sections (PRINCIPAL, ESTILO & MODA, TEMAS, TikTok, MEUS), CONTA footer, narrower width (260px/280px), premium active/hover styling, emerald NOVO badge at text-[7px]
+   305→- All existing functionality preserved: filters, favorites, search, modal, copy, UpdateBanner, ManequimPopup, EmptyState
+   306→- No database or login changes
+   307→- Zero lint errors, zero compilation errors
+   308→---
+   309→Task ID: 3
+   310→Agent: Main
+   311→Task: Redesign PromptVault visual based on Aurora Prompts references
+   312→
+   313→Work Log:
+   314→- Analyzed both reference images (iPhone screenshots of auroraprompts.com) with VLM
+   315→- Extracted detailed design specs: colors, typography, spacing, chip styles, button gradients, glassmorphism
+   316→- Parallel subagent 2-a: Redesigned globals.css (premium tokens, pv-card, chip-tool utilities), PromptCard (taller aspect-[3/4], pv-card class, rounded buttons, missing prompt badges), SearchBar (premium input, filter pills)
+   317→- Parallel subagent 2-b: Redesigned PromptModal (2-col desktop, tool chips with 6 colors, video playback preserved, missing prompt handling, premium spacing)
+   318→- Parallel subagent 2-c: Redesigned Gallery (mobile header with menu button, prompt counter, 2-col mobile grid, spacious gaps) and Sidebar (5 collapsible sections, CONTA footer, premium nav items)
+   319→- Browser verified: All features working - login, sidebar, search, filters, cards, modal, tool chips, copy, favorites, video, Sem Prompt filter, responsive mobile
+   320→
+   321→Stage Summary:
+   322→- PromptVault visually redesigned to match Aurora Prompts reference
+   323→- Premium dark theme with spacious layout
+   324→- 6 tool chips (PADRÃO, AURORA, GROK, GEMINI, KLING, FLOW) in modal
+   325→- 2-column desktop modal, single-column mobile
+   326→- Sidebar with 5 collapsible groups + CONTA section
+   327→- All existing features preserved: copy, favorites, search, filters, video, protection
+   328→- Zero lint errors, zero runtime errors
+   329→
+   330→---
+   331→Task ID: 4
+   332→Agent: Main
+   333→Task: Remove "Sem Prompt" section and prioritize prompts with images+videos at front
+   334→
+   335→Work Log:
+   336→- Removed "no-prompt" filter kind from filters.ts (type, filterKey, countFor, applyFilter, filterLabel)
+   337→- Removed "Sem Prompt" nav item from Sidebar.tsx PRINCIPAL section
+   338→- Removed AlertTriangle import from Sidebar.tsx (no longer needed)
+   339→- Removed amber "Sem prompt" badge from PromptCard.tsx full card view
+   340→- Removed disabled state from "Copiar prompt" button in PromptCard (always enabled, opens modal)
+   341→- Removed AlertTriangle import from PromptCard.tsx
+   342→- Updated PromptModal.tsx: replaced big amber "Prompt não disponível" warning with subtle "Referência visual disponível — o texto do prompt será adicionado em breve." message
+   343→- Updated PromptModal.tsx bottom button: changed "Prompt não disponível" → "Em breve" with Copy icon
+   344→- Removed AlertCircle import from PromptModal.tsx
+   345→- Updated sorting in filters.ts: new mediaScore function scores prompts with BOTH image+video → 0 (top), either → 1, none → 2
+   346→- Added hasPromptText function to sort prompts with text before those without
+   347→- sortByReference now sorts by: 1) media score (both>either>none), 2) isNew first, 3) has prompt text first, 4) images before videos
+   348→- Browser verified: all 8 checks pass (sidebar no "Sem Prompt", no amber badges, all buttons enabled, both-media cards first, modal subtle message, "Em breve" button)
+   349→
+   350→Stage Summary:
+   351→- "Sem Prompt" section completely removed from sidebar and filters
+   352→- Amber warning badges removed from cards and modal
+   353→- Sorting now puts prompts with both image+video at the very top
+   354→- Modal shows subtle message instead of big amber warning for missing prompts
+   355→- Zero lint errors, zero runtime errors
+   356→
+   357→---
+   358→Task ID: 5
+   359→Agent: Main
+   360→Task: Put prompts with working images/videos on the first page; remove broken prompts from initial view
+   361→
+   362→Work Log:
+   363→- Analyzed all 487 prompts: only 146 have working media (111 from supabase.co images + 35 from r2.dev/supabase.co videos)
+   364→- Added drive.usercontent.google.com and files.catbox.moe to BROKEN_HOSTS (Google Drive videos return format errors, catbox.moe blocked)
+   365→- Updated BROKEN_HOSTS in all 4 files: filters.ts, Gallery.tsx, PromptCard.tsx, PromptModal.tsx
+   366→- Created mediaQualityScore function: 0=both working, 1=working image, 2=working video, 3=broken URLs, 4=no media
+   367→- Updated sortByReference to use mediaQualityScore: working media first → broken → no media
+   368→- Updated Gallery.tsx hasPreview to check for broken hosts (not just Boolean)
+   369→- Updated PromptCard.tsx: isBrokenUrl now checks both image AND video URLs; showVideoThumb skips broken videos
+   370→- Updated PromptModal.tsx: hasImage/hasVideo flags check for broken hosts
+   371→- Updated videos-with-ref/videos-no-ref filters to use hasWorkingMedia
+   372→- Browser verified: first page shows 12 working image cards, zero broken/placeholder cards
+   373→
+   374→Stage Summary:
+   375→- First page of gallery now shows ONLY prompts with working media
+   376→- 146 working prompts (111 images + 35 videos) sorted to top
+   377→- 341 broken/missing prompts pushed to later pages
+   378→- All broken hosts properly detected: auroraprompts.com, imgur.com, drive.usercontent.google.com, files.catbox.moe
+   379→- Zero lint errors, zero runtime errors
+   380→
+   381→---
+   382→Task ID: 6
+   383→Agent: Main
+   384→Task: Replace WhatsApp code request with in-page code generation (0519 / 280394 alternating)
+   385→
+   386→Work Log:
+   387→- Updated auth-store.ts: added generateCodeForEmail function (deterministic hash-based code: even hash → 0519, odd hash → 280394)
+   388→- Simplified login logic: any non-blocked email + matching generated code → allow; no more VALID_EMAILS whitelist for old code
+   389→- Removed unused VALID_EMAILS import from auth-store.ts
+   390→- Updated LoginScreen.tsx:
+   391→  - Removed WhatsApp "Solicitar código de acesso" button completely
+   392→  - Removed WhatsApp URL constants and MessageCircle import
+   393→  - Added "Gerar código de acesso" button (KeyRound icon, brand gradient, disabled until email entered)
+   394→  - Added generated code display box (purple border, large mono font, select-all for easy copy)
+   395→  - Added copy button next to generated code (Copy/Check icon toggle)
+   396→  - Added "Copie o código e cole no campo abaixo" helper text
+   397→  - Email change resets generated code (user must regenerate)
+   398→  - Code input placeholder changed from "000000" to "Cole aqui"
+   399→  - Updated error message for wrong_code: "Código incorreto. Gere seu código e tente novamente."
+   400→- Browser verified: WhatsApp button removed, Gerar código button works, code displayed with copy, login succeeds after pasting code
+   401→
+   402→Stage Summary:
+   403→- Login flow: email → Gerar código → copy → paste → Acessar galeria (all on same page)
+   404→- Two codes alternate based on email hash: 0519 or 280394 (same email always gets same code)
+   405→- WhatsApp button completely removed
+   406→- Zero lint errors, zero runtime errors
+   407→
+   408→---
+   409→Task ID: 7
+   410→Agent: Main
+   411→Task: Import prompts from Google Doc, match with Drive videos, put at front of gallery
+   412→
+   413→Work Log:
+   414→- Downloaded Google Doc content from user's link (PROMPTS DOS VIDEOS FACELESS)
+   415→- Parsed 31 sections from document, extracted 53 prompt entries with titles and full text
+   416→- Matched prompts with existing 50 Google Drive video prompts by title similarity
+   417→- Updated 53 prompts with new text from the Google Doc
+   418→- 15 of 16 previously-missing-text Drive prompts now have prompt text
+   419→- Set isNew:true on all 50 Drive URL prompts so they appear first
+   420→- Removed drive.usercontent.google.com from BROKEN_HOSTS in all 4 files
+   421→- Converted Google Drive download URLs to /api/drive-video?id=FILE_ID proxy format
+   422→- Created /api/drive-video/route.ts proxy API that streams Google Drive videos
+   423→- Fixed Next.js 16 API incompatibility: req.searchParams → req.nextUrl.searchParams
+   424→- Updated sorting: video prompts (score 1) now appear before image-only prompts (score 2)
+   425→- Browser verified: all Drive videos now play correctly via proxy, zero "Vídeo indisponível"
+   426→
+   427→Stage Summary:
+   428→- 53 prompts updated with text from Google Doc
+   429→- 50 Google Drive videos now working via proxy API
+   430→- Working media prompts: 196 (was 146)
+   431→- First page shows video cards (Drive + Supabase) first, then image cards
+   432→- Zero lint errors, zero runtime errors
+   433→

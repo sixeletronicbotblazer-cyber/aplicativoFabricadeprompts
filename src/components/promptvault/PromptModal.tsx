@@ -11,7 +11,6 @@ import {
   Play,
   Loader2,
   RefreshCw,
-  Sparkles,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import {
@@ -37,15 +36,7 @@ const TYPE_STYLE: Record<PromptType, string> = {
   Produto: "bg-emerald-400/15 text-emerald-300 border-emerald-400/30",
 };
 
-/* ─── Tool chips config ─── */
-const TOOL_CHIPS = [
-  { key: "padrao", label: "PADRÃO", bg: "bg-slate-700", text: "text-white", icon: null },
-  { key: "aurora", label: "AURORA", bg: "bg-purple-600", text: "text-white", icon: "spark" },
-  { key: "grok", label: "GROK", bg: "bg-gray-800", text: "text-white", border: "border border-gray-500" },
-  { key: "gemini", label: "GEMINI", bg: "bg-blue-600", text: "text-white", icon: null },
-  { key: "kling", label: "KLING", bg: "bg-orange-600", text: "text-white", icon: null },
-  { key: "flow", label: "FLOW", bg: "bg-indigo-500", text: "text-white", icon: null },
-] as const;
+/* Tool chips removed per user request — single copy button in the actions bar */
 
 /* ─── Props ─── */
 interface PromptModalProps {
@@ -131,15 +122,7 @@ export function PromptModal({
     }
   };
 
-  const handleChipCopy = async (toolLabel: string) => {
-    if (!prompt || missingPrompt) return;
-    const ok = await copyText(prompt.prompt);
-    if (ok) {
-      toast.success(`Copiado para ${toolLabel}!`);
-    } else {
-      toast.error("Não foi possível copiar.");
-    }
-  };
+
 
   /* ─── Type badge component ─── */
   const renderTypeBadge = (label?: string) => {
@@ -332,32 +315,7 @@ export function PromptModal({
                 ))}
               </div>
 
-              {/* ── "Copiar para:" tool chips ── */}
-              <div className="mt-4">
-                <p className="mb-2 text-xs font-semibold text-brand-purple">
-                  Copiar para:
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {TOOL_CHIPS.map((chip) => (
-                    <button
-                      key={chip.key}
-                      type="button"
-                      onClick={() => handleChipCopy(chip.label)}
-                      disabled={missingPrompt}
-                      className={cn(
-                        "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-all active:scale-95",
-                        chip.bg,
-                        chip.text,
-                        chip.border ?? "",
-                        missingPrompt && "opacity-40 cursor-not-allowed"
-                      )}
-                    >
-                      {chip.icon === "spark" && <Sparkles className="h-3 w-3" />}
-                      {chip.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
+
 
               {/* ── Explanation / tip box ── */}
               {prompt.explanation && (
@@ -386,12 +344,12 @@ export function PromptModal({
                 ) : (
                   <ScrollArea className="max-h-[38vh] md:max-h-none scrollbar-premium">
                     <div
-                      className="relative rounded-xl border border-white/8 bg-black/30"
+                      className="relative rounded-xl border border-white/10 bg-black/40 overflow-hidden"
                       data-protected
                       data-no-select
                     >
                       <pre
-                        className="whitespace-pre-wrap break-words p-4 text-[13px] leading-[1.7] text-foreground/90 font-mono selection:bg-brand-purple/30"
+                        className="whitespace-pre-wrap break-words p-5 text-[13px] leading-[1.8] text-foreground/90 font-mono selection:bg-brand-purple/30"
                         data-allow-select
                       >
                         {prompt.prompt}
@@ -402,7 +360,7 @@ export function PromptModal({
                         onClick={handleCopy}
                         data-copy-prompt
                         data-prompt-text={prompt.prompt}
-                        className="absolute right-2.5 top-2.5 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-black/50 px-2.5 py-1.5 text-[11px] font-bold text-white/90 backdrop-blur-md transition-all hover:bg-black/70 active:scale-95"
+                        className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-black/60 px-3 py-1.5 text-[11px] font-bold text-white/90 backdrop-blur-md transition-all hover:bg-black/80 active:scale-95"
                       >
                         {copied ? (
                           <>
