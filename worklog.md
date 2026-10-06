@@ -377,3 +377,30 @@ Stage Summary:
 - 341 broken/missing prompts pushed to later pages
 - All broken hosts properly detected: auroraprompts.com, imgur.com, drive.usercontent.google.com, files.catbox.moe
 - Zero lint errors, zero runtime errors
+
+---
+Task ID: 6
+Agent: Main
+Task: Replace WhatsApp code request with in-page code generation (0519 / 280394 alternating)
+
+Work Log:
+- Updated auth-store.ts: added generateCodeForEmail function (deterministic hash-based code: even hash → 0519, odd hash → 280394)
+- Simplified login logic: any non-blocked email + matching generated code → allow; no more VALID_EMAILS whitelist for old code
+- Removed unused VALID_EMAILS import from auth-store.ts
+- Updated LoginScreen.tsx:
+  - Removed WhatsApp "Solicitar código de acesso" button completely
+  - Removed WhatsApp URL constants and MessageCircle import
+  - Added "Gerar código de acesso" button (KeyRound icon, brand gradient, disabled until email entered)
+  - Added generated code display box (purple border, large mono font, select-all for easy copy)
+  - Added copy button next to generated code (Copy/Check icon toggle)
+  - Added "Copie o código e cole no campo abaixo" helper text
+  - Email change resets generated code (user must regenerate)
+  - Code input placeholder changed from "000000" to "Cole aqui"
+  - Updated error message for wrong_code: "Código incorreto. Gere seu código e tente novamente."
+- Browser verified: WhatsApp button removed, Gerar código button works, code displayed with copy, login succeeds after pasting code
+
+Stage Summary:
+- Login flow: email → Gerar código → copy → paste → Acessar galeria (all on same page)
+- Two codes alternate based on email hash: 0519 or 280394 (same email always gets same code)
+- WhatsApp button completely removed
+- Zero lint errors, zero runtime errors

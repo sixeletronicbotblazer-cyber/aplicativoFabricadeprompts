@@ -1,15 +1,31 @@
 "use client";
 
 import { create } from "zustand";
-import { BLOCKED_EMAILS, VALID_EMAILS } from "./auth-emails";
+import { BLOCKED_EMAILS } from "./auth-emails";
 
-const OLD_CODE = "280394";
-const NEW_CODE = "0519";
+const CODE_A = "0519";
+const CODE_B = "280394";
 const SESSION_TTL = 60 * 60 * 1000; // 1 hora em ms
+
+/**
+ * Deterministic code generation based on email.
+ * Same email → always same code. Alternates between CODE_A and CODE_B.
+ */
+export function generateCodeForEmail(email: string): string {
+  const e = email.trim().toLowerCase();
+  if (!e) return "";
+  // Simple hash: sum of char codes
+  let hash = 0;
+  for (let i = 0; i < e.length; i++) {
+    hash = ((hash << 5) - hash + e.charCodeAt(i)) | 0;
+  }
+  // Even hash → CODE_A, odd hash → CODE_B
+  return hash % 2 === 0 ? CODE_A : CODE_B;
+}
 
 export type LoginResult =
   | { ok: true }
-  | { ok: false; reason: "wrong_code" | "blocked" | "email_not_found" };
+  | { ok: false; reason: "wrong_code" | "blocked" | "empty_email" };
 
 interface AuthState {
   isAuthenticated: boolean;
@@ -44,15 +60,13 @@ function clearSession() {
 /**
  * Auth store com sessão de 1h via localStorage.
  *
- * Lógica:
- * - Código novo (0519) + qualquer email → libera
- * - Código antigo (280394) + email válido → libera
- * - Código antigo (280394) + email reembolsado → bloqueia
- * - Código antigo (280394) + email não encontrado → nega
- * - Qualquer outro código → nega
+ * Lógica simplificada:
+ * - Gera código determinístico baseado no email (0519 ou 280394)
+ * - Se email bloqueado → nega
+ * - Se código confere com o gerado para o email → libera
+ * - Qualquer outro caso → nega
  */
 export const useAuthStore = create<AuthState>()((set) => {
-  // Restore session on init
   const stored = getStoredSession();
   const initialState = {
     isAuthenticated: !!stored,
@@ -64,22 +78,19 @@ export const useAuthStore = create<AuthState>()((set) => {
       const e = email.trim().toLowerCase();
       const c = code.trim();
 
-      if (c === NEW_CODE && e.length > 0) {
+      if (!e) {
+        return { ok: false, reason: "empty_email" };
+      }
+
+      if (BLOCKED_EMAILS.has(e)) {
+        return { ok: false, reason: "blocked" };
+      }
+
+      const expectedCode = generateCodeForEmail(e);
+      if (c === expectedCode) {
         saveSession(e, c);
         set({ isAuthenticated: true });
         return { ok: true };
-      }
-
-      if (c === OLD_CODE) {
-        if (BLOCKED_EMAILS.has(e)) {
-          return { ok: false, reason: "blocked" };
-        }
-        if (VALID_EMAILS.has(e)) {
-          saveSession(e, c);
-          set({ isAuthenticated: true });
-          return { ok: true };
-        }
-        return { ok: false, reason: "email_not_found" };
       }
 
       return { ok: false, reason: "wrong_code" };

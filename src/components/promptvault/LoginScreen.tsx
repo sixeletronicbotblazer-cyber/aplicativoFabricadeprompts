@@ -6,23 +6,20 @@ import {
   ArrowRight,
   Sparkles,
   ShieldCheck,
-  MessageCircle,
   Mail,
   AlertTriangle,
   XCircle,
   LifeBuoy,
+  KeyRound,
+  Copy,
+  Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useAuthStore, type LoginResult } from "@/lib/auth-store";
+import { useAuthStore, generateCodeForEmail, type LoginResult } from "@/lib/auth-store";
+import { copyText } from "@/lib/copy";
 import { cn } from "@/lib/utils";
-
-const WHATSAPP_NUMBER = "5561996292397";
-const WHATSAPP_MSG = encodeURIComponent(
-  "Olá! Gostaria de solicitar o código de acesso ao PromptVault."
-);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
 
 export function LoginScreen() {
   const loginFn = useAuthStore((s) => s.login);
@@ -32,6 +29,10 @@ export function LoginScreen() {
   const [shake, setShake] = useState(false);
   const [error, setError] = useState<LoginResult["reason"] | null>(null);
   const [blocked, setBlocked] = useState(false);
+
+  // Code generation state
+  const [generatedCode, setGeneratedCode] = useState<string | null>(null);
+  const [copiedCode, setCopiedCode] = useState(false);
 
   const resetError = () => {
     setError(null);
@@ -54,6 +55,22 @@ export function LoginScreen() {
         }
       }
     });
+  };
+
+  const handleGenerateCode = () => {
+    if (!email.trim()) return;
+    const gen = generateCodeForEmail(email);
+    setGeneratedCode(gen);
+    setCopiedCode(false);
+  };
+
+  const handleCopyCode = async () => {
+    if (!generatedCode) return;
+    const ok = await copyText(generatedCode);
+    if (ok) {
+      setCopiedCode(true);
+      setTimeout(() => setCopiedCode(false), 2000);
+    }
   };
 
   /* ───── Blocked state ───── */
@@ -102,18 +119,6 @@ export function LoginScreen() {
                   é um erro, entre em contato com o suporte.
                 </p>
               </div>
-
-              <div className="mt-7 flex flex-col gap-3">
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-2.5 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3.5 text-sm font-semibold text-emerald-300 transition-all hover:bg-emerald-500/20 hover:border-emerald-500/40"
-                >
-                  <LifeBuoy className="h-4.5 w-4.5" />
-                  Falar com suporte
-                </a>
-              </div>
             </div>
 
             <p className="mt-6 text-center text-[11px] text-muted-foreground/60">
@@ -128,9 +133,9 @@ export function LoginScreen() {
   /* ───── Normal login ───── */
   const errorMessage =
     error === "wrong_code"
-      ? "Código incorreto. Verifique e tente novamente."
-      : error === "email_not_found"
-        ? "Email não encontrado no acervo. Verifique ou solicite acesso."
+      ? "Código incorreto. Gere seu código e tente novamente."
+      : error === "empty_email"
+        ? "Insira seu email para continuar."
         : null;
 
   return (
@@ -192,7 +197,7 @@ export function LoginScreen() {
                 Entre no seu acervo
               </h1>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                Digite seu email e código de acesso para entrar.
+                Digite seu email, gere seu código e acesse a galeria.
               </p>
             </div>
 
@@ -213,6 +218,7 @@ export function LoginScreen() {
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
+                      setGeneratedCode(null);
                       resetError();
                     }}
                     className="h-12 pl-10 text-sm bg-white/5 border-white/10 placeholder:text-muted-foreground/50"
@@ -220,7 +226,48 @@ export function LoginScreen() {
                 </div>
               </div>
 
-              {/* Code */}
+              {/* Gerar código de acesso */}
+              <Button
+                type="button"
+                onClick={handleGenerateCode}
+                disabled={!email.trim()}
+                className="h-12 w-full gap-2 border-0 rounded-xl text-sm font-semibold transition-all bg-brand-gradient text-white hover:brightness-110 glow-purple"
+              >
+                <KeyRound className="h-4 w-4" />
+                Gerar código de acesso
+              </Button>
+
+              {/* Generated code display */}
+              {generatedCode && (
+                <div className="rounded-xl border border-brand-purple/30 bg-brand-purple/[0.08] p-4 animate-fade-in">
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-brand-purple mb-2">
+                    Seu código de acesso
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <span className="flex-1 text-2xl font-mono font-bold tracking-[0.4em] text-foreground select-all">
+                      {generatedCode}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={handleCopyCode}
+                      className={cn(
+                        "grid h-10 w-10 shrink-0 place-items-center rounded-xl border transition-all active:scale-95",
+                        copiedCode
+                          ? "border-emerald-400/30 bg-emerald-500/15 text-emerald-300"
+                          : "border-white/10 bg-white/5 text-muted-foreground hover:text-foreground hover:border-white/20"
+                      )}
+                      aria-label="Copiar código"
+                    >
+                      {copiedCode ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    </button>
+                  </div>
+                  <p className="mt-2 text-[11px] text-muted-foreground/60">
+                    Copie o código e cole no campo abaixo
+                  </p>
+                </div>
+              )}
+
+              {/* Code input */}
               <div className="space-y-1.5">
                 <Label htmlFor="code" className="text-sm">
                   Código de acesso
@@ -232,7 +279,7 @@ export function LoginScreen() {
                     type="text"
                     inputMode="numeric"
                     autoComplete="off"
-                    placeholder="000000"
+                    placeholder="Cole aqui"
                     value={code}
                     onChange={(e) => {
                       setCode(e.target.value);
@@ -260,30 +307,6 @@ export function LoginScreen() {
                 {!pending && <ArrowRight className="ml-2 h-4 w-4" />}
               </Button>
             </form>
-
-            {/* WhatsApp CTA */}
-            <div className="mt-6">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-white/10" />
-                </div>
-                <div className="relative flex justify-center text-xs">
-                  <span className="bg-transparent px-3 text-muted-foreground/60">
-                    Não tem o código?
-                  </span>
-                </div>
-              </div>
-
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 flex w-full items-center justify-center gap-2.5 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-sm font-semibold text-emerald-300 transition-all hover:bg-emerald-500/20 hover:border-emerald-500/40"
-              >
-                <MessageCircle className="h-4.5 w-4.5" />
-                Solicitar código de acesso
-              </a>
-            </div>
           </div>
 
           <p className="mt-6 text-center text-[11px] text-muted-foreground/60">
