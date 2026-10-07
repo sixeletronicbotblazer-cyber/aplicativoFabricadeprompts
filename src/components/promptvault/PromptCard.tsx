@@ -9,6 +9,7 @@ import {
   Play,
   Pause,
   Loader2,
+  Eye,
 } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
@@ -67,13 +68,7 @@ export function PromptCard({
   const videoIsBroken = isBrokenUrl(prompt.videoUrl);
   const hasWorkingImg = hasImage && !imageIsBroken;
   const hasWorkingVid = hasVideo && !videoIsBroken;
-  /* Compact card when no working media — always allow opening modal (no disabled state) */
 
-  /*
-   * Show video thumbnail if video is from a working host:
-   * - Has working video AND (no image OR image is broken OR type is Vídeo)
-   * Skip broken video URLs (auroraprompts.com, imgur.com)
-   */
   const showVideoThumb = hasWorkingVid && (!hasImage || imageIsBroken || prompt.type === "Vídeo");
   const hasAnyMedia = hasWorkingImg || hasWorkingVid || hasImage || hasVideo;
 
@@ -136,7 +131,7 @@ export function PromptCard({
     onToggleFavorite(prompt.id);
   };
 
-  /* COPIAR PROMPT opens the modal */
+  /* Open the modal */
   const handleOpenModal = (e: React.MouseEvent) => {
     e.stopPropagation();
     onOpen(prompt);
@@ -146,10 +141,10 @@ export function PromptCard({
   if (!hasAnyMedia) {
     return (
       <article ref={cardRef} className="group pv-card relative overflow-hidden">
-        <div className="flex items-center gap-3 p-4">
+        <div className="flex items-center gap-3 p-3 sm:p-4">
           <span
             className={cn(
-              "inline-flex items-center justify-center shrink-0 rounded-lg border h-10 w-10",
+              "inline-flex items-center justify-center shrink-0 rounded-lg border h-9 w-9 sm:h-10 sm:w-10",
               TYPE_STYLE[prompt.type]
             )}
           >
@@ -162,35 +157,45 @@ export function PromptCard({
             className="flex-1 min-w-0 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-turquesa/40 rounded"
             aria-label={`Ver detalhes de ${prompt.title}`}
           >
-            <h3 className="text-[13px] font-semibold leading-tight line-clamp-1 text-text-primary">
+            <h3 className="text-[12px] sm:text-[13px] font-semibold leading-tight line-clamp-1 text-text-primary">
               {prompt.title}
             </h3>
-            <span className="mt-0.5 inline-flex items-center text-[10px] text-text-secondary">
+            <span className="mt-0.5 inline-flex items-center gap-1 text-[10px] text-text-secondary">
               {prompt.category}
+              {missingPrompt && (
+                <span className="inline-flex items-center gap-0.5 text-[9px] text-brand-purple/60">
+                  <Eye className="h-2.5 w-2.5" />ref
+                </span>
+              )}
             </span>
           </button>
 
-          <div className="flex items-center gap-1.5 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
             <Button
               type="button"
               onClick={handleOpenModal}
               size="sm"
-              className="h-8 px-3 gap-1.5 text-[11px] font-bold border-0 rounded-lg transition-all active:scale-[0.97] bg-turquesa-gradient text-surface-dark hover:brightness-110"
+              className={cn(
+                "h-7 sm:h-8 px-2.5 sm:px-3 gap-1 text-[10px] sm:text-[11px] font-bold border-0 rounded-lg transition-all active:scale-[0.97]",
+                missingPrompt
+                  ? "bg-white/8 text-text-secondary hover:bg-white/12"
+                  : "bg-turquesa-gradient text-surface-dark hover:brightness-110"
+              )}
             >
-              <Copy className="h-3 w-3" />
+              {missingPrompt ? <Eye className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
             </Button>
             <button
               type="button"
               onClick={handleFavorite}
               className={cn(
-                "grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition-all",
+                "grid h-7 w-7 sm:h-8 sm:w-8 shrink-0 place-items-center rounded-lg border transition-all",
                 isFavorite
                   ? "border-brand-pink/30 bg-brand-pink/10 text-brand-pink"
                   : "border-border-card bg-surface-card text-text-secondary/50 hover:text-brand-pink hover:border-brand-pink/30"
               )}
               aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
             >
-              <Heart className={cn("h-3.5 w-3.5", isFavorite && "fill-current")} />
+              <Heart className={cn("h-3 w-3 sm:h-3.5 sm:w-3.5", isFavorite && "fill-current")} />
             </button>
           </div>
         </div>
@@ -213,7 +218,6 @@ export function PromptCard({
                 </div>
               )}
               {videoError ? (
-                /* Video error — fall back to image if available and not broken */
                 hasImage && !imageIsBroken ? (
                   <img
                     src={prompt.image}
@@ -236,6 +240,7 @@ export function PromptCard({
                 playsInline
                 loop
                 preload="metadata"
+                x-webkit-playsinline="true"
                 onLoadedData={() => setVideoLoading(false)}
                 onError={handleVideoError}
                 className={cn(
@@ -253,23 +258,22 @@ export function PromptCard({
                 >
                   <div
                     className={cn(
-                      "grid h-11 w-11 place-items-center rounded-full backdrop-blur-md border transition-all duration-300",
+                      "grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full backdrop-blur-md border transition-all duration-300",
                       isPlaying
                         ? "bg-black/30 border-white/10 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100"
                         : "bg-white/12 border-white/15 scale-100 group-hover:scale-110"
                     )}
                   >
                     {isPlaying ? (
-                      <Pause className="h-5 w-5 text-white" />
+                      <Pause className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                     ) : (
-                      <Play className="h-5 w-5 text-white ml-0.5" />
+                      <Play className="h-4 w-4 sm:h-5 sm:w-5 text-white ml-0.5" />
                     )}
                   </div>
                 </button>
               )}
             </div>
           ) : isVisible && hasImage && !imageIsBroken ? (
-            /* IMAGE thumbnail (only if not from broken host) */
             <img
               src={prompt.image}
               alt={prompt.title}
@@ -278,7 +282,6 @@ export function PromptCard({
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           ) : isVisible && (hasImage && imageIsBroken) && !showVideoThumb ? (
-            /* Broken image — show fallback icon */
             <div className="h-full w-full grid place-items-center bg-surface-secondary">
               <ImageIcon className="h-8 w-8 text-text-secondary/20" />
             </div>
@@ -289,18 +292,23 @@ export function PromptCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
 
         {/* Category tag */}
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider backdrop-blur-md bg-surface-dark/60 text-text-primary/80 border-border-card/40 pointer-events-none">
+        <span className="absolute left-2.5 sm:left-3 top-2.5 sm:top-3 inline-flex items-center gap-1 rounded-md border px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider backdrop-blur-md bg-surface-dark/60 text-text-primary/80 border-border-card/40 pointer-events-none">
           {prompt.category}
         </span>
 
         {/* NOVO badge */}
         {prompt.isNew && (
-          <span className="absolute right-12 top-3 inline-flex items-center rounded-full bg-brand-turquesa/20 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-brand-turquesa backdrop-blur-md z-[2] pointer-events-none">
+          <span className="absolute right-10 sm:right-12 top-2.5 sm:top-3 inline-flex items-center rounded-full bg-brand-turquesa/20 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-brand-turquesa backdrop-blur-md z-[2] pointer-events-none">
             Novo
           </span>
         )}
 
-
+        {/* Referência badge — for prompts without text */}
+        {missingPrompt && (
+          <span className="absolute right-10 sm:right-12 bottom-3 sm:bottom-4 inline-flex items-center gap-1 rounded-full bg-brand-purple/20 px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-brand-purple backdrop-blur-md z-[2] pointer-events-none">
+            <Eye className="h-2.5 w-2.5" />Ref
+          </span>
+        )}
       </div>
 
       {/* Favorite button */}
@@ -308,32 +316,46 @@ export function PromptCard({
         type="button"
         onClick={handleFavorite}
         className={cn(
-          "absolute right-3 top-3 z-10 grid h-8 w-8 place-items-center rounded-lg border backdrop-blur-md transition-all",
+          "absolute right-2.5 sm:right-3 top-2.5 sm:top-3 z-10 grid h-7 w-7 sm:h-8 sm:w-8 place-items-center rounded-lg border backdrop-blur-md transition-all",
           isFavorite
             ? "border-brand-pink/30 bg-brand-pink/15 text-brand-pink"
             : "border-white/8 bg-black/20 text-white/60 hover:text-brand-pink hover:border-brand-pink/30"
         )}
         aria-label={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
       >
-        <Heart className={cn("h-3.5 w-3.5", isFavorite && "fill-current")} />
+        <Heart className={cn("h-3 w-3 sm:h-3.5 sm:w-3.5", isFavorite && "fill-current")} />
       </button>
 
       {/* Card body */}
-      <div className="flex flex-1 flex-col p-3.5 pt-3">
-        <h3 className="text-[13px] font-semibold leading-snug line-clamp-2 text-text-primary">
+      <div className="flex flex-1 flex-col p-3 sm:p-3.5 pt-2.5 sm:pt-3">
+        <h3 className="text-[12px] sm:text-[13px] font-semibold leading-snug line-clamp-2 text-text-primary">
           {prompt.title}
         </h3>
 
-        {/* COPIAR PROMPT button — opens the modal */}
-        <div className="mt-auto pt-2.5">
+        {/* Action button — opens the modal */}
+        <div className="mt-auto pt-2">
           <Button
             type="button"
             onClick={handleOpenModal}
             size="sm"
-            className="h-9 w-full gap-1.5 text-[12px] font-bold border-0 rounded-lg transition-all active:scale-[0.97] bg-turquesa-gradient text-surface-dark hover:brightness-110"
+            className={cn(
+              "h-8 sm:h-9 w-full gap-1.5 text-[11px] sm:text-[12px] font-bold border-0 rounded-lg transition-all active:scale-[0.97]",
+              missingPrompt
+                ? "bg-white/8 text-text-secondary hover:bg-white/12"
+                : "bg-turquesa-gradient text-surface-dark hover:brightness-110"
+            )}
           >
-            <Copy className="h-3.5 w-3.5" />
-            Copiar prompt
+            {missingPrompt ? (
+              <>
+                <Eye className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                Ver referência
+              </>
+            ) : (
+              <>
+                <Copy className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                Copiar prompt
+              </>
+            )}
           </Button>
         </div>
       </div>
