@@ -4,7 +4,7 @@ import { useState, useTransition } from "react";
 import {
   Lock,
   ArrowRight,
-  Sparkles,
+  Gem,
   ShieldCheck,
   Mail,
   AlertTriangle,
@@ -95,10 +95,10 @@ export function LoginScreen() {
         <header className="px-5 sm:px-8 pt-7">
           <div className="flex items-center gap-2.5">
             <div className="grid h-9 w-9 place-items-center rounded-xl bg-brand-gradient glow-purple">
-              <Sparkles className="h-5 w-5 text-white" />
+              <Gem className="h-5 w-5 text-white" />
             </div>
             <div className="leading-tight">
-              <p className="text-sm font-semibold tracking-wide">PromptVault</p>
+              <p className="text-sm font-semibold tracking-wide">Fábrica de Prompts</p>
               <p className="text-[11px] text-muted-foreground">TikTok Shop</p>
             </div>
           </div>
@@ -122,7 +122,7 @@ export function LoginScreen() {
             </div>
 
             <p className="mt-6 text-center text-[11px] text-muted-foreground/60">
-              PromptVault TikTok Shop · Acervo exclusivo para clientes
+              Fábrica de Prompts TikTok Shop · Acervo exclusivo para clientes
             </p>
           </div>
         </main>
@@ -170,10 +170,10 @@ export function LoginScreen() {
       <header className="px-5 sm:px-8 pt-7">
         <div className="flex items-center gap-2.5">
           <div className="grid h-9 w-9 place-items-center rounded-xl bg-brand-gradient glow-purple">
-            <Sparkles className="h-5 w-5 text-white" />
+            <Gem className="h-5 w-5 text-white" />
           </div>
           <div className="leading-tight">
-            <p className="text-sm font-semibold tracking-wide">PromptVault</p>
+            <p className="text-sm font-semibold tracking-wide">Fábrica de Prompts</p>
             <p className="text-[11px] text-muted-foreground">TikTok Shop</p>
           </div>
         </div>
@@ -310,7 +310,7 @@ export function LoginScreen() {
           </div>
 
           <p className="mt-6 text-center text-[11px] text-muted-foreground/60">
-            PromptVault TikTok Shop · Acervo exclusivo para clientes
+            Fábrica de Prompts TikTok Shop · Acervo exclusivo para clientes
           </p>
         </div>
       </main>

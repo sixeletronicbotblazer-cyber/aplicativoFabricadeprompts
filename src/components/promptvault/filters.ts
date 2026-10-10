@@ -97,12 +97,9 @@ function sortVideoWithRef(list: Prompt[]): Prompt[] {
   });
 }
 
-/** Known broken / unreachable hosts for images and videos. */
-const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "files.catbox.moe"];
-
+/** No hosts are permanently blocked — let the browser handle errors natively via onError/onLoad. */
 function isBrokenUrl(url: string | undefined): boolean {
-  if (!url) return true;
-  return BROKEN_HOSTS.some((h) => url.includes(h));
+  return !url;
 }
 
 function hasWorkingImage(p: Prompt): boolean {

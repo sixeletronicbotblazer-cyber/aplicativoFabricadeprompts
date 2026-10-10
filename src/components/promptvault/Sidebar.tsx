@@ -28,6 +28,7 @@ import {
   Move,
   Shirt,
   ChevronDown,
+  Gem,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -65,23 +66,17 @@ const NAV_SECTIONS: NavSection[] = [
       { label: "Novidades", icon: Sparkles, filter: { kind: "novidades" }, isNew: true },
       { label: "Imagem", icon: ImageIcon, filter: { kind: "type", value: "Imagem" } },
       { label: "Vídeo", icon: Film, filter: { kind: "videos-with-ref" } },
-      { label: "Vídeos Parte 2", icon: Film, filter: { kind: "videos-no-ref" } },
     ],
   },
   {
-    title: "ESTILO & MODA",
+    title: "POV & ESTILO",
     defaultOpen: true,
     items: [
-      { label: "UGC", icon: Camera, filter: { kind: "category", value: "UGC" } },
       { label: "POV", icon: Eye, filter: { kind: "category", value: "POV" } },
-      { label: "POV Avançado", icon: Target, filter: { kind: "category", value: "POV Avançado" } },
+      { label: "UGC", icon: Camera, filter: { kind: "category", value: "UGC" } },
       { label: "Selfie", icon: User, filter: { kind: "category", value: "Selfie" } },
       { label: "Produto", icon: Hand, filter: { kind: "category", value: "Produto" } },
       { label: "Moda", icon: Shirt, filter: { kind: "category", value: "Moda" }, isNew: true },
-      { label: "Masculino", icon: User, filter: { kind: "category", value: "Masculino" }, isNew: true },
-      { label: "Casal", icon: Users, filter: { kind: "category", value: "Casal" }, isNew: true },
-      { label: "Lingerie", icon: Heart, filter: { kind: "category", value: "Lingerie" }, isNew: true },
-      { label: "Movimento", icon: Move, filter: { kind: "category", value: "Movimento" }, isNew: true },
     ],
   },
   {
@@ -101,7 +96,6 @@ const NAV_SECTIONS: NavSection[] = [
     items: [
       { label: "TikTok Shop", icon: ShoppingCart, filter: { kind: "category", value: "TikTok Shop" } },
       { label: "Identidade AI", icon: ScanFace, filter: { kind: "category", value: "Identidade AI" } },
-      { label: "Selfie UGC", icon: Camera, filter: { kind: "category", value: "Selfie UGC" } },
     ],
   },
   {
@@ -144,15 +138,15 @@ function SidebarContent({ filter, onSelect, onClose }: SidebarContentProps) {
   };
 
   const handleAccount = () => {
-    toast.info("PromptVault", {
+    toast.info("Fábrica de Prompts", {
       description: "Você está conectado ao acervo exclusivo.",
     });
     onClose?.();
   };
 
   const handleSupport = () => {
-    toast.info("Suporte PromptVault", {
-      description: "Envie um e-mail para suporte@promptvault.app — responderemos em até 24h.",
+    toast.info("Suporte", {
+      description: "Envie um e-mail para suporte@fabricadeprompts.app — responderemos em até 24h.",
     });
     onClose?.();
   };
@@ -169,10 +163,10 @@ function SidebarContent({ filter, onSelect, onClose }: SidebarContentProps) {
       <div className="flex items-center justify-between gap-2 px-5 pt-5 pb-4">
         <div className="flex items-center gap-2.5">
           <div className="grid h-9 w-9 place-items-center rounded-xl bg-brand-gradient glow-purple">
-            <Sparkles className="h-5 w-5 text-white" />
+            <Gem className="h-5 w-5 text-white" />
           </div>
           <div className="leading-tight">
-            <p className="text-sm font-bold tracking-wide">PromptVault</p>
+            <p className="text-sm font-bold tracking-wide">Fábrica de Prompts</p>
             <p className="text-[10px] text-muted-foreground/60">TikTok Shop</p>
           </div>
         </div>
