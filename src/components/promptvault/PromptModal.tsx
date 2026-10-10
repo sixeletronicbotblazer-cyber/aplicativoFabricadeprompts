@@ -67,6 +67,7 @@ export function PromptModal({
   const hasImage = Boolean(prompt?.image) && !isBroken(prompt?.image);
   const hasVideo = Boolean(prompt?.videoUrl) && !isBroken(prompt?.videoUrl);
   const hasMedia = hasImage || hasVideo;
+  const hasBothMedia = hasImage && hasVideo;
   const missingPrompt = !prompt?.prompt || prompt.prompt.trim().length < 10;
 
   /* ─── Reset video state when prompt changes ─── */
@@ -226,24 +227,57 @@ export function PromptModal({
           "p-0 gap-0 overflow-hidden border-border-card rounded-2xl bg-popover/98 backdrop-blur-2xl",
           "max-h-[94vh] sm:max-h-[92vh]",
           hasMedia
-            ? "max-w-[95vw] sm:max-w-[90vw] lg:max-w-[85vw] xl:max-w-5xl"
+            ? "max-w-[95vw] sm:max-w-[90vw] lg:max-w-[80vw] xl:max-w-5xl"
             : "max-w-[95vw] sm:max-w-2xl"
         )}
       >
         {prompt && (
           <div
             className={cn(
-              "grid max-h-[94vh] sm:max-h-[92vh]",
+              "flex flex-col max-h-[94vh] sm:max-h-[92vh]",
               hasMedia
-                ? "grid-cols-1 md:grid-cols-5"
-                : "grid-cols-1"
+                ? "md:flex-row"
+                : ""
             )}
           >
             {/* LEFT COLUMN — Media */}
             {hasMedia && (
-              <div className="relative md:col-span-2 flex flex-col bg-black/40 overflow-hidden">
-                {hasImage && (
-                  <div className="relative flex-1 min-h-0">
+              <div className={cn(
+                "relative flex-shrink-0 bg-black/40 overflow-hidden",
+                hasBothMedia
+                  ? "flex flex-col md:w-[220px] lg:w-[260px] xl:w-[300px] md:h-auto max-h-[25vh] sm:max-h-[30vh] md:max-h-none"
+                  : "md:w-[280px] lg:w-[320px] xl:w-[360px] md:h-auto max-h-[28vh] sm:max-h-[35vh] md:max-h-none"
+              )}>
+                {/* When both image + video: show image as small reference thumbnail, video as main */}
+                {hasBothMedia ? (
+                  <>
+                    {/* Image reference — small thumbnail on top */}
+                    <div className="relative h-[80px] sm:h-[100px] md:h-[90px] lg:h-[100px] w-full flex-shrink-0 border-b border-white/10">
+                      <img
+                        src={prompt.image}
+                        alt={`${prompt.title} - referência`}
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 pointer-events-none" />
+                      <div className="absolute left-2 top-2 z-10">
+                        {renderTypeBadge("Ref. Imagem")}
+                      </div>
+                      {/* Copy reference label */}
+                      <div className="absolute bottom-1.5 left-2 right-2 z-10">
+                        <p className="text-[8px] sm:text-[9px] text-white/70 font-medium truncate backdrop-blur-sm">Imagem de referência</p>
+                      </div>
+                    </div>
+                    {/* Video — main content below */}
+                    <div className="relative flex-1 min-h-0">
+                      {renderVideo()}
+                      <div className="absolute left-2 top-2 z-10">
+                        {renderTypeBadge("Vídeo")}
+                      </div>
+                    </div>
+                  </>
+                ) : hasImage ? (
+                  /* Only image */
+                  <div className="relative h-full min-h-0 flex-1">
                     <img
                       src={prompt.image}
                       alt={prompt.title}
@@ -254,13 +288,9 @@ export function PromptModal({
                       {renderTypeBadge()}
                     </div>
                   </div>
-                )}
-
-                {hasVideo && (
-                  <div className={cn(
-                    "relative overflow-hidden",
-                    hasImage ? "h-36 sm:h-48 md:h-44 lg:h-52" : "flex-1 min-h-0 h-48 sm:h-72 md:h-auto"
-                  )}>
+                ) : (
+                  /* Only video */
+                  <div className="relative h-full min-h-0 flex-1">
                     {renderVideo()}
                     <div className="absolute left-2.5 sm:left-3 top-2.5 sm:top-3 z-10">
                       {renderTypeBadge("Vídeo")}
@@ -273,8 +303,7 @@ export function PromptModal({
             {/* RIGHT COLUMN — Details */}
             <div
               className={cn(
-                "relative flex flex-col overflow-hidden",
-                hasMedia ? "md:col-span-3" : "",
+                "relative flex flex-col min-h-0 flex-1 overflow-hidden",
                 "p-4 sm:p-5 lg:p-6"
               )}
             >
@@ -282,7 +311,7 @@ export function PromptModal({
               <button
                 type="button"
                 onClick={() => onOpenChange(false)}
-                className="absolute right-3 sm:right-4 top-3 sm:top-4 grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-full bg-black/30 text-white/70 backdrop-blur-md transition-colors hover:text-white hover:bg-black/50"
+                className="absolute right-3 sm:right-4 top-3 sm:top-4 z-20 grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-full bg-black/30 text-white/70 backdrop-blur-md transition-colors hover:text-white hover:bg-black/50"
                 aria-label="Fechar"
               >
                 <X className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -332,7 +361,7 @@ export function PromptModal({
               )}
 
               {/* ── Prompt text block ── */}
-              <div className="mt-3 sm:mt-4 flex-1 min-h-0">
+              <div className="mt-3 sm:mt-4 flex-1 min-h-0 overflow-hidden">
                 <p className="mb-1.5 sm:mb-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-muted-foreground/60">
                   Prompt
                 </p>
@@ -349,45 +378,45 @@ export function PromptModal({
                     </div>
                   </div>
                 ) : (
-                  <ScrollArea className="max-h-[35vh] sm:max-h-[38vh] md:max-h-none scrollbar-premium">
-                    <div
-                      className="relative rounded-xl border border-white/10 bg-black/40 overflow-hidden"
-                      data-protected
-                      data-no-select
-                    >
+                  <div
+                    className="relative rounded-xl border border-white/10 bg-black/40 overflow-hidden"
+                    data-protected
+                    data-no-select
+                  >
+                    <ScrollArea className="max-h-[30vh] sm:max-h-[35vh] md:max-h-[40vh] lg:max-h-[45vh] scrollbar-premium">
                       <pre
                         className="whitespace-pre-wrap break-words p-3.5 sm:p-5 text-[12px] sm:text-[13px] leading-[1.7] sm:leading-[1.8] text-foreground/90 font-mono selection:bg-brand-purple/30"
                         data-allow-select
                       >
                         {prompt.prompt}
                       </pre>
-                      {/* Copy button inside prompt block */}
-                      <button
-                        type="button"
-                        onClick={handleCopy}
-                        data-copy-prompt
-                        data-prompt-text={prompt.prompt}
-                        className="absolute right-2.5 sm:right-3 top-2.5 sm:top-3 inline-flex items-center gap-1 sm:gap-1.5 rounded-lg border border-brand-turquesa/30 bg-brand-turquesa/90 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-white backdrop-blur-md transition-all hover:bg-brand-turquesa active:scale-95 shadow-sm"
-                      >
-                        {copied ? (
-                          <>
-                            <Check className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-emerald-400" />
-                            <span className="text-emerald-400">Copiado</span>
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                            Copiar
-                          </>
-                        )}
-                      </button>
-                    </div>
-                  </ScrollArea>
+                    </ScrollArea>
+                    {/* Copy button inside prompt block */}
+                    <button
+                      type="button"
+                      onClick={handleCopy}
+                      data-copy-prompt
+                      data-prompt-text={prompt.prompt}
+                      className="absolute right-2.5 sm:right-3 top-2.5 sm:top-3 z-10 inline-flex items-center gap-1 sm:gap-1.5 rounded-lg border border-brand-turquesa/30 bg-brand-turquesa/90 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-white backdrop-blur-md transition-all hover:bg-brand-turquesa active:scale-95 shadow-sm"
+                    >
+                      {copied ? (
+                        <>
+                          <Check className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-emerald-400" />
+                          <span className="text-emerald-400">Copiado</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                          Copiar
+                        </>
+                      )}
+                    </button>
+                  </div>
                 )}
               </div>
 
               {/* ── Bottom actions ── */}
-              <div className="mt-4 sm:mt-5 flex items-center gap-2">
+              <div className="mt-3 sm:mt-4 flex items-center gap-2 flex-shrink-0">
                 <Button
                   type="button"
                   onClick={handleCopy}
