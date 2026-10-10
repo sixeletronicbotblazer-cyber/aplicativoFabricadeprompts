@@ -454,3 +454,67 @@ Stage Summary:
 - Rebranded to "Fábrica de Prompts"
 - BROKEN_HOSTS removed (native browser error handling)
 - Pushed to https://github.com/sixeletronicbotblazer-cyber/aplicativoFabricadeprompts.git
+
+---
+Task ID: 2-a
+Agent: Z.ai Code (sub-agent)
+Task: Add Google Drive videos as new prompts and set them as novidades
+
+Work Log:
+- Read /home/z/my-project/upload/drive-files-list.json — contained 52 entries (1 duplicate removed → 50 unique Drive files)
+- Read /home/z/my-project/src/lib/prompts-data.json — 424 existing prompts
+- Built Node.js script to generate new prompt entries with:
+  - Category mapping based on filename patterns (Natal, POV, Moda, UGC, Gancho, Produto)
+  - Sequential IDs: drive-001 through drive-050
+  - referencia: true and isNew: true on all new entries
+  - videoUrl: /api/drive-video?id=FILE_ID pointing to the Drive proxy API
+  - Empty image and prompt fields (reference-only cards)
+- Prepend 50 new prompts to the front of the existing array
+- Validated resulting JSON: 474 total prompts, 352 marked isNew, all valid
+
+Category breakdown of new prompts:
+  UGC: 22 (método chinês, método gringo, fábrica, CTA)
+  Moda: 10 (faceless blusa/calça/conjunto/shorts/vestido, camisa, camiseta)
+  Natal: 7 (almofadas, árvore, decoração, estrela, caixa bolinhas)
+  Gancho: 6 (various hooks/hooks with transitions)
+  POV: 4 (banho de sol, espelho, feminino agachamento)
+  Produto: 1 (jogo americano)
+
+Result:
+- 50 new Drive video prompts added (prepended to front)
+- 474 total prompts in prompts-data.json
+- 352 prompts marked as isNew (50 new + 302 existing already marked)
+
+---
+Task ID: 2-b
+Agent: Z.ai Code (sub-agent)
+Task: Change app color scheme from AI-looking purple/cyan neon to warm, elegant dark theme
+
+Work Log:
+- Read globals.css — identified all color tokens using oklch with hue 285 (cool blue-purple) and neon purple/pink/cyan brand accents
+- Read tailwind.config.ts — confirmed it delegates to CSS custom properties (no hard-coded colors there)
+- Changed :root and .dark CSS custom properties:
+  - Brand accents: --brand-purple oklch(0.62 0.24 300) → oklch(0.55 0.15 15) (warm rose/terracotta)
+  - Brand accents: --brand-pink oklch(0.72 0.24 350) → oklch(0.65 0.14 45) (warm copper)
+  - Brand accents: --brand-cyan oklch(0.78 0.16 195) → oklch(0.75 0.12 85) (warm gold/amber)
+  - Background/foreground hue shifted from 285 (blue-purple) to 35/55 (warm)
+  - Primary changed from neon purple to warm rose
+  - Ring, sidebar-primary, sidebar-ring all updated to warm rose
+  - Chart colors changed to warm rose/copper/gold/terracotta/amber palette
+  - Surface hex colors changed from cool (e.g. #050509, #070711) to warm (e.g. #090807, #0C0A09)
+  - Surface card hover, border-card, border-subtle all shifted to warm undertones
+- Changed body background-image radial gradients:
+  - From purple/pink/cyan neon glows to warm rose/copper/gold subtle glows
+  - Reduced opacity (0.16→0.12, 0.12→0.08, 0.10→0.07) for more subtle atmosphere
+- Changed .bg-brand-gradient to use rose→copper→gold gradient
+- Changed .glow-purple to use warm rose with reduced opacity (0.25→0.15, 0.35→0.18) — more subtle
+- Changed .glow-soft to reduce shadow opacity (0.7→0.55) — more subtle
+- Ran `bun run lint` — no errors
+
+Result:
+- All CSS custom properties updated to warm, earthy palette
+- App now has rose/terracotta + copper + gold accents instead of neon purple/cyan
+- Backgrounds have warm undertones instead of cool blue-purple
+- Glow effects are more subtle/less "AI-looking"
+- All class names preserved (glow-purple, glow-soft, bg-brand-gradient, text-gradient-brand, etc.)
+- No component structure or layout changes
