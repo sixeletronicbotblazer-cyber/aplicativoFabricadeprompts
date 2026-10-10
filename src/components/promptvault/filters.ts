@@ -150,14 +150,14 @@ function mediaQualityScore(p: Prompt): number {
  */
 function sortByReference(list: Prompt[]): Prompt[] {
   return [...list].sort((a, b) => {
-    // 1. Media quality score (working media first, broken last)
-    const aScore = mediaQualityScore(a);
-    const bScore = mediaQualityScore(b);
-    if (aScore !== bScore) return aScore - bScore;
-    // 2. New items first
+    // 1. New items ALWAYS first (top of gallery)
     const aNew = a.isNew ? 0 : 1;
     const bNew = b.isNew ? 0 : 1;
     if (aNew !== bNew) return aNew - bNew;
+    // 2. Media quality score (working media first, broken last)
+    const aScore = mediaQualityScore(a);
+    const bScore = mediaQualityScore(b);
+    if (aScore !== bScore) return aScore - bScore;
     // 3. Has prompt text first
     const aText = hasPromptText(a) ? 0 : 1;
     const bText = hasPromptText(b) ? 0 : 1;
