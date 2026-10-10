@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Sparkles, Heart, ChevronDown, Film, ArrowRight, Zap, LayoutGrid, Menu } from "lucide-react";
+import { Gem, Heart, ChevronDown, Film, ArrowRight, Zap, LayoutGrid, Menu, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PROMPTS, type Prompt } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
@@ -77,9 +77,9 @@ export function Gallery() {
           {/* Mobile header — cleaner, more compact */}
           <div className="lg:hidden sticky top-0 z-30 flex items-center justify-between border-b border-border-subtle bg-background/90 px-3 sm:px-4 py-2.5 backdrop-blur-xl">
             <div className="flex items-center gap-2">
-              <div className="grid h-7 w-7 place-items-center rounded-lg bg-brand-gradient glow-purple"><Sparkles className="h-3.5 w-3.5 text-white" /></div>
+              <div className="grid h-7 w-7 place-items-center rounded-lg bg-brand-gradient glow-purple"><Gem className="h-3.5 w-3.5 text-white" /></div>
               <div className="leading-tight">
-                <p className="text-[13px] font-semibold tracking-wide">PromptVault</p>
+                <p className="text-[13px] font-semibold tracking-wide">Fábrica de Prompts</p>
                 <p className="text-[9px] text-muted-foreground/50">{filtered.length} prompts</p>
               </div>
             </div>
@@ -207,8 +207,8 @@ export function Gallery() {
       <footer className="mt-auto border-t border-border-subtle bg-background/60 backdrop-blur-xl">
         <div className="px-3 sm:px-6 lg:px-8 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <div className="grid h-6 w-6 place-items-center rounded-lg bg-brand-gradient"><Sparkles className="h-3 w-3 text-white" /></div>
-            <p className="text-[11px] sm:text-xs text-muted-foreground"><span className="font-semibold text-foreground">PromptVault</span>{" "}TikTok Shop · Seu acervo visual de prompts prontos para copiar, colar e usar.</p>
+            <div className="grid h-6 w-6 place-items-center rounded-lg bg-brand-gradient"><Gem className="h-3 w-3 text-white" /></div>
+            <p className="text-[11px] sm:text-xs text-muted-foreground"><span className="font-semibold text-foreground">Fábrica de Prompts</span>{" "}TikTok Shop · Seu acervo visual de prompts prontos para copiar, colar e usar.</p>
           </div>
           <p className="text-[10px] sm:text-[11px] text-muted-foreground/70">{PROMPTS.length} prompts disponíveis</p>
         </div>

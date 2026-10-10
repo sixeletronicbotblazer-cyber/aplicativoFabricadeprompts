@@ -7,35 +7,24 @@ export type PromptType =
   | "Produto";
 
 export type PromptCategory =
-  | "Selfie"
   | "POV"
-  | "POV Avançado"
-  | "POV Calçados"
-  | "POV Acessórios"
-  | "POV Moda"
-  | "POV Casa"
   | "UGC"
+  | "Selfie"
   | "Produto"
-  | "TikTok Shop"
-  | "Imagem"
-  | "Vídeo"
-  | "Identidade AI"
-  | "Selfie UGC"
-  | "PET"
-  | "Infantil"
-  | "Natal"
-  | "Natal Pet"
-  | "Natal POV"
-  | "Natal Gancho"
-  | "Gancho"
-  | "Gancho Masculino"
-  | "Transição"
+  | "Moda"
   | "Masculino"
   | "Casal"
-  | "Moda"
-  | "Moda Moto"
+  | "Lingerie"
   | "Movimento"
-  | "Lingerie";
+  | "Natal"
+  | "Gancho"
+  | "Transição"
+  | "PET"
+  | "Infantil"
+  | "TikTok Shop"
+  | "Identidade AI"
+  | "Imagem"
+  | "Vídeo";
 
 export interface Prompt {
   id: string;
@@ -60,14 +49,7 @@ export interface Prompt {
 }
 
 /**
- * Base de dados da galeria — extraída do documento enviado (Imagem.docx).
- *
- * Cada item segue a estrutura { id, title, type, category, description, tags,
- * image, prompt }. O texto dos prompts é preservado integralmente; apenas
- * organizado, formatado e tornado copiável.
- *
- * Para atualizar o acervo, substitua este JSON ou gere-o novamente com o
- * parser em `parse_prompts.py` a partir de um novo documento.
+ * Base de dados da galeria.
  */
 import promptsData from "./prompts-data.json";
 
@@ -78,34 +60,23 @@ export const PROMPTS: Prompt[] = promptsData as unknown as Prompt[];
  */
 export const CATEGORIES: PromptCategory[] = [
   "POV",
-  "POV Avançado",
-  "POV Calçados",
-  "POV Acessórios",
-  "POV Moda",
-  "POV Casa",
-  "Produto",
   "UGC",
   "Selfie",
+  "Produto",
+  "Moda",
+  "Masculino",
+  "Casal",
+  "Lingerie",
+  "Movimento",
+  "Natal",
+  "Gancho",
+  "Transição",
   "PET",
   "Infantil",
   "TikTok Shop",
+  "Identidade AI",
   "Imagem",
   "Vídeo",
-  "Identidade AI",
-  "Selfie UGC",
-  "Natal",
-  "Natal Pet",
-  "Natal POV",
-  "Natal Gancho",
-  "Gancho",
-  "Gancho Masculino",
-  "Transição",
-  "Masculino",
-  "Casal",
-  "Moda",
-  "Moda Moto",
-  "Movimento",
-  "Lingerie",
 ];
 
 export const TYPE_BADGES: PromptType[] = [

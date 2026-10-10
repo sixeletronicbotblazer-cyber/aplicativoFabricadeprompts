@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PromptVault TikTok Shop — Acervo de Prompts",
+  title: "Fábrica de Prompts — TikTok Shop",
   description:
     "Seu acervo visual de prompts prontos para copiar, colar e usar em vídeos de TikTok Shop e Shopee com IA.",
   keywords: [
-    "PromptVault",
+    "Fábrica de Prompts",
     "TikTok Shop",
     "prompts",
     "IA",
@@ -26,22 +26,22 @@ export const metadata: Metadata = {
     "vídeo",
     "Shopee",
   ],
-  authors: [{ name: "PromptVault" }],
+  authors: [{ name: "Fábrica de Prompts" }],
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "PromptVault",
+    title: "Fábrica de Prompts",
   },
   icons: {
     icon: "/logo.svg",
     apple: "/logo.svg",
   },
   openGraph: {
-    title: "PromptVault TikTok Shop",
+    title: "Fábrica de Prompts — TikTok Shop",
     description:
       "Seu acervo visual de prompts prontos para copiar, colar e usar.",
-    siteName: "PromptVault",
+    siteName: "Fábrica de Prompts",
     type: "website",
   },
 };

@@ -63,8 +63,7 @@ export function PromptModal({
   const videoRef = useRef<HTMLVideoElement>(null);
 
   /* ─── Derived flags ─── */
-  const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "files.catbox.moe"];
-  const isBroken = (url: string | undefined) => !url || BROKEN_HOSTS.some((h) => url.includes(h));
+  const isBroken = (url: string | undefined) => !url;
   const hasImage = Boolean(prompt?.image) && !isBroken(prompt?.image);
   const hasVideo = Boolean(prompt?.videoUrl) && !isBroken(prompt?.videoUrl);
   const hasMedia = hasImage || hasVideo;
