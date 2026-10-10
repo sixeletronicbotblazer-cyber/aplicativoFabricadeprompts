@@ -101,8 +101,8 @@ export function Gallery() {
                 <Zap className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
               </div>
               <div className="min-w-0">
-                <p className="text-[12px] sm:text-sm font-semibold text-foreground">Atualização 12/09</p>
-                <p className="text-[10px] sm:text-[11px] text-muted-foreground truncate">Novos prompts e referências adicionados</p>
+                <p className="text-[12px] sm:text-sm font-semibold text-foreground">Atualização 10/10</p>
+                <p className="text-[10px] sm:text-[11px] text-muted-foreground truncate">+56 novos prompts com vídeos e imagens no Supabase</p>
               </div>
             </div>
             <button
@@ -161,17 +161,17 @@ export function Gallery() {
             {visible.length === 0 ? (
               <EmptyState onReset={handleReset} />
             ) : isVideosNoRef ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
                 {visible.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
               </div>
             ) : isVideosWithRef ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
                 {visible.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
               </div>
             ) : (
               <div className="space-y-4 sm:space-y-6">
                 {hasPreviewCards && (
-                  <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
                     {previewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                   </div>
                 )}
@@ -186,7 +186,7 @@ export function Gallery() {
                       </div>
                       <div className="flex-1 h-px bg-white/10" />
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
                       {noPreviewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                     </div>
                   </div>
