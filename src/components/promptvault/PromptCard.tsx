@@ -18,6 +18,7 @@ import type { Prompt, PromptType } from "@/lib/prompts";
 import { cn } from "@/lib/utils";
 import { copyText } from "@/lib/copy";
 import { toast } from "sonner";
+import { hasWorkingVideo } from "@/lib/prompts";
 
 const TYPE_STYLE: Record<PromptType, string> = {
   Imagem: "bg-brand-cyan/15 text-brand-cyan border-brand-cyan/25",
@@ -376,6 +377,13 @@ export function PromptCard({
         {prompt.isNew && (
           <span className="absolute right-10 sm:right-12 top-2.5 sm:top-3 inline-flex items-center rounded-full bg-brand-turquesa/20 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-brand-turquesa backdrop-blur-md z-[2] pointer-events-none">
             Novo
+          </span>
+        )}
+
+        {/* Working video badge */}
+        {hasWorkingVideo(prompt) && (
+          <span className="absolute right-10 sm:right-12 bottom-3 sm:bottom-4 inline-flex items-center gap-0.5 rounded-full bg-emerald-500/20 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-emerald-400 backdrop-blur-md z-[2] pointer-events-none">
+            ✓ Vídeo
           </span>
         )}
 
