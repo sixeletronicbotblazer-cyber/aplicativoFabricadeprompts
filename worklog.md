@@ -518,3 +518,23 @@ Result:
 - Glow effects are more subtle/less "AI-looking"
 - All class names preserved (glow-purple, glow-soft, bg-brand-gradient, text-gradient-brand, etc.)
 - No component structure or layout changes
+---
+Task ID: 1
+Agent: main
+Task: Collapse sidebar sections by default + fix broken videos
+
+Work Log:
+- Changed all NAV_SECTIONS defaultOpen from true to false (except TikTok which was already false)
+- Removed BROKEN_HOSTS from Gallery.tsx that was blocking imgur.com and files.catbox.moe video URLs
+- Improved /api/drive-video proxy with Google virus-scan page handling (confirm token extraction)
+- Created /api/drive-thumb endpoint to proxy Google Drive thumbnails
+- Updated PromptCard.tsx: added Drive thumbnail fallback when video errors, retry button, video loading timeout (12s), poster attribute on video element
+- Updated PromptModal.tsx: added Drive thumbnail poster on video, thumbnail image in error state
+- Added RefreshCw icon import to PromptCard for retry buttons
+- Verified with agent-browser: sidebar sections all collapsed, expand on click, gallery loads correctly with 474 prompts
+
+Stage Summary:
+- Sidebar sections now collapsed by default (PRINCIPAL, POV & ESTILO, TEMAS, TIKTOK, MEUS)
+- Videos: removed host blocking, added thumbnail fallback, retry mechanism, 12s timeout
+- New API endpoint: /api/drive-thumb?id=FILE_ID for Google Drive thumbnails
+- App verified working in browser

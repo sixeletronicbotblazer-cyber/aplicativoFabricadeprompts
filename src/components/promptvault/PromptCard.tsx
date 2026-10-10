@@ -10,6 +10,7 @@ import {
   Pause,
   Loader2,
   Eye,
+  RefreshCw,
 } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
@@ -38,6 +39,25 @@ function isBrokenUrl(url: string | undefined): boolean {
   return !url;
 }
 
+/** Extract Google Drive file ID from a proxy URL like /api/drive-video?id=FILE_ID */
+function getDriveId(url: string | undefined): string | null {
+  if (!url) return null;
+  try {
+    const u = new URL(url, "https://dummy");
+    return u.searchParams.get("id");
+  } catch {
+    const m = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    return m ? m[1] : null;
+  }
+}
+
+/** Build a thumbnail URL for a Drive video */
+function getDriveThumbUrl(videoUrl: string | undefined): string | null {
+  const id = getDriveId(videoUrl);
+  if (!id) return null;
+  return `/api/drive-thumb?id=${id}`;
+}
+
 interface PromptCardProps {
   prompt: Prompt;
   isFavorite: boolean;
@@ -56,6 +76,7 @@ export function PromptCard({
   const [videoError, setVideoError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [thumbError, setThumbError] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -86,6 +107,18 @@ export function PromptCard({
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  /* Video loading timeout — fallback to thumbnail if video doesn't load in 12s */
+  useEffect(() => {
+    if (!isVisible || !showVideoThumb || videoError) return;
+    const timer = setTimeout(() => {
+      if (videoLoading) {
+        setVideoError(true);
+        setVideoLoading(false);
+      }
+    }, 12000);
+    return () => clearTimeout(timer);
+  }, [isVisible, showVideoThumb, videoError, videoLoading]);
 
   /* Pause video when card leaves viewport */
   useEffect(() => {
@@ -123,6 +156,18 @@ export function PromptCard({
     setVideoError(true);
     setVideoLoading(false);
   }, []);
+
+  /* Video retry handler */
+  const handleVideoRetry = useCallback(() => {
+    setVideoError(false);
+    setVideoLoading(true);
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+  }, []);
+
+  /* Derive thumbnail fallback URL for Drive videos */
+  const thumbUrl = videoError ? getDriveThumbUrl(prompt.videoUrl) : null;
 
   const handleFavorite = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -222,11 +267,35 @@ export function PromptCard({
                     alt={prompt.title}
                     className="h-full w-full object-cover opacity-80"
                   />
+                ) : thumbUrl && !thumbError ? (
+                  <div className="relative h-full w-full">
+                    <img
+                      src={thumbUrl}
+                      alt={prompt.title}
+                      onError={() => setThumbError(true)}
+                      className="h-full w-full object-cover opacity-70"
+                    />
+                    <button
+                      type="button"
+                      onClick={handleVideoRetry}
+                      className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-lg bg-black/50 px-2 py-1 text-[9px] font-semibold text-white/80 backdrop-blur-md hover:bg-black/60 transition-colors z-10"
+                    >
+                      <RefreshCw className="h-2.5 w-2.5" />
+                      Reproduzir
+                    </button>
+                  </div>
                 ) : (
                   <div className="absolute inset-0 grid place-items-center bg-surface-secondary">
                     <div className="flex flex-col items-center gap-1.5">
                       <Film className="h-6 w-6 text-text-secondary/30" />
-                      <span className="text-[9px] text-text-secondary/40">Vídeo indisponível</span>
+                      <button
+                        type="button"
+                        onClick={handleVideoRetry}
+                        className="mt-1 inline-flex items-center gap-1 rounded-lg bg-white/8 px-2 py-1 text-[9px] font-semibold text-text-secondary/60 hover:bg-white/12 transition-colors"
+                      >
+                        <RefreshCw className="h-2.5 w-2.5" />
+                        Tentar novamente
+                      </button>
                     </div>
                   </div>
                 )
@@ -234,12 +303,14 @@ export function PromptCard({
               <video
                 ref={videoRef}
                 src={prompt.videoUrl}
+                poster={getDriveThumbUrl(prompt.videoUrl) ?? undefined}
                 muted
                 playsInline
                 loop
                 preload="metadata"
                 x-webkit-playsinline="true"
                 onLoadedData={() => setVideoLoading(false)}
+                onLoadedMetadata={() => setVideoLoading(false)}
                 onError={handleVideoError}
                 className={cn(
                   "h-full w-full object-cover transition-opacity duration-300",

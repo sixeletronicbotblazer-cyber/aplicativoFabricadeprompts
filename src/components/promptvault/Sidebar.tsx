@@ -60,7 +60,7 @@ interface NavSection {
 const NAV_SECTIONS: NavSection[] = [
   {
     title: "PRINCIPAL",
-    defaultOpen: true,
+    defaultOpen: false,
     items: [
       { label: "Todos os prompts", icon: LayoutGrid, filter: { kind: "all" } },
       { label: "Novidades", icon: Sparkles, filter: { kind: "novidades" }, isNew: true },
@@ -70,7 +70,7 @@ const NAV_SECTIONS: NavSection[] = [
   },
   {
     title: "POV & ESTILO",
-    defaultOpen: true,
+    defaultOpen: false,
     items: [
       { label: "POV", icon: Eye, filter: { kind: "category", value: "POV" } },
       { label: "UGC", icon: Camera, filter: { kind: "category", value: "UGC" } },
@@ -81,7 +81,7 @@ const NAV_SECTIONS: NavSection[] = [
   },
   {
     title: "TEMAS",
-    defaultOpen: true,
+    defaultOpen: false,
     items: [
       { label: "Natal", icon: TreePine, filter: { kind: "category", value: "Natal" }, isNew: true },
       { label: "Ganchos", icon: Zap, filter: { kind: "category", value: "Gancho" }, isNew: true },
@@ -100,7 +100,7 @@ const NAV_SECTIONS: NavSection[] = [
   },
   {
     title: "MEUS",
-    defaultOpen: true,
+    defaultOpen: false,
     items: [
       { label: "Favoritos", icon: Heart, filter: { kind: "favorites" } },
       { label: "Atualizações", icon: RefreshCw, filter: { kind: "updates" } },

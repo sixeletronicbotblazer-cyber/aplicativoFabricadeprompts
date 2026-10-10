@@ -138,11 +138,25 @@ export function PromptModal({
   };
 
   /* ─── Video element (shared) ─── */
+  const driveThumbUrl = (() => {
+    if (!prompt?.videoUrl) return undefined;
+    try {
+      const u = new URL(prompt.videoUrl, "https://dummy");
+      const id = u.searchParams.get("id");
+      if (id) return `/api/drive-thumb?id=${id}`;
+    } catch {
+      const m = prompt.videoUrl.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (m?.[1]) return `/api/drive-thumb?id=${m[1]}`;
+    }
+    return undefined;
+  })();
+
   const renderVideo = (className?: string) => (
     <div className={cn("relative w-full", className)}>
       <video
         ref={videoRef}
         src={prompt?.videoUrl}
+        poster={driveThumbUrl}
         controls
         controlsList="nodownload"
         playsInline
@@ -177,19 +191,28 @@ export function PromptModal({
         </div>
       )}
 
-      {/* Error state with retry */}
+      {/* Error state with retry and thumbnail fallback */}
       {videoError && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/40">
-          <Film className="h-6 w-6 text-white/30" />
-          <p className="text-[11px] sm:text-xs text-white/60">Vídeo indisponível</p>
-          <button
-            type="button"
-            onClick={handleVideoRetry}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-white/15 px-3 py-1.5 text-[11px] sm:text-xs font-semibold text-white backdrop-blur-md transition-all hover:bg-white/25"
-          >
-            <RefreshCw className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-            Tentar novamente
-          </button>
+          {driveThumbUrl ? (
+            <img
+              src={driveThumbUrl}
+              alt={prompt?.title ?? "Video thumbnail"}
+              className="absolute inset-0 h-full w-full object-contain opacity-60"
+            />
+          ) : null}
+          <div className="relative z-10 flex flex-col items-center gap-2">
+            <Film className="h-6 w-6 text-white/30" />
+            <p className="text-[11px] sm:text-xs text-white/60">Vídeo indisponível</p>
+            <button
+              type="button"
+              onClick={handleVideoRetry}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-white/15 px-3 py-1.5 text-[11px] sm:text-xs font-semibold text-white backdrop-blur-md transition-all hover:bg-white/25"
+            >
+              <RefreshCw className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+              Tentar novamente
+            </button>
+          </div>
         </div>
       )}
     </div>
