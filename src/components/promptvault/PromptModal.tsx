@@ -367,7 +367,7 @@ export function PromptModal({
                         onClick={handleCopy}
                         data-copy-prompt
                         data-prompt-text={prompt.prompt}
-                        className="absolute right-2.5 sm:right-3 top-2.5 sm:top-3 inline-flex items-center gap-1 sm:gap-1.5 rounded-lg border border-white/10 bg-black/60 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-white/90 backdrop-blur-md transition-all hover:bg-black/80 active:scale-95"
+                        className="absolute right-2.5 sm:right-3 top-2.5 sm:top-3 inline-flex items-center gap-1 sm:gap-1.5 rounded-lg border border-brand-turquesa/30 bg-brand-turquesa/90 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-white backdrop-blur-md transition-all hover:bg-brand-turquesa active:scale-95 shadow-sm"
                       >
                         {copied ? (
                           <>
@@ -395,10 +395,10 @@ export function PromptModal({
                   className={cn(
                     "h-10 sm:h-11 flex-1 gap-2 text-[13px] sm:text-[15px] font-bold border-0 rounded-xl transition-all active:scale-[0.97]",
                     missingPrompt
-                      ? "bg-white/5 text-muted-foreground/40 cursor-not-allowed"
+                      ? "bg-white/15 text-white/50 cursor-not-allowed"
                       : copied
                         ? "bg-emerald-500/90 text-white hover:bg-emerald-500"
-                        : "bg-brand-gradient text-white hover:brightness-110 glow-purple"
+                        : "bg-brand-turquesa text-white hover:brightness-110 shadow-md shadow-brand-turquesa/20"
                   )}
                 >
                   {missingPrompt ? (

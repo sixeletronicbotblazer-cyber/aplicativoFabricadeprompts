@@ -221,8 +221,8 @@ export function PromptCard({
               className={cn(
                 "h-7 sm:h-8 px-2.5 sm:px-3 gap-1 text-[10px] sm:text-[11px] font-bold border-0 rounded-lg transition-all active:scale-[0.97]",
                 missingPrompt
-                  ? "bg-white/8 text-text-secondary hover:bg-white/12"
-                  : "bg-brand-gradient text-white hover:brightness-110 shadow-sm"
+                  ? "bg-white/15 text-white/70 hover:bg-white/20"
+                  : "bg-brand-turquesa text-white hover:brightness-110 shadow-sm shadow-brand-turquesa/30"
               )}
             >
               {missingPrompt ? <Eye className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
@@ -249,8 +249,15 @@ export function PromptCard({
   /* ─── FULL CARD (with preview) ─── */
   return (
     <article ref={cardRef} className="group pv-card relative overflow-hidden flex flex-col animate-fade-in">
-      {/* Preview area */}
-      <div className="relative block w-full overflow-hidden rounded-t-[0.875rem]">
+      {/* Preview area — clickable to open modal */}
+      <div
+        className="relative block w-full overflow-hidden rounded-t-[0.875rem] cursor-pointer"
+        onClick={handleOpenModal}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleOpenModal(e as any); }}
+        aria-label={`Ver prompt: ${prompt.title}`}
+      >
         <div className="aspect-[3/4] w-full bg-surface-secondary">
           {isVisible && showVideoThumb ? (
             /* VIDEO thumbnail with play/pause */
@@ -410,8 +417,8 @@ export function PromptCard({
             className={cn(
               "h-8 sm:h-9 w-full gap-1.5 text-[11px] sm:text-[12px] font-bold border-0 rounded-lg transition-all active:scale-[0.97]",
               missingPrompt
-                ? "bg-white/8 text-text-secondary hover:bg-white/12"
-                : "bg-brand-gradient text-white hover:brightness-110 shadow-sm"
+                ? "bg-white/15 text-white/70 hover:bg-white/20"
+                : "bg-brand-turquesa text-white hover:brightness-110 shadow-sm shadow-brand-turquesa/30"
             )}
           >
             {missingPrompt ? (
