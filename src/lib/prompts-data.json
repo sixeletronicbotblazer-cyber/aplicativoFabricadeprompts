@@ -1,5 +1,826 @@
 [
   {
+    "id": "drive-001",
+    "title": "Almofadas Natal",
+    "type": "Vídeo",
+    "category": "Natal",
+    "description": "Almofada temática de Natal para decoração",
+    "tags": [
+      "natal"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1Qy9exCwpvohEm4ol3a2Tdvfxb0u2RLVu"
+  },
+  {
+    "id": "drive-002",
+    "title": "Arvore de natal",
+    "type": "Vídeo",
+    "category": "Natal",
+    "description": "Decoração de árvore de Natal",
+    "tags": [
+      "natal"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1KIwjgNqmnpZxWXYrFX5aLvZh3NF6BGWt"
+  },
+  {
+    "id": "drive-003",
+    "title": "BANHO DE SOL 2",
+    "type": "Vídeo",
+    "category": "POV",
+    "description": "Vídeo POV de banho de sol",
+    "tags": [
+      "pov",
+      "banho"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1nqv6Jxm7lhSWLH1TflWWWb0PcBHKsXnV"
+  },
+  {
+    "id": "drive-004",
+    "title": "Banho de sol",
+    "type": "Vídeo",
+    "category": "POV",
+    "description": "Vídeo POV de banho de sol",
+    "tags": [
+      "pov",
+      "banho"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=17rROKltNd5O07JJl-tH6V0-xbNKenFPy"
+  },
+  {
+    "id": "drive-005",
+    "title": "Caixa bolinhas (decoração de arvore) natal",
+    "type": "Vídeo",
+    "category": "Natal",
+    "description": "Decoração de árvore de Natal",
+    "tags": [
+      "natal",
+      "decoração"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1I6x9Hyn_7qOy0C9Sbb8C_a1xll5-AH9_"
+  },
+  {
+    "id": "drive-006",
+    "title": "Camisa 123",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo de referência de camisa",
+    "tags": [
+      "moda",
+      "roupa"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=19DdlLh0x2XtXPKz0iTmjkh0r0vRGIXFm"
+  },
+  {
+    "id": "drive-007",
+    "title": "Camiseta Careta",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo de referência de camiseta",
+    "tags": [
+      "moda",
+      "roupa"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=14nICJdgyI0h48qkKh-fiw3GiNMjmdm9I"
+  },
+  {
+    "id": "drive-008",
+    "title": "CTA modelo",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo CTA com modelo",
+    "tags": [
+      "ugc",
+      "cta"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=14cszalnVNa0_OjUjqaiiFJBJCkfZnl8y"
+  },
+  {
+    "id": "drive-009",
+    "title": "Decoração natal (neutro para qualquer decoração de natal)",
+    "type": "Vídeo",
+    "category": "Natal",
+    "description": "Decoração neutra de Natal",
+    "tags": [
+      "natal",
+      "decoração"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1GIHrsmp8xkPLPyAfZSzInSmU_Nq9Sz34"
+  },
+  {
+    "id": "drive-010",
+    "title": "Espelho 1",
+    "type": "Vídeo",
+    "category": "POV",
+    "description": "Vídeo POV com espelho",
+    "tags": [
+      "pov",
+      "espelho"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1_occqWyOqt6lJcqVHn9LCBjKvUtrtA6r"
+  },
+  {
+    "id": "drive-011",
+    "title": "Estrela arvore de natal",
+    "type": "Vídeo",
+    "category": "Natal",
+    "description": "Decoração de árvore de Natal",
+    "tags": [
+      "natal"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1xZErfiNyW39CvWBVnYRX-lQY7GQwy9qk"
+  },
+  {
+    "id": "drive-012",
+    "title": "Fabrica caminhão",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de fábrica / método UGC",
+    "tags": [
+      "ugc",
+      "fabrica"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1oVQhYVDqUrsPQpV2ptZO9Wy6oDFq2OeK"
+  },
+  {
+    "id": "drive-013",
+    "title": "Fabrica VIDEO 1",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de fábrica / método UGC",
+    "tags": [
+      "ugc",
+      "fabrica"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1MnVLFCR4eJeETZ5oBXbD8qOWbhKn6xHl"
+  },
+  {
+    "id": "drive-014",
+    "title": "fabrica video 2",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de fábrica / método UGC",
+    "tags": [
+      "ugc",
+      "fabrica"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1ikHn1gSI5PdfuUOlW1YExIkUlkAnP0Ps"
+  },
+  {
+    "id": "drive-015",
+    "title": "Fabrica video 3",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de fábrica / método UGC",
+    "tags": [
+      "ugc",
+      "fabrica"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1MVwQxZTGK8ZGv1hMoq_X8moQrILS1o7s"
+  },
+  {
+    "id": "drive-016",
+    "title": "faceless blusa 3",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de blusa feminina",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1fwvZCsqz1PsJSyxNPcdFbfadKCDg0XWl"
+  },
+  {
+    "id": "drive-017",
+    "title": "faceless blusa",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de blusa feminina",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1t7hHHZWsh98iFnwqbJMIH17r4jmpR0lV"
+  },
+  {
+    "id": "drive-018",
+    "title": "faceless calça 2",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de calça feminina",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1dGx6JjEeYxISoSm1nmcJu99PkHk_lJSj"
+  },
+  {
+    "id": "drive-019",
+    "title": "faceless calça 3",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de calça feminina",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1jZx6WpA9rmaLxHA09Lgivi25Jg5eU3-P"
+  },
+  {
+    "id": "drive-020",
+    "title": "faceless calça",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de calça feminina",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1bfZuWX54qVOrHzPr3p50W-aWlmEs4Git"
+  },
+  {
+    "id": "drive-021",
+    "title": "faceless conjunto",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de conjunto feminino",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1PDL94HGjqZJR-zFiF_CTxk7Qq3UuBken"
+  },
+  {
+    "id": "drive-022",
+    "title": "faceless shorts",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de shorts feminino",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1QJmJp84WBOtUTigUvNcEbrUa_cpH3J24"
+  },
+  {
+    "id": "drive-023",
+    "title": "faceless vestido",
+    "type": "Vídeo",
+    "category": "Moda",
+    "description": "Vídeo faceless de vestido feminino",
+    "tags": [
+      "moda",
+      "roupa",
+      "faceless"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1AgNT9HE2h5aOeKVFVCb1-q2w5TpwF-YW"
+  },
+  {
+    "id": "drive-024",
+    "title": "feminino agachamento",
+    "type": "Vídeo",
+    "category": "POV",
+    "description": "Vídeo POV feminino",
+    "tags": [
+      "pov",
+      "feminino"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1-yFZjNYtTZmUXmy7UGhFoMBLb2vyafN2"
+  },
+  {
+    "id": "drive-025",
+    "title": "Gancho 22",
+    "type": "Vídeo",
+    "category": "Gancho",
+    "description": "Gancho para vídeo de TikTok",
+    "tags": [
+      "gancho",
+      "hook"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1LSs947DHjI4b4w_UD5VX5uXeqKUboTCm"
+  },
+  {
+    "id": "drive-026",
+    "title": "Gancho arvore de natal pet",
+    "type": "Vídeo",
+    "category": "Natal",
+    "description": "Decoração de árvore de Natal",
+    "tags": [
+      "natal",
+      "gancho",
+      "hook"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1ZMoBQ9qYKOC72shCy0qGh4FNTyrg8s_H"
+  },
+  {
+    "id": "drive-027",
+    "title": "Gancho Bolsa caindo",
+    "type": "Vídeo",
+    "category": "Gancho",
+    "description": "Gancho para vídeo de TikTok",
+    "tags": [
+      "gancho",
+      "hook"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1fs2dd6txQWFEDZbkpYpQgWCRplQymMQ9"
+  },
+  {
+    "id": "drive-028",
+    "title": "Gancho gatinho árvore Natal",
+    "type": "Vídeo",
+    "category": "Natal",
+    "description": "Gancho para vídeo de TikTok",
+    "tags": [
+      "natal",
+      "gancho",
+      "hook"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1YqYh_AGg-stLIiCbaqLqViECW0ZM05Uv"
+  },
+  {
+    "id": "drive-029",
+    "title": "Gancho papai Noel",
+    "type": "Vídeo",
+    "category": "Gancho",
+    "description": "Gancho para vídeo de TikTok",
+    "tags": [
+      "gancho",
+      "hook"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=14YWfV0udts_wPVPWBnVSGWr1hdb6zasm"
+  },
+  {
+    "id": "drive-030",
+    "title": "Gancho queimando roupa",
+    "type": "Vídeo",
+    "category": "Gancho",
+    "description": "Gancho para vídeo de TikTok",
+    "tags": [
+      "gancho",
+      "hook"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=17JinGLoCRnWWJ_ifPj_oqjaDG0cE-rCR"
+  },
+  {
+    "id": "drive-031",
+    "title": "Gancho transição pacote pegando fogo",
+    "type": "Vídeo",
+    "category": "Gancho",
+    "description": "Gancho para vídeo de TikTok",
+    "tags": [
+      "gancho",
+      "hook"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1Ssevy9vAz7J1Hceu60PJRQfTzv8nQ90p"
+  },
+  {
+    "id": "drive-032",
+    "title": "gancho transição pov isqueiro",
+    "type": "Vídeo",
+    "category": "Gancho",
+    "description": "Gancho para vídeo de TikTok",
+    "tags": [
+      "gancho",
+      "hook",
+      "pov"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1BEftvVn8OflZ8jzveR-h4BAQLOE4b9aQ"
+  },
+  {
+    "id": "drive-033",
+    "title": "Jogo americano Suplas",
+    "type": "Vídeo",
+    "category": "Produto",
+    "description": "Vídeo de produto jogo americano",
+    "tags": [
+      "produto"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1VQaAXLvkoy3RJvhRiS5dx7p8V4dBUuIm"
+  },
+  {
+    "id": "drive-034",
+    "title": "metodo chines (ilha de promo de loja)",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo do método chinês para UGC",
+    "tags": [
+      "ugc",
+      "metodo",
+      "chines"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=13oeMp12jbsw2xxiIbTQtKeAtFtpsxDI7"
+  },
+  {
+    "id": "drive-035",
+    "title": "Método chines caixa correio",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método chines caixa correio",
+    "tags": [
+      "ugc",
+      "chines"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1LizMDcNjzt7aGkGxHqO3FrCoypbNSoTp"
+  },
+  {
+    "id": "drive-036",
+    "title": "Método chines VIDEO roupa",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método chines VIDEO roupa",
+    "tags": [
+      "ugc",
+      "chines"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1okzJn8s7Dt_lOF5NO3M7Sqv6Q0ndm_1o"
+  },
+  {
+    "id": "drive-037",
+    "title": "Método gringo  Facelass shop4",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo  Facelass shop4",
+    "tags": [
+      "ugc",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1n0TaLRfG65RM4pcVLU8yxRNK_T8-s-kk"
+  },
+  {
+    "id": "drive-038",
+    "title": "Método gringo  faceless shop 3",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo  faceless shop 3",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1a7EzkasJOGhRgjsa-xazGmjxAxZvc7qc"
+  },
+  {
+    "id": "drive-039",
+    "title": "Método gringo  Faceless Shop 5",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo  Faceless Shop 5",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1ahwUMT4DarT4YLEscSYB05egSrj20Q7E"
+  },
+  {
+    "id": "drive-040",
+    "title": "Método gringo - Faceless shop 8",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo - Faceless shop 8",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1_cgG6J5ccApIupNvIWc3NNW_uK0lkRhc"
+  },
+  {
+    "id": "drive-041",
+    "title": "Método gringo - faceless shop 9",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo - faceless shop 9",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1HNgaP4Y0wEujL5-KyPpZLQezrV41pShy"
+  },
+  {
+    "id": "drive-042",
+    "title": "Método gringo - faceless shop 11",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo - faceless shop 11",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1JsV5gO1gTyuabzM1SnEXaZWivJnBJ_Hg"
+  },
+  {
+    "id": "drive-043",
+    "title": "Método gringo - faceless shop 14",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo - faceless shop 14",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1OosU_3z4sBczjHJ8sbP11VviYVbW2QOA"
+  },
+  {
+    "id": "drive-044",
+    "title": "Método gringo - Faceless shop",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo - Faceless shop",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1pndz68e_eEv1RG-jcBHgFIsRe76dl6RU"
+  },
+  {
+    "id": "drive-045",
+    "title": "Método gringo Faceless shop 6",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo Faceless shop 6",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1uD2kDPTXBLABw_xolUd1IlRrxqct3Pcn"
+  },
+  {
+    "id": "drive-046",
+    "title": "Método gringo Faceless shop 7",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo Faceless shop 7",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1-lgEeKIFL1tHhaoP2Pul1PxpRoaejJvC"
+  },
+  {
+    "id": "drive-047",
+    "title": "Método gringo faceless shop5",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo faceless shop5",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1YwQEpFehSqal652FfyiWrxF-a9bGPRSo"
+  },
+  {
+    "id": "drive-048",
+    "title": "Método gringo TRANSIÇÃO  Faceless shop3",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo TRANSIÇÃO  Faceless shop3",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1JMsv1VVcUtGnvRh9ime6Bj_BTlmXvZHM"
+  },
+  {
+    "id": "drive-049",
+    "title": "Método gringo TRANSIÇÃO Faceless shop 2",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo TRANSIÇÃO Faceless shop 2",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=17vFbhF1REeq-Bg0syALPHp0HYhdi7Z2v"
+  },
+  {
+    "id": "drive-050",
+    "title": "Método gringo TRANSIÇÃO Faceless shop",
+    "type": "Vídeo",
+    "category": "UGC",
+    "description": "Vídeo de referência — Método gringo TRANSIÇÃO Faceless shop",
+    "tags": [
+      "ugc",
+      "faceless",
+      "gringo"
+    ],
+    "image": "",
+    "prompt": "",
+    "referencia": true,
+    "isNew": true,
+    "videoUrl": "/api/drive-video?id=1P77riARJ3PSLZUk_9kDgzh-TuKSbR8tP"
+  },
+  {
     "id": "doc-001",
     "title": "Calçado UNIVERSAL",
     "type": "Produto",
