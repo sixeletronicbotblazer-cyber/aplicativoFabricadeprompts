@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { Gem, Heart, ChevronDown, Film, ArrowRight, Zap, LayoutGrid, Menu, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PROMPTS, type Prompt } from "@/lib/prompts";
+import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingMedia } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
 import { toast } from "sonner";
 import { applyFilter, filterLabel, type Filter, ALL_FILTER } from "./filters";
@@ -56,6 +56,13 @@ export function Gallery() {
   const hasNoPreviewCards = noPreviewCards.length > 0;
   const isVideosNoRef = filter.kind === "videos-no-ref";
   const isVideosWithRef = filter.kind === "videos-with-ref";
+
+  /** Split visible cards into working-video and rest for sectioned display */
+  const workingVideoCards = visible.filter((p) => hasWorkingVideo(p));
+  const restCards = visible.filter((p) => !hasWorkingVideo(p));
+  const restWithPreview = restCards.filter(hasPreview);
+  const restNoPreview = restCards.filter((p) => !hasPreview(p));
+  const hasWorkingVideoCards = workingVideoCards.length > 0;
 
   const handleToggleFav = (id: string) => {
     const r = toggleFav(id);
@@ -169,25 +176,55 @@ export function Gallery() {
                 {visible.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
               </div>
             ) : (
-              <div className="space-y-4 sm:space-y-6">
-                {hasPreviewCards && (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
-                    {previewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+              <div className="space-y-5 sm:space-y-7">
+                {/* ── WORKING VIDEOS SECTION ── */}
+                {hasWorkingVideoCards && (
+                  <div>
+                    <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                      <div className="grid h-6 w-6 sm:h-7 sm:w-7 place-items-center rounded-lg bg-emerald-500/15 border border-emerald-500/25">
+                        <Film className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-emerald-400" />
+                      </div>
+                      <h2 className="text-[12px] sm:text-sm font-bold text-emerald-400 tracking-wide uppercase">Vídeos Funcionais</h2>
+                      <span className="rounded-md bg-emerald-500/10 border border-emerald-500/20 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold tabular-nums text-emerald-400">{workingVideoCards.length}</span>
+                      <div className="flex-1 h-px bg-emerald-500/15" />
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
+                      {workingVideoCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                    </div>
                   </div>
                 )}
-                {hasNoPreviewCards && (
+
+                {/* ── REST WITH PREVIEW ── */}
+                {restWithPreview.length > 0 && (
+                  <div>
+                    <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                      <div className="grid h-6 w-6 sm:h-7 sm:w-7 place-items-center rounded-lg bg-white/5 border border-border-card">
+                        <Film className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-text-secondary/50" />
+                      </div>
+                      <h2 className="text-[12px] sm:text-sm font-semibold text-text-secondary/70 tracking-wide uppercase">Demais referências</h2>
+                      <span className="rounded-md bg-white/5 border border-border-card px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium tabular-nums text-text-secondary/50">{restWithPreview.length}</span>
+                      <div className="flex-1 h-px bg-white/8" />
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
+                      {restWithPreview.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                    </div>
+                  </div>
+                )}
+
+                {/* ── REST WITHOUT PREVIEW ── */}
+                {restNoPreview.length > 0 && (
                   <div className="pt-3 sm:pt-4">
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
                       <div className="flex-1 h-px bg-white/10" />
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Film className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                         <span className="text-[12px] sm:text-sm font-semibold tracking-wide">Sem referência visual</span>
-                        <span className="rounded-md bg-white/5 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium tabular-nums">{noPreviewCards.length}</span>
+                        <span className="rounded-md bg-white/5 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium tabular-nums">{restNoPreview.length}</span>
                       </div>
                       <div className="flex-1 h-px bg-white/10" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
-                      {noPreviewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                      {restNoPreview.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                     </div>
                   </div>
                 )}
