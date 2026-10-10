@@ -258,7 +258,7 @@ export function PromptCard({
         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleOpenModal(e as any); }}
         aria-label={`Ver prompt: ${prompt.title}`}
       >
-        <div className="aspect-[3/4] w-full bg-surface-secondary">
+        <div className="aspect-[4/3] sm:aspect-[3/4] w-full bg-surface-secondary">
           {isVisible && showVideoThumb ? (
             /* VIDEO thumbnail with play/pause */
             <div className="relative h-full w-full bg-black/40">
