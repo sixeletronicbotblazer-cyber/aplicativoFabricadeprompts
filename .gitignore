@@ -54,3 +54,5 @@ server.log
 /skills/
 # backup artifacts
 PromptVault.bundle
+tool-results/
+gallery-verify-*.png
