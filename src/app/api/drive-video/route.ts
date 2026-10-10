@@ -4,10 +4,46 @@ import { NextRequest, NextResponse } from "next/server";
  * Proxy API for Google Drive videos with Range request support.
  * Usage: /api/drive-video?id=FILE_ID
  *
- * Mobile browsers require HTTP 206 Partial Content (Range requests)
- * to play videos. This proxy forwards Range headers from the client
- * to Google Drive and streams the response back.
+ * Handles Google's virus-scan confirmation page for large files,
+ * supports HTTP 206 Partial Content for mobile playback.
  */
+
+/** Follow redirects and extract confirm token from HTML if needed */
+async function resolveDriveUrl(id: string): Promise<string> {
+  // Method 1: Try usercontent endpoint (works for small/medium files)
+  const url1 = `https://drive.usercontent.google.com/download?id=${id}&export=download`;
+
+  const res = await fetch(url1, {
+    redirect: "follow",
+    headers: {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      Accept: "*/*",
+    },
+  });
+
+  // If we got actual video content, this URL works
+  const ct = res.headers.get("content-type") || "";
+  if (ct.includes("video/") || ct.includes("application/octet-stream") || ct.includes("binary/octet-stream")) {
+    return url1;
+  }
+
+  // If we got HTML, try to extract confirm token (Google's virus scan page)
+  if (ct.includes("text/html")) {
+    try {
+      const html = await res.text();
+      // Look for confirm token in the HTML form
+      const match = html.match(/confirm=([a-zA-Z0-9_-]+)/);
+      if (match?.[1]) {
+        return `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=${match[1]}`;
+      }
+    } catch {
+      // Ignore parse errors
+    }
+  }
+
+  // Method 2: Try the uc endpoint as fallback
+  return `https://drive.google.com/uc?id=${id}&export=download`;
+}
 
 export async function GET(req: NextRequest) {
   const id = req.nextUrl.searchParams.get("id");
@@ -16,11 +52,11 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const driveUrl = `https://drive.usercontent.google.com/download?id=${id}&export=download`;
+    const driveUrl = await resolveDriveUrl(id);
 
     // Forward the Range header from the client (essential for mobile playback)
     const headers: Record<string, string> = {
-      "User-Agent": "Mozilla/5.0 (compatible; PromptVault/1.0)",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       Accept: "*/*",
     };
 
@@ -53,7 +89,7 @@ export async function GET(req: NextRequest) {
 
     // Build response headers — support Range for mobile video playback
     const resHeaders: Record<string, string> = {
-      "Content-Type": contentType,
+      "Content-Type": contentType.startsWith("text/") ? "video/mp4" : contentType,
       "Cache-Control": "public, max-age=86400, immutable",
       "Access-Control-Allow-Origin": "*",
       "Accept-Ranges": acceptRanges ?? "bytes",

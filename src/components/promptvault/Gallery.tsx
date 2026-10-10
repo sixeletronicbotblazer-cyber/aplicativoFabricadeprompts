@@ -47,8 +47,8 @@ export function Gallery() {
   const visibleCount = PAGE_SIZE * (page + 1);
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
-  const BROKEN_HOSTS = ["auroraprompts.com", "imgur.com", "files.catbox.moe"];
-  const isBroken = (url: string | undefined) => !url || BROKEN_HOSTS.some((h) => url.includes(h));
+  /** No hosts are permanently blocked — let the browser handle errors natively via onError/onLoad. */
+  const isBroken = (url: string | undefined) => !url;
   const hasPreview = (p: Prompt) => !isBroken(p.image) || !isBroken(p.videoUrl);
   const previewCards = visible.filter(hasPreview);
   const noPreviewCards = visible.filter((p) => !hasPreview(p));
