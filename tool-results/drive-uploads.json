@@ -1,0 +1,762 @@
+[
+  {
+    "promptId": "drive-001",
+    "title": "Almofadas Natal",
+    "driveId": "1Qy9exCwpvohEm4ol3a2Tdvfxb0u2RLVu",
+    "supabaseFilename": "almofadas-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-002",
+    "title": "Arvore de natal",
+    "driveId": "1KIwjgNqmnpZxWXYrFX5aLvZh3NF6BGWt",
+    "supabaseFilename": "arvore-de-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-003",
+    "title": "BANHO DE SOL 2",
+    "driveId": "1nqv6Jxm7lhSWLH1TflWWWb0PcBHKsXnV",
+    "supabaseFilename": "banho-de-sol-2-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-004",
+    "title": "Banho de sol",
+    "driveId": "17rROKltNd5O07JJl-tH6V0-xbNKenFPy",
+    "supabaseFilename": "banho-de-sol-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-005",
+    "title": "Caixa bolinhas (decoração de arvore) natal",
+    "driveId": "1I6x9Hyn_7qOy0C9Sbb8C_a1xll5-AH9_",
+    "supabaseFilename": "caixa-bolinhas-decoracao-de-arvore-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-006",
+    "title": "Camisa 123",
+    "driveId": "19DdlLh0x2XtXPKz0iTmjkh0r0vRGIXFm",
+    "supabaseFilename": "camisa-123-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-007",
+    "title": "Camiseta Careta",
+    "driveId": "14nICJdgyI0h48qkKh-fiw3GiNMjmdm9I",
+    "supabaseFilename": "camiseta-careta-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-008",
+    "title": "CTA modelo",
+    "driveId": "14cszalnVNa0_OjUjqaiiFJBJCkfZnl8y",
+    "supabaseFilename": "cta-modelo-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-009",
+    "title": "Decoração natal (neutro para qualquer decoração de natal)",
+    "driveId": "1GIHrsmp8xkPLPyAfZSzInSmU_Nq9Sz34",
+    "supabaseFilename": "decoracao-natal-neutro-para-qualquer-decoracao-de-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-010",
+    "title": "Espelho 1",
+    "driveId": "1_occqWyOqt6lJcqVHn9LCBjKvUtrtA6r",
+    "supabaseFilename": "espelho-1-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-011",
+    "title": "Estrela arvore de natal",
+    "driveId": "1xZErfiNyW39CvWBVnYRX-lQY7GQwy9qk",
+    "supabaseFilename": "estrela-arvore-de-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-012",
+    "title": "Fabrica caminhão",
+    "driveId": "1oVQhYVDqUrsPQpV2ptZO9Wy6oDFq2OeK",
+    "supabaseFilename": "fabrica-caminhao-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-013",
+    "title": "Fabrica VIDEO 1",
+    "driveId": "1MnVLFCR4eJeETZ5oBXbD8qOWbhKn6xHl",
+    "supabaseFilename": "fabrica-video-1-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-014",
+    "title": "fabrica video 2",
+    "driveId": "1ikHn1gSI5PdfuUOlW1YExIkUlkAnP0Ps",
+    "supabaseFilename": "fabrica-video-2-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-015",
+    "title": "Fabrica video 3",
+    "driveId": "1MVwQxZTGK8ZGv1hMoq_X8moQrILS1o7s",
+    "supabaseFilename": "fabrica-video-3-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-016",
+    "title": "faceless blusa 3",
+    "driveId": "1fwvZCsqz1PsJSyxNPcdFbfadKCDg0XWl",
+    "supabaseFilename": "faceless-blusa-3-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-017",
+    "title": "faceless blusa",
+    "driveId": "1t7hHHZWsh98iFnwqbJMIH17r4jmpR0lV",
+    "supabaseFilename": "faceless-blusa-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-018",
+    "title": "faceless calça 2",
+    "driveId": "1dGx6JjEeYxISoSm1nmcJu99PkHk_lJSj",
+    "supabaseFilename": "faceless-calca-2-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-019",
+    "title": "faceless calça 3",
+    "driveId": "1jZx6WpA9rmaLxHA09Lgivi25Jg5eU3-P",
+    "supabaseFilename": "faceless-calca-3-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-020",
+    "title": "faceless calça",
+    "driveId": "1bfZuWX54qVOrHzPr3p50W-aWlmEs4Git",
+    "supabaseFilename": "faceless-calca-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-021",
+    "title": "faceless conjunto",
+    "driveId": "1PDL94HGjqZJR-zFiF_CTxk7Qq3UuBken",
+    "supabaseFilename": "faceless-conjunto-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-022",
+    "title": "faceless shorts",
+    "driveId": "1QJmJp84WBOtUTigUvNcEbrUa_cpH3J24",
+    "supabaseFilename": "faceless-shorts-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-023",
+    "title": "faceless vestido",
+    "driveId": "1AgNT9HE2h5aOeKVFVCb1-q2w5TpwF-YW",
+    "supabaseFilename": "faceless-vestido-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-024",
+    "title": "feminino agachamento",
+    "driveId": "1-yFZjNYtTZmUXmy7UGhFoMBLb2vyafN2",
+    "supabaseFilename": "feminino-agachamento-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-025",
+    "title": "Gancho 22",
+    "driveId": "1LSs947DHjI4b4w_UD5VX5uXeqKUboTCm",
+    "supabaseFilename": "gancho-22-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-026",
+    "title": "Gancho arvore de natal pet",
+    "driveId": "1ZMoBQ9qYKOC72shCy0qGh4FNTyrg8s_H",
+    "supabaseFilename": "gancho-arvore-de-natal-pet-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-027",
+    "title": "Gancho Bolsa caindo",
+    "driveId": "1fs2dd6txQWFEDZbkpYpQgWCRplQymMQ9",
+    "supabaseFilename": "gancho-bolsa-caindo-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-028",
+    "title": "Gancho gatinho árvore Natal",
+    "driveId": "1YqYh_AGg-stLIiCbaqLqViECW0ZM05Uv",
+    "supabaseFilename": "gancho-gatinho-arvore-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-029",
+    "title": "Gancho papai Noel",
+    "driveId": "14YWfV0udts_wPVPWBnVSGWr1hdb6zasm",
+    "supabaseFilename": "gancho-papai-noel-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-030",
+    "title": "Gancho queimando roupa",
+    "driveId": "17JinGLoCRnWWJ_ifPj_oqjaDG0cE-rCR",
+    "supabaseFilename": "gancho-queimando-roupa-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-031",
+    "title": "Gancho transição pacote pegando fogo",
+    "driveId": "1Ssevy9vAz7J1Hceu60PJRQfTzv8nQ90p",
+    "supabaseFilename": "gancho-transicao-pacote-pegando-fogo-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-032",
+    "title": "gancho transição pov isqueiro",
+    "driveId": "1BEftvVn8OflZ8jzveR-h4BAQLOE4b9aQ",
+    "supabaseFilename": "gancho-transicao-pov-isqueiro-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-033",
+    "title": "Jogo americano Suplas",
+    "driveId": "1VQaAXLvkoy3RJvhRiS5dx7p8V4dBUuIm",
+    "supabaseFilename": "jogo-americano-suplas-video.mp4",
+    "category": "Produto",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-034",
+    "title": "metodo chines (ilha de promo de loja)",
+    "driveId": "13oeMp12jbsw2xxiIbTQtKeAtFtpsxDI7",
+    "supabaseFilename": "metodo-chines-ilha-de-promo-de-loja-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-035",
+    "title": "Método chines caixa correio",
+    "driveId": "1LizMDcNjzt7aGkGxHqO3FrCoypbNSoTp",
+    "supabaseFilename": "metodo-chines-caixa-correio-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-036",
+    "title": "Método chines VIDEO roupa",
+    "driveId": "1okzJn8s7Dt_lOF5NO3M7Sqv6Q0ndm_1o",
+    "supabaseFilename": "metodo-chines-video-roupa-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-037",
+    "title": "Método gringo  Facelass shop4",
+    "driveId": "1n0TaLRfG65RM4pcVLU8yxRNK_T8-s-kk",
+    "supabaseFilename": "metodo-gringo-facelass-shop4-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-038",
+    "title": "Método gringo  faceless shop 3",
+    "driveId": "1a7EzkasJOGhRgjsa-xazGmjxAxZvc7qc",
+    "supabaseFilename": "metodo-gringo-faceless-shop-3-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-039",
+    "title": "Método gringo  Faceless Shop 5",
+    "driveId": "1ahwUMT4DarT4YLEscSYB05egSrj20Q7E",
+    "supabaseFilename": "metodo-gringo-faceless-shop-5-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-040",
+    "title": "Método gringo - Faceless shop 8",
+    "driveId": "1_cgG6J5ccApIupNvIWc3NNW_uK0lkRhc",
+    "supabaseFilename": "metodo-gringo-faceless-shop-8-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-041",
+    "title": "Método gringo - faceless shop 9",
+    "driveId": "1HNgaP4Y0wEujL5-KyPpZLQezrV41pShy",
+    "supabaseFilename": "metodo-gringo-faceless-shop-9-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-042",
+    "title": "Método gringo - faceless shop 11",
+    "driveId": "1JsV5gO1gTyuabzM1SnEXaZWivJnBJ_Hg",
+    "supabaseFilename": "metodo-gringo-faceless-shop-11-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-043",
+    "title": "Método gringo - faceless shop 14",
+    "driveId": "1OosU_3z4sBczjHJ8sbP11VviYVbW2QOA",
+    "supabaseFilename": "metodo-gringo-faceless-shop-14-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-047",
+    "title": "Método gringo faceless shop5",
+    "driveId": "1YwQEpFehSqal652FfyiWrxF-a9bGPRSo",
+    "supabaseFilename": "metodo-gringo-faceless-shop5-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "drive-048",
+    "title": "Método gringo TRANSIÇÃO  Faceless shop3",
+    "driveId": "1JMsv1VVcUtGnvRh9ime6Bj_BTlmXvZHM",
+    "supabaseFilename": "metodo-gringo-transicao-faceless-shop3-video.mp4",
+    "category": "UGC",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "vid-link-004",
+    "title": "Selfie Pensativo",
+    "driveId": "1_occqWyOqt6lJcqVHn9LCBjKvUtrtA6r",
+    "supabaseFilename": "selfie-pensativo-video.mp4",
+    "category": "Selfie",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-001-dentro-do",
+    "title": "Gancho papai Noel",
+    "driveId": "14YWfV0udts_wPVPWBnVSGWr1hdb6zasm",
+    "supabaseFilename": "gancho-papai-noel-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-002-gancho-gatinho-arvore-de-natal",
+    "title": "GANCHO GATINHO ARVORE DE NATAL",
+    "driveId": "1YqYh_AGg-stLIiCbaqLqViECW0ZM05Uv",
+    "supabaseFilename": "gancho-gatinho-arvore-de-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-005-estrelas-arvore-de-natal",
+    "title": "ESTRELAS ARVORE DE NATAL",
+    "driveId": "1xZErfiNyW39CvWBVnYRX-lQY7GQwy9qk",
+    "supabaseFilename": "estrelas-arvore-de-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-008-almofadas-natal",
+    "title": "ALMOFADAS NATAL",
+    "driveId": "1Qy9exCwpvohEm4ol3a2Tdvfxb0u2RLVu",
+    "supabaseFilename": "almofadas-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-009-decoracao-natal-neutro-para-qualquer-decoracao-de-natal",
+    "title": "DECORACAO NATAL ( NEUTRO PARA QUALQUER DECORACAO DE NATAL )",
+    "driveId": "1GIHrsmp8xkPLPyAfZSzInSmU_Nq9Sz34",
+    "supabaseFilename": "decoracao-natal-neutro-para-qualquer-decoracao-de-natal--video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-013-arvore-de-natal",
+    "title": "ARVORE DE NATAL",
+    "driveId": "1KIwjgNqmnpZxWXYrFX5aLvZh3NF6BGWt",
+    "supabaseFilename": "arvore-de-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-014-caixa-de-bolinha-natal",
+    "title": "CAIXA DE BOLINHA NATAL",
+    "driveId": "1I6x9Hyn_7qOy0C9Sbb8C_a1xll5-AH9_",
+    "supabaseFilename": "caixa-de-bolinha-natal-video.mp4",
+    "category": "Natal",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-016-pov-tapete-natal",
+    "title": "POV TAPETE NATAL",
+    "driveId": "1ZMoBQ9qYKOC72shCy0qGh4FNTyrg8s_H",
+    "supabaseFilename": "pov-tapete-natal-video.mp4",
+    "category": "Natal",
+    "type": "POV"
+  },
+  {
+    "promptId": "pdf-022-que-voce-quer-quer-ela-vista",
+    "title": "que voce quer quer ela vista",
+    "driveId": "13oeMp12jbsw2xxiIbTQtKeAtFtpsxDI7",
+    "supabaseFilename": "que-voce-quer-quer-ela-vista-video.mp4",
+    "category": "Vídeo",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-023-transicao-chiclete-modelo",
+    "title": "Transição Chiclete Modelo",
+    "driveId": "1P77riARJ3PSLZUk_9kDgzh-TuKSbR8tP",
+    "supabaseFilename": "transicao-chiclete-modelo-video.mp4",
+    "category": "Transição",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-025-gancho-bolsa-caindo",
+    "title": "Gancho Bolsa Caindo",
+    "driveId": "1fs2dd6txQWFEDZbkpYpQgWCRplQymMQ9",
+    "supabaseFilename": "gancho-bolsa-caindo-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-026-use-com-qualquer-roupa-e-qualquer-modelo",
+    "title": "Transição Roupa Neutro",
+    "driveId": "1pndz68e_eEv1RG-jcBHgFIsRe76dl6RU",
+    "supabaseFilename": "transicao-roupa-neutro-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-028-produto-que-quer-que-ela-tire-do-roupeiro",
+    "title": "Gancho Roupeiro",
+    "driveId": "1LizMDcNjzt7aGkGxHqO3FrCoypbNSoTp",
+    "supabaseFilename": "gancho-roupeiro-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-030-use-com-qualquer-roupa-que-estiver-na-mao-da-modelo",
+    "title": "Transição Roupa na Mão",
+    "driveId": "1okzJn8s7Dt_lOF5NO3M7Sqv6Q0ndm_1o",
+    "supabaseFilename": "transicao-roupa-na-mao-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-031-use-a-foto-da-sua-modelo-com-qualquer-roupa",
+    "title": "Modelo com Roupa",
+    "driveId": "1a7EzkasJOGhRgjsa-xazGmjxAxZvc7qc",
+    "supabaseFilename": "modelo-com-roupa-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-034-coloque-a-peca-que-deseja-divulgar-nos-bracos-da-modelo",
+    "title": "Modelo Peça nos Braços",
+    "driveId": "1n0TaLRfG65RM4pcVLU8yxRNK_T8-s-kk",
+    "supabaseFilename": "modelo-peca-nos-bracos-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-035-iniciar-o-video-cochichando",
+    "title": "iniciar o video cochichando",
+    "driveId": "14cszalnVNa0_OjUjqaiiFJBJCkfZnl8y",
+    "supabaseFilename": "iniciar-o-video-cochichando-video.mp4",
+    "category": "Vídeo",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-044-transicao-celular",
+    "title": "Transição Celular",
+    "driveId": "17vFbhF1REeq-Bg0syALPHp0HYhdi7Z2v",
+    "supabaseFilename": "transicao-celular-video.mp4",
+    "category": "Transição",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-045-gancho-roupa-na-camera",
+    "title": "Gancho Roupa na Câmera",
+    "driveId": "17JinGLoCRnWWJ_ifPj_oqjaDG0cE-rCR",
+    "supabaseFilename": "gancho-roupa-na-camera-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-046-modelo-transicao-mao-pos-banho",
+    "title": "Transição Mão Pós Banho",
+    "driveId": "17rROKltNd5O07JJl-tH6V0-xbNKenFPy",
+    "supabaseFilename": "transicao-mao-pos-banho-video.mp4",
+    "category": "Transição",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-047-movimentos-roupa",
+    "title": "Movimento Roupa",
+    "driveId": "1uD2kDPTXBLABw_xolUd1IlRrxqct3Pcn",
+    "supabaseFilename": "movimento-roupa-video.mp4",
+    "category": "Movimento",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-048-camiseta-careta",
+    "title": "Movimento Camiseta Careta",
+    "driveId": "14nICJdgyI0h48qkKh-fiw3GiNMjmdm9I",
+    "supabaseFilename": "movimento-camiseta-careta-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-050-frontal-regata-2",
+    "title": "POV Frontal Regata 2",
+    "driveId": "1YwQEpFehSqal652FfyiWrxF-a9bGPRSo",
+    "supabaseFilename": "pov-frontal-regata-2-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-051-gancho-com-desfoque-3",
+    "title": "GANCHO COM DESFOQUE 3",
+    "driveId": "1LSs947DHjI4b4w_UD5VX5uXeqKUboTCm",
+    "supabaseFilename": "gancho-com-desfoque-3-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-052-blusa-de-times-e-beijo-para-tela-e-coracao",
+    "title": "Movimento Blusa Time Beijo",
+    "driveId": "1-lgEeKIFL1tHhaoP2Pul1PxpRoaejJvC",
+    "supabaseFilename": "movimento-blusa-time-beijo-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-057-gancho-segurando-pacote-roupa",
+    "title": "GANCHO SEGURANDO PACOTE ROUPA",
+    "driveId": "1oVQhYVDqUrsPQpV2ptZO9Wy6oDFq2OeK",
+    "supabaseFilename": "gancho-segurando-pacote-roupa-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-058-segurando-pacote-2",
+    "title": "Segurando Pacote 2",
+    "driveId": "1ikHn1gSI5PdfuUOlW1YExIkUlkAnP0Ps",
+    "supabaseFilename": "segurando-pacote-2-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-060-pacote-segurando-5",
+    "title": "Segurando Pacote 5",
+    "driveId": "1MVwQxZTGK8ZGv1hMoq_X8moQrILS1o7s",
+    "supabaseFilename": "segurando-pacote-5-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-064-gancho-colocando-a-calca",
+    "title": "Gancho Colocando a Calça",
+    "driveId": "1jZx6WpA9rmaLxHA09Lgivi25Jg5eU3-P",
+    "supabaseFilename": "gancho-colocando-a-calca-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-065-gancho-caixa-de-papel",
+    "title": "Gancho Caixa de Papel",
+    "driveId": "1BEftvVn8OflZ8jzveR-h4BAQLOE4b9aQ",
+    "supabaseFilename": "gancho-caixa-de-papel-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-066-gancho-pactore-preto-viral",
+    "title": "Gancho Pacote Preto Viral",
+    "driveId": "1Ssevy9vAz7J1Hceu60PJRQfTzv8nQ90p",
+    "supabaseFilename": "gancho-pacote-preto-viral-video.mp4",
+    "category": "Gancho",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-067-transicao-academia",
+    "title": "Transição Academia",
+    "driveId": "1JMsv1VVcUtGnvRh9ime6Bj_BTlmXvZHM",
+    "supabaseFilename": "transicao-academia-video.mp4",
+    "category": "Transição",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-069-mao-da-modelo",
+    "title": "POV Peça na Mão da Modelo",
+    "driveId": "1ahwUMT4DarT4YLEscSYB05egSrj20Q7E",
+    "supabaseFilename": "pov-peca-na-mao-da-modelo-video.mp4",
+    "category": "Moda",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-071-transicao-roupa-amassada-neutro-qualquer-peca",
+    "title": "Transição Roupa Amassada",
+    "driveId": "1_cgG6J5ccApIupNvIWc3NNW_uK0lkRhc",
+    "supabaseFilename": "transicao-roupa-amassada-video.mp4",
+    "category": "Transição",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-074-rtansicao-mao-neutr-coim-giro",
+    "title": "Transição Mão Neutro com Giro",
+    "driveId": "1HNgaP4Y0wEujL5-KyPpZLQezrV41pShy",
+    "supabaseFilename": "transicao-mao-neutro-com-giro-video.mp4",
+    "category": "Transição",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-075-transicao-vestido-sem-estar-vestido-na-mao",
+    "title": "Transição Vestido na Mão",
+    "driveId": "1AgNT9HE2h5aOeKVFVCb1-q2w5TpwF-YW",
+    "supabaseFilename": "transicao-vestido-na-mao-video.mp4",
+    "category": "Transição",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-076-de-toalha-com-roupa-na-mao",
+    "title": "DE TOALHA COM ROUPA NA MAO",
+    "driveId": "1nqv6Jxm7lhSWLH1TflWWWb0PcBHKsXnV",
+    "supabaseFilename": "de-toalha-com-roupa-na-mao-video.mp4",
+    "category": "Vídeo",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-082-camisa-video-01",
+    "title": "Camisa Vídeo 01",
+    "driveId": "1MnVLFCR4eJeETZ5oBXbD8qOWbhKn6xHl",
+    "supabaseFilename": "camisa-video-01-video.mp4",
+    "category": "Vídeo",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-086-neutro-qualquer-blusa-ou-cropped",
+    "title": "neutro qualquer blusa ou cropped",
+    "driveId": "1t7hHHZWsh98iFnwqbJMIH17r4jmpR0lV",
+    "supabaseFilename": "neutro-qualquer-blusa-ou-cropped-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-087-neutro-qualquer-conjunto",
+    "title": "neutro qualquer conjunto",
+    "driveId": "1PDL94HGjqZJR-zFiF_CTxk7Qq3UuBken",
+    "supabaseFilename": "neutro-qualquer-conjunto-video.mp4",
+    "category": "Vídeo",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-088-neutro-qualquer-peca",
+    "title": "neutro qualquer peça",
+    "driveId": "1JsV5gO1gTyuabzM1SnEXaZWivJnBJ_Hg",
+    "supabaseFilename": "neutro-qualquer-peca-video.mp4",
+    "category": "Vídeo",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-089-neutro",
+    "title": "POV Neutro Qualquer Peça",
+    "driveId": "1OosU_3z4sBczjHJ8sbP11VviYVbW2QOA",
+    "supabaseFilename": "pov-neutro-qualquer-peca-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-108-prompt-neutro-para-qualquer-camiseta",
+    "title": "POV Camiseta Neutro",
+    "driveId": "19DdlLh0x2XtXPKz0iTmjkh0r0vRGIXFm",
+    "supabaseFilename": "pov-camiseta-neutro-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-116-pov-calca-sobre-a-cama",
+    "title": "POV Calça Sobre Cama",
+    "driveId": "1bfZuWX54qVOrHzPr3p50W-aWlmEs4Git",
+    "supabaseFilename": "pov-calca-sobre-cama-video.mp4",
+    "category": "POV",
+    "type": "POV"
+  },
+  {
+    "promptId": "pdf-117-pov-blusa-sobre-a-cama-3",
+    "title": "POV Blusa Sobre Cama 3",
+    "driveId": "1fwvZCsqz1PsJSyxNPcdFbfadKCDg0XWl",
+    "supabaseFilename": "pov-blusa-sobre-cama-3-video.mp4",
+    "category": "POV",
+    "type": "POV"
+  },
+  {
+    "promptId": "pdf-122-pov-shorts-2",
+    "title": "POV Shorts 2",
+    "driveId": "1QJmJp84WBOtUTigUvNcEbrUa_cpH3J24",
+    "supabaseFilename": "pov-shorts-2-video.mp4",
+    "category": "POV",
+    "type": "POV"
+  },
+  {
+    "promptId": "pdf-145-manequin-feminino",
+    "title": "POV Manequim Feminino",
+    "driveId": "1-yFZjNYtTZmUXmy7UGhFoMBLb2vyafN2",
+    "supabaseFilename": "pov-manequim-feminino-video.mp4",
+    "category": "POV",
+    "type": "Vídeo"
+  },
+  {
+    "promptId": "pdf-149-pov-calca-jeans-video",
+    "title": "POV Calça Jeans Vídeo",
+    "driveId": "1dGx6JjEeYxISoSm1nmcJu99PkHk_lJSj",
+    "supabaseFilename": "pov-calca-jeans-video-video.mp4",
+    "category": "POV",
+    "type": "POV"
+  },
+  {
+    "promptId": "pdf-152-pov-jogo-de-pratos",
+    "title": "POV Jogo de Pratos",
+    "driveId": "1VQaAXLvkoy3RJvhRiS5dx7p8V4dBUuIm",
+    "supabaseFilename": "pov-jogo-de-pratos-video.mp4",
+    "category": "POV",
+    "type": "POV"
+  }
+]
