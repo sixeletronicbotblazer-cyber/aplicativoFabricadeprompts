@@ -538,3 +538,25 @@ Stage Summary:
 - Videos: removed host blocking, added thumbnail fallback, retry mechanism, 12s timeout
 - New API endpoint: /api/drive-thumb?id=FILE_ID for Google Drive thumbnails
 - App verified working in browser
+---
+Task ID: 2
+Agent: main
+Task: Fix copy button visibility, responsive 2-col, new prompts first, video improvements
+
+Work Log:
+- Added brand-turquesa CSS variable (oklch(0.72 0.12 75)) to :root and .dark themes
+- Added --color-brand-turquesa to @theme inline
+- Created .bg-turquesa-gradient CSS utility class (was missing, causing invisible buttons)
+- Fixed "Copiar prompt" button in PromptCard: changed from bg-turquesa-gradient/text-surface-dark (invisible) to bg-brand-gradient/text-white with shadow-sm
+- Changed grid-cols from grid-cols-2 sm:grid-cols-2 to grid-cols-2 on mobile (consistent 2 columns)
+- Modified sortByReference: isNew items now sort FIRST before media quality
+- Added skeleton-shimmer CSS animation for loading placeholders
+- Pushed to GitHub: sixeletronicbotblazer-cyber/aplicativoFabricadeprompts
+
+Stage Summary:
+- Copy button now visible with brand gradient + white text
+- Mobile shows exactly 2 prompts per line (verified with agent-browser)
+- New prompts always appear first in gallery
+- All sidebar sections collapsed by default
+- Drive video proxy improved with confirm token handling
+- Drive thumbnail fallback when videos fail
