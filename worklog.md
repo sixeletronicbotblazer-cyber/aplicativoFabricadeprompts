@@ -430,3 +430,27 @@ Stage Summary:
 - Working media prompts: 196 (was 146)
 - First page shows video cards (Drive + Supabase) first, then image cards
 - Zero lint errors, zero runtime errors
+
+---
+Task ID: 2
+Agent: main
+Task: Clean empty prompts, reorganize categories, rebrand, and push to new GitHub repo
+
+Work Log:
+- Analyzed all 487 prompts: found 63 with no image AND no videoUrl
+- Removed 63 empty prompts → 424 remaining
+- Merged 13F categories → 18 categories (POV Avançado/Calçados/Acessórios/Moda/Casa → POV, Selfie UGC → UGC, Natal variants → Natal, etc.)
+- Removed BROKEN_HOSTS blocking from filters.ts, PromptCard.tsx, PromptModal.tsx
+- Rebranded from "@PromptVault to "Fábrica de Prompts" across all components
+- Changed brand icon from Sparkles to Gem
+- Updated sidebar: PRINCIPAL, POV & ESTILO, TEMAS, TikTok, MEUS
+- Updated layout.tsx metadata (title, keywords, openGraph, authors)
+- Browser tested login + gallery flow successfully
+- Pushed to new GitHub repo: sixeletronicbotblazer-cyber/aplicativoFabricadeprompts
+
+Stage Summary:
+- 424 prompts remaining (63 removed)
+- 18 categories (down from 31)
+- Rebranded to "Fábrica de Prompts"
+- BROKEN_HOSTS removed (native browser error handling)
+- Pushed to https://github.com/sixeletronicbotblazer-cyber/aplicativoFabricadeprompts.git
