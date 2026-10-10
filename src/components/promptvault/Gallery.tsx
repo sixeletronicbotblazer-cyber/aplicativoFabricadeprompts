@@ -15,7 +15,7 @@ import { EmptyState } from "./EmptyState";
 import { UpdateBanner } from "./UpdateBanner";
 import { ManequimPopup } from "./ManequimPopup";
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 16;
 
 export function Gallery() {
   const [filter, setFilterState] = useState<Filter>(ALL_FILTER);
@@ -161,17 +161,17 @@ export function Gallery() {
             {visible.length === 0 ? (
               <EmptyState onReset={handleReset} />
             ) : isVideosNoRef ? (
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
                 {visible.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
               </div>
             ) : isVideosWithRef ? (
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
                 {visible.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
               </div>
             ) : (
               <div className="space-y-4 sm:space-y-6">
                 {hasPreviewCards && (
-                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+                  <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
                     {previewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                   </div>
                 )}
@@ -186,7 +186,7 @@ export function Gallery() {
                       </div>
                       <div className="flex-1 h-px bg-white/10" />
                     </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
                       {noPreviewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                     </div>
                   </div>
