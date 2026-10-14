@@ -56,3 +56,4 @@ server.log
 PromptVault.bundle
 tool-results/
 gallery-verify-*.png
+upload-videos.sh
