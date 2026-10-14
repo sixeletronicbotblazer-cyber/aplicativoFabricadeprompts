@@ -585,3 +585,28 @@ Stage Summary:
 - 3 gallery sections: "Vídeos Funcionais" (emerald header), "Demais referências", "Sem referência visual"
 - "✓ Vídeo" badge shows on cards with working videos
 - Successfully pushed to GitHub
+
+---
+Task ID: 2
+Agent: main
+Task: Remove old popups and create new usage guide popup
+
+Work Log:
+- Removed UpdateBanner (old "Novos prompts adicionados" popup) from Gallery
+- Removed ManequimPopup (old "Módulo Selfie UGC" popup) from Gallery
+- Removed "Atualização 10/10" banner from Gallery main content
+- Created new UsageGuidePopup component with two sections:
+  1. "Imagem de Referência" - explains user needs matching image from video reference
+     - 4 step-by-step instructions: pause video, take screenshot, save on computer, upload to AI
+     - Red warning box about needing matching image for coherence
+  2. "Sempre leia o prompt antes de usar" - review prompt before copying
+     - Check items: verify movement, check for included audio, adapt details, then copy
+- Popup shows once (saves to localStorage), dismissed with "ENTENDI, VAMOS LÁ!" button
+- Fixed Screenshot icon (not in lucide-react) → replaced with Camera
+- Updated git remote with new token
+- Force pushed to GitHub (commit 1040868)
+
+Stage Summary:
+- Old popups completely removed and replaced with new usage guide
+- New popup has amber/orange design with clear step-by-step instructions
+- Published to GitHub successfully
