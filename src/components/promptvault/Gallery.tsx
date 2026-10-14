@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Gem, Heart, ChevronDown, Film, ArrowRight, Zap, LayoutGrid, Menu, Sparkles } from "lucide-react";
+import { Gem, Heart, ChevronDown, Film, LayoutGrid, Menu, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingMedia } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
@@ -12,8 +12,7 @@ import { SearchBar } from "./SearchBar";
 import { PromptCard } from "./PromptCard";
 import { PromptModal } from "./PromptModal";
 import { EmptyState } from "./EmptyState";
-import { UpdateBanner } from "./UpdateBanner";
-import { ManequimPopup } from "./ManequimPopup";
+import { UsageGuidePopup } from "./UsageGuidePopup";
 
 const PAGE_SIZE = 16;
 
@@ -99,27 +98,6 @@ export function Gallery() {
                 <Menu className="h-3.5 w-3.5" />
               </Button>
             </div>
-          </div>
-
-          {/* Update Banner — responsive padding */}
-          <div className="mx-3 sm:mx-6 lg:mx-8 mt-3 sm:mt-4 mb-0 rounded-xl border border-brand-pink/20 bg-gradient-to-r from-brand-pink/[0.08] via-brand-purple/[0.06] to-brand-cyan/[0.04] px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-3">
-            <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-              <div className="grid h-7 w-7 sm:h-8 sm:w-8 shrink-0 place-items-center rounded-lg bg-brand-gradient shadow-md shadow-brand-purple/20">
-                <Zap className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
-              </div>
-              <div className="min-w-0">
-                <p className="text-[12px] sm:text-sm font-semibold text-foreground">Atualização 10/10</p>
-                <p className="text-[10px] sm:text-[11px] text-muted-foreground truncate">+56 novos prompts com vídeos e imagens no Supabase</p>
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => setFilter({ kind: "novidades" })}
-              className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-brand-gradient px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold text-white shadow-sm hover:brightness-110 transition-all active:scale-95"
-            >
-              Ver novidades
-              <ArrowRight className="h-3 w-3" />
-            </button>
           </div>
 
           <div className="px-3 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 space-y-4 sm:space-y-6 lg:space-y-7">
@@ -250,8 +228,7 @@ export function Gallery() {
           <p className="text-[10px] sm:text-[11px] text-muted-foreground/70">{PROMPTS.length} prompts disponíveis</p>
         </div>
       </footer>
-      <UpdateBanner onNavigate={(cat) => setFilter({ kind: "category", value: cat as any })} onNavigateNovidades={() => setFilter({ kind: "novidades" })} />
-      <ManequimPopup onNavigate={() => setFilter({ kind: "category", value: "Selfie UGC" })} />
+      <UsageGuidePopup />
       <PromptModal prompt={selected} open={modalOpen} onOpenChange={setModalOpen} isFavorite={selected ? isFav(selected.id) : false} onToggleFavorite={handleToggleFav} />
     </div>
   );
