@@ -100,6 +100,8 @@ export function Gallery() {
             </div>
           </div>
 
+          <UsageGuidePopup />
+
           <div className="px-3 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 space-y-4 sm:space-y-6 lg:space-y-7">
             {/* Desktop header */}
             <div className="hidden lg:block">
@@ -228,7 +230,6 @@ export function Gallery() {
           <p className="text-[10px] sm:text-[11px] text-muted-foreground/70">{PROMPTS.length} prompts disponíveis</p>
         </div>
       </footer>
-      <UsageGuidePopup />
       <PromptModal prompt={selected} open={modalOpen} onOpenChange={setModalOpen} isFavorite={selected ? isFav(selected.id) : false} onToggleFavorite={handleToggleFav} />
     </div>
   );
