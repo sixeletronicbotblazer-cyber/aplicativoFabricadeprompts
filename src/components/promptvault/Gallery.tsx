@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { Gem, Heart, ChevronDown, Film, LayoutGrid, Menu, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingMedia } from "@/lib/prompts";
+import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingMedia, hasWorkingImage } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
 import { toast } from "sonner";
 import { applyFilter, filterLabel, type Filter, ALL_FILTER } from "./filters";
@@ -13,6 +13,7 @@ import { PromptCard } from "./PromptCard";
 import { PromptModal } from "./PromptModal";
 import { EmptyState } from "./EmptyState";
 import { UsageGuidePopup } from "./UsageGuidePopup";
+import { UpdateBanner } from "./UpdateBanner";
 
 const PAGE_SIZE = 16;
 
@@ -33,35 +34,43 @@ export function Gallery() {
   const filtered = useMemo(() => {
     const base = applyFilter(PROMPTS, filter, favIds);
     const q = query.trim().toLowerCase();
-    if (!q) return base;
-    return base.filter((p) => (
-      p.title.toLowerCase().includes(q) ||
-      p.category.toLowerCase().includes(q) ||
-      p.type.toLowerCase().includes(q) ||
-      p.description.toLowerCase().includes(q) ||
-      p.tags.some((t) => t.toLowerCase().includes(q))
-    ));
+    const matched = q
+      ? base.filter((p) => (
+          p.title.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          p.type.toLowerCase().includes(q) ||
+          p.description.toLowerCase().includes(q) ||
+          p.tags.some((t) => t.toLowerCase().includes(q))
+        ))
+      : base;
+
+    /** Sort: working previews first, broken/no-preview last */
+    return matched.sort((a, b) => {
+      const aW = (hasWorkingImage(a) ? 2 : 0) + (hasWorkingVideo(a) ? 1 : 0);
+      const bW = (hasWorkingImage(b) ? 2 : 0) + (hasWorkingVideo(b) ? 1 : 0);
+      return bW - aW; // higher working score first
+    });
   }, [filter, query, favIds]);
 
   const visibleCount = PAGE_SIZE * (page + 1);
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
-  /** No hosts are permanently blocked — let the browser handle errors natively via onError/onLoad. */
-  const isBroken = (url: string | undefined) => !url;
-  const hasPreview = (p: Prompt) => !isBroken(p.image) || !isBroken(p.videoUrl);
-  const previewCards = visible.filter(hasPreview);
-  const noPreviewCards = visible.filter((p) => !hasPreview(p));
-  const hasPreviewCards = previewCards.length > 0;
-  const hasNoPreviewCards = noPreviewCards.length > 0;
+  /**
+   * Check if a prompt has a usable preview (image or video from a working host).
+   * Broken hosts (old Supabase 402, auroraprompts down) are excluded.
+   */
+  const hasWorkingPreview = (p: Prompt) => hasWorkingImage(p) || hasWorkingVideo(p);
   const isVideosNoRef = filter.kind === "videos-no-ref";
   const isVideosWithRef = filter.kind === "videos-with-ref";
 
-  /** Split visible cards into working-video and rest for sectioned display */
-  const workingVideoCards = visible.filter((p) => hasWorkingVideo(p));
-  const restCards = visible.filter((p) => !hasWorkingVideo(p));
-  const restWithPreview = restCards.filter(hasPreview);
-  const restNoPreview = restCards.filter((p) => !hasPreview(p));
-  const hasWorkingVideoCards = workingVideoCards.length > 0;
+  /** Split visible cards into working-video, working-image, and no-preview sections */
+  const workingVideoCards = visible.filter((p) => hasWorkingVideo(p) && !hasWorkingImage(p));
+  const workingImageCards = visible.filter((p) => hasWorkingImage(p) && !hasWorkingVideo(p));
+  const bothMediaCards = visible.filter((p) => hasWorkingImage(p) && hasWorkingVideo(p));
+  const noPreviewCards = visible.filter((p) => !hasWorkingPreview(p));
+  const hasWorkingVideoCards = workingVideoCards.length > 0 || bothMediaCards.length > 0;
+  const hasWorkingImageCards = workingImageCards.length > 0;
+  const hasNoPreviewCards = noPreviewCards.length > 0;
 
   const handleToggleFav = (id: string) => {
     const r = toggleFav(id);
@@ -101,6 +110,7 @@ export function Gallery() {
           </div>
 
           <UsageGuidePopup />
+          <UpdateBanner onNavigate={(cat) => setFilter({ kind: "category", category: cat as any })} onNavigateNovidades={() => setFilter({ kind: "novidades" })} />
 
           <div className="px-3 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 space-y-4 sm:space-y-6 lg:space-y-7">
             {/* Desktop header */}
@@ -165,46 +175,47 @@ export function Gallery() {
                         <Film className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-emerald-400" />
                       </div>
                       <h2 className="text-[12px] sm:text-sm font-bold text-emerald-400 tracking-wide uppercase">Vídeos Funcionais</h2>
-                      <span className="rounded-md bg-emerald-500/10 border border-emerald-500/20 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold tabular-nums text-emerald-400">{workingVideoCards.length}</span>
+                      <span className="rounded-md bg-emerald-500/10 border border-emerald-500/20 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold tabular-nums text-emerald-400">{workingVideoCards.length + bothMediaCards.length}</span>
                       <div className="flex-1 h-px bg-emerald-500/15" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
+                      {bothMediaCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                       {workingVideoCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                     </div>
                   </div>
                 )}
 
-                {/* ── REST WITH PREVIEW ── */}
-                {restWithPreview.length > 0 && (
+                {/* ── WORKING IMAGE REFERENCES ── */}
+                {hasWorkingImageCards && (
                   <div>
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                      <div className="grid h-6 w-6 sm:h-7 sm:w-7 place-items-center rounded-lg bg-white/5 border border-border-card">
-                        <Film className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-text-secondary/50" />
+                      <div className="grid h-6 w-6 sm:h-7 sm:w-7 place-items-center rounded-lg bg-brand-cyan/15 border border-brand-cyan/25">
+                        <LayoutGrid className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-brand-cyan" />
                       </div>
-                      <h2 className="text-[12px] sm:text-sm font-semibold text-text-secondary/70 tracking-wide uppercase">Demais referências</h2>
-                      <span className="rounded-md bg-white/5 border border-border-card px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium tabular-nums text-text-secondary/50">{restWithPreview.length}</span>
-                      <div className="flex-1 h-px bg-white/8" />
+                      <h2 className="text-[12px] sm:text-sm font-bold text-brand-cyan tracking-wide uppercase">Referências Visuais</h2>
+                      <span className="rounded-md bg-brand-cyan/10 border border-brand-cyan/20 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold tabular-nums text-brand-cyan">{workingImageCards.length}</span>
+                      <div className="flex-1 h-px bg-brand-cyan/15" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
-                      {restWithPreview.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                      {workingImageCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                     </div>
                   </div>
                 )}
 
-                {/* ── REST WITHOUT PREVIEW ── */}
-                {restNoPreview.length > 0 && (
+                {/* ── NO PREVIEW (compact cards) ── */}
+                {hasNoPreviewCards && (
                   <div className="pt-3 sm:pt-4">
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
                       <div className="flex-1 h-px bg-white/10" />
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Film className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                         <span className="text-[12px] sm:text-sm font-semibold tracking-wide">Sem referência visual</span>
-                        <span className="rounded-md bg-white/5 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium tabular-nums">{restNoPreview.length}</span>
+                        <span className="rounded-md bg-white/5 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium tabular-nums">{noPreviewCards.length}</span>
                       </div>
                       <div className="flex-1 h-px bg-white/10" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
-                      {restNoPreview.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                      {noPreviewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                     </div>
                   </div>
                 )}

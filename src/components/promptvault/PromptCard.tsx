@@ -35,9 +35,21 @@ function TypeIcon({ type, className }: { type: PromptType; className?: string })
   return <ImageIcon className={className} />;
 }
 
-/** No hosts are permanently blocked — let the browser handle errors natively via onError/onLoad. */
+/**
+ * Check if a URL is from a known broken/unreachable host.
+ * Old Supabase (luoyccnsbgoxdhcqyvdb) returns 402.
+ * auroraprompts.com is down/unreachable.
+ * i.imgur.com is blocked in this environment.
+ */
+const BROKEN_HOSTS = [
+  "luoyccnsbgoxdhcqyvdb.supabase.co",
+  "auroraprompts.com",
+  "i.imgur.com",
+];
+
 function isBrokenUrl(url: string | undefined): boolean {
-  return !url;
+  if (!url) return true;
+  return BROKEN_HOSTS.some((h) => url.includes(h));
 }
 
 /** Extract Google Drive file ID from a proxy URL like /api/drive-video?id=FILE_ID */
@@ -59,6 +71,9 @@ function getDriveThumbUrl(videoUrl: string | undefined): string | null {
   return `/api/drive-thumb?id=${id}`;
 }
 
+/** Timeout for image loading before we consider it broken (8 seconds) */
+const IMG_LOAD_TIMEOUT = 8000;
+
 interface PromptCardProps {
   prompt: Prompt;
   isFavorite: boolean;
@@ -78,8 +93,12 @@ export function PromptCard({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [thumbError, setThumbError] = useState(false);
+  /** Image load state: true = loaded ok, false = error/timeout */
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgError, setImgError] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const imgTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const hasImage = Boolean(prompt.image);
   const hasVideo = Boolean(prompt.videoUrl);
@@ -108,6 +127,19 @@ export function PromptCard({
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  /* Image loading timeout — mark as error if image doesn't load in time */
+  useEffect(() => {
+    if (!isVisible || !hasWorkingImg || showVideoThumb || imgLoaded || imgError) return;
+    imgTimerRef.current = setTimeout(() => {
+      if (!imgLoaded) {
+        setImgError(true);
+      }
+    }, IMG_LOAD_TIMEOUT);
+    return () => {
+      if (imgTimerRef.current) clearTimeout(imgTimerRef.current);
+    };
+  }, [isVisible, hasWorkingImg, showVideoThumb, imgLoaded, imgError]);
 
   /* Video loading timeout — fallback to thumbnail if video doesn't load in 12s */
   useEffect(() => {
@@ -165,6 +197,26 @@ export function PromptCard({
     if (videoRef.current) {
       videoRef.current.load();
     }
+  }, []);
+
+  /* Image load success handler */
+  const handleImgLoad = useCallback(() => {
+    setImgLoaded(true);
+    setImgError(false);
+    if (imgTimerRef.current) clearTimeout(imgTimerRef.current);
+  }, []);
+
+  /* Image load error handler */
+  const handleImgError = useCallback(() => {
+    setImgError(true);
+    setImgLoaded(false);
+    if (imgTimerRef.current) clearTimeout(imgTimerRef.current);
+  }, []);
+
+  /* Image retry handler */
+  const handleImgRetry = useCallback(() => {
+    setImgError(false);
+    setImgLoaded(false);
   }, []);
 
   /* Derive thumbnail fallback URL for Drive videos */
@@ -247,6 +299,11 @@ export function PromptCard({
     );
   }
 
+  /* Determine what to show in the preview area */
+  const showImagePreview = isVisible && hasWorkingImg && !showVideoThumb && !imgError;
+  const showImageFallback = isVisible && hasWorkingImg && !showVideoThumb && imgError && !imgLoaded;
+  const showImageLoading = isVisible && hasWorkingImg && !showVideoThumb && !imgLoaded && !imgError;
+
   /* ─── FULL CARD (with preview) ─── */
   return (
     <article ref={cardRef} className="group pv-card relative overflow-hidden flex flex-col animate-fade-in">
@@ -273,6 +330,8 @@ export function PromptCard({
                   <img
                     src={prompt.image}
                     alt={prompt.title}
+                    onError={handleImgError}
+                    onLoad={handleImgLoad}
                     className="h-full w-full object-cover opacity-80"
                   />
                 ) : thumbUrl && !thumbError ? (
@@ -350,17 +409,56 @@ export function PromptCard({
                 </button>
               )}
             </div>
-          ) : isVisible && hasImage && !imageIsBroken ? (
-            <img
-              src={prompt.image}
-              alt={prompt.title}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-          ) : isVisible && (hasImage && imageIsBroken) && !showVideoThumb ? (
+          ) : showImagePreview ? (
+            /* IMAGE preview with error handling */
+            <div className="relative h-full w-full">
+              {!imgLoaded && (
+                <div className="absolute inset-0 grid place-items-center">
+                  <Loader2 className="h-5 w-5 text-text-secondary/30 animate-spin" />
+                </div>
+              )}
+              <img
+                src={prompt.image}
+                alt={prompt.title}
+                loading="lazy"
+                decoding="async"
+                onError={handleImgError}
+                onLoad={handleImgLoad}
+                className={cn(
+                  "h-full w-full object-cover transition-all duration-500",
+                  imgLoaded ? "opacity-100 group-hover:scale-[1.02]" : "opacity-0"
+                )}
+              />
+            </div>
+          ) : showImageFallback ? (
+            /* Image failed to load — show fallback with retry */
             <div className="h-full w-full grid place-items-center bg-surface-secondary">
-              <ImageIcon className="h-8 w-8 text-text-secondary/20" />
+              <div className="flex flex-col items-center gap-1.5">
+                <ImageIcon className="h-6 w-6 text-text-secondary/30" />
+                <button
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); handleImgRetry(); }}
+                  className="mt-1 inline-flex items-center gap-1 rounded-lg bg-white/8 px-2 py-1 text-[9px] font-semibold text-text-secondary/60 hover:bg-white/12 transition-colors"
+                >
+                  <RefreshCw className="h-2.5 w-2.5" />
+                  Recarregar
+                </button>
+              </div>
+            </div>
+          ) : showImageLoading ? (
+            /* Image is loading */
+            <div className="h-full w-full skeleton-shimmer" />
+          ) : isVisible && (hasImage && imageIsBroken) && !showVideoThumb ? (
+            /* URL is known broken — show placeholder icon */
+            <div className="h-full w-full grid place-items-center bg-surface-secondary">
+              <div className="flex flex-col items-center gap-1">
+                {prompt.type === "Vídeo" ? (
+                  <Film className="h-8 w-8 text-text-secondary/20" />
+                ) : (
+                  <ImageIcon className="h-8 w-8 text-text-secondary/20" />
+                )}
+                <span className="text-[9px] text-text-secondary/30">Indisponível</span>
+              </div>
             </div>
           ) : (
             <div className="h-full w-full skeleton-shimmer" />
@@ -381,7 +479,7 @@ export function PromptCard({
         )}
 
         {/* Working video badge */}
-        {hasWorkingVideo(prompt) && (
+        {hasWorkingVideo(prompt) && !videoIsBroken && (
           <span className="absolute right-10 sm:right-12 bottom-3 sm:bottom-4 inline-flex items-center gap-0.5 rounded-full bg-emerald-500/20 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-emerald-400 backdrop-blur-md z-[2] pointer-events-none">
             ✓ Vídeo
           </span>
