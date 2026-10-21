@@ -610,3 +610,28 @@ Stage Summary:
 - Old popups completely removed and replaced with new usage guide
 - New popup has amber/orange design with clear step-by-step instructions
 - Published to GitHub successfully
+---
+Task ID: 1
+Agent: Z.ai Code (main)
+Task: Fix image preview handling, convert popup to inline banner, and prepare for GitHub push
+
+Work Log:
+- Verified current app state with browser - found all images showing as black/empty boxes
+- Investigated root cause: Old Supabase (luoyccnsbgoxdhcqyvdb) returns HTTP 402 (payment required), auroraprompts.com is down, imgur.com blocked in sandbox
+- Analyzed prompt data: 530 total prompts, 178 empty images, 51 old Supabase (broken), 34 new Supabase (working), 185 auroraprompts (broken), 77 local (working)
+- Updated prompts.ts: Replaced KNOWN_SUPABASE_VIDEOS/KNOWN_SUPABASE_IMAGES sets with BROKEN_HOSTS array for host-based detection
+- Added broken hosts$1 detection for: luoyccnsbgoxdhcqyvdb.supabase*co, auroraprompts.com, i.imgur.com
+- Rewrote PromptCard.tsx: Added imgLoaded/imgError state tracking, onLoad/onError handlers on <img> tags, 8-second image load timeout, "Indisponível" placeholder for broken URLs, "Recarregar" (reload) button for failed images, loading spinner during image load
+- Updated Gallery.tsx: Fixed hasWorkingPreview logic, added workingImageCards/bothMediaCards sections, sorted filtered list so working previews appear first, added "Referências Visuais" section with cyan accent
+- Converted UpdateBanner.tsx from;modal popup to inline dismissible banner (compact header + expandable content)
+- Added UpdateBanner to Gallery alongside UsageGuidePopup
+- Verified with browser: 10 images loaded successfully, 0 broken, allCsections visible
+
+Stage Summary:
+- Images now load correctly for: local /prompts/* files, new Supabase signed URLs (wpevghcfmjwmidcjdtnd)
+- Broken URLs show "Indisponível" placeholder instead of black box
+- Failed image loads show "Recarregar" retry button
+- Gallery sorted: working previews first, no-preview cards last
+- UpdateBanner converted from popup to inline banner
+- GitHub push failed due to expired token in remote URL
+- All changes committed locally
