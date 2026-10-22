@@ -98,12 +98,16 @@ export function countByCategory(): Record<string, number> {
 }
 
 /**
- * Known broken hosts — old Supabase returns 402, auroraprompts.com is down.
+ * Known broken hosts — old Supabase returns 402, auroraprompts.com is down,
+ * i.imgur.com is blocked in this environment.
+ * All URLs pointing to these hosts have been migrated to local /sb/ paths
+ * or the new Supabase project (kwlsuylcowdldtaqaaou).
  */
 const BROKEN_HOSTS = [
   "luoyccnsbgoxdhcqyvdb.supabase.co",
   "auroraprompts.com",
   "i.imgur.com",
+  "imgur.com",
 ];
 
 /**

@@ -40,11 +40,13 @@ function TypeIcon({ type, className }: { type: PromptType; className?: string })
  * Old Supabase (luoyccnsbgoxdhcqyvdb) returns 402.
  * auroraprompts.com is down/unreachable.
  * i.imgur.com is blocked in this environment.
+ * All broken URLs have been migrated to local /sb/ paths or new Supabase.
  */
 const BROKEN_HOSTS = [
   "luoyccnsbgoxdhcqyvdb.supabase.co",
   "auroraprompts.com",
   "i.imgur.com",
+  "imgur.com",
 ];
 
 function isBrokenUrl(url: string | undefined): boolean {
