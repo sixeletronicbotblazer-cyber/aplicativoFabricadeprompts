@@ -664,3 +664,69 @@ Stage Summary:
 - Dead Drive proxy code removed from PromptCard and PromptModal
 - Sort priority: video(4) > image(2) > new(1), then category+title
 - All video URLs verified working (catbox, r2.dev, local)
+
+---
+Task ID: 4-a
+Agent: Z.ai Code (sub-agent)
+Task: Upload 12 Drive videos to Supabase Storage
+
+Work Log:
+- Read /tmp/needs-upload.json with 12 video entries (prompt IDs + Drive file IDs)
+- Created upload script at /home/z/upload-videos.sh handling:
+  - Download from Google Drive via drive.usercontent.google.com with User-Agent header
+  - Virus scan confirm token extraction fallback
+  - Upload to Supabase Storage REST API with x-upsert header
+  - Verification by checking public URL returns HTTP 200
+  - Results tracking in JSON format
+- Executed upload script: all 12 videos processed successfully
+  - All downloads completed (valid MP4 files, sizes range 1.5MB–8.1MB)
+  - All Supabase uploads returned HTTP 200
+  - All verifications passed (public URLs return HTTP 200)
+- Created /tmp/prompt-to-sb-video.json mapping prompt IDs to Supabase public URLs
+- Updated /home/z/upload-results.json with full results
+
+Results:
+- ✅ 12/12 videos uploaded successfully
+- ❌ 0 failures
+- Bucket: prompts-media, path prefix: video/
+- Naming: drive-{DRIVE_ID}.mp4
+
+Files uploaded:
+  1. pdf-005-estrelas-arvore-de-natal → video/drive-1xZErfiNyW39CvWBVnYRX-lQY7GQwy9qk.mp4 (5.5MB)
+  2. pdf-016-pov-tapete-natal → video/drive-1ZMoBQ9qYKOC72shCy0qGh4FNTyrg8s_H.mp4 (6.1MB)
+  3. pdf-035-iniciar-o-video-cochichando → video/drive-14cszalnVNa0_OjUjqaiiFJBJCkfZnl8y.mp4 (3.0MB)
+  4. pdf-046-modelo-transicao-mao-pos-banho → video/drive-17rROKltNd5O07JJl-tH6V0-xbNKenFPy.mp4 (5.1MB)
+  5. pdf-047-movimentos-roupa → video/drive-1uD2kDPTXBLABw_xolUd1IlRrxqct3Pcn.mp4 (5.3MB)
+  6. pdf-050-frontal-regata-2 → video/drive-1YwQEpFehSqal652FfyiWrxF-a9bGPRSo.mp4 (5.0MB)
+  7. pdf-052-blusa-de-times-e-beijo-para-tela-e-coracao → video/drive-1-lgEeKIFL1tHhaoP2Pul1PxpRoaejJvC.mp4 (2.6MB)
+  8. pdf-057-gancho-segurando-pacote-roupa → video/drive-1oVQhYVDqUrsPQpV2ptZO9Wy6oDFq2OeK.mp4 (6.9MB)
+  9. pdf-064-gancho-colocando-a-calca → video/drive-1jZx6WpA9rmaLxHA09Lgivi25Jg5eU3-P.mp4 (3.2MB)
+  10. pdf-086-neutro-qualquer-blusa-ou-cropped → video/drive-1t7hHHZWsh98iFnwqbJMIH17r4jmpR0lV.mp4 (1.5MB)
+  11. pdf-116-pov-calca-sobre-a-cama → video/drive-1bfZuWX54qVOrHzPr3p50W-aWlmEs4Git.mp4 (3.4MB)
+  12. pdf-149-pov-calca-jeans-video → video/drive-1dGx6JjEeYxISoSm1nmcJu99PkHk_lJSj.mp4 (7.7MB)
+---
+Task ID: 2
+Agent: main
+Task: Re-link all Supabase media to new project kwlsuylcowdldtaqaaou
+
+Work Log:
+- Saved new Supabase keys to .env (publishable + secret)
+- Listed bucket contents: 53 images in image/ folder, 86 videos in video/ folder
+- Tested public URLs: all return HTTP 200
+- Built mapping: 21 thumb images, 16 drive images, 35 cloned videos, 51 drive videos from bucket
+- Updated 289 image URLs from /sb/image/ and /api/drive-image to new Supabase
+- Updated 35 video URLs from /sb/video/ and cloned-* to new Supabase
+- Cross-referenced old commits (a34b133, 70db46c) to map Drive file IDs to prompt IDs
+- Matched 76 drive-* videos from bucket to their prompts
+- Downloaded and uploaded 12 additional Drive videos to new Supabase (all 12 successful)
+- Updated prompts-data.json: 289 images + 123 videos now on new Supabase
+- Reordered prompts: 131 with working video first, then 399 with images
+- Browser verified: 131 vídeos badge, "Vídeos com Referência" section, Supabase videos play
+- 46 sup-* prompts still without videos (their videos are on old Supabase luoyccnsbgoxdhcqyvdb which returns 402)
+
+Stage Summary:
+- 289 images linked to new Supabase (kwlsuylcowdldtaqaaou)
+- 123 videos linked to new Supabase
+- 12 new Drive videos downloaded and uploaded to bucket
+- 46 videos still on old Supabase (blocked 402) - need source files to re-upload
+- Gallery shows "131 vídeos" with working video section
