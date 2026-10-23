@@ -1,0 +1,1184 @@
+[
+  {
+    "id": "sup-001",
+    "type": "video",
+    "path": "1pov-conjunto-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/1pov-conjunto-video.mp4"
+  },
+  {
+    "id": "sup-002",
+    "type": "video",
+    "path": "22-cta-capinha.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/22-cta-capinha.mp4"
+  },
+  {
+    "id": "sup-003",
+    "type": "video",
+    "path": "cta-gloss-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/cta-gloss-video.mp4"
+  },
+  {
+    "id": "sup-003",
+    "type": "image",
+    "path": "cta-gloss-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/cta-gloss-imagem.webp"
+  },
+  {
+    "id": "sup-004",
+    "type": "video",
+    "path": "gancho-oculos-cta-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-oculos-cta-video.mp4"
+  },
+  {
+    "id": "sup-004",
+    "type": "image",
+    "path": "gancho-oculos-cta-foto.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-oculos-cta-foto.webp"
+  },
+  {
+    "id": "sup-005",
+    "type": "video",
+    "path": "gloss-viral-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gloss-viral-video.mp4"
+  },
+  {
+    "id": "sup-005",
+    "type": "image",
+    "path": "gloss-viral-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gloss-viral-imagem.webp"
+  },
+  {
+    "id": "sup-006",
+    "type": "video",
+    "path": "gloss-viralizado-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gloss-viralizado-video.mp4"
+  },
+  {
+    "id": "sup-006",
+    "type": "image",
+    "path": "gloss-viralizado-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gloss-viralizado-imagem.webp"
+  },
+  {
+    "id": "sup-007",
+    "type": "video",
+    "path": "gloss-viralizado-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gloss-viralizado-video.mp4"
+  },
+  {
+    "id": "sup-008",
+    "type": "video",
+    "path": "masculino-religio-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/masculino-religio-video.mp4"
+  },
+  {
+    "id": "sup-008",
+    "type": "image",
+    "path": "masculino-religio-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/masculino-religio-imagem.webp"
+  },
+  {
+    "id": "sup-010",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-2-video.mp4"
+  },
+  {
+    "id": "sup-010",
+    "type": "image",
+    "path": "metodo-gringo-faceless-shop-2-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-2-imagem.webp"
+  },
+  {
+    "id": "sup-011",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-4-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-4-video.mp4"
+  },
+  {
+    "id": "sup-011",
+    "type": "image",
+    "path": "metodo-gringo-faceless-shop-4-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-4-imagem.webp"
+  },
+  {
+    "id": "sup-016",
+    "type": "video",
+    "path": "pov-abrindo-saco-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-abrindo-saco-video.mp4"
+  },
+  {
+    "id": "sup-016",
+    "type": "image",
+    "path": "pov-abrindo-saco-imagem-2.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-abrindo-saco-imagem-2.webp"
+  },
+  {
+    "id": "sup-017",
+    "type": "video",
+    "path": "pov-adicionando-pecas-em-cena-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-adicionando-pecas-em-cena-video.mp4"
+  },
+  {
+    "id": "sup-017",
+    "type": "image",
+    "path": "pov-adicionando-pecas-em-cena-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-adicionando-pecas-em-cena-imagem.webp"
+  },
+  {
+    "id": "sup-018",
+    "type": "video",
+    "path": "pov-cabide-qualquer-roupa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-cabide-qualquer-roupa-video.mp4"
+  },
+  {
+    "id": "sup-018",
+    "type": "image",
+    "path": "pov-cabide-qualquer-roupa-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-cabide-qualquer-roupa-imagem.webp"
+  },
+  {
+    "id": "sup-019",
+    "type": "video",
+    "path": "pov-caindo-roupas-na-cama-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-caindo-roupas-na-cama-video.mp4"
+  },
+  {
+    "id": "sup-020",
+    "type": "image",
+    "path": "pov-caindo-roupas-na-cama-cena-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-caindo-roupas-na-cama-cena-1.webp"
+  },
+  {
+    "id": "sup-021",
+    "type": "image",
+    "path": "pov-caindo-roupas-na-cama-cena-2.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-caindo-roupas-na-cama-cena-2.webp"
+  },
+  {
+    "id": "sup-022",
+    "type": "video",
+    "path": "pov-calcado-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-calcado-video.mp4"
+  },
+  {
+    "id": "sup-022",
+    "type": "image",
+    "path": "pov-calcado-imagem-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-calcado-imagem-1.webp"
+  },
+  {
+    "id": "sup-023",
+    "type": "video",
+    "path": "pov-calcinhas-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-calcinhas-video.mp4"
+  },
+  {
+    "id": "sup-023",
+    "type": "image",
+    "path": "pov-calcinhas-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-calcinhas-imagem.webp"
+  },
+  {
+    "id": "sup-024",
+    "type": "video",
+    "path": "pov-conjunto-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-conjunto-video.mp4"
+  },
+  {
+    "id": "sup-024",
+    "type": "image",
+    "path": "pov-conjunto-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-conjunto-imagem.webp"
+  },
+  {
+    "id": "sup-025",
+    "type": "video",
+    "path": "pov-conjunto-lingerie-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-conjunto-lingerie-video.mp4"
+  },
+  {
+    "id": "sup-026",
+    "type": "video",
+    "path": "pov-croppedblusa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-croppedblusa-video.mp4"
+  },
+  {
+    "id": "sup-026",
+    "type": "image",
+    "path": "pov-croppedblusa-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-croppedblusa-imagem.webp"
+  },
+  {
+    "id": "sup-027",
+    "type": "video",
+    "path": "pov-croppedblusa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-croppedblusa-video.mp4"
+  },
+  {
+    "id": "sup-028",
+    "type": "video",
+    "path": "pov-esmalte-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-esmalte-video.mp4"
+  },
+  {
+    "id": "sup-028",
+    "type": "image",
+    "path": "pov-esmalte-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-esmalte-imagem.webp"
+  },
+  {
+    "id": "sup-029",
+    "type": "video",
+    "path": "pov-esmalte2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-esmalte2-video.mp4"
+  },
+  {
+    "id": "sup-030",
+    "type": "video",
+    "path": "pov-roupa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-roupa-video.mp4"
+  },
+  {
+    "id": "sup-030",
+    "type": "image",
+    "path": "pov-roupa-imagem-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-roupa-imagem-1.webp"
+  },
+  {
+    "id": "sup-031",
+    "type": "video",
+    "path": "pov-saco-transparente-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-saco-transparente-video.mp4"
+  },
+  {
+    "id": "sup-031",
+    "type": "image",
+    "path": "pov-saco-transparente-imagem-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-saco-transparente-imagem-1.webp"
+  },
+  {
+    "id": "sup-032",
+    "type": "video",
+    "path": "pov-sutia-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-sutia-video.mp4"
+  },
+  {
+    "id": "sup-032",
+    "type": "image",
+    "path": "pov-sutia-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-sutia-imagem.webp"
+  },
+  {
+    "id": "sup-033",
+    "type": "video",
+    "path": "pov-tirando-do-pacote-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-tirando-do-pacote-video.mp4"
+  },
+  {
+    "id": "sup-033",
+    "type": "image",
+    "path": "pov-tirando-do-pacote-imagem-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-tirando-do-pacote-imagem-1.webp"
+  },
+  {
+    "id": "sup-034",
+    "type": "video",
+    "path": "pov-unhas-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-unhas-video.mp4"
+  },
+  {
+    "id": "sup-034",
+    "type": "image",
+    "path": "pov-unhas-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/pov-unhas-imagem.webp"
+  },
+  {
+    "id": "sup-035",
+    "type": "video",
+    "path": "prompt-fone-grande-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/prompt-fone-grande-video.mp4"
+  },
+  {
+    "id": "sup-035",
+    "type": "image",
+    "path": "prompt-fone-grande-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/prompt-fone-grande-imagem.webp"
+  },
+  {
+    "id": "sup-036",
+    "type": "image",
+    "path": "prompt-fone-grande-2-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/prompt-fone-grande-2-imagem.webp"
+  },
+  {
+    "id": "sup-037",
+    "type": "video",
+    "path": "rimel-ugc-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/rimel-ugc-video.mp4"
+  },
+  {
+    "id": "sup-037",
+    "type": "image",
+    "path": "rimel-ugc-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/rimel-ugc-imagem.webp"
+  },
+  {
+    "id": "sup-038",
+    "type": "video",
+    "path": "transicao-aparecendo-produto-neutro-para-qualquer-produto-video-final.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/transicao-aparecendo-produto-neutro-para-qualquer-produto-video-final.mp4"
+  },
+  {
+    "id": "sup-038",
+    "type": "image",
+    "path": "transicao-aparecendo-produto-neutro-para-qualquer-produto-imagem-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/transicao-aparecendo-produto-neutro-para-qualquer-produto-imagem-1.webp"
+  },
+  {
+    "id": "sup-039",
+    "type": "image",
+    "path": "transicao-aparecendo-produto-neutro-para-qualquer-produto-imagem-2-modelo.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/transicao-aparecendo-produto-neutro-para-qualquer-produto-imagem-2-modelo.webp"
+  },
+  {
+    "id": "sup-040",
+    "type": "video",
+    "path": "ugc-batom-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-batom-video.mp4"
+  },
+  {
+    "id": "sup-040",
+    "type": "image",
+    "path": "ugc-batom-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-batom-imagem.webp"
+  },
+  {
+    "id": "sup-041",
+    "type": "video",
+    "path": "ugc-blush-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-blush-video.mp4"
+  },
+  {
+    "id": "sup-041",
+    "type": "image",
+    "path": "ugc-blush-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-blush-imagem.webp"
+  },
+  {
+    "id": "sup-042",
+    "type": "image",
+    "path": "ugc-blush-cena-1-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-blush-cena-1-imagem.webp"
+  },
+  {
+    "id": "sup-043",
+    "type": "video",
+    "path": "ugc-blush-cena-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-blush-cena-2-video.mp4"
+  },
+  {
+    "id": "sup-044",
+    "type": "video",
+    "path": "ugc-bolsa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-bolsa-video.mp4"
+  },
+  {
+    "id": "sup-044",
+    "type": "image",
+    "path": "ugc-bolsa-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-bolsa-imagem.webp"
+  },
+  {
+    "id": "sup-045",
+    "type": "video",
+    "path": "ugc-calcado-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-calcado-video.mp4"
+  },
+  {
+    "id": "sup-046",
+    "type": "image",
+    "path": "ugc-calcado-tenis-caixa.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-calcado-tenis-caixa.webp"
+  },
+  {
+    "id": "sup-047",
+    "type": "image",
+    "path": "ugc-calcado-ugc-segurando-caixa.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-calcado-ugc-segurando-caixa.webp"
+  },
+  {
+    "id": "sup-048",
+    "type": "video",
+    "path": "ugc-capinha-celular-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-capinha-celular-video.mp4"
+  },
+  {
+    "id": "sup-048",
+    "type": "image",
+    "path": "ugc-capinha-celular-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-capinha-celular-imagem.webp"
+  },
+  {
+    "id": "sup-049",
+    "type": "video",
+    "path": "ugc-creme-estrias-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-creme-estrias-video.mp4"
+  },
+  {
+    "id": "sup-049",
+    "type": "image",
+    "path": "ugc-creme-estrias-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-creme-estrias-imagem.webp"
+  },
+  {
+    "id": "sup-050",
+    "type": "video",
+    "path": "ugc-espalhando-creme-de-estrias-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-espalhando-creme-de-estrias-video.mp4"
+  },
+  {
+    "id": "sup-050",
+    "type": "image",
+    "path": "ugc-espalhando-creme-de-estrias-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-espalhando-creme-de-estrias-imagem.webp"
+  },
+  {
+    "id": "sup-051",
+    "type": "video",
+    "path": "ugc-limpando-rosto-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-limpando-rosto-video.mp4"
+  },
+  {
+    "id": "sup-051",
+    "type": "image",
+    "path": "ugc-limpando-rosto-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-limpando-rosto-imagem.webp"
+  },
+  {
+    "id": "sup-052",
+    "type": "video",
+    "path": "ugc-maquiagem-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-maquiagem-video.mp4"
+  },
+  {
+    "id": "sup-052",
+    "type": "image",
+    "path": "ugc-maquiagem-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-maquiagem-imagem.webp"
+  },
+  {
+    "id": "sup-053",
+    "type": "video",
+    "path": "ugc-oculos-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-oculos-video.mp4"
+  },
+  {
+    "id": "sup-053",
+    "type": "image",
+    "path": "ugc-oculos-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-oculos-imagem.webp"
+  },
+  {
+    "id": "sup-054",
+    "type": "image",
+    "path": "ugc-pacote-cena-1-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-pacote-cena-1-imagem.webp"
+  },
+  {
+    "id": "sup-055",
+    "type": "video",
+    "path": "ugc-pacote-cena-1-e-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-pacote-cena-1-e-2-video.mp4"
+  },
+  {
+    "id": "sup-056",
+    "type": "image",
+    "path": "ugc-pacote-cena-2-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-pacote-cena-2-imagem.webp"
+  },
+  {
+    "id": "sup-057",
+    "type": "video",
+    "path": "ugc-passando-creme-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-passando-creme-video.mp4"
+  },
+  {
+    "id": "sup-057",
+    "type": "image",
+    "path": "ugc-passando-creme-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-passando-creme-imagem.webp"
+  },
+  {
+    "id": "sup-058",
+    "type": "video",
+    "path": "ugc-passando-perfume-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-passando-perfume-video.mp4"
+  },
+  {
+    "id": "sup-058",
+    "type": "image",
+    "path": "ugc-passando-perfume-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-passando-perfume-imagem.webp"
+  },
+  {
+    "id": "sup-059",
+    "type": "video",
+    "path": "ugc-pasta-de-dente-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-pasta-de-dente-video.mp4"
+  },
+  {
+    "id": "sup-059",
+    "type": "image",
+    "path": "ugc-pasta-de-dente-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-pasta-de-dente-imagem.webp"
+  },
+  {
+    "id": "sup-060",
+    "type": "video",
+    "path": "ugc-rimel-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-rimel-video.mp4"
+  },
+  {
+    "id": "sup-060",
+    "type": "image",
+    "path": "ugc-rimel-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/ugc-rimel-imagem.webp"
+  },
+  {
+    "id": "sup-061",
+    "type": "image",
+    "path": "versao-22-cta-celular.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/versao-22-cta-celular.webp"
+  },
+  {
+    "id": "drive-001",
+    "type": "video",
+    "path": "almofadas-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/almofadas-natal-video.mp4"
+  },
+  {
+    "id": "drive-002",
+    "type": "video",
+    "path": "arvore-de-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/arvore-de-natal-video.mp4"
+  },
+  {
+    "id": "drive-003",
+    "type": "video",
+    "path": "banho-de-sol-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/banho-de-sol-2-video.mp4"
+  },
+  {
+    "id": "drive-004",
+    "type": "video",
+    "path": "banho-de-sol-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/banho-de-sol-video.mp4"
+  },
+  {
+    "id": "drive-005",
+    "type": "video",
+    "path": "caixa-bolinhas-decoracao-de-arvore-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/caixa-bolinhas-decoracao-de-arvore-natal-video.mp4"
+  },
+  {
+    "id": "drive-006",
+    "type": "video",
+    "path": "camisa-123-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/camisa-123-video.mp4"
+  },
+  {
+    "id": "drive-007",
+    "type": "video",
+    "path": "camiseta-careta-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/camiseta-careta-video.mp4"
+  },
+  {
+    "id": "drive-008",
+    "type": "video",
+    "path": "cta-modelo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/cta-modelo-video.mp4"
+  },
+  {
+    "id": "drive-009",
+    "type": "video",
+    "path": "decoracao-natal-neutro-para-qualquer-decoracao-de-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/decoracao-natal-neutro-para-qualquer-decoracao-de-natal-video.mp4"
+  },
+  {
+    "id": "drive-010",
+    "type": "video",
+    "path": "espelho-1-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/espelho-1-video.mp4"
+  },
+  {
+    "id": "drive-011",
+    "type": "video",
+    "path": "estrela-arvore-de-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/estrela-arvore-de-natal-video.mp4"
+  },
+  {
+    "id": "drive-012",
+    "type": "video",
+    "path": "fabrica-caminhao-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-caminhao-video.mp4"
+  },
+  {
+    "id": "drive-013",
+    "type": "video",
+    "path": "fabrica-video-1-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-video-1-video.mp4"
+  },
+  {
+    "id": "drive-014",
+    "type": "video",
+    "path": "fabrica-video-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-video-2-video.mp4"
+  },
+  {
+    "id": "drive-015",
+    "type": "video",
+    "path": "fabrica-video-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-video-3-video.mp4"
+  },
+  {
+    "id": "drive-016",
+    "type": "video",
+    "path": "faceless-blusa-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-blusa-3-video.mp4"
+  },
+  {
+    "id": "drive-017",
+    "type": "video",
+    "path": "faceless-blusa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-blusa-video.mp4"
+  },
+  {
+    "id": "drive-018",
+    "type": "video",
+    "path": "faceless-calca-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-calca-2-video.mp4"
+  },
+  {
+    "id": "drive-019",
+    "type": "video",
+    "path": "faceless-calca-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-calca-3-video.mp4"
+  },
+  {
+    "id": "drive-020",
+    "type": "video",
+    "path": "faceless-calca-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-calca-video.mp4"
+  },
+  {
+    "id": "drive-021",
+    "type": "video",
+    "path": "faceless-conjunto-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-conjunto-video.mp4"
+  },
+  {
+    "id": "drive-022",
+    "type": "video",
+    "path": "faceless-shorts-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-shorts-video.mp4"
+  },
+  {
+    "id": "drive-023",
+    "type": "video",
+    "path": "faceless-vestido-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-vestido-video.mp4"
+  },
+  {
+    "id": "drive-024",
+    "type": "video",
+    "path": "feminino-agachamento-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/feminino-agachamento-video.mp4"
+  },
+  {
+    "id": "drive-025",
+    "type": "video",
+    "path": "gancho-22-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-22-video.mp4"
+  },
+  {
+    "id": "drive-026",
+    "type": "video",
+    "path": "gancho-arvore-de-natal-pet-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-arvore-de-natal-pet-video.mp4"
+  },
+  {
+    "id": "drive-027",
+    "type": "video",
+    "path": "gancho-bolsa-caindo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-bolsa-caindo-video.mp4"
+  },
+  {
+    "id": "drive-028",
+    "type": "video",
+    "path": "gancho-gatinho-arvore-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-gatinho-arvore-natal-video.mp4"
+  },
+  {
+    "id": "drive-029",
+    "type": "video",
+    "path": "gancho-papai-noel-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-papai-noel-video.mp4"
+  },
+  {
+    "id": "drive-030",
+    "type": "video",
+    "path": "gancho-queimando-roupa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-queimando-roupa-video.mp4"
+  },
+  {
+    "id": "drive-031",
+    "type": "video",
+    "path": "gancho-transicao-pacote-pegando-fogo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-transicao-pacote-pegando-fogo-video.mp4"
+  },
+  {
+    "id": "drive-032",
+    "type": "video",
+    "path": "gancho-transicao-pov-isqueiro-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-transicao-pov-isqueiro-video.mp4"
+  },
+  {
+    "id": "drive-033",
+    "type": "video",
+    "path": "jogo-americano-suplas-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/jogo-americano-suplas-video.mp4"
+  },
+  {
+    "id": "drive-034",
+    "type": "video",
+    "path": "metodo-chines-ilha-de-promo-de-loja-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-chines-ilha-de-promo-de-loja-video.mp4"
+  },
+  {
+    "id": "drive-035",
+    "type": "video",
+    "path": "metodo-chines-caixa-correio-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-chines-caixa-correio-video.mp4"
+  },
+  {
+    "id": "drive-036",
+    "type": "video",
+    "path": "metodo-chines-video-roupa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-chines-video-roupa-video.mp4"
+  },
+  {
+    "id": "drive-037",
+    "type": "video",
+    "path": "metodo-gringo-facelass-shop4-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-facelass-shop4-video.mp4"
+  },
+  {
+    "id": "drive-038",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-3-video.mp4"
+  },
+  {
+    "id": "drive-039",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-5-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-5-video.mp4"
+  },
+  {
+    "id": "drive-040",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-8-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-8-video.mp4"
+  },
+  {
+    "id": "drive-041",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-9-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-9-video.mp4"
+  },
+  {
+    "id": "drive-042",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-11-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-11-video.mp4"
+  },
+  {
+    "id": "drive-043",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-14-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-14-video.mp4"
+  },
+  {
+    "id": "drive-044",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-1-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-1-video.mp4"
+  },
+  {
+    "id": "drive-044",
+    "type": "image",
+    "path": "metodo-gringo-faceless-shop-1-imagem-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-1-imagem-1.webp"
+  },
+  {
+    "id": "drive-045",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-6-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-6-video.mp4"
+  },
+  {
+    "id": "drive-045",
+    "type": "image",
+    "path": "metodo-gringo-faceless-shop-6-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-6-imagem.webp"
+  },
+  {
+    "id": "drive-046",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-7-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-7-video.mp4"
+  },
+  {
+    "id": "drive-046",
+    "type": "image",
+    "path": "metodo-gringo-faceless-shop-7-imagem.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-7-imagem.webp"
+  },
+  {
+    "id": "drive-047",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop5-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop5-video.mp4"
+  },
+  {
+    "id": "drive-048",
+    "type": "video",
+    "path": "metodo-gringo-transicao-faceless-shop3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-transicao-faceless-shop3-video.mp4"
+  },
+  {
+    "id": "drive-049",
+    "type": "video",
+    "path": "metodo-gringo-transicao-faceless-shop-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-transicao-faceless-shop-2-video.mp4"
+  },
+  {
+    "id": "drive-049",
+    "type": "image",
+    "path": "metodo-gringo-transicao-faceless-shop-2-imagem-2.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-transicao-faceless-shop-2-imagem-2.webp"
+  },
+  {
+    "id": "drive-050",
+    "type": "video",
+    "path": "metodo-gringo-transicao-faceless-shop-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-transicao-faceless-shop-video.mp4"
+  },
+  {
+    "id": "drive-050",
+    "type": "image",
+    "path": "metodo-gringo-transicao-faceless-shop-imagem-1.webp",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-transicao-faceless-shop-imagem-1.webp"
+  },
+  {
+    "id": "vid-link-004",
+    "type": "video",
+    "path": "espelho-1-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/espelho-1-video.mp4"
+  },
+  {
+    "id": "pdf-001-dentro-do",
+    "type": "video",
+    "path": "gancho-papai-noel-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-papai-noel-video.mp4"
+  },
+  {
+    "id": "pdf-002-gancho-gatinho-arvore-de-natal",
+    "type": "video",
+    "path": "gancho-gatinho-arvore-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-gatinho-arvore-natal-video.mp4"
+  },
+  {
+    "id": "pdf-005-estrelas-arvore-de-natal",
+    "type": "video",
+    "path": "estrela-arvore-de-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/estrela-arvore-de-natal-video.mp4"
+  },
+  {
+    "id": "pdf-008-almofadas-natal",
+    "type": "video",
+    "path": "almofadas-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/almofadas-natal-video.mp4"
+  },
+  {
+    "id": "pdf-009-decoracao-natal-neutro-para-qualquer-decoracao-de-natal",
+    "type": "video",
+    "path": "decoracao-natal-neutro-para-qualquer-decoracao-de-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/decoracao-natal-neutro-para-qualquer-decoracao-de-natal-video.mp4"
+  },
+  {
+    "id": "pdf-013-arvore-de-natal",
+    "type": "video",
+    "path": "arvore-de-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/arvore-de-natal-video.mp4"
+  },
+  {
+    "id": "pdf-014-caixa-de-bolinha-natal",
+    "type": "video",
+    "path": "caixa-bolinhas-decoracao-de-arvore-natal-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/caixa-bolinhas-decoracao-de-arvore-natal-video.mp4"
+  },
+  {
+    "id": "pdf-016-pov-tapete-natal",
+    "type": "video",
+    "path": "gancho-arvore-de-natal-pet-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-arvore-de-natal-pet-video.mp4"
+  },
+  {
+    "id": "pdf-022-que-voce-quer-quer-ela-vista",
+    "type": "video",
+    "path": "metodo-chines-ilha-de-promo-de-loja-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-chines-ilha-de-promo-de-loja-video.mp4"
+  },
+  {
+    "id": "pdf-023-transicao-chiclete-modelo",
+    "type": "video",
+    "path": "transicao-chiclete-modelo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/transicao-chiclete-modelo-video.mp4"
+  },
+  {
+    "id": "pdf-025-gancho-bolsa-caindo",
+    "type": "video",
+    "path": "gancho-bolsa-caindo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-bolsa-caindo-video.mp4"
+  },
+  {
+    "id": "pdf-026-use-com-qualquer-roupa-e-qualquer-modelo",
+    "type": "video",
+    "path": "transicao-roupa-neutro-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/transicao-roupa-neutro-video.mp4"
+  },
+  {
+    "id": "pdf-028-produto-que-quer-que-ela-tire-do-roupeiro",
+    "type": "video",
+    "path": "metodo-chines-caixa-correio-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-chines-caixa-correio-video.mp4"
+  },
+  {
+    "id": "pdf-030-use-com-qualquer-roupa-que-estiver-na-mao-da-modelo",
+    "type": "video",
+    "path": "metodo-chines-video-roupa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-chines-video-roupa-video.mp4"
+  },
+  {
+    "id": "pdf-031-use-a-foto-da-sua-modelo-com-qualquer-roupa",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-3-video.mp4"
+  },
+  {
+    "id": "pdf-034-coloque-a-peca-que-deseja-divulgar-nos-bracos-da-modelo",
+    "type": "video",
+    "path": "metodo-gringo-facelass-shop4-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-facelass-shop4-video.mp4"
+  },
+  {
+    "id": "pdf-035-iniciar-o-video-cochichando",
+    "type": "video",
+    "path": "cta-modelo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/cta-modelo-video.mp4"
+  },
+  {
+    "id": "pdf-044-transicao-celular",
+    "type": "video",
+    "path": "transicao-celular-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/transicao-celular-video.mp4"
+  },
+  {
+    "id": "pdf-045-gancho-roupa-na-camera",
+    "type": "video",
+    "path": "gancho-queimando-roupa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-queimando-roupa-video.mp4"
+  },
+  {
+    "id": "pdf-046-modelo-transicao-mao-pos-banho",
+    "type": "video",
+    "path": "banho-de-sol-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/banho-de-sol-video.mp4"
+  },
+  {
+    "id": "pdf-047-movimentos-roupa",
+    "type": "video",
+    "path": "movimento-roupa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/movimento-roupa-video.mp4"
+  },
+  {
+    "id": "pdf-048-camiseta-careta",
+    "type": "video",
+    "path": "camiseta-careta-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/camiseta-careta-video.mp4"
+  },
+  {
+    "id": "pdf-050-frontal-regata-2",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop5-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop5-video.mp4"
+  },
+  {
+    "id": "pdf-051-gancho-com-desfoque-3",
+    "type": "video",
+    "path": "gancho-22-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-22-video.mp4"
+  },
+  {
+    "id": "pdf-052-blusa-de-times-e-beijo-para-tela-e-coracao",
+    "type": "video",
+    "path": "movimento-blusa-time-beijo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/movimento-blusa-time-beijo-video.mp4"
+  },
+  {
+    "id": "pdf-057-gancho-segurando-pacote-roupa",
+    "type": "video",
+    "path": "fabrica-caminhao-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-caminhao-video.mp4"
+  },
+  {
+    "id": "pdf-058-segurando-pacote-2",
+    "type": "video",
+    "path": "fabrica-video-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-video-2-video.mp4"
+  },
+  {
+    "id": "pdf-060-pacote-segurando-5",
+    "type": "video",
+    "path": "fabrica-video-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-video-3-video.mp4"
+  },
+  {
+    "id": "pdf-064-gancho-colocando-a-calca",
+    "type": "video",
+    "path": "faceless-calca-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-calca-3-video.mp4"
+  },
+  {
+    "id": "pdf-065-gancho-caixa-de-papel",
+    "type": "video",
+    "path": "gancho-transicao-pov-isqueiro-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-transicao-pov-isqueiro-video.mp4"
+  },
+  {
+    "id": "pdf-066-gancho-pactore-preto-viral",
+    "type": "video",
+    "path": "gancho-transicao-pacote-pegando-fogo-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/gancho-transicao-pacote-pegando-fogo-video.mp4"
+  },
+  {
+    "id": "pdf-067-transicao-academia",
+    "type": "video",
+    "path": "metodo-gringo-transicao-faceless-shop3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-transicao-faceless-shop3-video.mp4"
+  },
+  {
+    "id": "pdf-069-mao-da-modelo",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-5-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-5-video.mp4"
+  },
+  {
+    "id": "pdf-071-transicao-roupa-amassada-neutro-qualquer-peca",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-8-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-8-video.mp4"
+  },
+  {
+    "id": "pdf-074-rtansicao-mao-neutr-coim-giro",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-9-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-9-video.mp4"
+  },
+  {
+    "id": "pdf-075-transicao-vestido-sem-estar-vestido-na-mao",
+    "type": "video",
+    "path": "faceless-vestido-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-vestido-video.mp4"
+  },
+  {
+    "id": "pdf-076-de-toalha-com-roupa-na-mao",
+    "type": "video",
+    "path": "banho-de-sol-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/banho-de-sol-2-video.mp4"
+  },
+  {
+    "id": "pdf-082-camisa-video-01",
+    "type": "video",
+    "path": "fabrica-video-1-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/fabrica-video-1-video.mp4"
+  },
+  {
+    "id": "pdf-086-neutro-qualquer-blusa-ou-cropped",
+    "type": "video",
+    "path": "faceless-blusa-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-blusa-video.mp4"
+  },
+  {
+    "id": "pdf-087-neutro-qualquer-conjunto",
+    "type": "video",
+    "path": "faceless-conjunto-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-conjunto-video.mp4"
+  },
+  {
+    "id": "pdf-088-neutro-qualquer-peca",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-11-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-11-video.mp4"
+  },
+  {
+    "id": "pdf-089-neutro",
+    "type": "video",
+    "path": "metodo-gringo-faceless-shop-14-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/metodo-gringo-faceless-shop-14-video.mp4"
+  },
+  {
+    "id": "pdf-108-prompt-neutro-para-qualquer-camiseta",
+    "type": "video",
+    "path": "camisa-123-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/camisa-123-video.mp4"
+  },
+  {
+    "id": "pdf-116-pov-calca-sobre-a-cama",
+    "type": "video",
+    "path": "faceless-calca-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-calca-video.mp4"
+  },
+  {
+    "id": "pdf-117-pov-blusa-sobre-a-cama-3",
+    "type": "video",
+    "path": "faceless-blusa-3-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-blusa-3-video.mp4"
+  },
+  {
+    "id": "pdf-122-pov-shorts-2",
+    "type": "video",
+    "path": "faceless-shorts-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-shorts-video.mp4"
+  },
+  {
+    "id": "pdf-145-manequin-feminino",
+    "type": "video",
+    "path": "feminino-agachamento-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/feminino-agachamento-video.mp4"
+  },
+  {
+    "id": "pdf-149-pov-calca-jeans-video",
+    "type": "video",
+    "path": "faceless-calca-2-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/faceless-calca-2-video.mp4"
+  },
+  {
+    "id": "pdf-152-pov-jogo-de-pratos",
+    "type": "video",
+    "path": "jogo-americano-suplas-video.mp4",
+    "url": "https://luoyccnsbgoxdhcqyvdb.supabase.co/storage/v1/object/public/prompts-media/jogo-americano-suplas-video.mp4"
+  }
+]
