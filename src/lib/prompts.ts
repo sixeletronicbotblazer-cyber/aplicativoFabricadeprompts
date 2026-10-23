@@ -108,6 +108,7 @@ const BROKEN_HOSTS = [
   "auroraprompts.com",
   "i.imgur.com",
   "imgur.com",
+  "drive.usercontent.google.com",
 ];
 
 /**

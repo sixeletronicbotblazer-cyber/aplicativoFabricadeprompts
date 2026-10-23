@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Gem, Heart, ChevronDown, Film, LayoutGrid, Menu, Sparkles } from "lucide-react";
+import { Gem, Heart, ChevronDown, Film, LayoutGrid, Menu, Sparkles, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingMedia, hasWorkingImage } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
@@ -44,11 +44,12 @@ export function Gallery() {
         ))
       : base;
 
-    /** Sort: working previews first, broken/no-preview last */
+    /** Sort: videos first (highest priority), then working images, then no media */
     return matched.sort((a, b) => {
-      const aW = (hasWorkingImage(a) ? 2 : 0) + (hasWorkingVideo(a) ? 1 : 0);
-      const bW = (hasWorkingImage(b) ? 2 : 0) + (hasWorkingVideo(b) ? 1 : 0);
-      return bW - aW; // higher working score first
+      const aW = (hasWorkingVideo(a) ? 4 : 0) + (hasWorkingImage(a) ? 2 : 0) + (a.isNew ? 1 : 0);
+      const bW = (hasWorkingVideo(b) ? 4 : 0) + (hasWorkingImage(b) ? 2 : 0) + (b.isNew ? 1 : 0);
+      if (aW !== bW) return bW - aW;
+      return a.category.localeCompare(b.category) || a.title.localeCompare(b.title);
     });
   }, [filter, query, favIds]);
 
@@ -63,12 +64,16 @@ export function Gallery() {
   const isVideosNoRef = filter.kind === "videos-no-ref";
   const isVideosWithRef = filter.kind === "videos-with-ref";
 
+  /** Total video count across ALL filtered (not just visible page) */
+  const totalFilteredVideos = filtered.filter((p) => hasWorkingVideo(p)).length;
+
   /** Split visible cards into working-video, working-image, and no-preview sections */
+  const bothMediaCards = visible.filter((p) => hasWorkingImage(p) && hasWorkingVideo(p));
   const workingVideoCards = visible.filter((p) => hasWorkingVideo(p) && !hasWorkingImage(p));
   const workingImageCards = visible.filter((p) => hasWorkingImage(p) && !hasWorkingVideo(p));
-  const bothMediaCards = visible.filter((p) => hasWorkingImage(p) && hasWorkingVideo(p));
   const noPreviewCards = visible.filter((p) => !hasWorkingPreview(p));
-  const hasWorkingVideoCards = workingVideoCards.length > 0 || bothMediaCards.length > 0;
+  const totalVideoCards = workingVideoCards.length + bothMediaCards.length;
+  const hasWorkingVideoCards = totalVideoCards > 0;
   const hasWorkingImageCards = workingImageCards.length > 0;
   const hasNoPreviewCards = noPreviewCards.length > 0;
 
@@ -121,6 +126,13 @@ export function Gallery() {
                   <p className="mt-1 text-sm text-muted-foreground/60">Escolha uma referência, veja o formato e copie o prompt pronto para usar.</p>
                 </div>
                 <div className="flex items-center gap-3">
+                  {totalFilteredVideos > 0 && (
+                    <div className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.06] px-4 py-2">
+                      <Video className="h-4 w-4 text-emerald-400" />
+                      <span className="text-sm font-bold tabular-nums text-emerald-400">{totalFilteredVideos}</span>
+                      <span className="text-xs text-emerald-400/60">vídeos</span>
+                    </div>
+                  )}
                   <div className="flex items-center gap-2 rounded-xl border border-border-card bg-white/[0.03] px-4 py-2">
                     <LayoutGrid className="h-4 w-4 text-muted-foreground/50" />
                     <span className="text-sm font-semibold tabular-nums text-foreground">{filtered.length}</span>
@@ -167,15 +179,15 @@ export function Gallery() {
               </div>
             ) : (
               <div className="space-y-5 sm:space-y-7">
-                {/* ── WORKING VIDEOS SECTION ── */}
+                {/* ── VÍDEOS FUNCIONAIS (PRIORIDADE MÁXIMA) ── */}
                 {hasWorkingVideoCards && (
                   <div>
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                      <div className="grid h-6 w-6 sm:h-7 sm:w-7 place-items-center rounded-lg bg-emerald-500/15 border border-emerald-500/25">
-                        <Film className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-emerald-400" />
+                      <div className="grid h-7 w-7 sm:h-8 sm:w-8 place-items-center rounded-lg bg-emerald-500/20 border border-emerald-500/30">
+                        <Video className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-400" />
                       </div>
-                      <h2 className="text-[12px] sm:text-sm font-bold text-emerald-400 tracking-wide uppercase">Vídeos Funcionais</h2>
-                      <span className="rounded-md bg-emerald-500/10 border border-emerald-500/20 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold tabular-nums text-emerald-400">{workingVideoCards.length + bothMediaCards.length}</span>
+                      <h2 className="text-sm sm:text-base font-bold text-emerald-400 tracking-wide">Vídeos com Referência</h2>
+                      <span className="rounded-full bg-emerald-500/15 border border-emerald-500/25 px-2 sm:px-2.5 py-0.5 text-[11px] sm:text-xs font-bold tabular-nums text-emerald-400">{totalVideoCards}</span>
                       <div className="flex-1 h-px bg-emerald-500/15" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
@@ -185,15 +197,15 @@ export function Gallery() {
                   </div>
                 )}
 
-                {/* ── WORKING IMAGE REFERENCES ── */}
+                {/* ── REFERÊNCIAS VISUAIS (imagens) ── */}
                 {hasWorkingImageCards && (
                   <div>
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                      <div className="grid h-6 w-6 sm:h-7 sm:w-7 place-items-center rounded-lg bg-brand-cyan/15 border border-brand-cyan/25">
-                        <LayoutGrid className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-brand-cyan" />
+                      <div className="grid h-7 w-7 sm:h-8 sm:w-8 place-items-center rounded-lg bg-brand-cyan/15 border border-brand-cyan/25">
+                        <LayoutGrid className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-cyan" />
                       </div>
-                      <h2 className="text-[12px] sm:text-sm font-bold text-brand-cyan tracking-wide uppercase">Referências Visuais</h2>
-                      <span className="rounded-md bg-brand-cyan/10 border border-brand-cyan/20 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold tabular-nums text-brand-cyan">{workingImageCards.length}</span>
+                      <h2 className="text-sm sm:text-base font-bold text-brand-cyan tracking-wide">Referências Visuais</h2>
+                      <span className="rounded-full bg-brand-cyan/10 border border-brand-cyan/20 px-2 sm:px-2.5 py-0.5 text-[11px] sm:text-xs font-bold tabular-nums text-brand-cyan">{workingImageCards.length}</span>
                       <div className="flex-1 h-px bg-brand-cyan/15" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
@@ -202,7 +214,7 @@ export function Gallery() {
                   </div>
                 )}
 
-                {/* ── NO PREVIEW (compact cards) ── */}
+                {/* ── SEM REFERÊNCIA VISUAL ── */}
                 {hasNoPreviewCards && (
                   <div className="pt-3 sm:pt-4">
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
@@ -210,7 +222,7 @@ export function Gallery() {
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Film className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                         <span className="text-[12px] sm:text-sm font-semibold tracking-wide">Sem referência visual</span>
-                        <span className="rounded-md bg-white/5 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium tabular-nums">{noPreviewCards.length}</span>
+                        <span className="rounded-full bg-white/8 px-2 py-0.5 text-[11px] sm:text-xs font-medium tabular-nums">{noPreviewCards.length}</span>
                       </div>
                       <div className="flex-1 h-px bg-white/10" />
                     </div>

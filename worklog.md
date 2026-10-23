@@ -635,3 +635,32 @@ Stage Summary:
 - UpdateBanner converted from popup to inline banner
 - GitHub push failed due to expired token in remote URL
 - All changes committed locally
+---
+Task ID: 1
+Agent: main
+Task: Organize prompts - put videos first, improve gallery organization
+
+Work Log:
+- Analyzed current prompts-data.json: 530 total, 43 with working video URLs (6 local /sb/video/, 8 catbox.moe, 29 r2.dev), 530 with images (34 local /sb/image/ working, 77 /prompts/ working, 419 broken /sb/image/)
+- Tested video URLs: catbox.moe returns 200, r2.dev returns 200, local files exist
+- Reordered prompts-data.json: 43 video prompts first (sorted by isNew then category), then 487 image-only prompts
+- Cleaned up PromptCard.tsx: removed dead Drive proxy code (getDriveId, getDriveThumbUrl, thumbUrl, thumbError state)
+- Cleaned up PromptModal.tsx: removed driveThumbUrl computation and Drive thumbnail fallback
+- Updated prompts.ts: added drive.usercontent.google.com to BROKEN_HOSTS
+- Improved Gallery.tsx:
+  - Changed sort: videos get score 4 (highest priority), images get 2, new gets 1
+  - Added secondary sort by category + title for consistent ordering
+  - Added totalFilteredVideos count (shows total videos across ALL filtered, not just visible page)
+  - Added video counter badge in desktop header (emerald "43 vídeos")
+  - Improved section headers: "Vídeos com Referência" with Video icon, larger badges
+  - Changed badge shapes to rounded-full for cleaner look
+  - Changed section order: bothMediaCards + workingVideoCards → workingImageCards → noPreviewCards
+- Ran lint: clean, no errors
+- Browser verified: login, gallery shows 43 vídeos badge, "Vídeos com Referência" section first, video cards with ✓ VÍDEO badge and play button, modal opens with video loaded (readyState=4), mobile layout works, footer exists
+
+Stage Summary:
+- 43 video prompts now appear first in gallery with emerald "Vídeos com Referência" section
+- Desktop header shows "43 vídeos" badge in emerald
+- Dead Drive proxy code removed from PromptCard and PromptModal
+- Sort priority: video(4) > image(2) > new(1), then category+title
+- All video URLs verified working (catbox, r2.dev, local)

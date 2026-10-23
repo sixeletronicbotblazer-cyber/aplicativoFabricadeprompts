@@ -54,25 +54,6 @@ function isBrokenUrl(url: string | undefined): boolean {
   return BROKEN_HOSTS.some((h) => url.includes(h));
 }
 
-/** Extract Google Drive file ID from a proxy URL like /api/drive-video?id=FILE_ID */
-function getDriveId(url: string | undefined): string | null {
-  if (!url) return null;
-  try {
-    const u = new URL(url, "https://dummy");
-    return u.searchParams.get("id");
-  } catch {
-    const m = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-    return m ? m[1] : null;
-  }
-}
-
-/** Build a thumbnail URL for a Drive video */
-function getDriveThumbUrl(videoUrl: string | undefined): string | null {
-  const id = getDriveId(videoUrl);
-  if (!id) return null;
-  return `/api/drive-thumb?id=${id}`;
-}
-
 /** Timeout for image loading before we consider it broken (8 seconds) */
 const IMG_LOAD_TIMEOUT = 8000;
 
@@ -94,7 +75,6 @@ export function PromptCard({
   const [videoError, setVideoError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [thumbError, setThumbError] = useState(false);
   /** Image load state: true = loaded ok, false = error/timeout */
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -221,9 +201,6 @@ export function PromptCard({
     setImgLoaded(false);
   }, []);
 
-  /* Derive thumbnail fallback URL for Drive videos */
-  const thumbUrl = videoError ? getDriveThumbUrl(prompt.videoUrl) : null;
-
   const handleFavorite = (e: React.MouseEvent) => {
     e.stopPropagation();
     onToggleFavorite(prompt.id);
@@ -336,23 +313,6 @@ export function PromptCard({
                     onLoad={handleImgLoad}
                     className="h-full w-full object-cover opacity-80"
                   />
-                ) : thumbUrl && !thumbError ? (
-                  <div className="relative h-full w-full">
-                    <img
-                      src={thumbUrl}
-                      alt={prompt.title}
-                      onError={() => setThumbError(true)}
-                      className="h-full w-full object-cover opacity-70"
-                    />
-                    <button
-                      type="button"
-                      onClick={handleVideoRetry}
-                      className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-lg bg-black/50 px-2 py-1 text-[9px] font-semibold text-white/80 backdrop-blur-md hover:bg-black/60 transition-colors z-10"
-                    >
-                      <RefreshCw className="h-2.5 w-2.5" />
-                      Reproduzir
-                    </button>
-                  </div>
                 ) : (
                   <div className="absolute inset-0 grid place-items-center bg-surface-secondary">
                     <div className="flex flex-col items-center gap-1.5">
@@ -372,7 +332,6 @@ export function PromptCard({
               <video
                 ref={videoRef}
                 src={prompt.videoUrl}
-                poster={getDriveThumbUrl(prompt.videoUrl) ?? undefined}
                 muted
                 playsInline
                 loop
