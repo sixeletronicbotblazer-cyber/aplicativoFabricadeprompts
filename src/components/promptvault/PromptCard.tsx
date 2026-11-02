@@ -44,6 +44,7 @@ function TypeIcon({ type, className }: { type: PromptType; className?: string })
  */
 const BROKEN_HOSTS = [
   "luoyccnsbgoxdhcqyvdb.supabase.co",
+  "kwlsuylcowdldtaqaaou.supabase.co",
   "auroraprompts.com",
   "i.imgur.com",
   "imgur.com",
@@ -71,10 +72,12 @@ export function PromptCard({
   onOpen,
 }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
-  const [videoLoading, setVideoLoading] = useState(true);
+  const [videoLoading, setVideoLoading] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  /** Egress saving: video src only attached after user clicks play on the card */
+  const [videoActivated, setVideoActivated] = useState(false);
   /** Image load state: true = loaded ok, false = error/timeout */
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -123,9 +126,9 @@ export function PromptCard({
     };
   }, [isVisible, hasWorkingImg, showVideoThumb, imgLoaded, imgError]);
 
-  /* Video loading timeout — fallback to thumbnail if video doesn't load in 12s */
+  /* Video loading timeout — fallback to placeholder if video doesn't load in 12s */
   useEffect(() => {
-    if (!isVisible || !showVideoThumb || videoError) return;
+    if (!videoActivated || videoError) return;
     const timer = setTimeout(() => {
       if (videoLoading) {
         setVideoError(true);
@@ -133,11 +136,17 @@ export function PromptCard({
       }
     }, 12000);
     return () => clearTimeout(timer);
-  }, [isVisible, showVideoThumb, videoError, videoLoading]);
+  }, [videoActivated, videoError, videoLoading]);
+
+  /* Start playing once the video element mounts after activation */
+  useEffect(() => {
+    if (!videoActivated || !videoRef.current) return;
+    videoRef.current.play().then(() => setIsPlaying(true)).catch(() => setVideoError(true));
+  }, [videoActivated]);
 
   /* Pause video when card leaves viewport */
   useEffect(() => {
-    if (!showVideoThumb || !videoRef.current) return;
+    if (!videoActivated || !videoRef.current) return;
     const el = cardRef.current;
     if (!el) return;
     const obs = new IntersectionObserver(
@@ -151,11 +160,16 @@ export function PromptCard({
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, [showVideoThumb]);
+  }, [videoActivated]);
 
-  /* Video play/pause handler */
+  /* Video play/pause handler — activates video load on first click */
   const handleVideoClick = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
+    if (!videoActivated) {
+      setVideoActivated(true);
+      setVideoLoading(true);
+      return;
+    }
     const v = videoRef.current;
     if (!v) return;
     if (v.paused) {
@@ -164,7 +178,7 @@ export function PromptCard({
       v.pause();
       setIsPlaying(false);
     }
-  }, []);
+  }, [videoActivated]);
 
   /* Video error handler */
   const handleVideoError = useCallback(() => {
@@ -297,75 +311,90 @@ export function PromptCard({
       >
         <div className="aspect-[4/3] sm:aspect-[3/4] w-full bg-surface-secondary">
           {isVisible && showVideoThumb ? (
-            /* VIDEO thumbnail with play/pause */
+            /* VIDEO preview: static poster (image or placeholder) — video bytes
+               are only fetched after the user clicks play (saves Supabase egress) */
             <div className="relative h-full w-full bg-black/40">
-              {videoLoading && !videoError && (
-                <div className="absolute inset-0 grid place-items-center">
-                  <Loader2 className="h-5 w-5 text-text-secondary/40 animate-spin" />
+              {/* Static poster: reference image if available, otherwise gradient placeholder */}
+              {hasImage && !imageIsBroken ? (
+                <img
+                  src={prompt.image}
+                  alt={prompt.title}
+                  onError={handleImgError}
+                  onLoad={handleImgLoad}
+                  className="h-full w-full object-cover opacity-90"
+                />
+              ) : (
+                <div className="h-full w-full bg-gradient-to-br from-brand-purple/15 via-black/50 to-black/60 grid place-items-center">
+                  <Film className="h-8 w-8 text-white/30" />
                 </div>
               )}
-              {videoError ? (
-                hasImage && !imageIsBroken ? (
-                  <img
-                    src={prompt.image}
-                    alt={prompt.title}
-                    onError={handleImgError}
-                    onLoad={handleImgLoad}
-                    className="h-full w-full object-cover opacity-80"
-                  />
-                ) : (
-                  <div className="absolute inset-0 grid place-items-center bg-surface-secondary">
-                    <div className="flex flex-col items-center gap-1.5">
-                      <Film className="h-6 w-6 text-text-secondary/30" />
-                      <button
-                        type="button"
-                        onClick={handleVideoRetry}
-                        className="mt-1 inline-flex items-center gap-1 rounded-lg bg-white/8 px-2 py-1 text-[9px] font-semibold text-text-secondary/60 hover:bg-white/12 transition-colors"
-                      >
-                        <RefreshCw className="h-2.5 w-2.5" />
-                        Tentar novamente
-                      </button>
-                    </div>
+
+              {/* Video element — only mounted after activation (click on play) */}
+              {videoActivated && !videoError && (
+                <video
+                  ref={videoRef}
+                  src={prompt.videoUrl}
+                  muted
+                  playsInline
+                  loop
+                  preload="auto"
+                  x-webkit-playsinline="true"
+                  onLoadedData={() => setVideoLoading(false)}
+                  onLoadedMetadata={() => setVideoLoading(false)}
+                  onError={handleVideoError}
+                  className={cn(
+                    "absolute inset-0 h-full w-full object-cover bg-black transition-opacity duration-300",
+                    videoLoading ? "opacity-0" : "opacity-90"
+                  )}
+                />
+              )}
+
+              {/* Loading spinner while activated video buffers */}
+              {videoLoading && videoActivated && !videoError && (
+                <div className="absolute inset-0 grid place-items-center bg-black/40">
+                  <Loader2 className="h-5 w-5 text-white/60 animate-spin" />
+                </div>
+              )}
+
+              {/* Video error fallback with retry */}
+              {videoError && (
+                <div className="absolute inset-0 grid place-items-center bg-surface-secondary/80 backdrop-blur-sm">
+                  <div className="flex flex-col items-center gap-1.5">
+                    <Film className="h-6 w-6 text-text-secondary/30" />
+                    <button
+                      type="button"
+                      onClick={handleVideoRetry}
+                      className="mt-1 inline-flex items-center gap-1 rounded-lg bg-white/8 px-2 py-1 text-[9px] font-semibold text-text-secondary/60 hover:bg-white/12 transition-colors"
+                    >
+                      <RefreshCw className="h-2.5 w-2.5" />
+                      Tentar novamente
+                    </button>
                   </div>
-                )
-              ) : null}
-              <video
-                ref={videoRef}
-                src={prompt.videoUrl}
-                muted
-                playsInline
-                loop
-                preload="metadata"
-                x-webkit-playsinline="true"
-                onLoadedData={() => setVideoLoading(false)}
-                onLoadedMetadata={() => setVideoLoading(false)}
-                onError={handleVideoError}
-                className={cn(
-                  "h-full w-full object-cover transition-opacity duration-300",
-                  videoLoading || videoError ? "opacity-0" : "opacity-90"
-                )}
-              />
-              {/* Play/Pause overlay */}
-              {!videoError && (
+                </div>
+              )}
+
+              {/* Play/Pause overlay — always visible until video plays */}
+              {!isPlaying && !videoError && (
                 <button
                   type="button"
                   onClick={handleVideoClick}
                   className="absolute inset-0 grid place-items-center cursor-pointer z-10"
-                  aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
+                  aria-label="Reproduzir vídeo"
                 >
-                  <div
-                    className={cn(
-                      "grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full backdrop-blur-md border transition-all duration-300",
-                      isPlaying
-                        ? "bg-black/30 border-white/10 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100"
-                        : "bg-white/12 border-white/15 scale-100 group-hover:scale-110"
-                    )}
-                  >
-                    {isPlaying ? (
-                      <Pause className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                    ) : (
-                      <Play className="h-4 w-4 sm:h-5 sm:w-5 text-white ml-0.5" />
-                    )}
+                  <div className="grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full bg-white/12 border border-white/15 backdrop-blur-md transition-all duration-300 scale-100 group-hover:scale-110">
+                    <Play className="h-4 w-4 sm:h-5 sm:w-5 text-white ml-0.5" />
+                  </div>
+                </button>
+              )}
+              {isPlaying && !videoError && (
+                <button
+                  type="button"
+                  onClick={handleVideoClick}
+                  className="absolute inset-0 cursor-pointer z-10"
+                  aria-label="Pausar vídeo"
+                >
+                  <div className="absolute top-2 right-2 grid h-8 w-8 place-items-center rounded-full bg-black/40 border border-white/10 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Pause className="h-3.5 w-3.5 text-white" />
                   </div>
                 </button>
               )}

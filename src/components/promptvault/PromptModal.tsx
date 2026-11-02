@@ -60,6 +60,8 @@ export function PromptModal({
   const [videoLoading, setVideoLoading] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  /** Egress saving: video src is only attached after the user clicks play */
+  const [videoActivated, setVideoActivated] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   /* ─── Derived flags ─── */
@@ -78,17 +80,25 @@ export function PromptModal({
     setVideoLoading(false);
     setVideoError(false);
     setIsPlaying(false);
+    setVideoActivated(false);
   }
 
-  /* ─── Autoplay video on mount ─── */
+  /* ─── Play video once activated (src attached after user click) ─── */
   useEffect(() => {
-    if (!open || !hasVideo || !videoRef.current) return;
+    if (!videoActivated || !open || !videoRef.current) return;
     const v = videoRef.current;
     v.play().then(() => setIsPlaying(true)).catch(() => { /* user interaction required */ });
-  }, [open, hasVideo]);
+  }, [videoActivated, open]);
 
   /* ─── Video handlers ─── */
   const handleVideoPlayPause = () => {
+    if (!videoActivated) {
+      /* First click: attach src and start loading (saves bandwidth —
+         nothing is downloaded until the user explicitly asks to play) */
+      setVideoActivated(true);
+      setVideoLoading(true);
+      return;
+    }
     const v = videoRef.current;
     if (!v) return;
     if (v.paused) {
@@ -139,35 +149,38 @@ export function PromptModal({
   };
 
   const renderVideo = (className?: string) => (
-    <div className={cn("relative w-full", className)}>
-      <video
-        ref={videoRef}
-        src={prompt?.videoUrl}
-        controls
-        controlsList="nodownload"
-        playsInline
-        preload="auto"
-        x-webkit-playsinline="true"
-        onCanPlay={() => { setVideoLoading(false); setVideoError(false); }}
-        onWaiting={() => setVideoLoading(true)}
-        onPlaying={() => { setVideoLoading(false); setIsPlaying(true); }}
-        onPause={() => setIsPlaying(false)}
-        onError={() => { setVideoLoading(false); setVideoError(true); }}
-        className="h-full w-full object-contain"
-      />
-
-      {/* Play overlay */}
-      {!isPlaying && !videoError && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/20">
+    <div className={cn("relative w-full h-full min-h-[140px] sm:min-h-[200px]", className)}>
+      {/* Placeholder shown until the user clicks play — avoids any video download */}
+      {!videoActivated ? (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-black/70 to-black/40">
           <button
             type="button"
             onClick={handleVideoPlayPause}
-            className="pointer-events-auto grid h-10 w-10 sm:h-12 sm:w-12 place-items-center rounded-full bg-white/15 text-white backdrop-blur-md transition-all hover:bg-white/25 hover:scale-110 active:scale-95"
+            className="grid h-14 w-14 sm:h-16 sm:w-16 place-items-center rounded-full bg-white/15 text-white backdrop-blur-md border border-white/20 transition-all hover:bg-white/25 hover:scale-110 active:scale-95"
             aria-label="Reproduzir vídeo"
           >
-            <Play className="h-4.5 w-4.5 sm:h-5 sm:w-5 ml-0.5" />
+            <Play className="h-6 w-6 sm:h-7 sm:w-7 ml-0.5" />
           </button>
+          <span className="text-[10px] sm:text-[11px] font-medium text-white/50">
+            Clique para reproduzir
+          </span>
         </div>
+      ) : (
+        <video
+          ref={videoRef}
+          src={prompt?.videoUrl}
+          controls
+          controlsList="nodownload"
+          playsInline
+          preload="auto"
+          x-webkit-playsinline="true"
+          onCanPlay={() => { setVideoLoading(false); setVideoError(false); }}
+          onWaiting={() => setVideoLoading(true)}
+          onPlaying={() => { setVideoLoading(false); setIsPlaying(true); }}
+          onPause={() => setIsPlaying(false)}
+          onError={() => { setVideoLoading(false); setVideoError(true); }}
+          className="h-full w-full object-contain"
+        />
       )}
 
       {/* Loading spinner */}

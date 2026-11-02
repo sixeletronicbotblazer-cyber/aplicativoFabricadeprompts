@@ -2,7 +2,7 @@
  * Supabase client for the new project.
  * Used for storage operations (image/video uploads and retrieval).
  *
- * Project: kwlsuylcowdldtaqaaou
+ * Project: yhfudstfhlzkcaumruop
  * Bucket:  prompts-media (public)
  */
 

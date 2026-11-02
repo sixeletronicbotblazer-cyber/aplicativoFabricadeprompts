@@ -58,3 +58,9 @@ PromptVault.bundle
 tool-results/
 gallery-verify-*.png
 upload-videos.sh
+# migration reference/backup artifacts (not part of the app)
+cloned-repo/
+.migration-cache/
+migrate-*.mjs
+supabase-migration-map.json
+.zscripts/dev.pid
