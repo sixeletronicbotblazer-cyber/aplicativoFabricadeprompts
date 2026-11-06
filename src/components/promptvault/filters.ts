@@ -165,9 +165,10 @@ function mediaQualityScore(p: Prompt): number {
  */
 function sortByReference(list: Prompt[]): Prompt[] {
   return [...list].sort((a, b) => {
-    // 0. POV prompts ALWAYS first (highlighted mode)
-    const aPov = isPovPrompt(a) ? 0 : 1;
-    const bPov = isPovPrompt(b) ? 0 : 1;
+    // 0. POV prompts WITH VIDEO first (featured mode — the most popular).
+    //    Image-only POV prompts follow the normal sequence.
+    const aPov = isPovPrompt(a) && hasWorkingVideo(a) ? 0 : 1;
+    const bPov = isPovPrompt(b) && hasWorkingVideo(b) ? 0 : 1;
     if (aPov !== bPov) return aPov - bPov;
     // 1. New items first within group
     const aNew = a.isNew ? 0 : 1;

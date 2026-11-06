@@ -1015,7 +1015,7 @@
     "image": "/sb/image/1786157596186-14fh8y.jpg",
     "prompt": "⁠​‌‌​​‌​‌​​‌‌​​​​​​‌‌​‌‌‌​‌‌​​‌‌​​​‌‌​​​​​​‌‌​​​​​‌‌​​‌​‌​‌‌​​‌\n\nDuration: 8–10 seconds\n\nUse the uploaded image as the exact first frame.\n\nCreate an ultra-realistic first-person TikTok Shop UGC smartphone video.\n\nThe satin pajama set must remain 100% identical throughout the entire video.\n\nPreserve exactly:\n\n* same satin fabric\n* same pink color\n* same black piping\n* same pocket\n* same buttons\n* same shorts\n* same wrinkles\n* same stitching\n* same proportions\n* same reflections\n* same bed\n* same pillows\n* same lighting\n* same composition\n\nNothing about the product may change.\n\n⸻\n\nCamera\n\nThe camera is held naturally above the bed by the person filming.\n\nThe framing remains almost fixed during the entire video.\n\nOnly tiny handheld smartphone movements.\n\nNatural autofocus.\n\nNatural exposure adjustments.\n\nLooks exactly like someone casually filming at home.\n\nNever cinematic.\n\nNever stabilized.\n\n⸻\n\nHand Movement\n\nThe video begins with both pajama pieces lying naturally on the",
     "isNew": false,
-    "videoUrl": "https://files.catbox.moe/8d6z2n.mp4#t=0.1",
+    "videoUrl": "https://yhfudstfhlzkcaumruop.supabase.co/storage/v1/object/public/prompts-media/video/pov-camisa-na-cama.mp4",
     "referencia": false
   },
   {
@@ -1306,7 +1306,7 @@
     ],
     "image": "/sb/image/1786552465622-9u2ue0.jpg",
     "prompt": "POV outfit universal — vídeo de referência para criação de conteúdo.",
-    "videoUrl": "https://files.catbox.moe/mq8o9f.mp4#t=0.1",
+    "videoUrl": "https://yhfudstfhlzkcaumruop.supabase.co/storage/v1/object/public/prompts-media/video/pov-outfit-universal.mp4",
     "referencia": true,
     "isNew": false
   },
@@ -1993,7 +1993,7 @@
     "image": "/sb/image/1786546887588-soitry.jpg",
     "prompt": "{ \"type\": \"image_to_video\", \"aspect_ratio\": \"9:16\", \"prompt\": \"Estabilização de câmera muito leve, estilo câmera na mão. Leve deriva natural. O sujeito mantém uma postura relaxada com pequenas inclinações da cabeça e movimentos suaves dos ombros. Os acessórios se movem naturalmente com a gravidade. Sensação de gravação casual e descontraída.\" }",
     "referencia": false,
-    "videoUrl": "https://files.catbox.moe/8d6z2n.mp4#t=0.1",
+    "videoUrl": "https://yhfudstfhlzkcaumruop.supabase.co/storage/v1/object/public/prompts-media/video/pov-camisa-na-cama.mp4",
     "isNew": false
   },
   {

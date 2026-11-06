@@ -45,13 +45,15 @@ export function Gallery() {
       : base;
 
     /**
-     * Sort: POV prompts first (highlighted mode), then videos,
-     * then working images, then no media.
+     * Sort: POV prompts WITH VIDEO first (featured mode — Supabase/Drive
+     * references), then all videos, then working images, then no media.
+     * POV prompts that are image-only follow the normal sequence.
      */
+    const isFeaturedPov = (p: Prompt) => isPovPrompt(p) && hasWorkingVideo(p);
     return [...matched].sort((a, b) => {
-      // POV mode ALWAYS first — the most popular mode
-      const aPov = isPovPrompt(a) ? 1 : 0;
-      const bPov = isPovPrompt(b) ? 1 : 0;
+      // Featured POV (with video) ALWAYS first — the most popular mode
+      const aPov = isFeaturedPov(a) ? 1 : 0;
+      const bPov = isFeaturedPov(b) ? 1 : 0;
       if (aPov !== bPov) return bPov - aPov;
       const aW = (hasWorkingVideo(a) ? 4 : 0) + (hasWorkingImage(a) ? 2 : 0) + (a.isNew ? 1 : 0);
       const bW = (hasWorkingVideo(b) ? 4 : 0) + (hasWorkingImage(b) ? 2 : 0) + (b.isNew ? 1 : 0);
@@ -76,8 +78,13 @@ export function Gallery() {
 
   /** Split visible cards into working-video, working-image, and no-preview sections */
   const isAllView = filter.kind === "all" || filter.kind === "pov";
-  const povCards = isAllView ? visible.filter((p) => isPovPrompt(p)) : [];
-  const nonPov = isAllView ? visible.filter((p) => !isPovPrompt(p)) : visible;
+  /** Featured POV = only prompts with a working video (Supabase/Drive).
+   *  Image-only POV prompts follow the normal sequence below. */
+  const isFeaturedPov = (p: Prompt) => isPovPrompt(p) && hasWorkingVideo(p);
+  const povCards = isAllView ? visible.filter(isFeaturedPov) : [];
+  const nonPov = isAllView ? visible.filter((p) => !isFeaturedPov(p)) : visible;
+  /** Total featured POV videos across ALL filtered (not just visible page) */
+  const totalFeaturedPov = isAllView ? filtered.filter(isFeaturedPov).length : 0;
   const bothMediaCards = nonPov.filter((p) => hasWorkingImage(p) && hasWorkingVideo(p));
   const workingVideoCards = nonPov.filter((p) => hasWorkingVideo(p) && !hasWorkingImage(p));
   const workingImageCards = nonPov.filter((p) => hasWorkingImage(p) && !hasWorkingVideo(p));
@@ -194,15 +201,17 @@ export function Gallery() {
               </div>
             ) : (
               <div className="space-y-5 sm:space-y-7">
-                {/* ── POV EM DESTAQUE (MODO MAIS USADO) ── */}
+                {/* ── POV EM DESTAQUE (MODO MAIS USADO — SÓ VÍDEOS) ── */}
                 {povCards.length > 0 && (
-                  <div className="relative rounded-2xl border border-amber-400/20 bg-gradient-to-b from-amber-500/[0.07] to-transparent p-3 sm:p-4">
-                    <div className="flex items-center gap-3 mb-3 sm:mb-4 px-1">
-                      <div className="grid h-7 w-7 sm:h-8 sm:w-8 place-items-center rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg shadow-amber-500/20">
+                  <div className="relative rounded-2xl border border-amber-400/25 bg-gradient-to-b from-amber-500/[0.09] via-amber-500/[0.04] to-transparent p-3 sm:p-4 shadow-lg shadow-amber-500/[0.06]">
+                    <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 px-1">
+                      <div className="grid h-7 w-7 sm:h-8 sm:w-8 place-items-center rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg shadow-amber-500/25">
                         <Star className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white fill-white" />
                       </div>
-                      <h2 className="text-sm sm:text-base font-bold bg-gradient-to-r from-amber-200 via-amber-300 to-orange-300 bg-clip-text text-transparent tracking-wide">POV — Modo favorito da galera</h2>
-                      <span className="rounded-full bg-amber-500/15 border border-amber-400/30 px-2 sm:px-2.5 py-0.5 text-[11px] sm:text-xs font-bold tabular-nums text-amber-300">{povCards.length}</span>
+                      <h2 className="text-sm sm:text-base font-bold bg-gradient-to-r from-amber-200 via-amber-300 to-orange-300 bg-clip-text text-transparent tracking-wide">Modo POV — Os mais usados</h2>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/15 border border-amber-400/30 px-2 sm:px-2.5 py-0.5 text-[11px] sm:text-xs font-bold tabular-nums text-amber-300">
+                        <Video className="h-3 w-3" />{totalFeaturedPov} vídeos
+                      </span>
                       <div className="flex-1 h-px bg-amber-400/15" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
