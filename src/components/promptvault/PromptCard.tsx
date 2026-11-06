@@ -11,6 +11,7 @@ import {
   Loader2,
   Eye,
   RefreshCw,
+  Star,
 } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
@@ -19,6 +20,7 @@ import { cn } from "@/lib/utils";
 import { copyText } from "@/lib/copy";
 import { toast } from "sonner";
 import { hasWorkingVideo } from "@/lib/prompts";
+import { isPovPrompt } from "./filters";
 
 const TYPE_STYLE: Record<PromptType, string> = {
   Imagem: "bg-brand-cyan/15 text-brand-cyan border-brand-cyan/25",
@@ -461,12 +463,19 @@ export function PromptCard({
           {prompt.category}
         </span>
 
-        {/* NOVO badge */}
-        {prompt.isNew && (
-          <span className="absolute right-10 sm:right-12 top-2.5 sm:top-3 inline-flex items-center rounded-full bg-brand-turquesa/20 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-brand-turquesa backdrop-blur-md z-[2] pointer-events-none">
-            Novo
-          </span>
-        )}
+        {/* POV highlight badge — most popular mode */}
+        <div className="absolute right-10 sm:right-12 top-2.5 sm:top-3 z-[2] flex flex-col items-end gap-1 pointer-events-none">
+          {isPovPrompt(prompt) && (
+            <span className="inline-flex items-center gap-0.5 rounded-full bg-gradient-to-r from-amber-500/25 to-orange-500/25 border border-amber-400/40 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-amber-200 backdrop-blur-md">
+              <Star className="h-2 w-2 fill-amber-300 text-amber-300" /> POV
+            </span>
+          )}
+          {prompt.isNew && (
+            <span className="inline-flex items-center rounded-full bg-brand-turquesa/20 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-brand-turquesa backdrop-blur-md">
+              Novo
+            </span>
+          )}
+        </div>
 
         {/* Working video badge */}
         {hasWorkingVideo(prompt) && !videoIsBroken && (

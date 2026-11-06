@@ -7,6 +7,7 @@ import {
 
 export type Filter =
   | { kind: "all" }
+  | { kind: "pov" }
   | { kind: "type"; value: PromptType }
   | { kind: "category"; value: PromptCategory }
   | { kind: "favorites" }
@@ -23,6 +24,8 @@ export function filterKey(f: Filter): string {
   switch (f.kind) {
     case "all":
       return "all";
+    case "pov":
+      return "pov";
     case "favorites":
       return "favorites";
     case "recommended":
@@ -43,10 +46,23 @@ export function filterKey(f: Filter): string {
   }
 }
 
+/**
+ * Check if a prompt is a POV prompt — the most popular mode.
+ * Matches "POV" in title, category or type (and "Ponto de vista").
+ */
+export function isPovPrompt(p: Prompt): boolean {
+  const t = (p.title || "").toLowerCase();
+  const c = (p.category || "").toLowerCase();
+  const ty = (p.type || "").toLowerCase();
+  return t.includes("pov") || c.includes("pov") || ty === "pov" || t.includes("ponto de vista");
+}
+
 export function countFor(f: Filter, favIds: string[]): number {
   switch (f.kind) {
     case "all":
       return PROMPTS.length;
+    case "pov":
+      return PROMPTS.filter(isPovPrompt).length;
     case "favorites":
       return favIds.length;
     case "recommended":
@@ -144,13 +160,16 @@ function mediaQualityScore(p: Prompt): number {
 }
 
 /**
- * Sort helper: prompts with WORKING media → first,
- * then broken media → second, then no media → last.
- * Within each group: new items first, then has prompt text, then images before videos.
+ * Sort helper: POV prompts first (most popular mode), then working media,
+ * then broken media, then no media.
  */
 function sortByReference(list: Prompt[]): Prompt[] {
   return [...list].sort((a, b) => {
-    // 1. New items ALWAYS first (top of gallery)
+    // 0. POV prompts ALWAYS first (highlighted mode)
+    const aPov = isPovPrompt(a) ? 0 : 1;
+    const bPov = isPovPrompt(b) ? 0 : 1;
+    if (aPov !== bPov) return aPov - bPov;
+    // 1. New items first within group
     const aNew = a.isNew ? 0 : 1;
     const bNew = b.isNew ? 0 : 1;
     if (aNew !== bNew) return aNew - bNew;
@@ -179,6 +198,8 @@ export function applyFilter(
   switch (f.kind) {
     case "all":
       return sortByReference(prompts);
+    case "pov":
+      return sortByReference(prompts.filter(isPovPrompt));
     case "favorites":
       return sortByReference(prompts.filter((p) => favSet.has(p.id)));
     case "recommended":
@@ -205,6 +226,8 @@ export function filterLabel(f: Filter): string {
   switch (f.kind) {
     case "all":
       return "Todos os prompts";
+    case "pov":
+      return "POV ⭐ Em destaque";
     case "favorites":
       return "Favoritos";
     case "recommended":

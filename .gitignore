@@ -64,3 +64,4 @@ cloned-repo/
 migrate-*.mjs
 supabase-migration-map.json
 .zscripts/dev.pid
+recover-*.mjs

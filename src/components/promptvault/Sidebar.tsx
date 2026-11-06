@@ -29,6 +29,7 @@ import {
   Shirt,
   ChevronDown,
   Gem,
+  Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -49,6 +50,8 @@ interface NavItem {
   icon: React.ElementType;
   filter: Filter;
   isNew?: boolean;
+  /** Highlighted "hot" item (POV) — gets special styling */
+  isHot?: boolean;
 }
 
 interface NavSection {
@@ -60,8 +63,9 @@ interface NavSection {
 const NAV_SECTIONS: NavSection[] = [
   {
     title: "PRINCIPAL",
-    defaultOpen: false,
+    defaultOpen: true,
     items: [
+      { label: "POV", icon: Eye, filter: { kind: "pov" }, isHot: true },
       { label: "Todos os prompts", icon: LayoutGrid, filter: { kind: "all" } },
       { label: "Novidades", icon: Sparkles, filter: { kind: "novidades" }, isNew: true },
       { label: "Imagem", icon: ImageIcon, filter: { kind: "type", value: "Imagem" } },
@@ -72,7 +76,6 @@ const NAV_SECTIONS: NavSection[] = [
     title: "POV & ESTILO",
     defaultOpen: false,
     items: [
-      { label: "POV", icon: Eye, filter: { kind: "category", value: "POV" } },
       { label: "UGC", icon: Camera, filter: { kind: "category", value: "UGC" } },
       { label: "Selfie", icon: User, filter: { kind: "category", value: "Selfie" } },
       { label: "Produto", icon: Hand, filter: { kind: "category", value: "Produto" } },
@@ -222,23 +225,37 @@ function SidebarContent({ filter, onSelect, onClose }: SidebarContentProps) {
                           className={cn(
                             "group flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-[13px] transition-all",
                             active
-                              ? "bg-brand-purple/15 text-white"
-                              : "text-muted-foreground/60 hover:bg-white/[0.04] hover:text-foreground"
+                              ? item.isHot
+                                ? "bg-amber-500/15 text-white ring-1 ring-amber-400/30"
+                                : "bg-brand-purple/15 text-white"
+                              : item.isHot
+                                ? "text-amber-200/90 hover:bg-amber-500/10 hover:text-amber-100"
+                                : "text-muted-foreground/60 hover:bg-white/[0.04] hover:text-foreground"
                           )}
                         >
                           <span
                             className={cn(
                               "grid h-7 w-7 shrink-0 place-items-center rounded-md transition-colors",
                               active
-                                ? "bg-brand-gradient text-white shadow-sm"
-                                : "bg-white/[0.04] text-muted-foreground/40 group-hover:text-foreground"
+                                ? item.isHot
+                                  ? "bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-sm"
+                                  : "bg-brand-gradient text-white shadow-sm"
+                                : item.isHot
+                                  ? "bg-amber-500/15 text-amber-300/80 group-hover:text-amber-200"
+                                  : "bg-white/[0.04] text-muted-foreground/40 group-hover:text-foreground"
                             )}
                           >
                             <Icon className="h-3.5 w-3.5" />
                           </span>
                           <span className="flex-1 text-left font-medium">
                             {item.label}
-                            {item.isNew && (
+                            {item.isHot && (
+                              <span className="ml-1.5 inline-flex items-center gap-0.5 rounded-full border border-amber-300/50 bg-gradient-to-r from-amber-500/25 to-orange-500/25 px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-amber-200">
+                                <Star className="h-2 w-2 fill-amber-300 text-amber-300" />
+                                EM ALTA
+                              </span>
+                            )}
+                            {item.isNew && !item.isHot && (
                               <span className="ml-1.5 inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-500/20 px-1 py-px text-[7px] font-bold uppercase tracking-wider text-emerald-300">
                                 NOVO
                               </span>
@@ -249,7 +266,9 @@ function SidebarContent({ filter, onSelect, onClose }: SidebarContentProps) {
                               "rounded-md px-1.5 py-0.5 text-[10px] tabular-nums",
                               active
                                 ? "bg-white/10 text-white/80"
-                                : "bg-white/[0.03] text-muted-foreground/35"
+                                : item.isHot
+                                  ? "bg-amber-500/10 text-amber-200/70"
+                                  : "bg-white/[0.03] text-muted-foreground/35"
                             )}
                           >
                             {count}
