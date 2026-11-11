@@ -65,6 +65,8 @@ interface PromptCardProps {
   isFavorite: boolean;
   onToggleFavorite: (id: string) => void;
   onOpen: (prompt: Prompt) => void;
+  /** Hide the POV badge — used inside the featured POV section (all cards are POV). */
+  hidePovBadge?: boolean;
 }
 
 export function PromptCard({
@@ -72,6 +74,7 @@ export function PromptCard({
   isFavorite,
   onToggleFavorite,
   onOpen,
+  hidePovBadge = false,
 }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
   const [videoLoading, setVideoLoading] = useState(false);
@@ -463,9 +466,9 @@ export function PromptCard({
           {prompt.category}
         </span>
 
-        {/* POV highlight badge — most popular mode */}
+        {/* POV highlight badge — most popular mode (hidden inside the POV section) */}
         <div className="absolute right-10 sm:right-12 top-2.5 sm:top-3 z-[2] flex flex-col items-end gap-1 pointer-events-none">
-          {isPovPrompt(prompt) && (
+          {isPovPrompt(prompt) && !hidePovBadge && (
             <span className="inline-flex items-center gap-0.5 rounded-full bg-gradient-to-r from-amber-500/25 to-orange-500/25 border border-amber-400/40 px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-amber-200 backdrop-blur-md">
               <Star className="h-2 w-2 fill-amber-300 text-amber-300" /> POV
             </span>

@@ -1,21 +1,21 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Gem, Heart, ChevronDown, Film, LayoutGrid, Menu, Sparkles, Star, Video } from "lucide-react";
+import { Gem, Heart, ChevronDown, Film, HelpCircle, LayoutGrid, Menu, Sparkles, Star, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingMedia, hasWorkingImage } from "@/lib/prompts";
+import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingImage } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
 import { toast } from "sonner";
-import { applyFilter, filterLabel, isPovPrompt, type Filter, ALL_FILTER } from "./filters";
+import { cn } from "@/lib/utils";
+import { applyFilter, countFor, filterLabel, isPovPrompt, type Filter, ALL_FILTER } from "./filters";
 import { Sidebar, MobileSidebar } from "./Sidebar";
 import { SearchBar } from "./SearchBar";
 import { PromptCard } from "./PromptCard";
 import { PromptModal } from "./PromptModal";
 import { EmptyState } from "./EmptyState";
 import { UsageGuidePopup } from "./UsageGuidePopup";
-import { UpdateBanner } from "./UpdateBanner";
 
-const PAGE_SIZE = 16;
+const PAGE_SIZE = 24;
 
 export function Gallery() {
   const [filter, setFilterState] = useState<Filter>(ALL_FILTER);
@@ -24,9 +24,22 @@ export function Gallery() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selected, setSelected] = useState<Prompt | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  /** Usage guide dialog (opened from the info bar and the "?" search button) */
+  const [guideOpen, setGuideOpen] = useState(false);
+  /** "Sem referência visual" section starts collapsed to reduce noise */
+  const [noRefOpen, setNoRefOpen] = useState(false);
 
   const favIds = useFavoritesStore((s) => s.ids);
   const toggleFav = useFavoritesStore((s) => s.toggle);
+
+  /** Chip counts for the quick-access row in the SearchBar */
+  const counts = useMemo(() => ({
+    all: countFor({ kind: "all" }, favIds),
+    pov: countFor({ kind: "pov" }, favIds),
+    videos: countFor({ kind: "videos-with-ref" }, favIds),
+    novidades: countFor({ kind: "novidades" }, favIds),
+    favorites: favIds.length,
+  }), [favIds]);
 
   const setFilter = (f: Filter) => { setFilterState(f); setPage(0); };
   const setQuery = (q: string) => { setQueryState(q); setPage(0); };
@@ -131,9 +144,6 @@ export function Gallery() {
             </div>
           </div>
 
-          <UsageGuidePopup />
-          <UpdateBanner onNavigate={(cat) => setFilter({ kind: "category", category: cat as any })} onNavigateNovidades={() => setFilter({ kind: "novidades" })} />
-
           <div className="px-3 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 space-y-4 sm:space-y-6 lg:space-y-7">
             {/* Desktop header */}
             <div className="hidden lg:block">
@@ -159,7 +169,7 @@ export function Gallery() {
               </div>
             </div>
 
-            <SearchBar query={query} onQueryChange={setQuery} filter={filter} onFilterChange={setFilter} onOpenMenu={() => setMobileOpen(true)} />
+            <SearchBar query={query} onQueryChange={setQuery} filter={filter} onFilterChange={setFilter} onOpenMenu={() => setMobileOpen(true)} onOpenGuide={() => setGuideOpen(true)} counts={counts} />
 
             {/* Filter info bar — more compact on mobile */}
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -172,21 +182,31 @@ export function Gallery() {
                   <> prompts</>
                 )}
               </p>
-              {filter.kind === "pov" && (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-gradient-to-r from-amber-500/15 to-orange-500/15 px-3 py-1 text-[11px] font-bold text-amber-200">
-                  <Star className="h-3 w-3 fill-amber-300 text-amber-300" /> POV em destaque — o modo mais usado
-                </span>
-              )}
-              {filter.kind === "updates" && (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 px-3 py-1 text-[11px] font-medium text-brand-cyan">
-                  <Sparkles className="h-3 w-3" /> Novidades no acervo
-                </span>
-              )}
-              {filter.kind === "novidades" && (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-medium text-emerald-300">
-                  <Sparkles className="h-3 w-3" /> Novidades
-                </span>
-              )}
+              <div className="flex items-center gap-2">
+                {filter.kind === "pov" && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-gradient-to-r from-amber-500/15 to-orange-500/15 px-3 py-1 text-[11px] font-bold text-amber-200">
+                    <Star className="h-3 w-3 fill-amber-300 text-amber-300" /> POV em destaque — o modo mais usado
+                  </span>
+                )}
+                {filter.kind === "updates" && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 px-3 py-1 text-[11px] font-medium text-brand-cyan">
+                    <Sparkles className="h-3 w-3" /> Novidades no acervo
+                  </span>
+                )}
+                {filter.kind === "novidades" && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-medium text-emerald-300">
+                    <Sparkles className="h-3 w-3" /> Novidades
+                  </span>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setGuideOpen(true)}
+                  className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border-card bg-white/[0.03] px-3 text-[12px] sm:text-[13px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.07] hover:text-foreground"
+                >
+                  <HelpCircle className="h-3.5 w-3.5" />
+                  Como usar
+                </button>
+              </div>
             </div>
 
             {visible.length === 0 ? (
@@ -215,7 +235,7 @@ export function Gallery() {
                       <div className="flex-1 h-px bg-amber-400/15" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
-                      {povCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
+                      {povCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} hidePovBadge />)}
                     </div>
                   </div>
                 )}
@@ -255,21 +275,25 @@ export function Gallery() {
                   </div>
                 )}
 
-                {/* ── SEM REFERÊNCIA VISUAL ── */}
+                {/* ── SEM REFERÊNCIA VISUAL (colapsável, fechado por padrão) ── */}
                 {hasNoPreviewCards && (
                   <div className="pt-3 sm:pt-4">
-                    <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                      <div className="flex-1 h-px bg-white/10" />
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Film className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                        <span className="text-[12px] sm:text-sm font-semibold tracking-wide">Sem referência visual</span>
-                        <span className="rounded-full bg-white/8 px-2 py-0.5 text-[11px] sm:text-xs font-medium tabular-nums">{noPreviewCards.length}</span>
+                    <button
+                      type="button"
+                      onClick={() => setNoRefOpen((v) => !v)}
+                      aria-expanded={noRefOpen}
+                      className="flex w-full items-center justify-center gap-2 rounded-xl border border-border-subtle bg-white/[0.02] px-4 py-3 text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
+                    >
+                      <Film className="h-4 w-4 shrink-0" />
+                      <span className="text-[12px] sm:text-sm font-semibold tracking-wide">Sem referência visual</span>
+                      <span className="rounded-full bg-white/8 px-2 py-0.5 text-[11px] sm:text-xs font-medium tabular-nums">{noPreviewCards.length}</span>
+                      <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform duration-200", noRefOpen && "rotate-180")} />
+                    </button>
+                    {noRefOpen && (
+                      <div className="mt-3 sm:mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
+                        {noPreviewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
                       </div>
-                      <div className="flex-1 h-px bg-white/10" />
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
-                      {noPreviewCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} />)}
-                    </div>
+                    )}
                   </div>
                 )}
               </div>
@@ -295,6 +319,7 @@ export function Gallery() {
         </div>
       </footer>
       <PromptModal prompt={selected} open={modalOpen} onOpenChange={setModalOpen} isFavorite={selected ? isFav(selected.id) : false} onToggleFavorite={handleToggleFav} />
+      <UsageGuidePopup open={guideOpen} onOpenChange={setGuideOpen} />
     </div>
   );
 }
