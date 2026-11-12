@@ -3,6 +3,10 @@ import {
   type Prompt,
   type PromptCategory,
   type PromptType,
+  hasWorkingVideo,
+  hasWorkingImage,
+  hasWorkingMedia,
+  hasSupabaseVideo,
 } from "@/lib/prompts";
 
 export type Filter =
@@ -113,24 +117,6 @@ function sortVideoWithRef(list: Prompt[]): Prompt[] {
   });
 }
 
-/** No hosts are permanently blocked — let the browser handle errors natively via onError/onLoad. */
-function isBrokenUrl(url: string | undefined): boolean {
-  return !url;
-}
-
-function hasWorkingImage(p: Prompt): boolean {
-  return Boolean(p.image) && !isBrokenUrl(p.image);
-}
-
-function hasWorkingVideo(p: Prompt): boolean {
-  return Boolean(p.videoUrl) && !isBrokenUrl(p.videoUrl);
-}
-
-/** Has any working media (image or video from a working host). */
-function hasWorkingMedia(p: Prompt): boolean {
-  return hasWorkingImage(p) || hasWorkingVideo(p);
-}
-
 /** Has any media URL at all (even from broken hosts). */
 function hasAnyMedia(p: Prompt): boolean {
   return Boolean(p.image) || Boolean(p.videoUrl);
@@ -142,39 +128,42 @@ function hasPromptText(p: Prompt): boolean {
 }
 
 /**
- * Media quality score:
- * 0 = both working image + working video  (best)
- * 1 = working video only                  (recently uploaded Drive/R2 videos)
- * 2 = working image only                  (static image cards)
- * 3 = has media but ALL broken            (degraded — show last)
- * 4 = no media at all                     (worst)
+ * Media quality score (LOWER = shown earlier):
+ * 0 = Supabase video (BEST — our project, reliable, shown in destaque)
+ * 1 = both working image + working video (non-Supabase)
+ * 2 = working video only (non-Supabase, e.g. catbox)
+ * 3 = working image only
+ * 4 = has media but ALL broken (degraded — show last)
+ * 5 = no media at all
  */
 function mediaQualityScore(p: Prompt): number {
+  const sbVid = hasSupabaseVideo(p);
   const wImg = hasWorkingImage(p);
   const wVid = hasWorkingVideo(p);
-  if (wImg && wVid) return 0;
-  if (wVid) return 1;
-  if (wImg) return 2;
-  if (hasAnyMedia(p)) return 3;  // has URLs but all broken
-  return 4;
+  if (sbVid) return 0;
+  if (wImg && wVid) return 1;
+  if (wVid) return 2;
+  if (wImg) return 3;
+  if (hasAnyMedia(p)) return 4;  // has URLs but all broken
+  return 5;
 }
 
 /**
- * Sort helper: POV prompts first (most popular mode), then working media,
- * then broken media, then no media.
+ * Sort helper: POV prompts with Supabase video FIRST (strict destaque),
+ * then other Supabase videos, then working media, then broken media.
  */
 function sortByReference(list: Prompt[]): Prompt[] {
   return [...list].sort((a, b) => {
-    // 0. POV prompts WITH VIDEO first (featured mode — the most popular).
-    //    Image-only POV prompts follow the normal sequence.
-    const aPov = isPovPrompt(a) && hasWorkingVideo(a) ? 0 : 1;
-    const bPov = isPovPrompt(b) && hasWorkingVideo(b) ? 0 : 1;
+    // 0. POV prompts WITH SUPABASE VIDEO first (the destaque — strictly ours).
+    //    POV with catbox/image-only follows the normal sequence.
+    const aPov = isPovPrompt(a) && hasSupabaseVideo(a) ? 0 : 1;
+    const bPov = isPovPrompt(b) && hasSupabaseVideo(b) ? 0 : 1;
     if (aPov !== bPov) return aPov - bPov;
     // 1. New items first within group
     const aNew = a.isNew ? 0 : 1;
     const bNew = b.isNew ? 0 : 1;
     if (aNew !== bNew) return aNew - bNew;
-    // 2. Media quality score (working media first, broken last)
+    // 2. Media quality score (Supabase first, working media, broken last)
     const aScore = mediaQualityScore(a);
     const bScore = mediaQualityScore(b);
     if (aScore !== bScore) return aScore - bScore;

@@ -113,11 +113,27 @@ const BROKEN_HOSTS = [
 ];
 
 /**
+ * The CURRENT Supabase project host — the only one we consider "in our project".
+ * Media hosted here is reliable and shown in the destaque (highlight) section.
+ */
+export const SUPABASE_HOST = "yhfudstfhlzkcaumruop.supabase.co";
+
+/**
  * Check if a URL points to a known broken host.
  */
 function isBrokenHost(url: string | undefined): boolean {
   if (!url) return true;
   return BROKEN_HOSTS.some((h) => url.includes(h));
+}
+
+/**
+ * Check if a URL is hosted on the CURRENT Supabase project (our bucket).
+ * This is the strict "in our project" check — only these prompts get destaque.
+ */
+export function isSupabaseUrl(url: string | undefined): boolean {
+  if (!url) return false;
+  if (isBrokenHost(url)) return false;
+  return url.includes(SUPABASE_HOST);
 }
 
 /**
@@ -153,4 +169,20 @@ export function hasWorkingImage(prompt: Prompt): boolean {
  */
 export function hasWorkingMedia(prompt: Prompt): boolean {
   return hasWorkingVideo(prompt) || hasWorkingImage(prompt);
+}
+
+/**
+ * STRICT Supabase check — only true when the video is hosted on OUR current
+ * Supabase project (yhfudstfhlzkcaumruop). Used for the destaque (highlight)
+ * section. Catbox, Drive, and any other host return false.
+ */
+export function hasSupabaseVideo(prompt: Prompt): boolean {
+  return isSupabaseUrl(prompt.videoUrl);
+}
+
+/**
+ * STRICT Supabase check for images.
+ */
+export function hasSupabaseImage(prompt: Prompt): boolean {
+  return isSupabaseUrl(prompt.image);
 }

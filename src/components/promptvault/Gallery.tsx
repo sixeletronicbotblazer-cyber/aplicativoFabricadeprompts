@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { Gem, Heart, ChevronDown, Film, HelpCircle, LayoutGrid, Menu, Sparkles, Star, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingImage } from "@/lib/prompts";
+import { PROMPTS, type Prompt, hasWorkingVideo, hasWorkingImage, hasSupabaseVideo } from "@/lib/prompts";
 import { useFavoritesStore } from "@/lib/favorites-store";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
@@ -58,18 +58,21 @@ export function Gallery() {
       : base;
 
     /**
-     * Sort: POV prompts WITH VIDEO first (featured mode — Supabase/Drive
-     * references), then all videos, then working images, then no media.
-     * POV prompts that are image-only follow the normal sequence.
+     * Sort: POV prompts WITH SUPABASE VIDEO first (featured mode — strictly
+     * our project's bucket, the most reliable ones). POV prompts that use
+     * catbox/image-only follow the normal sequence and stay OUT of destaque.
      */
-    const isFeaturedPov = (p: Prompt) => isPovPrompt(p) && hasWorkingVideo(p);
+    const isFeaturedPov = (p: Prompt) => isPovPrompt(p) && hasSupabaseVideo(p);
     return [...matched].sort((a, b) => {
-      // Featured POV (with video) ALWAYS first — the most popular mode
+      // Featured POV (Supabase video) ALWAYS first — the most popular mode
       const aPov = isFeaturedPov(a) ? 1 : 0;
       const bPov = isFeaturedPov(b) ? 1 : 0;
       if (aPov !== bPov) return bPov - aPov;
-      const aW = (hasWorkingVideo(a) ? 4 : 0) + (hasWorkingImage(a) ? 2 : 0) + (a.isNew ? 1 : 0);
-      const bW = (hasWorkingVideo(b) ? 4 : 0) + (hasWorkingImage(b) ? 2 : 0) + (b.isNew ? 1 : 0);
+      // Supabase-hosted videos come before any other working media
+      const aSb = hasSupabaseVideo(a) ? 4 : 0;
+      const bSb = hasSupabaseVideo(b) ? 4 : 0;
+      const aW = aSb + (hasWorkingVideo(a) ? 4 : 0) + (hasWorkingImage(a) ? 2 : 0) + (a.isNew ? 1 : 0);
+      const bW = bSb + (hasWorkingVideo(b) ? 4 : 0) + (hasWorkingImage(b) ? 2 : 0) + (b.isNew ? 1 : 0);
       if (aW !== bW) return bW - aW;
       return a.category.localeCompare(b.category) || a.title.localeCompare(b.title);
     });
@@ -91,9 +94,10 @@ export function Gallery() {
 
   /** Split visible cards into working-video, working-image, and no-preview sections */
   const isAllView = filter.kind === "all" || filter.kind === "pov";
-  /** Featured POV = only prompts with a working video (Supabase/Drive).
-   *  Image-only POV prompts follow the normal sequence below. */
-  const isFeaturedPov = (p: Prompt) => isPovPrompt(p) && hasWorkingVideo(p);
+  /** Featured POV = ONLY prompts with a video hosted on OUR Supabase project.
+   *  Catbox/Drive/image-only POV prompts follow the normal sequence below
+   *  and stay OUT of the destaque. */
+  const isFeaturedPov = (p: Prompt) => isPovPrompt(p) && hasSupabaseVideo(p);
   const povCards = isAllView ? visible.filter(isFeaturedPov) : [];
   const nonPov = isAllView ? visible.filter((p) => !isFeaturedPov(p)) : visible;
   /** Total featured POV videos across ALL filtered (not just visible page) */
@@ -221,10 +225,10 @@ export function Gallery() {
               </div>
             ) : (
               <div className="space-y-5 sm:space-y-7">
-                {/* ── POV EM DESTAQUE (MODO MAIS USADO — SÓ VÍDEOS) ── */}
+                {/* ── POV EM DESTAQUE (MODO MAIS USADO — SÓ VÍDEOS DO SUPABASE) ── */}
                 {povCards.length > 0 && (
                   <div className="relative rounded-2xl border border-amber-400/25 bg-gradient-to-b from-amber-500/[0.09] via-amber-500/[0.04] to-transparent p-3 sm:p-4 shadow-lg shadow-amber-500/[0.06]">
-                    <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 px-1">
+                    <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 px-1 flex-wrap">
                       <div className="grid h-7 w-7 sm:h-8 sm:w-8 place-items-center rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg shadow-amber-500/25">
                         <Star className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white fill-white" />
                       </div>
@@ -232,7 +236,10 @@ export function Gallery() {
                       <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/15 border border-amber-400/30 px-2 sm:px-2.5 py-0.5 text-[11px] sm:text-xs font-bold tabular-nums text-amber-300">
                         <Video className="h-3 w-3" />{totalFeaturedPov} vídeos
                       </span>
-                      <div className="flex-1 h-px bg-amber-400/15" />
+                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-[11px] font-bold text-emerald-300">
+                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />Supabase
+                      </span>
+                      <div className="flex-1 h-px bg-amber-400/15 min-w-4" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
                       {povCards.map((prompt) => <PromptCard key={prompt.id} prompt={prompt} isFavorite={isFav(prompt.id)} onToggleFavorite={handleToggleFav} onOpen={openModal} hidePovBadge />)}
